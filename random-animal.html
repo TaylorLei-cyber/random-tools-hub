@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///Users/leicong/Desktop/random-generator/random-animal.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦁 Random Animal Generator - Random Animal Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation bar */
+        .header {
+            background: white;
+            box-shadow: none;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+            padding: 8px 0;
+            margin: 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 16px;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+        
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px 30px 20px;
+            background: #f8f9fa;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Animal display section */
+        .animal-section {
+            padding: 30px 20px 60px 20px;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px 0;
+        }
+        
+        .animal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .animal-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .animal-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .animal-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+        }
+        
+        .animal-name {
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .generate-btn {
+            background: #ffd700;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
+            justify-content: center;
+            min-width: 160px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .generate-btn:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        }
+        
+        .generate-btn span {
+            font-size: 1.2rem;
+        }
+        
+        .generate-btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.2;
+        }
+        
+        .generate-btn-text .line1 {
+            font-size: 1.1rem;
+        }
+        
+        .generate-btn-text .line2 {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Single line display styles */
+        .generate-btn-text.single-line {
+            flex-direction: row;
+            gap: 5px;
+        }
+        
+        .generate-btn-text.single-line .line1,
+        .generate-btn-text.single-line .line2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        /* Content sections */
+        .content-section {
+            padding: 60px 20px;
+        }
+        
+        .content-section.white {
+            background: white;
+        }
+        
+        .content-section.gray {
+            background: #f8f9fa;
+        }
+        
+        .content-section.dark {
+            background: #333;
+            color: white;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-content p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        /* Feature section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-text {
+            flex: 1;
+        }
+        
+        .feature-text h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .feature-text p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* FAQ section */
+        .faq-section {
+            padding: 60px 20px;
+            background: white;
+            color: #333;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #2c3e50;
+            padding: 20px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: #333;
+        }
+        
+        .faq-arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: #6c757d;
+        }
+        
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+            color: #333;
+        }
+        
+        .faq-answer {
+            color: #6c757d;
+            line-height: 1.6;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0 20px;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+            margin: 0 0 20px 0;
+            border-radius: 8px;
+        }
+        
+        .faq-answer ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 5px;
+        }
+        
+        /* Call to action section */
+        .cta-section {
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .cta-description {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/MyGenTool.svg" alt="MyGenTool" style="height: 35px; width: auto;">
+                    <span style="margin-left: 10px; font-weight: 600; font-size: 1.2rem; color: #333;">MyGenTool</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="random-bible-verse.html">Random Bible Verse Generator</a></li>
+                    <li><a href="random-animal.html">Random Animal Generator</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">All Tools ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="random-number.html">Random Number Generator</a></li>
+                            <li><a href="random-color.html">Random Color Generator</a></li>
+                            <li><a href="random-password.html">Random Password Generator</a></li>
+                            <li><a href="random-food.html">Random Food Generator</a></li>
+                            <li><a href="random-travel.html">Random Travel Generator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Random Animal Generator</h1>
+            <p>Find out which animal you'll discover next with our Random Animal Generator. Explore, learn, and have fun with an endless variety of animals from around the world.</p>
+        </div>
+    </section>
+
+    <!-- Animal display section -->
+    <section class="animal-section">
+        <div class="container">
+            <div class="animal-grid" id="animal-grid"><div class="animal-card">
+                    <div class="animal-image">🦁</div>
+                    <div class="animal-name">Lion</div>
+                </div><div class="animal-card">
+                    <div class="animal-image">🦒</div>
+                    <div class="animal-name">Giraffe</div>
+                </div><div class="animal-card">
+                    <div class="animal-image">🦈</div>
+                    <div class="animal-name">Shark</div>
+                </div><div class="animal-card">
+                    <div class="animal-image">🐸</div>
+                    <div class="animal-name">Frog</div>
+                </div><div class="animal-card">
+                    <div class="animal-image">🐨</div>
+                    <div class="animal-name">Koala</div>
+                </div></div>
+            <div class="button-container">
+                <button class="generate-btn" onclick="generateAnimals()">
+                    <span>🦁</span>
+                    <div class="generate-btn-text single-line">
+                        <div class="line1">Generate Another</div>
+                        <div class="line2">Animal</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is the Random Animal Generator -->
+    <section class="content-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+        <div class="container">
+            <h2 class="section-title">What is the Random Animal Generator?</h2>
+            <div class="section-content">
+                <p>The Random Animal Generator is a fun and educational tool that introduces you to a wide variety of animals from around the world. Whether you're a student, teacher, animal lover, or just curious about wildlife, this tool provides an engaging way to discover new species and learn about different animals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="content-section gray">
+        <div class="container">
+            <h2 class="section-title">How to Use the Random Animal Generator</h2>
+            <div class="section-content">
+                <div style="display: flex; gap: 40px; align-items: center; margin-top: 40px;">
+                    <div style="flex: 1; text-align: left;">
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">1. Click the "Generate" Button</h3>
+                            <p style="color: #666; line-height: 1.5; font-size: 0.95rem;">Start your animal discovery journey by clicking the golden "Generate Another Animal" button. Our advanced algorithm will instantly select a random animal from our extensive database of creatures from around the world.</p>
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">2. Explore Your Animal</h3>
+                            <p style="color: #666; line-height: 1.5; font-size: 0.95rem;">Discover fascinating facts and details about the animal you've been given. Learn about its natural habitat, unique behaviors, diet preferences, and special characteristics that make it truly remarkable.</p>
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">3. Repeat for More</h3>
+                            <p style="color: #666; line-height: 1.5; font-size: 0.95rem;">Keep generating new animals to expand your knowledge and discover more creatures. Each click reveals a new surprise, helping you build a comprehensive understanding of the incredible diversity of life on Earth.</p>
+                        </div>
+                    </div>
+                    <div style="flex: 1;">
+                        <img src="images/how-to-use-the-random-animal-generator.png" style="width: 100%; object-fit: cover; border-radius: 12px;">                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Random Animal Generator -->
+    <section class="content-section white">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Random Animal Generator?</h2>
+            <div class="section-content">
+                <!-- First content block -->
+                <div style="display: flex; align-items: center; gap: 40px; margin-top: 30px; margin-bottom: 60px;">
+                    <div style="flex: 1; text-align: left;">
+                        <h3 style="font-size: 1.8rem; font-weight: 600; color: #333; margin-bottom: 20px; line-height: 1.3;">Perfect for kids, educators, and animal lovers alike</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 1rem;">Are your kids asking for a pet, but you're not too keen on the traditional dog or cat options? You've come to the right place. With random animals from around the world, you're sure to settle on one that fits all your desires. My daughter is pushing for a kangaroo, but I'm leaning more toward an alpaca.</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <img src="images/perfect-for-kids-educators-and-animal-lovers-alike.png" alt="Perfect for kids, educators, and animal lovers alike" style="width: 100%; height: 300px; object-fit: contain; border-radius: 12px;">
+                    </div>
+                </div>
+
+                <!-- Second content block -->
+                <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 60px;">
+                    <div style="flex: 1;">
+                        <img src="images/endless-animal-variety.png" alt="Endless Animal Variety" style="width: 100%; height: 300px; object-fit: contain; border-radius: 12px;">
+                    </div>
+                    <div style="flex: 1; text-align: left;">
+                        <h3 style="font-size: 1.8rem; font-weight: 600; color: #333; margin-bottom: 20px; line-height: 1.3;">Endless Animal Variety</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 1rem;">Our Random Animal Generator offers a wide range of animals from every corner of the globe. From the vast savannas of Africa to the deep oceans of the Pacific, you'll have access to an endless variety of creatures. Whether you're fascinated by mammals, reptiles, birds, or aquatic animals, our generator can introduce you to a vast array of species. Each click reveals a new surprise, providing you with an infinite number of animals to discover.</p>
+                    </div>
+                </div>
+
+                <!-- Third content block -->
+                <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 60px;">
+                    <div style="flex: 1; text-align: left;">
+                        <h3 style="font-size: 1.8rem; font-weight: 600; color: #333; margin-bottom: 20px; line-height: 1.3;">Interactive Learning</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 1rem;">This tool is not just for fun—it's an excellent resource for learning! As you generate new animals, you can dive into rich, informative details about each one. Explore the animal's natural habitat, behaviors, diet, and unique traits. Whether you're a student looking to expand your knowledge or just curious about the world around you, our generator helps you learn in a fun and interactive way. It's like having a personal wildlife encyclopedia at your fingertips!</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <img src="images/interactive-learning.png" alt="Interactive Learning" style="width: 100%; height: 300px; object-fit: contain; border-radius: 12px;">
+                    </div>
+                </div>
+
+                <!-- Fourth content block -->
+                <div style="display: flex; align-items: center; gap: 40px;">
+                    <div style="flex: 1;">
+                        <img src="images/user-friendly-interface.png" alt="User-friendly Interface" style="width: 100%; height: 300px; object-fit: contain; border-radius: 12px;">
+                    </div>
+                    <div style="flex: 1; text-align: left;">
+                        <h3 style="font-size: 1.8rem; font-weight: 600; color: #333; margin-bottom: 20px; line-height: 1.3;">User-friendly Interface</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 1rem;">Our Random Animal Generator is designed to be simple and intuitive, ensuring a seamless experience for all users. You don't need to be tech-savvy to use it—just click a button, and a random animal will appear on your screen. The user interface is clean and easy to navigate, providing clear information and engaging visuals without unnecessary distractions. Whether you're a beginner or an experienced animal enthusiast, the interface is built to cater to everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        How does the Random Animal Generator work?
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">Our generator uses a sophisticated algorithm to randomly select animals from our extensive database, ensuring each generation is truly random and unbiased.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is it free to use the Random Animal Generator?
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">Yes, our Random Animal Generator is completely free to use. No registration or payment required.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is the information provided about each animal?
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">We strive to provide accurate and up-to-date information about each animal, sourced from reliable wildlife databases and scientific resources.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can this tool be used by children or students?
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">Absolutely! Our tool is designed to be educational and safe for users of all ages, making it perfect for classroom use or family learning.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What types of animals can I expect to see with the generator?
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">Our database includes a wide variety of animals from different categories:</div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Mammals (lions, elephants, dolphins, etc.)</li>
+                            <li>Birds (eagles, penguins, parrots, etc.)</li>
+                            <li>Reptiles (snakes, turtles, lizards, etc.)</li>
+                            <li>Amphibians (frogs, salamanders, etc.)</li>
+                            <li>Fish (sharks, clownfish, etc.)</li>
+                            <li>Insects (butterflies, bees, ants, etc.)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I use this tool for educational purposes?
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">Yes! Teachers and educators are encouraged to use our tool in classrooms for biology lessons, animal studies, and general science education.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How many times can I generate animals?
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">You can generate animals as many times as you want! There's no limit to how many times you can use our generator.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Start Your Animal Discovery Journey Today!</h2>
+            <p class="cta-description">Ready to explore the amazing world of animals? Click the button below to start generating random animals and discover fascinating creatures from around the globe.</p>
+            <div class="button-container">
+                <button class="generate-btn" onclick="generateAnimals()">
+                    <span>🦁</span>
+                    <div class="generate-btn-text single-line">
+                        <div class="line1">Generate Another</div>
+                        <div class="line2">Animal</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright © 2025 Random Tools Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animal data
+        const animals = [
+            { name: 'Turtle', emoji: '🐢' },
+            { name: 'Chameleon', emoji: '🦎' },
+            { name: 'Raccoon', emoji: '🦝' },
+            { name: 'Coyote', emoji: '🐺' },
+            { name: 'Serval', emoji: '🐆' },
+            { name: 'Wallaby', emoji: '🦘' },
+            { name: 'Elephant', emoji: '🐘' },
+            { name: 'Giraffe', emoji: '🦒' },
+            { name: 'Penguin', emoji: '🐧' },
+            { name: 'Dolphin', emoji: '🐬' },
+            { name: 'Butterfly', emoji: '🦋' },
+            { name: 'Owl', emoji: '🦉' },
+            { name: 'Panda', emoji: '🐼' },
+            { name: 'Koala', emoji: '🐨' },
+            { name: 'Tiger', emoji: '🐯' },
+            { name: 'Lion', emoji: '🦁' },
+            { name: 'Shark', emoji: '🦈' },
+            { name: 'Eagle', emoji: '🦅' },
+            { name: 'Snake', emoji: '🐍' },
+            { name: 'Frog', emoji: '🐸' },
+            { name: 'Bee', emoji: '🐝' },
+            { name: 'Ant', emoji: '🐜' },
+            { name: 'Spider', emoji: '🕷️' },
+            { name: 'Crab', emoji: '🦀' },
+            { name: 'Octopus', emoji: '🐙' }
+        ];
+
+        // Generate random animals
+        function generateAnimals() {
+            const grid = document.getElementById('animal-grid');
+            grid.innerHTML = '';
+            
+            // Randomly select 5 animals
+            const selectedAnimals = [];
+            const shuffled = [...animals].sort(() => 0.5 - Math.random());
+            
+            for (let i = 0; i < 5; i++) {
+                selectedAnimals.push(shuffled[i]);
+            }
+            
+            // Create animal cards
+            selectedAnimals.forEach(animal => {
+                const card = document.createElement('div');
+                card.className = 'animal-card';
+                card.innerHTML = `
+                    <div class="animal-image">${animal.emoji}</div>
+                    <div class="animal-name">${animal.name}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Generate initial animals when page loads
+        document.addEventListener('DOMContentLoaded', generateAnimals);
+
+        // FAQ collapse functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    // Close all other open FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current FAQ item status
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+ </body></html>

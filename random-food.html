@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍕 Random Food Generator - Random Food Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Navigation bar styles */
+        .header {
+            background: white;
+            box-shadow: none;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+            padding: 8px 0;
+            margin: 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 16px;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+        
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+
+        /* Reference RandomGenerate.io design style */
+        body {
+            background: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .single-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .main-content {
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        .food-generator {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .food-display-large {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .food-icon-large {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        
+        .food-name-large {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            min-width: 200px;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .food-category {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        .generate-btn-large {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .generate-btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .category-filter {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .category-btn {
+            padding: 8px 16px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .category-btn:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        .category-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .food-history {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .history-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .history-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            max-width: 400px;
+        }
+        
+        .history-item {
+            padding: 5px 12px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .history-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/MyGenTool.svg" alt="MyGenTool" style="height: 35px; width: auto;">
+                    <span style="margin-left: 10px; font-weight: 600; font-size: 1.2rem; color: #333;">MyGenTool</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="random-bible-verse.html">Random Bible Verse Generator</a></li>
+                    <li><a href="random-animal.html">Random Animal Generator</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">All Tools ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="random-number.html">Random Number Generator</a></li>
+                            <li><a href="random-color.html">Random Color Generator</a></li>
+                            <li><a href="random-password.html">Random Password Generator</a></li>
+                            <li><a href="random-food.html">Random Food Generator</a></li>
+                            <li><a href="random-travel.html">Random Travel Generator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    
+    <div class="single-page">
+        <div class="main-content">
+            <header>
+                <h1>🍕 Random Food Generator</h1>
+                <p>Discover food, randomly select your next meal</p>
+            </header>
+            
+            <div class="food-generator">
+                <div class="category-filter">
+                    <button class="category-btn active" onclick="setCategory('all')">All</button>
+                    <button class="category-btn" onclick="setCategory('chinese')">Chinese</button>
+                    <button class="category-btn" onclick="setCategory('western')">Western</button>
+                    <button class="category-btn" onclick="setCategory('dessert')">Dessert</button>
+                    <button class="category-btn" onclick="setCategory('drink')">Drinks</button>
+                </div>
+                
+                <button class="generate-btn-large" onclick="generateRandomFood()">Generate Random Food</button>
+                
+                <div class="food-display-large" id="food-result">
+                    <div class="food-name-large">Click button to generate random food</div>
+                </div>
+                
+                <div class="food-history">
+                    <div class="history-title">Recently generated foods:</div>
+                    <div class="history-list" id="food-history"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const foodList = {
+            chinese: [
+                'Kung Pao Chicken', 'Mapo Tofu', 'Sweet and Sour Pork', 'Boiled Fish', 'Twice Cooked Pork', 'Fish Fragrant Shredded Pork', 'Braised Pork', 'Xiaolongbao',
+                'Zhajiang Noodles', 'Lanzhou Hand-Pulled Noodles', 'Chongqing Hot Pot', 'Beijing Roast Duck', 'White Cut Chicken', 'Char Siu Bao', 'Fried Rice', 'Sour Fish'
+            ],
+            western: [
+                'Spaghetti', 'Pizza', 'Hamburger', 'Steak', 'Sandwich', 'Salad', 'Sushi', 'Taco',
+                'Escargot', 'Paella', 'Greek Salad', 'German Pork Knuckle', 'Swiss Cheese Fondue', 'Fish and Chips'
+            ],
+            dessert: [
+                'Tiramisu', 'Macaron', 'Cheesecake', 'Chocolate Mousse', 'Ice Cream', 'Pudding', 'Egg Tart', 'Cream Puff',
+                'Mille Crepe Cake', 'Mousse Cake', 'Souffle', 'Crepe', 'Waffle', 'Muffin'
+            ],
+            drink: [
+                'Bubble Tea', 'Latte', 'Matcha Latte', 'Lemonade', 'Juice', 'Cola', 'Beer', 'Red Wine',
+                'Cocktail', 'Hot Chocolate', 'Green Tea', 'Black Tea', 'Flower Tea', 'Soy Milk'
+            ]
+        };
+        
+        let currentCategory = 'all';
+        let foodHistory = [];
+        
+        function setCategory(category) {
+            currentCategory = category;
+            
+            // Update button status
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        
+        function generateRandomFood() {
+            let availableFoods = [];
+            
+            if (currentCategory === 'all') {
+                // Merge all food categories
+                Object.values(foodList).forEach(category => {
+                    availableFoods = availableFoods.concat(category);
+                });
+            } else {
+                availableFoods = foodList[currentCategory] || [];
+            }
+            
+            if (availableFoods.length === 0) {
+                alert('No food options available for this category!');
+                return;
+            }
+            
+            const randomFood = availableFoods[Math.floor(Math.random() * availableFoods.length)];
+            const resultElement = document.getElementById('food-result');
+            
+            // Select icon based on food type
+            let icon = '🍽️';
+            if (currentCategory === 'chinese' || foodList.chinese.includes(randomFood)) {
+                icon = '🥢';
+            } else if (currentCategory === 'western' || foodList.western.includes(randomFood)) {
+                icon = '🍴';
+            } else if (currentCategory === 'dessert' || foodList.dessert.includes(randomFood)) {
+                icon = '🍰';
+            } else if (currentCategory === 'drink' || foodList.drink.includes(randomFood)) {
+                icon = '🥤';
+            }
+            
+            resultElement.innerHTML = `
+                <div class="food-icon-large">${icon}</div>
+                <div class="food-name-large">${randomFood}</div>
+                <div class="food-category">${getCategoryName(currentCategory)}</div>
+            `;
+            
+            // Add to history
+            addToHistory(randomFood);
+            
+            // Add animation effect
+            resultElement.style.animation = 'fadeIn 0.5s ease-in-out';
+            setTimeout(() => {
+                resultElement.style.animation = '';
+            }, 500);
+        }
+        
+        function getCategoryName(category) {
+            const categoryNames = {
+                'all': 'All Foods',
+                'chinese': 'Chinese',
+                'western': 'Western',
+                'dessert': 'Dessert',
+                'drink': 'Drinks'
+            };
+            return categoryNames[category] || 'Unknown Category';
+        }
+        
+        function addToHistory(food) {
+            if (!foodHistory.includes(food)) {
+                foodHistory.unshift(food);
+                if (foodHistory.length > 8) {
+                    foodHistory.pop();
+                }
+                updateHistoryDisplay();
+            }
+        }
+        
+        function updateHistoryDisplay() {
+            const historyElement = document.getElementById('food-history');
+            const historyHTML = foodHistory.map(food => 
+                `<div class="history-item" onclick="selectFromHistory('${food}')">${food}</div>`
+            ).join('');
+            
+            historyElement.innerHTML = historyHTML;
+        }
+        
+        function selectFromHistory(food) {
+            const resultElement = document.getElementById('food-result');
+            
+            // Select icon based on food type
+            let icon = '🍽️';
+            if (foodList.chinese.includes(food)) {
+                icon = '🥢';
+            } else if (foodList.western.includes(food)) {
+                icon = '🍴';
+            } else if (foodList.dessert.includes(food)) {
+                icon = '🍰';
+            } else if (foodList.drink.includes(food)) {
+                icon = '🥤';
+            }
+            
+            resultElement.innerHTML = `
+                <div class="food-icon-large">${icon}</div>
+                <div class="food-name-large">${food}</div>
+                <div class="food-category">Selected from history</div>
+            `;
+            
+            // Add animation effect
+            resultElement.style.animation = 'fadeIn 0.5s ease-in-out';
+            setTimeout(() => {
+                resultElement.style.animation = '';
+            }, 500);
+        }
+    </script>
+</body>
+</html> 

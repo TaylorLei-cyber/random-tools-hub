@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>�� Random Tools Hub - Random Tools Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reference RandomGenerate.io design style */
+        body {
+            background: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Navigation bar */
+        .header {
+            background: white;
+            box-shadow: none;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+            padding: 8px 0;
+            margin: 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 16px;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+        
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        /* Main content area */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero section */
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-top: 40px;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Category section */
+        .category-section {
+            margin-bottom: 60px;
+        }
+        
+        .category-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        /* Tool card grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .tool-icon-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .tool-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .tool-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        /* Category tags */
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .tool-tag {
+            background: #f8f9fa;
+            color: #666;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .visit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .visit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .footer-description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .footer-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/MyGenTool.svg" alt="MyGenTool" style="height: 35px; width: auto;">
+                    <span style="margin-left: 10px; font-weight: 600; font-size: 1.2rem; color: #333;">MyGenTool</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="random-bible-verse.html">Random Bible Verse Generator</a></li>
+                    <li><a href="random-animal.html">Random Animal Generator</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">All Tools ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="random-number.html">Random Number Generator</a></li>
+                            <li><a href="random-color.html">Random Color Generator</a></li>
+                            <li><a href="random-password.html">Random Password Generator</a></li>
+                            <li><a href="random-food.html">Random Food Generator</a></li>
+                            <li><a href="random-travel.html">Random Travel Generator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Hero section -->
+        <section class="hero-section">
+            <h1 class="hero-title">Welcome to the world of randomness!</h1>
+            <p class="hero-subtitle">
+                Random Tools Hub provides simple and easy-to-use tools to help you find inspiration, make decisions, or just enjoy the fun.
+                From random numbers to color generation, from password creation to food recommendations, we have everything!
+            </p>
+        </section>
+        
+        <!-- Tool grid -->
+        <section class="category-section">
+            <h2 class="category-title">🎯 Core Tools</h2>
+            <div class="tools-grid">
+                <!-- Random Number Tool -->
+                <a href="random-number.html" class="tool-card">
+                    <div class="tool-icon-section">
+                        <div class="tool-icon">🎲</div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">Random Number Generator</h3>
+                        <p class="tool-description">
+                            Generates random numbers within a specified range, supports custom minimum and maximum values, suitable for various random selection scenarios.
+                        </p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Number</span>
+                            <span class="tool-tag">Range</span>
+                            <span class="tool-tag">Tool</span>
+                        </div>
+                        <div class="visit-btn">Start Using</div>
+                    </div>
+                </a>
+
+                <!-- Random Color Tool -->
+                <a href="random-color.html" class="tool-card">
+                    <div class="tool-icon-section">
+                        <div class="tool-icon">🎨</div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">Random Color Generator</h3>
+                        <p class="tool-description">
+                            Generates random colors and their HEX and RGB values, supports color history and click-to-copy functionality.
+                        </p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Color</span>
+                            <span class="tool-tag">HEX</span>
+                            <span class="tool-tag">RGB</span>
+                        </div>
+                        <div class="visit-btn">Start Using</div>
+                    </div>
+                </a>
+
+                <!-- Random Password Tool -->
+                <a href="random-password.html" class="tool-card">
+                    <div class="tool-icon-section">
+                        <div class="tool-icon">🔐</div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">Random Password Generator</h3>
+                        <p class="tool-description">
+                            Generates secure and reliable random passwords, customizable length and character types, includes password strength detection.
+                        </p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Password</span>
+                            <span class="tool-tag">Secure</span>
+                            <span class="tool-tag">Strength</span>
+                        </div>
+                        <div class="visit-btn">Start Using</div>
+                    </div>
+                </a>
+
+                <!-- Random Food Tool -->
+                <a href="random-food.html" class="tool-card">
+                    <div class="tool-icon-section">
+                        <div class="tool-icon">🍕</div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">Random Food Generator</h3>
+                        <p class="tool-description">
+                            Discover food, randomly select your next meal. Includes Chinese, Western, desserts, and drinks.
+                        </p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Food</span>
+                            <span class="tool-tag">Category</span>
+                            <span class="tool-tag">Recommendation</span>
+                        </div>
+                        <div class="visit-btn">Start Using</div>
+                    </div>
+                </a>
+
+                <!-- Random Travel Tool -->
+                <a href="random-travel.html" class="tool-card">
+                    <div class="tool-icon-section">
+                        <div class="tool-icon">✈️</div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">Random Travel Generator</h3>
+                        <p class="tool-description">
+                            Explore the world, discover your next travel destination. Covers selected attractions across six continents.
+                        </p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Travel</span>
+                            <span class="tool-tag">Destination</span>
+                            <span class="tool-tag">Global</span>
+                        </div>
+                        <div class="visit-btn">Start Using</div>
+                    </div>
+                </a>
+
+                <!-- Random Animal Tool -->
+                <a href="random-animal.html" class="tool-card">
+                    <div class="tool-icon-section">
+                        <div class="tool-icon">🦁</div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">Random Animal Generator</h3>
+                        <p class="tool-description">
+                            Explore the animal world, discover various interesting animals. Includes mammals, birds, reptiles, and more.
+                        </p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Animal</span>
+                            <span class="tool-tag">Education</span>
+                            <span class="tool-tag">Explore</span>
+                        </div>
+                        <div class="visit-btn">Start Using</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-title">🎲 Random Tools Hub</h3>
+            <p class="footer-description">
+                We are committed to providing the best random generation tools to help users make quick decisions and inspire creative inspiration.
+                Each tool is carefully designed to be simple and powerful.
+            </p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <a href="#" class="footer-link">Contact Us</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #999;">
+                © 2025 Random Tools Hub. Make randomness fun!
+            </p>
+        </div>
+    </footer>
+</body>
+</html> 

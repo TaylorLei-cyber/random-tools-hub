@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Random Number Generator - Random Number Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Navigation bar styles */
+        .header {
+            background: white;
+            box-shadow: none;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+            padding: 8px 0;
+            margin: 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 16px;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+        
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+
+        /* Reference RandomGenerate.io design style */
+        body {
+            background: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .single-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            font-weight: 500;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255,255,255,1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .main-content {
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        .number-generator {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+        }
+        
+        .number-display-large {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 30px 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 2px dashed #e9ecef;
+        }
+        
+        .generate-btn-large {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+        
+        .generate-btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .range-selector {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        
+        .range-input {
+            padding: 10px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 100px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .range-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .range-label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .result-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f4fd;
+            border-radius: 8px;
+            color: #0c5460;
+            font-weight: 500;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/MyGenTool.svg" alt="MyGenTool" style="height: 35px; width: auto;">
+                    <span style="margin-left: 10px; font-weight: 600; font-size: 1.2rem; color: #333;">MyGenTool</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="random-bible-verse.html">Random Bible Verse Generator</a></li>
+                    <li><a href="random-animal.html">Random Animal Generator</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">All Tools ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="random-number.html">Random Number Generator</a></li>
+                            <li><a href="random-color.html">Random Color Generator</a></li>
+                            <li><a href="random-password.html">Random Password Generator</a></li>
+                            <li><a href="random-food.html">Random Food Generator</a></li>
+                            <li><a href="random-travel.html">Random Travel Generator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    
+    <div class="single-page">
+        <div class="main-content">
+            <header>
+                <h1>🎯 Random Number Generator</h1>
+                <p>Generate random numbers within a specified range</p>
+            </header>
+            
+            <div class="number-generator">
+                <div class="range-selector">
+                    <label class="range-label">Min:</label>
+                    <input type="number" id="minValue" class="range-input" value="1" min="0" max="9999">
+                    <label class="range-label">Max:</label>
+                    <input type="number" id="maxValue" class="range-input" value="100" min="1" max="9999">
+                </div>
+                
+                <button class="generate-btn-large" onclick="generateRandomNumber()">Generate Random Number</button>
+                
+                <div class="number-display-large" id="number-result">
+                    Click button to generate random number
+                </div>
+                
+                <div class="result-info">
+                    <p>Current range: <span id="current-range">1 - 100</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateRandomNumber() {
+            const min = parseInt(document.getElementById('minValue').value) || 1;
+            const max = parseInt(document.getElementById('maxValue').value) || 100;
+            
+            // Ensure minimum value is less than maximum value
+            if (min >= max) {
+                alert('Minimum value must be less than maximum value!');
+                return;
+            }
+            
+            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            const resultElement = document.getElementById('number-result');
+            
+            resultElement.innerHTML = `
+                <span class="number-value">${randomNumber}</span>
+            `;
+            
+            // Update current range display
+            document.getElementById('current-range').textContent = `${min} - ${max}`;
+            
+            // Add animation effect
+            resultElement.style.animation = 'fadeIn 0.5s ease-in-out';
+            setTimeout(() => {
+                resultElement.style.animation = '';
+            }, 500);
+        }
+        
+        // Listen for input changes, update range display in real-time
+        document.getElementById('minValue').addEventListener('input', updateRange);
+        document.getElementById('maxValue').addEventListener('input', updateRange);
+        
+        function updateRange() {
+            const min = document.getElementById('minValue').value || 1;
+            const max = document.getElementById('maxValue').value || 100;
+            document.getElementById('current-range').textContent = `${min} - ${max}`;
+        }
+    </script>
+</body>
+</html> 
