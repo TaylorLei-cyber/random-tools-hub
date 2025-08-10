@@ -24,31 +24,31 @@
       "destination": "/index.html"
     },
     {
-      "source": "/random-number",
+      "source": "/random-number-generator",
       "destination": "/random-number.html"
     },
     {
-      "source": "/random-color",
+      "source": "/random-color-generator",
       "destination": "/random-color.html"
     },
     {
-      "source": "/random-password",
+      "source": "/random-password-generator",
       "destination": "/random-password.html"
     },
     {
-      "source": "/random-food",
+      "source": "/random-food-generator",
       "destination": "/random-food.html"
     },
     {
-      "source": "/random-travel",
+      "source": "/random-travel-generator",
       "destination": "/random-travel.html"
     },
     {
-      "source": "/random-animal",
+      "source": "/random-animal-generator",
       "destination": "/random-animal.html"
     },
     {
-      "source": "/random-bible-verse",
+      "source": "/random-bible-verse-generator",
       "destination": "/random-bible-verse.html"
     }
   ],
