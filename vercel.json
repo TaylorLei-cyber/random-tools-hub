@@ -18,6 +18,40 @@
       "use": "@vercel/static"
     }
   ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/random-number",
+      "destination": "/random-number.html"
+    },
+    {
+      "source": "/random-color",
+      "destination": "/random-color.html"
+    },
+    {
+      "source": "/random-password",
+      "destination": "/random-password.html"
+    },
+    {
+      "source": "/random-food",
+      "destination": "/random-food.html"
+    },
+    {
+      "source": "/random-travel",
+      "destination": "/random-travel.html"
+    },
+    {
+      "source": "/random-animal",
+      "destination": "/random-animal.html"
+    },
+    {
+      "source": "/random-bible-verse",
+      "destination": "/random-bible-verse.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
