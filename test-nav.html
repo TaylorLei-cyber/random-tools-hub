@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动端导航测试</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding-top: 100px;
+            background: #f8f9fa;
+        }
+        .test-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .test-info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .test-button {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="/" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/MyGenTool.svg" alt="MyGenTool" style="height: 35px; width: auto;">
+                    <span style="margin-left: 10px; font-weight: 600; font-size: 1.2rem; color: #333;">MyGenTool</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/random-bible-verse-generator">Random Bible Verse Generator</a></li>
+                    <li><a href="/random-animal-generator">Random Animal Generator</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">All Tools</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/random-number-generator">Random Number Generator</a></li>
+                            <li><a href="/random-color-generator">Random Color Generator</a></li>
+                            <li><a href="/random-password-generator">Random Password Generator</a></li>
+                            <li><a href="/random-food-generator">Random Food Generator</a></li>
+                            <li><a href="/random-travel-generator">Random Travel Generator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="test-content">
+        <div class="test-info">
+            <h2>移动端导航测试页面</h2>
+            <p>请将浏览器窗口调整到移动端尺寸（宽度小于768px）来测试移动端导航功能。</p>
+            <p>测试步骤：</p>
+            <ol>
+                <li>点击右上角的汉堡菜单按钮</li>
+                <li>点击"All Tools"下拉菜单</li>
+                <li>测试各种交互功能</li>
+            </ol>
+        </div>
+        
+        <div>
+            <button class="test-button" onclick="testNavToggle()">测试导航切换</button>
+            <button class="test-button" onclick="testDropdownToggle()">测试下拉菜单</button>
+            <button class="test-button" onclick="resetNav()">重置导航状态</button>
+        </div>
+        
+        <div id="test-results" style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+            <h3>测试结果：</h3>
+            <div id="results-content">等待测试...</div>
+        </div>
+    </div>
+
+    <script src="mobile-nav.js"></script>
+    <script>
+        function testNavToggle() {
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileNavToggle && navMenu) {
+                mobileNavToggle.click();
+                updateResults('导航切换测试完成');
+            } else {
+                updateResults('错误：找不到导航元素');
+            }
+        }
+        
+        function testDropdownToggle() {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (dropdownToggle && dropdown) {
+                const isActive = dropdown.classList.contains('active');
+                updateResults(`测试前下拉菜单状态: ${isActive ? '展开' : '收起'}`);
+                
+                dropdownToggle.click();
+                
+                setTimeout(() => {
+                    const newIsActive = dropdown.classList.contains('active');
+                    updateResults(`测试后下拉菜单状态: ${newIsActive ? '展开' : '收起'}`);
+                    updateResults('下拉菜单测试完成');
+                }, 100);
+            } else {
+                updateResults('错误：找不到下拉菜单元素');
+            }
+        }
+        
+        function resetNav() {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (navMenu) navMenu.classList.remove('active');
+            if (mobileNavToggle) mobileNavToggle.classList.remove('active');
+            if (dropdown) dropdown.classList.remove('active');
+            
+            updateResults('导航状态已重置');
+        }
+        
+        function updateResults(message) {
+            const resultsContent = document.getElementById('results-content');
+            const timestamp = new Date().toLocaleTimeString();
+            resultsContent.innerHTML += `<p>[${timestamp}] ${message}</p>`;
+        }
+        
+        // 页面加载完成后的检查
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdown = document.querySelector('.dropdown');
+            
+            updateResults('页面加载完成');
+            updateResults(`移动端导航按钮: ${mobileNavToggle ? '找到' : '未找到'}`);
+            updateResults(`导航菜单: ${navMenu ? '找到' : '未找到'}`);
+            updateResults(`下拉菜单按钮: ${dropdownToggle ? '找到' : '未找到'}`);
+            updateResults(`下拉菜单: ${dropdown ? '找到' : '未找到'}`);
+        });
+    </script>
+</body>
+</html> 

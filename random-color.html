@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎨 Random Color Generator - Random Color Generator</title>
+    <title>🎨 Random Color Generator - Free Online Color Generator Tool</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Navigation bar styles */
@@ -184,9 +184,9 @@
             /* 移动端导航 - 右对齐下拉菜单 */
             .nav-menu {
                 display: none;
-                position: absolute;
-                top: 100%;
-                right: 0;
+                position: fixed;
+                top: 70px;
+                right: 20px;
                 width: 200px;
                 background: white;
                 border: 1px solid #e9ecef;
@@ -233,22 +233,49 @@
             }
             
             .dropdown-toggle {
-                display: none;
+                display: block;
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+                text-decoration: none;
+                border-bottom: 1px solid #f0f0f0;
+                cursor: pointer;
+            }
+            
+            .dropdown-toggle::after {
+                content: '▼';
+                font-size: 0.8rem;
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+                color: #666;
+            }
+            
+            .dropdown.active .dropdown-toggle::after {
+                content: '▲';
+                transform: rotate(180deg);
             }
             
             .dropdown-menu {
                 position: static;
-                opacity: 1;
-                visibility: visible;
+                opacity: 0;
+                visibility: hidden;
                 transform: none;
-                background: transparent;
+                background: #f8f9fa;
                 border: none;
                 box-shadow: none;
                 min-width: auto;
                 padding: 0;
                 margin: 0;
-                max-height: none;
-                overflow: visible;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                max-height: 300px;
             }
             
             .dropdown-menu li {
@@ -268,7 +295,7 @@
             }
             
             .dropdown-menu a:hover {
-                background: #f8f9fa;
+                background: #e9ecef;
                 color: #667eea;
             }
             
@@ -397,145 +424,7 @@
             margin-top: 80px;
         }
         
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-        
-        .header p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        .back-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            background: rgba(255,255,255,0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .back-btn:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-        }
-        
-        .main-content {
-            max-width: 600px;
-            width: 90%;
-        }
-        
-        .color-generator {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        }
-        
-        .color-display-large {
-            margin: 30px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .color-preview-large {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .color-preview-large:hover {
-            transform: scale(1.1);
-        }
-        
-        .color-info-large {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .color-hex-large {
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: #333;
-            padding: 10px 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .color-hex-large:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-        }
-        
-        .color-rgb-large {
-            font-family: 'Courier New', monospace;
-            font-size: 1.1rem;
-            color: #666;
-        }
-        
-        .generate-btn-large {
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 20px 0;
-        }
-        
-        .generate-btn-large:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-        }
-        
-        .color-history {
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .history-color {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .history-color:hover {
-            transform: scale(1.2);
-        }
-
-        .nav-menu.active {
-            display: flex;
-            opacity: 1;
-            visibility: visible;
-        }
+        /* 使用全局CSS中的标题样式 */
     </style>
 </head>
 <body>
@@ -568,11 +457,11 @@
                     <li class="mobile-only"><a href="/random-food-generator">Random Food Generator</a></li>
                     <li class="mobile-only"><a href="/random-travel-generator">Random Travel Generator</a></li>
                 </ul>
-                <div class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <button class="mobile-nav-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -583,12 +472,15 @@
         <div class="main-content">
             <header>
                 <h1>🎨 Random Color Generator</h1>
-                <p>Generate random colors and their color values</p>
+                <h2>Generate Random Colors with HEX & RGB Values</h2>
+                <p>Create beautiful random colors for your design projects</p>
             </header>
             
             <div class="color-generator">
+                <h3>Color Generation</h3>
                 <button class="generate-btn-large" onclick="generateRandomColor()">Generate Random Color</button>
                 
+                <h3>Generated Color</h3>
                 <div class="color-display-large" id="color-result">
                     <div class="color-preview-large" style="background-color: #f0f0f0;"></div>
                     <div class="color-info-large">
@@ -596,6 +488,7 @@
                     </div>
                 </div>
                 
+                <h3>Color History</h3>
                 <div class="color-history" id="color-history">
                     <p style="width: 100%; color: #666; margin-bottom: 10px;">Recently generated colors:</p>
                 </div>
@@ -696,16 +589,9 @@
         
         // Mobile navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const mobileNavToggle = document.getElementById('mobile-nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (mobileNavToggle && navMenu) {
-                mobileNavToggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    mobileNavToggle.classList.toggle('active');
-                });
-            }
+            // 颜色生成器特定的JavaScript代码
         });
     </script>
+    <script src="mobile-nav.js"></script>
 </body>
 </html> 

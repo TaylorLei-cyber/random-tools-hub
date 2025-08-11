@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎯 Random Number Generator - Random Number Generator</title>
+    <title>🎯 Random Number Generator - Free Online Number Generator Tool</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Navigation bar styles */
@@ -180,9 +180,9 @@
             /* 移动端导航 - 右对齐下拉菜单 */
             .nav-menu {
                 display: none;
-                position: absolute;
-                top: 100%;
-                right: 0;
+                position: fixed;
+                top: 70px;
+                right: 20px;
                 width: 200px;
                 background: white;
                 border: 1px solid #e9ecef;
@@ -229,22 +229,49 @@
             }
             
             .dropdown-toggle {
-                display: none;
+                display: block;
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+                text-decoration: none;
+                border-bottom: 1px solid #f0f0f0;
+                cursor: pointer;
+            }
+            
+            .dropdown-toggle::after {
+                content: '▼';
+                font-size: 0.8rem;
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+                color: #666;
+            }
+            
+            .dropdown.active .dropdown-toggle::after {
+                content: '▲';
+                transform: rotate(180deg);
             }
             
             .dropdown-menu {
                 position: static;
-                opacity: 1;
-                visibility: visible;
+                opacity: 0;
+                visibility: hidden;
                 transform: none;
-                background: transparent;
+                background: #f8f9fa;
                 border: none;
                 box-shadow: none;
                 min-width: auto;
                 padding: 0;
                 margin: 0;
-                max-height: none;
-                overflow: visible;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                max-height: 300px;
             }
             
             .dropdown-menu li {
@@ -264,7 +291,7 @@
             }
             
             .dropdown-menu a:hover {
-                background: #f8f9fa;
+                background: #e9ecef;
                 color: #667eea;
             }
             
@@ -492,19 +519,7 @@
             font-weight: 500;
         }
         
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-        
-        .header p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
+        /* 使用全局CSS中的标题样式 */
     </style>
 </head>
 <body>
@@ -531,11 +546,11 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <button class="mobile-nav-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -546,10 +561,12 @@
         <div class="main-content">
             <header>
                 <h1>🎯 Random Number Generator</h1>
-                <p>Generate random numbers within a specified range</p>
+                <h2>Generate Random Numbers Within Custom Range</h2>
+                <p>Create random numbers between any minimum and maximum values you specify</p>
             </header>
             
             <div class="number-generator">
+                <h3>Number Range Settings</h3>
                 <div class="range-selector">
                     <label class="range-label">Min:</label>
                     <input type="number" id="minValue" class="range-input" value="1" min="0" max="9999">
@@ -559,6 +576,7 @@
                 
                 <button class="generate-btn-large" onclick="generateRandomNumber()">Generate Random Number</button>
                 
+                <h3>Generated Result</h3>
                 <div class="number-display-large" id="number-result">
                     Click button to generate random number
                 </div>
@@ -570,6 +588,7 @@
         </div>
     </div>
 
+    <script src="mobile-nav.js"></script>
     <script>
         function generateRandomNumber() {
             const min = parseInt(document.getElementById('minValue').value) || 1;
@@ -607,19 +626,6 @@
             const max = document.getElementById('maxValue').value || 100;
             document.getElementById('current-range').textContent = `${min} - ${max}`;
         }
-        
-        // Mobile navigation functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileNavToggle = document.getElementById('mobile-nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (mobileNavToggle && navMenu) {
-                mobileNavToggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    mobileNavToggle.classList.toggle('active');
-                });
-            }
-        });
     </script>
 </body>
 </html> 

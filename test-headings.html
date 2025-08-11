@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题大小测试</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .size-info {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>这是H1标题 - 测试字体大小</h1>
+    <div class="size-info">H1 字体大小: <span id="h1-size"></span></div>
+    
+    <h2>这是H2标题 - 测试字体大小</h2>
+    <div class="size-info">H2 字体大小: <span id="h2-size"></span></div>
+    
+    <h3>这是H3标题 - 测试字体大小</h3>
+    <div class="size-info">H3 字体大小: <span id="h3-size"></span></div>
+    
+    <div class="test-section">
+        <h2>H2标题示例</h2>
+        <p>这是一个段落，用来测试H2标题的显示效果。</p>
+    </div>
+    
+    <div class="test-section">
+        <h3>H3标题示例</h3>
+        <p>这是一个段落，用来测试H3标题的显示效果。</p>
+    </div>
+
+    <script>
+        // 获取并显示标题的字体大小
+        function updateSizes() {
+            const h1 = document.querySelector('h1');
+            const h2 = document.querySelector('h2');
+            const h3 = document.querySelector('h3');
+            
+            const h1Size = window.getComputedStyle(h1).fontSize;
+            const h2Size = window.getComputedStyle(h2).fontSize;
+            const h3Size = window.getComputedStyle(h3).fontSize;
+            
+            document.getElementById('h1-size').textContent = h1Size;
+            document.getElementById('h2-size').textContent = h2Size;
+            document.getElementById('h3-size').textContent = h3Size;
+        }
+        
+        // 页面加载时更新
+        updateSizes();
+        
+        // 窗口大小改变时更新
+        window.addEventListener('resize', updateSizes);
+    </script>
+</body>
+</html> 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///Users/leicong/Desktop/random-generator/random-animal.html -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🦁 Random Animal Generator - Random Animal Generator</title>
     <link rel="stylesheet" href="style.css">
@@ -510,9 +510,9 @@
             /* 移动端导航 - 右对齐下拉菜单 */
             .nav-menu {
                 display: none;
-                position: absolute;
-                top: 100%;
-                right: 0;
+                position: fixed;
+                top: 70px;
+                right: 20px;
                 width: 200px;
                 background: white;
                 border: 1px solid #e9ecef;
@@ -559,22 +559,49 @@
             }
             
             .dropdown-toggle {
-                display: none;
+                display: block;
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+                text-decoration: none;
+                border-bottom: 1px solid #f0f0f0;
+                cursor: pointer;
+            }
+            
+            .dropdown-toggle::after {
+                content: '▼';
+                font-size: 0.8rem;
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+                color: #666;
+            }
+            
+            .dropdown.active .dropdown-toggle::after {
+                content: '▲';
+                transform: rotate(180deg);
             }
             
             .dropdown-menu {
                 position: static;
-                opacity: 1;
-                visibility: visible;
+                opacity: 0;
+                visibility: hidden;
                 transform: none;
-                background: transparent;
+                background: #f8f9fa;
                 border: none;
                 box-shadow: none;
                 min-width: auto;
                 padding: 0;
                 margin: 0;
-                max-height: none;
-                overflow: visible;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                max-height: 300px;
             }
             
             .dropdown-menu li {
@@ -594,7 +621,7 @@
             }
             
             .dropdown-menu a:hover {
-                background: #f8f9fa;
+                background: #e9ecef;
                 color: #667eea;
             }
             
@@ -768,11 +795,11 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <button class="mobile-nav-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -947,8 +974,8 @@
                         What types of animals can I expect to see with the generator?
                         <span class="faq-arrow">▼</span>
                     </div>
-                    <div class="faq-answer">Our database includes a wide variety of animals from different categories:</div>
                     <div class="faq-answer">
+                        Our database includes a wide variety of animals from different categories:
                         <ul>
                             <li>Mammals (lions, elephants, dolphins, etc.)</li>
                             <li>Birds (eagles, penguins, parrots, etc.)</li>
@@ -1082,31 +1109,11 @@
             });
         });
 
-        // Mobile navigation functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileNavToggle = document.getElementById('mobile-nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (mobileNavToggle && navMenu) {
-                mobileNavToggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    mobileNavToggle.classList.toggle('active');
-                });
-            }
-        });
-        
         // 移动端下拉菜单功能
         document.addEventListener('DOMContentLoaded', function() {
-            const dropdownToggle = document.querySelector('.dropdown-toggle');
-            const dropdown = document.querySelector('.dropdown');
-            
-            if (dropdownToggle && dropdown) {
-                dropdownToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
-                });
-            }
+            // 动物生成器特定的JavaScript代码
         });
     </script>
+    <script src="mobile-nav.js"></script>
 
  </body></html>

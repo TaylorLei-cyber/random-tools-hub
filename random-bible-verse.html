@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0070)file:///Users/leicong/Desktop/random-generator/random-bible-verse.html -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📖 Random Bible Verse Generator - Random Bible Verse Generator</title>
     <link rel="stylesheet" href="style.css">
@@ -467,9 +467,9 @@
             /* 移动端导航 - 右对齐下拉菜单 */
             .nav-menu {
                 display: none;
-                position: absolute;
-                top: 100%;
-                right: 0;
+                position: fixed;
+                top: 70px;
+                right: 20px;
                 width: 200px;
                 background: white;
                 border: 1px solid #e9ecef;
@@ -516,22 +516,49 @@
             }
             
             .dropdown-toggle {
-                display: none;
+                display: block;
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+                text-decoration: none;
+                border-bottom: 1px solid #f0f0f0;
+                cursor: pointer;
+            }
+            
+            .dropdown-toggle::after {
+                content: '▼';
+                font-size: 0.8rem;
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+                color: #666;
+            }
+            
+            .dropdown.active .dropdown-toggle::after {
+                content: '▲';
+                transform: rotate(180deg);
             }
             
             .dropdown-menu {
                 position: static;
-                opacity: 1;
-                visibility: visible;
+                opacity: 0;
+                visibility: hidden;
                 transform: none;
-                background: transparent;
+                background: #f8f9fa;
                 border: none;
                 box-shadow: none;
                 min-width: auto;
                 padding: 0;
                 margin: 0;
-                max-height: none;
-                overflow: visible;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                max-height: 300px;
             }
             
             .dropdown-menu li {
@@ -551,7 +578,7 @@
             }
             
             .dropdown-menu a:hover {
-                background: #f8f9fa;
+                background: #e9ecef;
                 color: #667eea;
             }
             
@@ -734,11 +761,11 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <button class="mobile-nav-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -1007,13 +1034,9 @@
         // Generate initial verses when page loads
         document.addEventListener('DOMContentLoaded', generateVerses);
 
-        // Mobile navigation toggle
-        const mobileNavToggle = document.getElementById('mobile-nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        mobileNavToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            mobileNavToggle.classList.toggle('active');
+        // 移动端下拉菜单功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 圣经经文生成器特定的JavaScript代码
         });
         
         // FAQ collapse functionality
@@ -1037,5 +1060,6 @@
             });
         });
     </script>
+    <script src="mobile-nav.js"></script>
 
  </body></html>
