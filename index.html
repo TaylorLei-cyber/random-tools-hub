@@ -330,6 +330,16 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
         
+        /* Mobile-only elements */
+        .mobile-only {
+            display: none;
+        }
+        
+        /* Desktop-only elements */
+        .dropdown {
+            display: block;
+        }
+        
         /* Responsive design */
         @media (max-width: 1200px) {
             .tools-grid {
@@ -387,6 +397,20 @@
             .nav-menu li:nth-child(2) { transition-delay: 0.2s; }
             .nav-menu li:nth-child(3) { transition-delay: 0.3s; }
             .nav-menu li:nth-child(4) { transition-delay: 0.4s; }
+            .nav-menu li:nth-child(5) { transition-delay: 0.5s; }
+            .nav-menu li:nth-child(6) { transition-delay: 0.6s; }
+            .nav-menu li:nth-child(7) { transition-delay: 0.7s; }
+            .nav-menu li:nth-child(8) { transition-delay: 0.8s; }
+            .nav-menu li:nth-child(9) { transition-delay: 0.9s; }
+            
+            /* 移动端显示所有工具链接，隐藏下拉菜单 */
+            .mobile-only {
+                display: block;
+            }
+            
+            .dropdown {
+                display: none;
+            }
             
             .dropdown-menu {
                 position: static;
@@ -551,6 +575,12 @@
                             <li><a href="/random-travel-generator">Random Travel Generator</a></li>
                         </ul>
                     </li>
+                    <!-- 移动端直接显示的工具链接 -->
+                    <li class="mobile-only"><a href="/random-number-generator">Random Number Generator</a></li>
+                    <li class="mobile-only"><a href="/random-color-generator">Random Color Generator</a></li>
+                    <li class="mobile-only"><a href="/random-password-generator">Random Password Generator</a></li>
+                    <li class="mobile-only"><a href="/random-food-generator">Random Food Generator</a></li>
+                    <li class="mobile-only"><a href="/random-travel-generator">Random Travel Generator</a></li>
                 </ul>
                 <button class="mobile-nav-toggle" aria-label="Toggle menu">
                     <span></span>
