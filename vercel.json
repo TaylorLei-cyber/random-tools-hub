@@ -18,6 +18,43 @@
       "use": "@vercel/static"
     }
   ],
+  "redirects": [
+    {
+      "source": "/random-number.html",
+      "destination": "/random-number-generator",
+      "permanent": true
+    },
+    {
+      "source": "/random-color.html",
+      "destination": "/random-color-generator",
+      "permanent": true
+    },
+    {
+      "source": "/random-password.html",
+      "destination": "/random-password-generator",
+      "permanent": true
+    },
+    {
+      "source": "/random-food.html",
+      "destination": "/random-food-generator",
+      "permanent": true
+    },
+    {
+      "source": "/random-travel.html",
+      "destination": "/random-travel-generator",
+      "permanent": true
+    },
+    {
+      "source": "/random-animal.html",
+      "destination": "/random-animal-generator",
+      "permanent": true
+    },
+    {
+      "source": "/random-bible-verse.html",
+      "destination": "/random-bible-verse-generator",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
