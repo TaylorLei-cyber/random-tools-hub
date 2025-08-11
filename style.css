@@ -206,13 +206,14 @@ h3 {
         transform: translateY(0);
     }
     
-    /* 桌面端下拉菜单横向布局 */
+    /* 桌面端下拉菜单与文字右侧对齐 */
     .dropdown-menu {
         right: 0;
         left: auto;
         flex-direction: column;
         min-width: 280px;
         max-width: 350px;
+        transform-origin: top right;
     }
     
     .dropdown-menu li {
