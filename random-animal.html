@@ -444,29 +444,139 @@
             .nav {
                 flex-direction: column;
                 gap: 15px;
+                padding: 15px 0;
             }
             
             .nav-menu {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 15px;
+                font-size: 0.9rem;
+            }
+            
+            .dropdown-menu {
+                min-width: 180px;
+            }
+            
+            .hero {
+                padding: 30px 20px;
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .button-container {
+                margin-top: 30px;
+            }
+            
+            .generate-btn {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .animal-display {
+                margin: 25px 0;
+            }
+            
+            .animal-name {
+                font-size: 1.8rem;
+                padding: 15px;
+            }
+            
+            .container {
+                padding: 0 20px;
             }
             
             .section-title {
                 font-size: 2rem;
             }
             
-            .features-grid {
-                grid-template-columns: 1fr;
+            .section-content > div {
+                flex-direction: column;
+                gap: 20px;
+                margin-bottom: 40px;
             }
             
-            .feature-item {
-                flex-direction: column;
-                text-align: center;
+            .section-content > div > div {
+                flex: 1;
+            }
+            
+            .section-content h3 {
+                font-size: 1.6rem;
+            }
+            
+            .section-content p {
+                font-size: 1rem;
+            }
+            
+            .section-content img {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .nav-menu {
+                gap: 10px;
+                font-size: 0.85rem;
+            }
+            
+            .hero {
+                padding: 25px 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .button-container {
+                margin-top: 25px;
+            }
+            
+            .generate-btn {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+            
+            .animal-display {
+                margin: 20px 0;
+            }
+            
+            .animal-name {
+                font-size: 1.5rem;
+                padding: 12px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-content h3 {
+                font-size: 1.4rem;
+            }
+            
+            .section-content p {
+                font-size: 0.95rem;
+            }
+            
+            .section-content img {
+                height: 200px;
             }
         }
     </style>
