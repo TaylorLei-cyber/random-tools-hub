@@ -861,6 +861,19 @@
             navMenu.classList.toggle('active');
             mobileNavToggle.classList.toggle('active');
         });
+        
+        // 移动端下拉菜单功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                });
+            }
+        });
     </script>
 </body>
 </html> 
