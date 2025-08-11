@@ -675,6 +675,20 @@
                 font-size: 0.95rem;
                 padding: 15px;
             }
+            
+            /* 移动端Why Choose板块布局调整 */
+            .section-content > div[style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            
+            .section-content > div[style*="display: flex"] > div:first-child {
+                order: 1;
+            }
+            
+            .section-content > div[style*="display: flex"] > div:last-child {
+                order: 2;
+            }
         }
         
         @media (max-width: 480px) {
