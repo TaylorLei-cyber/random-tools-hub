@@ -357,6 +357,7 @@
                 display: flex;
             }
             
+            /* 移动端导航重新设计 - 参考现代SaaS平台 */
             .nav-menu {
                 display: none;
                 position: fixed;
@@ -367,13 +368,14 @@
                 background: rgba(255, 255, 255, 0.98);
                 backdrop-filter: blur(10px);
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 80px 40px 40px 40px;
                 z-index: 1000;
                 opacity: 0;
                 visibility: hidden;
                 transition: all 0.3s ease;
+                overflow-y: auto;
             }
             
             .nav-menu.active {
@@ -383,33 +385,66 @@
             }
             
             .nav-menu li {
+                width: 100%;
+                margin: 0;
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateX(-20px);
                 transition: all 0.3s ease;
             }
             
             .nav-menu.active li {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0);
             }
             
             .nav-menu li:nth-child(1) { transition-delay: 0.1s; }
             .nav-menu li:nth-child(2) { transition-delay: 0.2s; }
             .nav-menu li:nth-child(3) { transition-delay: 0.3s; }
             .nav-menu li:nth-child(4) { transition-delay: 0.4s; }
-            .nav-menu li:nth-child(5) { transition-delay: 0.5s; }
-            .nav-menu li:nth-child(6) { transition-delay: 0.6s; }
-            .nav-menu li:nth-child(7) { transition-delay: 0.7s; }
-            .nav-menu li:nth-child(8) { transition-delay: 0.8s; }
-            .nav-menu li:nth-child(9) { transition-delay: 0.9s; }
             
-            /* 移动端显示所有工具链接，隐藏下拉菜单 */
-            .mobile-only {
+            .nav-menu a {
+                display: block;
+                padding: 16px 0;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #333;
+                border-bottom: 1px solid #f0f0f0;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-menu a:hover {
+                color: #667eea;
+                background: transparent;
+            }
+            
+            /* 移动端下拉菜单样式 */
+            .dropdown {
+                width: 100%;
                 display: block;
             }
             
-            .dropdown {
-                display: none;
+            .dropdown-toggle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 16px 0;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #333;
+                border-bottom: 1px solid #f0f0f0;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            
+            .dropdown-toggle::after {
+                content: '▼';
+                font-size: 0.8rem;
+                transition: transform 0.3s ease;
+            }
+            
+            .dropdown.active .dropdown-toggle::after {
+                transform: rotate(180deg);
             }
             
             .dropdown-menu {
@@ -422,23 +457,41 @@
                 box-shadow: none;
                 min-width: auto;
                 padding: 0;
-                margin-top: 15px;
-                text-align: center;
+                margin: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                max-height: 300px;
             }
             
             .dropdown-menu li {
-                margin: 10px 0;
+                margin: 0;
+                opacity: 1;
+                transform: none;
             }
             
             .dropdown-menu a {
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: 500;
                 color: #666;
-                font-size: 0.9rem;
-                padding: 8px 0;
+                border-bottom: none;
+                background: #f8f9fa;
+                margin: 4px 0;
+                border-radius: 8px;
             }
             
             .dropdown-menu a:hover {
-                background: transparent;
+                background: #e9ecef;
                 color: #333;
+            }
+            
+            /* 隐藏移动端专用链接 */
+            .mobile-only {
+                display: none;
             }
             
             .hero-title {
@@ -575,12 +628,6 @@
                             <li><a href="/random-travel-generator">Random Travel Generator</a></li>
                         </ul>
                     </li>
-                    <!-- 移动端直接显示的工具链接 -->
-                    <li class="mobile-only"><a href="/random-number-generator">Random Number Generator</a></li>
-                    <li class="mobile-only"><a href="/random-color-generator">Random Color Generator</a></li>
-                    <li class="mobile-only"><a href="/random-password-generator">Random Password Generator</a></li>
-                    <li class="mobile-only"><a href="/random-food-generator">Random Food Generator</a></li>
-                    <li class="mobile-only"><a href="/random-travel-generator">Random Travel Generator</a></li>
                 </ul>
                 <button class="mobile-nav-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -750,6 +797,19 @@
         mobileNavToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileNavToggle.classList.toggle('active');
+        });
+        
+        // 移动端下拉菜单功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                });
+            }
         });
     </script>
 </body>
