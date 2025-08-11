@@ -159,101 +159,64 @@
                 display: flex;
             }
             
-            /* 移动端导航重新设计 - 右侧覆盖面板 */
+            .nav {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+            }
+            
+            /* 移动端导航 - 全屏覆盖式 */
             .nav-menu {
                 display: none;
                 position: fixed;
                 top: 0;
-                right: 0;
-                width: 60%;
+                left: 0;
+                width: 100%;
                 height: 100vh;
                 background: white;
-                border-left: 1px solid #e9ecef;
                 flex-direction: column;
                 justify-content: flex-start;
-                align-items: flex-start;
-                padding: 80px 30px 40px 30px;
+                align-items: center;
+                padding: 80px 20px 20px 20px;
                 z-index: 1000;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateX(100%);
-                transition: all 0.3s ease;
                 overflow-y: auto;
-                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
             }
             
             .nav-menu.active {
                 display: flex;
-                opacity: 1;
-                visibility: visible;
-                transform: translateX(0);
             }
             
             .nav-menu li {
                 width: 100%;
                 margin: 0;
-                opacity: 0;
-                transform: translateX(20px);
-                transition: all 0.3s ease;
+                text-align: center;
+                border-bottom: 1px solid #f0f0f0;
             }
-            
-            .nav-menu.active li {
-                opacity: 1;
-                transform: translateX(0);
-            }
-            
-            .nav-menu li:nth-child(1) { transition-delay: 0.1s; }
-            .nav-menu li:nth-child(2) { transition-delay: 0.2s; }
-            .nav-menu li:nth-child(3) { transition-delay: 0.3s; }
-            .nav-menu li:nth-child(4) { transition-delay: 0.4s; }
             
             .nav-menu a {
                 display: block;
-                padding: 16px 0;
+                padding: 20px;
                 font-size: 1.2rem;
-                font-weight: 600;
+                font-weight: 500;
                 color: #333;
-                border-bottom: 1px solid #f0f0f0;
                 text-decoration: none;
                 transition: all 0.3s ease;
             }
             
             .nav-menu a:hover {
                 color: #667eea;
-                background: transparent;
+                background: #f8f9fa;
             }
             
-            /* 移动端下拉菜单样式 */
+            /* 移动端隐藏下拉菜单，直接显示所有工具链接 */
             .dropdown {
                 width: 100%;
                 display: block;
             }
             
             .dropdown-toggle {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 16px 0;
-                font-size: 1.2rem;
-                font-weight: 600;
-                color: #333;
-                border-bottom: 1px solid #f0f0f0;
-                cursor: pointer;
-                text-decoration: none;
-                gap: 8px; /* Added gap between text and triangle */
-            }
-            
-            .dropdown-toggle::after {
-                content: '▼';
-                font-size: 0.8rem;
-                transition: transform 0.3s ease;
-                color: #666;
-                margin-left: auto; /* Push triangle to the right */
-            }
-            
-            .dropdown.active .dropdown-toggle::after {
-                content: '▲';
-                transform: none;
+                display: none;
             }
             
             .dropdown-menu {
@@ -267,26 +230,19 @@
                 min-width: auto;
                 padding: 0;
                 margin: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-            }
-            
-            .dropdown.active .dropdown-menu {
-                max-height: 300px;
+                max-height: none;
+                overflow: visible;
             }
             
             .dropdown-menu li {
-                margin: 0;
-                opacity: 1;
-                transform: none;
+                border-bottom: 1px solid #f0f0f0;
             }
             
             .dropdown-menu a {
-                padding: 12px 20px;
-                font-size: 1rem;
+                padding: 20px;
+                font-size: 1.2rem;
                 font-weight: 500;
-                color: #666;
+                color: #333;
                 border-bottom: none;
                 background: transparent;
                 margin: 0;
@@ -296,12 +252,7 @@
             
             .dropdown-menu a:hover {
                 background: #f8f9fa;
-                color: #333;
-            }
-            
-            /* 隐藏移动端专用链接 */
-            .mobile-only {
-                display: none;
+                color: #667eea;
             }
             
             .single-page {
@@ -324,9 +275,9 @@
                 font-size: 1rem;
             }
             
-            .travel-name-large {
-                font-size: 1.6rem;
-                padding: 15px;
+            .travel-display-large {
+                font-size: 2.5rem;
+                min-height: 60px;
             }
             
             .generate-btn-large {
@@ -334,13 +285,15 @@
                 font-size: 1.1rem;
             }
             
-            .region-filter {
-                gap: 8px;
+            .continent-selector {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
             }
             
-            .region-btn {
-                padding: 6px 12px;
-                font-size: 0.85rem;
+            .continent-btn {
+                width: 100%;
+                padding: 12px;
             }
         }
         

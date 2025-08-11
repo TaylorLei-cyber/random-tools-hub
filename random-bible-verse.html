@@ -464,48 +464,40 @@
                 padding: 10px 0;
             }
             
+            /* 移动端导航 - 全屏覆盖式 */
             .nav-menu {
                 display: none;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                width: 200px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
                 background: white;
-                border: 1px solid #e9ecef;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
                 flex-direction: column;
                 justify-content: flex-start;
-                align-items: flex-start;
-                padding: 10px 0;
+                align-items: center;
+                padding: 80px 20px 20px 20px;
                 z-index: 1000;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(-10px);
-                transition: all 0.3s ease;
+                overflow-y: auto;
             }
             
             .nav-menu.active {
                 display: flex;
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
             }
             
             .nav-menu li {
                 width: 100%;
                 margin: 0;
-                opacity: 1;
-                transform: none;
+                text-align: center;
+                border-bottom: 1px solid #f0f0f0;
             }
             
             .nav-menu a {
                 display: block;
-                padding: 12px 20px;
-                font-size: 1rem;
+                padding: 20px;
+                font-size: 1.2rem;
                 font-weight: 500;
                 color: #333;
-                border-bottom: 1px solid #f0f0f0;
                 text-decoration: none;
                 transition: all 0.3s ease;
             }
@@ -515,36 +507,14 @@
                 background: #f8f9fa;
             }
             
-            /* 移动端下拉菜单样式 */
+            /* 移动端隐藏下拉菜单，直接显示所有工具链接 */
             .dropdown {
                 width: 100%;
                 display: block;
             }
             
             .dropdown-toggle {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 12px 20px;
-                font-size: 1rem;
-                font-weight: 500;
-                color: #333;
-                border-bottom: 1px solid #f0f0f0;
-                cursor: pointer;
-                text-decoration: none;
-                gap: 8px;
-            }
-            
-            .dropdown-toggle::after {
-                content: '▼';
-                font-size: 0.8rem;
-                transition: transform 0.3s ease;
-                color: #666;
-            }
-            
-            .dropdown.active .dropdown-toggle::after {
-                content: '▲';
-                transform: none;
+                display: none;
             }
             
             .dropdown-menu {
@@ -552,32 +522,25 @@
                 opacity: 1;
                 visibility: visible;
                 transform: none;
-                background: #f8f9fa;
+                background: transparent;
                 border: none;
                 box-shadow: none;
                 min-width: auto;
                 padding: 0;
                 margin: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-            }
-            
-            .dropdown.active .dropdown-menu {
-                max-height: 300px;
+                max-height: none;
+                overflow: visible;
             }
             
             .dropdown-menu li {
-                margin: 0;
-                opacity: 1;
-                transform: none;
+                border-bottom: 1px solid #f0f0f0;
             }
             
             .dropdown-menu a {
-                padding: 10px 20px 10px 40px;
-                font-size: 0.9rem;
-                font-weight: 400;
-                color: #666;
+                padding: 20px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: #333;
                 border-bottom: none;
                 background: transparent;
                 margin: 0;
@@ -586,13 +549,8 @@
             }
             
             .dropdown-menu a:hover {
-                background: #e9ecef;
-                color: #333;
-            }
-            
-            /* 隐藏移动端专用链接 */
-            .mobile-only {
-                display: none;
+                background: #f8f9fa;
+                color: #667eea;
             }
             
             .hero {
@@ -1047,6 +1005,15 @@
         // Generate initial verses when page loads
         document.addEventListener('DOMContentLoaded', generateVerses);
 
+        // Mobile navigation toggle
+        const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileNavToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileNavToggle.classList.toggle('active');
+        });
+        
         // FAQ collapse functionality
         document.addEventListener('DOMContentLoaded', function() {
             const faqItems = document.querySelectorAll('.faq-item');
@@ -1066,28 +1033,6 @@
                     item.classList.toggle('active');
                 });
             });
-        });
-
-        // Mobile navigation toggle
-        const mobileNavToggle = document.getElementById('mobile-nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        mobileNavToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            mobileNavToggle.classList.toggle('active');
-        });
-        
-        // 移动端下拉菜单功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdownToggle = document.querySelector('.dropdown-toggle');
-            const dropdown = document.querySelector('.dropdown');
-            
-            if (dropdownToggle && dropdown) {
-                dropdownToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
-                });
-            }
         });
     </script>
 
