@@ -451,6 +451,10 @@
         
         /* Responsive design */
         @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: flex;
+            }
+            
             .nav {
                 flex-direction: column;
                 gap: 15px;
@@ -780,11 +784,11 @@
                         </ul>
                     </li>
                 </ul>
-                <button class="mobile-nav-toggle" aria-label="Toggle menu">
+                <div class="mobile-nav-toggle" id="mobile-nav-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
-                </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -1075,7 +1079,7 @@
         });
 
         // Mobile navigation toggle
-        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mobileNavToggle = document.getElementById('mobile-nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
 
         mobileNavToggle.addEventListener('click', function() {
