@@ -689,6 +689,15 @@
             .section-content > div[style*="display: flex"] > div:last-child {
                 order: 2;
             }
+            
+            /* 确保文字内容始终在上方 */
+            .section-content > div[style*="display: flex"] > div[style*="text-align: left"] {
+                order: 1 !important;
+            }
+            
+            .section-content > div[style*="display: flex"] > div:not([style*="text-align: left"]) {
+                order: 2 !important;
+            }
         }
         
         @media (max-width: 480px) {
