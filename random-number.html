@@ -64,6 +64,13 @@
             cursor: pointer;
         }
         
+        .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+            color: #666;
+        }
+        
         .dropdown-menu {
             position: absolute;
             top: 100%;
