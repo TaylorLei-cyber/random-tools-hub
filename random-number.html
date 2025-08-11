@@ -240,10 +240,12 @@
                 content: '▼';
                 font-size: 0.8rem;
                 transition: transform 0.3s ease;
+                color: #666;
             }
             
             .dropdown.active .dropdown-toggle::after {
-                transform: rotate(180deg);
+                content: '▲';
+                transform: none;
             }
             
             .dropdown-menu {
@@ -278,14 +280,18 @@
                 font-weight: 500;
                 color: #666;
                 border-bottom: none;
-                background: #f8f9fa;
-                margin: 4px 0;
-                border-radius: 8px;
+                background: transparent;
+                margin: 0;
+                border-radius: 0;
+                text-indent: 20px;
+                border-left: 2px solid transparent;
+                transition: all 0.3s ease;
             }
             
             .dropdown-menu a:hover {
-                background: #e9ecef;
+                background: #f8f9fa;
                 color: #333;
+                border-left-color: #667eea;
             }
             
             /* 隐藏移动端专用链接 */
