@@ -106,6 +106,36 @@
             color: #333;
         }
         
+        /* Mobile navigation styles */
+        .mobile-nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+        
+        .mobile-nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .mobile-nav-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .mobile-nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-nav-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
         /* Responsive design */
         @media (max-width: 768px) {
             .nav {
@@ -425,6 +455,11 @@
                         </ul>
                     </li>
                 </ul>
+                <div class="mobile-nav-toggle" id="mobile-nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
@@ -599,6 +634,19 @@
                 resultElement.style.animation = '';
             }, 500);
         }
+        
+        // Mobile navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileNavToggle && navMenu) {
+                mobileNavToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    mobileNavToggle.classList.toggle('active');
+                });
+            }
+        });
     </script>
 </body>
 </html> 
