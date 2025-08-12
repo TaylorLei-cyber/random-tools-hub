@@ -333,6 +333,45 @@
                 padding: 15px;
             }
             
+            .options-table {
+                max-width: 100%;
+            }
+            
+            .options-table th,
+            .options-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .option-select {
+                max-width: 150px;
+            }
+            
+            .food-result-card {
+                padding: 20px;
+            }
+            
+            .food-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .food-icon-result {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            
+            .food-name-result {
+                font-size: 1.5rem;
+            }
+            
+            .food-details {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
             .option-group {
                 width: 100%;
                 justify-content: space-between;
@@ -555,36 +594,164 @@
             align-items: center;
         }
         
-        .option-group {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
+        .options-table {
+            width: 100%;
+            max-width: 500px;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .options-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .options-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .options-table tr:last-child td {
+            border-bottom: none;
         }
         
         .option-label {
             font-weight: 600;
             color: #333;
             min-width: 120px;
-            text-align: right;
         }
         
         .option-select {
-            padding: 10px 15px;
+            padding: 8px 12px;
             border: 2px solid #e9ecef;
-            border-radius: 8px;
-            font-size: 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
             background: white;
             cursor: pointer;
             transition: all 0.3s ease;
-            min-width: 150px;
+            width: 100%;
+            max-width: 200px;
         }
         
         .option-select:focus {
             outline: none;
             border-color: #667eea;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        /* 结果卡片样式 */
+        .food-result-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid #f0f0f0;
+        }
+        
+        .food-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .food-icon-result {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .food-info {
+            flex: 1;
+        }
+        
+        .food-name-result {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .food-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .food-tag {
+            background: #f8f9fa;
+            color: #666;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .food-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .detail-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .detail-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .detail-content {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .nutrition-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .nutrition-item:last-child {
+            border-bottom: none;
+        }
+        
+        .nutrition-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .nutrition-value {
+            color: #333;
+            font-weight: 500;
+            font-size: 0.9rem;
         }
         
         .food-history {
@@ -677,25 +844,30 @@
                 </div>
                 
                 <div class="options-selector">
-                    <div class="option-group">
-                        <label class="option-label">Choose Meal Type:</label>
-                        <select class="option-select" id="mealType">
-                            <option value="random">Random</option>
-                            <option value="breakfast">Breakfast</option>
-                            <option value="lunch">Lunch</option>
-                            <option value="dinner">Dinner</option>
-                            <option value="snack">Snacks</option>
-                        </select>
-                    </div>
-                    
-                    <div class="option-group">
-                        <label class="option-label">Choose Lifestyle (Veg/Non-veg):</label>
-                        <select class="option-select" id="lifestyle">
-                            <option value="random">Random</option>
-                            <option value="vegetarian">Vegetarian</option>
-                            <option value="non-vegetarian">Non-Vegetarian</option>
-                        </select>
-                    </div>
+                    <table class="options-table">
+                        <tr>
+                            <th>Choose Meal Type:</th>
+                            <td>
+                                <select class="option-select" id="mealType">
+                                    <option value="random">Random</option>
+                                    <option value="breakfast">Breakfast</option>
+                                    <option value="lunch">Lunch</option>
+                                    <option value="dinner">Dinner</option>
+                                    <option value="snack">Snacks</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Choose Lifestyle (Veg/Non-veg):</th>
+                            <td>
+                                <select class="option-select" id="lifestyle">
+                                    <option value="random">Random</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                    <option value="non-vegetarian">Non-Vegetarian</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 
                 <button class="generate-btn-large" onclick="generateRandomFood()">Generate Food</button>
@@ -734,67 +906,473 @@
         
         // 扩展食物数据库，添加餐点类型和生活方式信息
         const foodDatabase = {
-            'Kung Pao Chicken': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Mapo Tofu': { mealType: 'dinner', lifestyle: 'vegetarian', category: 'chinese' },
-            'Sweet and Sour Pork': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Boiled Fish': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Twice Cooked Pork': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Fish Fragrant Shredded Pork': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Braised Pork': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Xiaolongbao': { mealType: 'breakfast', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Zhajiang Noodles': { mealType: 'lunch', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Lanzhou Hand-Pulled Noodles': { mealType: 'lunch', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Chongqing Hot Pot': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Beijing Roast Duck': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'White Cut Chicken': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Char Siu Bao': { mealType: 'breakfast', lifestyle: 'non-vegetarian', category: 'chinese' },
-            'Fried Rice': { mealType: 'lunch', lifestyle: 'vegetarian', category: 'chinese' },
-            'Sour Fish': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Kung Pao Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 28, carbs: 15, fat: 18 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium'
+            },
+            'Mapo Tofu': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 12, carbs: 8, fat: 12 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy'
+            },
+            'Sweet and Sour Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 22, carbs: 25, fat: 20 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium'
+            },
+            'Boiled Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 35, carbs: 5, fat: 8 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium'
+            },
+            'Twice Cooked Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 350, protein: 25, carbs: 12, fat: 22 },
+                prepTime: '40 minutes',
+                difficulty: 'Hard'
+            },
+            'Fish Fragrant Shredded Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 20, carbs: 10, fat: 18 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium'
+            },
+            'Braised Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 420, protein: 30, carbs: 8, fat: 28 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard'
+            },
+            'Xiaolongbao': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 150, protein: 8, carbs: 20, fat: 5 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard'
+            },
+            'Zhajiang Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 450, protein: 18, carbs: 65, fat: 15 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy'
+            },
+            'Lanzhou Hand-Pulled Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 15, carbs: 60, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Hard'
+            },
+            'Chongqing Hot Pot': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 25, carbs: 12, fat: 16 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium'
+            },
+            'Beijing Roast Duck': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 350, protein: 32, carbs: 5, fat: 22 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard'
+            },
+            'White Cut Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 35, carbs: 2, fat: 8 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium'
+            },
+            'Char Siu Bao': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 10, carbs: 25, fat: 6 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium'
+            },
+            'Fried Rice': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 8, carbs: 55, fat: 8 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy'
+            },
+            'Sour Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 240, protein: 28, carbs: 8, fat: 12 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium'
+            },
             
-            'Spaghetti': { mealType: 'dinner', lifestyle: 'vegetarian', category: 'western' },
-            'Pizza': { mealType: 'dinner', lifestyle: 'vegetarian', category: 'western' },
-            'Hamburger': { mealType: 'lunch', lifestyle: 'non-vegetarian', category: 'western' },
-            'Steak': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
-            'Sandwich': { mealType: 'lunch', lifestyle: 'vegetarian', category: 'western' },
-            'Salad': { mealType: 'lunch', lifestyle: 'vegetarian', category: 'western' },
-            'Sushi': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
-            'Taco': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
-            'Escargot': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
-            'Paella': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
-            'Greek Salad': { mealType: 'lunch', lifestyle: 'vegetarian', category: 'western' },
-            'German Pork Knuckle': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
-            'Swiss Cheese Fondue': { mealType: 'dinner', lifestyle: 'vegetarian', category: 'western' },
-            'Fish and Chips': { mealType: 'lunch', lifestyle: 'non-vegetarian', category: 'western' },
+            'Spaghetti': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 10, carbs: 50, fat: 4 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy'
+            },
+            'Pizza': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 12, carbs: 45, fat: 10 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium'
+            },
+            'Hamburger': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 450, protein: 25, carbs: 35, fat: 22 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy'
+            },
+            'Steak': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 40, carbs: 2, fat: 22 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium'
+            },
+            'Sandwich': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 12, carbs: 40, fat: 8 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy'
+            },
+            'Salad': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 6, carbs: 15, fat: 6 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy'
+            },
+            'Sushi': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 15, carbs: 30, fat: 2 },
+                prepTime: '40 minutes',
+                difficulty: 'Hard'
+            },
+            'Taco': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 18, carbs: 25, fat: 12 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy'
+            },
+            'Escargot': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 20, carbs: 8, fat: 8 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium'
+            },
+            'Paella': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 25, carbs: 35, fat: 10 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium'
+            },
+            'Greek Salad': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 150, protein: 8, carbs: 12, fat: 10 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy'
+            },
+            'German Pork Knuckle': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 580, protein: 45, carbs: 8, fat: 38 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard'
+            },
+            'Swiss Cheese Fondue': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 18, carbs: 8, fat: 25 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium'
+            },
+            'Fish and Chips': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 450, protein: 22, carbs: 45, fat: 20 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium'
+            },
             
-            'Tiramisu': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Macaron': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Cheesecake': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Chocolate Mousse': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Ice Cream': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Pudding': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Egg Tart': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Cream Puff': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Mille Crepe Cake': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Mousse Cake': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Souffle': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Crepe': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
-            'Waffle': { mealType: 'breakfast', lifestyle: 'vegetarian', category: 'dessert' },
-            'Muffin': { mealType: 'breakfast', lifestyle: 'vegetarian', category: 'dessert' },
+            'Tiramisu': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 6, carbs: 35, fat: 12 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium'
+            },
+            'Macaron': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 120, protein: 3, carbs: 18, fat: 5 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard'
+            },
+            'Cheesecake': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 320, protein: 8, carbs: 25, fat: 20 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium'
+            },
+            'Chocolate Mousse': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 6, carbs: 22, fat: 18 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy'
+            },
+            'Ice Cream': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 200, protein: 4, carbs: 25, fat: 10 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy'
+            },
+            'Pudding': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 150, protein: 4, carbs: 28, fat: 3 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy'
+            },
+            'Egg Tart': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 180, protein: 5, carbs: 22, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium'
+            },
+            'Cream Puff': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 220, protein: 6, carbs: 18, fat: 12 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium'
+            },
+            'Mille Crepe Cake': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 8, carbs: 30, fat: 15 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard'
+            },
+            'Mousse Cake': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 250, protein: 6, carbs: 25, fat: 14 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium'
+            },
+            'Souffle': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 180, protein: 8, carbs: 20, fat: 8 },
+                prepTime: '35 minutes',
+                difficulty: 'Hard'
+            },
+            'Crepe': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy'
+            },
+            'Waffle': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 220, protein: 6, carbs: 35, fat: 8 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy'
+            },
+            'Muffin': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 180, protein: 4, carbs: 28, fat: 6 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy'
+            },
             
-            'Bubble Tea': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Latte': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Matcha Latte': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Lemonade': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Juice': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Cola': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Beer': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Red Wine': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Cocktail': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Hot Chocolate': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Green Tea': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Black Tea': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Flower Tea': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
-            'Soy Milk': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' }
+            'Bubble Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 180, protein: 2, carbs: 35, fat: 2 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy'
+            },
+            'Latte': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 8, carbs: 12, fat: 5 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy'
+            },
+            'Matcha Latte': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 100, protein: 6, carbs: 10, fat: 4 },
+                prepTime: '8 minutes',
+                difficulty: 'Easy'
+            },
+            'Lemonade': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 80, protein: 1, carbs: 20, fat: 0 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy'
+            },
+            'Juice': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 100, protein: 2, carbs: 22, fat: 0 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy'
+            },
+            'Cola': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 140, protein: 0, carbs: 35, fat: 0 },
+                prepTime: '1 minute',
+                difficulty: 'Easy'
+            },
+            'Beer': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 150, protein: 2, carbs: 12, fat: 0 },
+                prepTime: '1 minute',
+                difficulty: 'Easy'
+            },
+            'Red Wine': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 125, protein: 0, carbs: 4, fat: 0 },
+                prepTime: '1 minute',
+                difficulty: 'Easy'
+            },
+            'Cocktail': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 180, protein: 0, carbs: 15, fat: 0 },
+                prepTime: '8 minutes',
+                difficulty: 'Medium'
+            },
+            'Hot Chocolate': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 200, protein: 8, carbs: 25, fat: 8 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy'
+            },
+            'Green Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 2, protein: 0, carbs: 0, fat: 0 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy'
+            },
+            'Black Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 2, protein: 0, carbs: 0, fat: 0 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy'
+            },
+            'Flower Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 5, protein: 0, carbs: 1, fat: 0 },
+                prepTime: '8 minutes',
+                difficulty: 'Easy'
+            },
+            'Soy Milk': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 80, protein: 7, carbs: 4, fat: 4 },
+                prepTime: '2 minutes',
+                difficulty: 'Easy'
+            }
         };
         
         let currentCategory = 'all';
@@ -861,9 +1439,59 @@
             }
             
             resultElement.innerHTML = `
-                <div class="food-icon-large">${icon}</div>
-                <div class="food-name-large">${randomFood}</div>
-                <div class="food-category">${getCategoryName(foodInfo.category)} • ${getMealTypeName(foodInfo.mealType)} • ${getLifestyleName(foodInfo.lifestyle)}</div>
+                <div class="food-result-card">
+                    <div class="food-header">
+                        <div class="food-icon-result">${icon}</div>
+                        <div class="food-info">
+                            <div class="food-name-result">${randomFood}</div>
+                            <div class="food-tags">
+                                <span class="food-tag">${getCategoryName(foodInfo.category)}</span>
+                                <span class="food-tag">${getMealTypeName(foodInfo.mealType)}</span>
+                                <span class="food-tag">${getLifestyleName(foodInfo.lifestyle)}</span>
+                                <span class="food-tag">${foodInfo.difficulty}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-details">
+                        <div class="detail-section">
+                            <div class="detail-title">Details</div>
+                            <div class="detail-content">
+                                <p>Meal Type: ${getMealTypeName(foodInfo.mealType)}</p>
+                                <p>Lifestyle: ${getLifestyleName(foodInfo.lifestyle)}</p>
+                                <p>Category: ${getCategoryName(foodInfo.category)}</p>
+                                <p>Difficulty: ${foodInfo.difficulty}</p>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-title">Nutrition (per serving)</div>
+                            <div class="nutrition-grid">
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Calories:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.calories} kcal</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Protein:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.protein}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Carbs:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.carbs}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Fat:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.fat}g</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-title">Preparation</div>
+                            <div class="detail-content">
+                                <p>Time: ${foodInfo.prepTime}</p>
+                                <p>Difficulty: ${foodInfo.difficulty}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             `;
             
             // Add to history
@@ -943,9 +1571,59 @@
             }
             
             resultElement.innerHTML = `
-                <div class="food-icon-large">${icon}</div>
-                <div class="food-name-large">${food}</div>
-                <div class="food-category">${getCategoryName(foodInfo.category)} • ${getMealTypeName(foodInfo.mealType)} • ${getLifestyleName(foodInfo.lifestyle)}</div>
+                <div class="food-result-card">
+                    <div class="food-header">
+                        <div class="food-icon-result">${icon}</div>
+                        <div class="food-info">
+                            <div class="food-name-result">${food}</div>
+                            <div class="food-tags">
+                                <span class="food-tag">${getCategoryName(foodInfo.category)}</span>
+                                <span class="food-tag">${getMealTypeName(foodInfo.mealType)}</span>
+                                <span class="food-tag">${getLifestyleName(foodInfo.lifestyle)}</span>
+                                <span class="food-tag">${foodInfo.difficulty}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-details">
+                        <div class="detail-section">
+                            <div class="detail-title">Details</div>
+                            <div class="detail-content">
+                                <p>Meal Type: ${getMealTypeName(foodInfo.mealType)}</p>
+                                <p>Lifestyle: ${getLifestyleName(foodInfo.lifestyle)}</p>
+                                <p>Category: ${getCategoryName(foodInfo.category)}</p>
+                                <p>Difficulty: ${foodInfo.difficulty}</p>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-title">Nutrition (per serving)</div>
+                            <div class="nutrition-grid">
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Calories:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.calories} kcal</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Protein:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.protein}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Carbs:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.carbs}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Fat:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.fat}g</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-title">Preparation</div>
+                            <div class="detail-content">
+                                <p>Time: ${foodInfo.prepTime}</p>
+                                <p>Difficulty: ${foodInfo.difficulty}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             `;
             
             // Add animation effect
