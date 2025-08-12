@@ -707,43 +707,6 @@
             font-weight: 500;
             font-size: 0.9rem;
         }
-        
-        .food-history {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .history-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        
-        .history-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-            max-width: 400px;
-        }
-        
-        .history-item {
-            padding: 5px 12px;
-            background: #f8f9fa;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .history-item:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-        }
     </style>
 </head>
 <body>
@@ -820,11 +783,6 @@
                 
                 <div class="food-display-large" id="food-result">
                     <div class="food-name-large">Click button to generate random food</div>
-                </div>
-                
-                <div class="food-history">
-                    <div class="history-title">Recently generated foods:</div>
-                    <div class="history-list" id="food-history"></div>
                 </div>
             </div>
         </div>
@@ -1379,8 +1337,6 @@
             }
         };
         
-        let foodHistory = [];
-        
         function generateRandomFood() {
             const mealType = document.getElementById('mealType').value;
             const lifestyle = document.getElementById('lifestyle').value;
@@ -1467,9 +1423,6 @@
                 </div>
             `;
             
-            // Add to history
-            addToHistory(randomFood);
-            
             // Add animation effect
             resultElement.style.animation = 'fadeIn 0.5s ease-in-out';
             setTimeout(() => {
@@ -1506,92 +1459,6 @@
                 'non-vegetarian': 'Non-Vegetarian'
             };
             return lifestyleNames[lifestyle] || 'Unknown Lifestyle';
-        }
-        
-        function addToHistory(food) {
-            if (!foodHistory.includes(food)) {
-                foodHistory.unshift(food);
-                if (foodHistory.length > 8) {
-                    foodHistory.pop();
-                }
-                updateHistoryDisplay();
-            }
-        }
-        
-        function updateHistoryDisplay() {
-            const historyElement = document.getElementById('food-history');
-            const historyHTML = foodHistory.map(food => 
-                `<div class="history-item" onclick="selectFromHistory('${food}')">${food}</div>`
-            ).join('');
-            
-            historyElement.innerHTML = historyHTML;
-        }
-        
-        function selectFromHistory(food) {
-            const resultElement = document.getElementById('food-result');
-            const foodInfo = foodDatabase[food];
-            
-            resultElement.innerHTML = `
-                <div class="food-result-card">
-                    <div class="food-header">
-                        <img src="${foodInfo.image}" alt="${food}" class="food-icon-result">
-                        <div class="food-info">
-                            <div class="food-name-result">${food}</div>
-                            <div class="food-tags">
-                                <span class="food-tag">${getCategoryName(foodInfo.category)}</span>
-                                <span class="food-tag">${getMealTypeName(foodInfo.mealType)}</span>
-                                <span class="food-tag">${getLifestyleName(foodInfo.lifestyle)}</span>
-                                <span class="food-tag">${foodInfo.difficulty}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="food-details">
-                        <div class="detail-section">
-                            <div class="detail-title">Details</div>
-                            <div class="detail-content">
-                                <p>Meal Type: ${getMealTypeName(foodInfo.mealType)}</p>
-                                <p>Lifestyle: ${getLifestyleName(foodInfo.lifestyle)}</p>
-                                <p>Category: ${getCategoryName(foodInfo.category)}</p>
-                                <p>Difficulty: ${foodInfo.difficulty}</p>
-                            </div>
-                        </div>
-                        <div class="detail-section">
-                            <div class="detail-title">Nutrition (per serving)</div>
-                            <div class="nutrition-grid">
-                                <div class="nutrition-item">
-                                    <span class="nutrition-label">Calories:</span>
-                                    <span class="nutrition-value">${foodInfo.nutrition.calories} kcal</span>
-                                </div>
-                                <div class="nutrition-item">
-                                    <span class="nutrition-label">Protein:</span>
-                                    <span class="nutrition-value">${foodInfo.nutrition.protein}g</span>
-                                </div>
-                                <div class="nutrition-item">
-                                    <span class="nutrition-label">Carbs:</span>
-                                    <span class="nutrition-value">${foodInfo.nutrition.carbs}g</span>
-                                </div>
-                                <div class="nutrition-item">
-                                    <span class="nutrition-label">Fat:</span>
-                                    <span class="nutrition-value">${foodInfo.nutrition.fat}g</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail-section">
-                            <div class="detail-title">Preparation</div>
-                            <div class="detail-content">
-                                <p>Time: ${foodInfo.prepTime}</p>
-                                <p>Difficulty: ${foodInfo.difficulty}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            // Add animation effect
-            resultElement.style.animation = 'fadeIn 0.5s ease-in-out';
-            setTimeout(() => {
-                resultElement.style.animation = '';
-            }, 500);
         }
         
         // 移动端下拉菜单功能
