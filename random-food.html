@@ -326,6 +326,26 @@
                 width: 100%;
                 padding: 12px;
             }
+
+            .options-selector {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+            }
+            
+            .option-group {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .option-label {
+                min-width: 100px;
+                text-align: left;
+            }
+            
+            .option-select {
+                min-width: 120px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -526,6 +546,47 @@
             border-color: #667eea;
         }
         
+        /* 新增的选项样式 */
+        .options-selector {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .option-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .option-label {
+            font-weight: 600;
+            color: #333;
+            min-width: 120px;
+            text-align: right;
+        }
+        
+        .option-select {
+            padding: 10px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 150px;
+        }
+        
+        .option-select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
         .food-history {
             margin-top: 30px;
             display: flex;
@@ -615,7 +676,29 @@
                     <button class="category-btn" onclick="setCategory('drink')">Drinks</button>
                 </div>
                 
-                <button class="generate-btn-large" onclick="generateRandomFood()">Generate Random Food</button>
+                <div class="options-selector">
+                    <div class="option-group">
+                        <label class="option-label">Choose Meal Type:</label>
+                        <select class="option-select" id="mealType">
+                            <option value="random">Random</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snack">Snacks</option>
+                        </select>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label class="option-label">Choose Lifestyle (Veg/Non-veg):</label>
+                        <select class="option-select" id="lifestyle">
+                            <option value="random">Random</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="non-vegetarian">Non-Vegetarian</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="generate-btn-large" onclick="generateRandomFood()">Generate Food</button>
                 
                 <div class="food-display-large" id="food-result">
                     <div class="food-name-large">Click button to generate random food</div>
@@ -649,6 +732,71 @@
             ]
         };
         
+        // 扩展食物数据库，添加餐点类型和生活方式信息
+        const foodDatabase = {
+            'Kung Pao Chicken': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Mapo Tofu': { mealType: 'dinner', lifestyle: 'vegetarian', category: 'chinese' },
+            'Sweet and Sour Pork': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Boiled Fish': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Twice Cooked Pork': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Fish Fragrant Shredded Pork': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Braised Pork': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Xiaolongbao': { mealType: 'breakfast', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Zhajiang Noodles': { mealType: 'lunch', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Lanzhou Hand-Pulled Noodles': { mealType: 'lunch', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Chongqing Hot Pot': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Beijing Roast Duck': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'White Cut Chicken': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Char Siu Bao': { mealType: 'breakfast', lifestyle: 'non-vegetarian', category: 'chinese' },
+            'Fried Rice': { mealType: 'lunch', lifestyle: 'vegetarian', category: 'chinese' },
+            'Sour Fish': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'chinese' },
+            
+            'Spaghetti': { mealType: 'dinner', lifestyle: 'vegetarian', category: 'western' },
+            'Pizza': { mealType: 'dinner', lifestyle: 'vegetarian', category: 'western' },
+            'Hamburger': { mealType: 'lunch', lifestyle: 'non-vegetarian', category: 'western' },
+            'Steak': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
+            'Sandwich': { mealType: 'lunch', lifestyle: 'vegetarian', category: 'western' },
+            'Salad': { mealType: 'lunch', lifestyle: 'vegetarian', category: 'western' },
+            'Sushi': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
+            'Taco': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
+            'Escargot': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
+            'Paella': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
+            'Greek Salad': { mealType: 'lunch', lifestyle: 'vegetarian', category: 'western' },
+            'German Pork Knuckle': { mealType: 'dinner', lifestyle: 'non-vegetarian', category: 'western' },
+            'Swiss Cheese Fondue': { mealType: 'dinner', lifestyle: 'vegetarian', category: 'western' },
+            'Fish and Chips': { mealType: 'lunch', lifestyle: 'non-vegetarian', category: 'western' },
+            
+            'Tiramisu': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Macaron': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Cheesecake': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Chocolate Mousse': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Ice Cream': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Pudding': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Egg Tart': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Cream Puff': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Mille Crepe Cake': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Mousse Cake': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Souffle': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Crepe': { mealType: 'dessert', lifestyle: 'vegetarian', category: 'dessert' },
+            'Waffle': { mealType: 'breakfast', lifestyle: 'vegetarian', category: 'dessert' },
+            'Muffin': { mealType: 'breakfast', lifestyle: 'vegetarian', category: 'dessert' },
+            
+            'Bubble Tea': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Latte': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Matcha Latte': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Lemonade': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Juice': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Cola': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Beer': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Red Wine': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Cocktail': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Hot Chocolate': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Green Tea': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Black Tea': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Flower Tea': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' },
+            'Soy Milk': { mealType: 'drink', lifestyle: 'vegetarian', category: 'drink' }
+        };
+        
         let currentCategory = 'all';
         let foodHistory = [];
         
@@ -663,19 +811,36 @@
         }
         
         function generateRandomFood() {
+            const mealType = document.getElementById('mealType').value;
+            const lifestyle = document.getElementById('lifestyle').value;
+            
             let availableFoods = [];
             
+            // 根据选择的类别过滤食物
             if (currentCategory === 'all') {
-                // Merge all food categories
-                Object.values(foodList).forEach(category => {
-                    availableFoods = availableFoods.concat(category);
-                });
+                availableFoods = Object.keys(foodDatabase);
             } else {
-                availableFoods = foodList[currentCategory] || [];
+                availableFoods = Object.keys(foodDatabase).filter(food => 
+                    foodDatabase[food].category === currentCategory
+                );
+            }
+            
+            // 根据餐点类型过滤
+            if (mealType !== 'random') {
+                availableFoods = availableFoods.filter(food => 
+                    foodDatabase[food].mealType === mealType
+                );
+            }
+            
+            // 根据生活方式过滤
+            if (lifestyle !== 'random') {
+                availableFoods = availableFoods.filter(food => 
+                    foodDatabase[food].lifestyle === lifestyle
+                );
             }
             
             if (availableFoods.length === 0) {
-                alert('No food options available for this category!');
+                alert('No food options available for the selected criteria! Please try different options.');
                 return;
             }
             
@@ -684,20 +849,21 @@
             
             // Select icon based on food type
             let icon = '🍽️';
-            if (currentCategory === 'chinese' || foodList.chinese.includes(randomFood)) {
+            const foodInfo = foodDatabase[randomFood];
+            if (foodInfo.category === 'chinese') {
                 icon = '🥢';
-            } else if (currentCategory === 'western' || foodList.western.includes(randomFood)) {
+            } else if (foodInfo.category === 'western') {
                 icon = '🍴';
-            } else if (currentCategory === 'dessert' || foodList.dessert.includes(randomFood)) {
+            } else if (foodInfo.category === 'dessert') {
                 icon = '🍰';
-            } else if (currentCategory === 'drink' || foodList.drink.includes(randomFood)) {
+            } else if (foodInfo.category === 'drink') {
                 icon = '🥤';
             }
             
             resultElement.innerHTML = `
                 <div class="food-icon-large">${icon}</div>
                 <div class="food-name-large">${randomFood}</div>
-                <div class="food-category">${getCategoryName(currentCategory)}</div>
+                <div class="food-category">${getCategoryName(foodInfo.category)} • ${getMealTypeName(foodInfo.mealType)} • ${getLifestyleName(foodInfo.lifestyle)}</div>
             `;
             
             // Add to history
@@ -721,6 +887,26 @@
             return categoryNames[category] || 'Unknown Category';
         }
         
+        function getMealTypeName(mealType) {
+            const mealTypeNames = {
+                'breakfast': 'Breakfast',
+                'lunch': 'Lunch',
+                'dinner': 'Dinner',
+                'snack': 'Snack',
+                'dessert': 'Dessert',
+                'drink': 'Drink'
+            };
+            return mealTypeNames[mealType] || 'Unknown Meal Type';
+        }
+        
+        function getLifestyleName(lifestyle) {
+            const lifestyleNames = {
+                'vegetarian': 'Vegetarian',
+                'non-vegetarian': 'Non-Vegetarian'
+            };
+            return lifestyleNames[lifestyle] || 'Unknown Lifestyle';
+        }
+        
         function addToHistory(food) {
             if (!foodHistory.includes(food)) {
                 foodHistory.unshift(food);
@@ -742,23 +928,24 @@
         
         function selectFromHistory(food) {
             const resultElement = document.getElementById('food-result');
+            const foodInfo = foodDatabase[food];
             
             // Select icon based on food type
             let icon = '🍽️';
-            if (foodList.chinese.includes(food)) {
+            if (foodInfo.category === 'chinese') {
                 icon = '🥢';
-            } else if (foodList.western.includes(food)) {
+            } else if (foodInfo.category === 'western') {
                 icon = '🍴';
-            } else if (foodList.dessert.includes(food)) {
+            } else if (foodInfo.category === 'dessert') {
                 icon = '🍰';
-            } else if (foodList.drink.includes(food)) {
+            } else if (foodInfo.category === 'drink') {
                 icon = '🥤';
             }
             
             resultElement.innerHTML = `
                 <div class="food-icon-large">${icon}</div>
                 <div class="food-name-large">${food}</div>
-                <div class="food-category">Selected from history</div>
+                <div class="food-category">${getCategoryName(foodInfo.category)} • ${getMealTypeName(foodInfo.mealType)} • ${getLifestyleName(foodInfo.lifestyle)}</div>
             `;
             
             // Add animation effect
