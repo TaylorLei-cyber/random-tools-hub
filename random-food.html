@@ -316,17 +316,6 @@
                 font-size: 1.1rem;
             }
             
-            .category-selector {
-                flex-direction: column;
-                gap: 10px;
-                padding: 15px;
-            }
-            
-            .category-btn {
-                width: 100%;
-                padding: 12px;
-            }
-
             .options-selector {
                 flex-direction: column;
                 gap: 10px;
@@ -421,15 +410,6 @@
             .generate-btn-large {
                 padding: 10px 25px;
                 font-size: 1rem;
-            }
-            
-            .category-filter {
-                gap: 6px;
-            }
-            
-            .category-btn {
-                padding: 5px 10px;
-                font-size: 0.8rem;
             }
             
             .back-btn {
@@ -554,35 +534,6 @@
         .generate-btn-large:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-        }
-        
-        .category-filter {
-            margin: 20px 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .category-btn {
-            padding: 8px 16px;
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-        
-        .category-btn:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-        }
-        
-        .category-btn.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: #667eea;
         }
         
         /* 新增的选项样式 */
@@ -835,14 +786,6 @@
             </header>
             
             <div class="food-generator">
-                <div class="category-filter">
-                    <button class="category-btn active" onclick="setCategory('all')">All</button>
-                    <button class="category-btn" onclick="setCategory('chinese')">Chinese</button>
-                    <button class="category-btn" onclick="setCategory('western')">Western</button>
-                    <button class="category-btn" onclick="setCategory('dessert')">Dessert</button>
-                    <button class="category-btn" onclick="setCategory('drink')">Drinks</button>
-                </div>
-                
                 <div class="options-selector">
                     <table class="options-table">
                         <tr>
@@ -1375,33 +1318,13 @@
             }
         };
         
-        let currentCategory = 'all';
         let foodHistory = [];
-        
-        function setCategory(category) {
-            currentCategory = category;
-            
-            // Update button status
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-        }
         
         function generateRandomFood() {
             const mealType = document.getElementById('mealType').value;
             const lifestyle = document.getElementById('lifestyle').value;
             
-            let availableFoods = [];
-            
-            // 根据选择的类别过滤食物
-            if (currentCategory === 'all') {
-                availableFoods = Object.keys(foodDatabase);
-            } else {
-                availableFoods = Object.keys(foodDatabase).filter(food => 
-                    foodDatabase[food].category === currentCategory
-                );
-            }
+            let availableFoods = Object.keys(foodDatabase);
             
             // 根据餐点类型过滤
             if (mealType !== 'random') {
