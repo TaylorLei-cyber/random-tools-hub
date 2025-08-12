@@ -1516,7 +1516,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="full-recipe-btn" onclick="showFullRecipe('${randomFood}')">Full Recipe</button>
+                    <button class="full-recipe-btn" onclick="openFoodRecipe('${randomFood}')">Full Recipe</button>
                 </div>
             `;
             
@@ -1626,6 +1626,15 @@
         function showFullRecipe(foodName) {
             // 这里可以链接到完整的食谱页面或显示详细步骤
             alert(`Full recipe for ${foodName} will be available soon!`);
+        }
+
+        function openFoodRecipe(foodName) {
+            // 创建Food.com的搜索链接
+            const searchQuery = encodeURIComponent(foodName);
+            const foodComUrl = `https://www.food.com/search/${searchQuery}`;
+            
+            // 在新标签页中打开Food.com搜索页面
+            window.open(foodComUrl, '_blank');
         }
         
         function getCategoryName(category) {
