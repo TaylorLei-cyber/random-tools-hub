@@ -1512,80 +1512,78 @@
             // 生成配料列表
             const ingredients = generateIngredients(randomFood, foodInfo);
             
-            // 动态获取Food.com图片
-            fetchFoodImage(randomFood).then(imageUrl => {
-                resultElement.innerHTML = `
-                    <div class="food-result-card">
-                        <div class="food-header">
-                            <img src="${imageUrl}" alt="${randomFood}" class="food-icon-result">
-                            <div class="food-info">
-                                <div class="food-name-result">${randomFood}</div>
-                                <div class="food-tags">
-                                    <span class="food-tag">${getLifestyleName(foodInfo.lifestyle)}</span>
-                                    <span class="food-tag">${getMealTypeName(foodInfo.mealType)}</span>
-                                    <span class="food-tag">Prep ${foodInfo.prepTime}</span>
-                                </div>
+            // 直接使用静态图片URL
+            resultElement.innerHTML = `
+                <div class="food-result-card">
+                    <div class="food-header">
+                        <img src="${foodInfo.image}" alt="${randomFood}" class="food-icon-result">
+                        <div class="food-info">
+                            <div class="food-name-result">${randomFood}</div>
+                            <div class="food-tags">
+                                <span class="food-tag">${getLifestyleName(foodInfo.lifestyle)}</span>
+                                <span class="food-tag">${getMealTypeName(foodInfo.mealType)}</span>
+                                <span class="food-tag">Prep ${foodInfo.prepTime}</span>
                             </div>
                         </div>
-                        <div class="food-details">
-                            <div class="detail-section">
-                                <div class="detail-title ingredients">Ingredients</div>
-                                <ul class="ingredients-list">
-                                    ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-                                </ul>
-                            </div>
-                            <div class="detail-section">
-                                <div class="detail-title nutrition">Nutrition (per serving)</div>
-                                <div class="nutrition-grid">
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label calories">Calories:</span>
-                                        <span class="nutrition-value">${foodInfo.nutrition.calories} kcal</span>
-                                    </div>
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label fat">Fat Content:</span>
-                                        <span class="nutrition-value">${foodInfo.nutrition.fat}g</span>
-                                    </div>
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label">Saturated Fat:</span>
-                                        <span class="nutrition-value">${Math.round(foodInfo.nutrition.fat * 0.3)}g</span>
-                                    </div>
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label">Cholesterol:</span>
-                                        <span class="nutrition-value">${Math.round(foodInfo.nutrition.fat * 5)}mg</span>
-                                    </div>
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label">Sodium:</span>
-                                        <span class="nutrition-value">${Math.round(foodInfo.nutrition.calories * 2)}mg</span>
-                                    </div>
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label">Carbohydrates:</span>
-                                        <span class="nutrition-value">${foodInfo.nutrition.carbs}g</span>
-                                    </div>
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label">Fiber:</span>
-                                        <span class="nutrition-value">${Math.round(foodInfo.nutrition.carbs * 0.1)}g</span>
-                                    </div>
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label">Sugar:</span>
-                                        <span class="nutrition-value">${Math.round(foodInfo.nutrition.carbs * 0.3)}g</span>
-                                    </div>
-                                    <div class="nutrition-item">
-                                        <span class="nutrition-label">Protein:</span>
-                                        <span class="nutrition-value">${foodInfo.nutrition.protein}g</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="full-recipe-btn" onclick="openFoodRecipe('${randomFood}')">Full Recipe</button>
                     </div>
-                `;
-                
-                // Add animation effect
-                resultElement.style.animation = 'fadeIn 0.5s ease-in-out';
-                setTimeout(() => {
-                    resultElement.style.animation = '';
-                }, 500);
-            });
+                    <div class="food-details">
+                        <div class="detail-section">
+                            <div class="detail-title ingredients">Ingredients</div>
+                            <ul class="ingredients-list">
+                                ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-title nutrition">Nutrition (per serving)</div>
+                            <div class="nutrition-grid">
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label calories">Calories:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.calories} kcal</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label fat">Fat Content:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.fat}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Saturated Fat:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.fat * 0.3)}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Cholesterol:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.fat * 5)}mg</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Sodium:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.calories * 2)}mg</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Carbohydrates:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.carbs}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Fiber:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.carbs * 0.1)}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Sugar:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.carbs * 0.3)}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Protein:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.protein}g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="full-recipe-btn" onclick="openFoodRecipe('${randomFood}')">Full Recipe</button>
+                </div>
+            `;
+            
+            // Add animation effect
+            resultElement.style.animation = 'fadeIn 0.5s ease-in-out';
+            setTimeout(() => {
+                resultElement.style.animation = '';
+            }, 500);
         }
         
         function generateIngredients(foodName, foodInfo) {
@@ -1699,42 +1697,6 @@
                 const searchQuery = encodeURIComponent(foodName);
                 const foodComUrl = `https://www.food.com/search/${searchQuery}`;
                 window.open(foodComUrl, '_blank');
-            }
-        }
-        
-        // 动态获取Food.com图片的函数
-        async function fetchFoodImage(foodName) {
-            try {
-                const foodInfo = foodDatabase[foodName];
-                if (foodInfo && foodInfo.recipeUrl) {
-                    // 从Food.com搜索页面获取图片
-                    const response = await fetch(foodInfo.recipeUrl);
-                    const html = await response.text();
-                    
-                    // 尝试从搜索页面中提取第一个食谱的图片URL
-                    const imgMatch = html.match(/<img[^>]+src="([^"]*img\.sndimg\.com[^"]*)"[^>]*>/i);
-                    if (imgMatch && imgMatch[1]) {
-                        return imgMatch[1];
-                    }
-                    
-                    // 尝试其他图片选择器
-                    const imgMatch2 = html.match(/<img[^>]+class="[^"]*recipe-photo[^"]*"[^>]+src="([^"]*)"[^>]*>/i);
-                    if (imgMatch2 && imgMatch2[1]) {
-                        return imgMatch2[1];
-                    }
-                    
-                    // 尝试从搜索结果中获取图片
-                    const imgMatch3 = html.match(/<img[^>]+data-src="([^"]*img\.sndimg\.com[^"]*)"[^>]*>/i);
-                    if (imgMatch3 && imgMatch3[1]) {
-                        return imgMatch3[1];
-                    }
-                }
-                
-                // 如果无法从搜索页面获取，返回默认图片
-                return 'https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,h_419/v1/img/recipes/50/84/7/picrSYXH.jpg';
-            } catch (error) {
-                console.log('Error fetching Food.com image:', error);
-                return 'https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,h_419/v1/img/recipes/50/84/7/picrSYXH.jpg';
             }
         }
         
