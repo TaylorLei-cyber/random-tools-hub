@@ -325,6 +325,7 @@ main {
     min-height: 0;
     height: auto;
 }
+
 /* Food Generator Styles - Matching Reference Design */
 .food-result-card {
     background: #1a1a1a;
