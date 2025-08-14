@@ -61,47 +61,45 @@
     </header>
 
     <main class="main-content" style="margin-top: 70px;">
-        <div class="container">
-            <!-- 上方：食物生成器部分 -->
-            <div class="generator-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 40px; border-radius: 0; margin-bottom: 0; text-align: center;">
-                <h1 class="generator-title" style="color: white; font-size: 3rem; font-weight: 700; margin-bottom: 20px;">🍕 Random Food Generator & Dinner Idea Picker</h1>
-                <p class="generator-description" style="color: rgba(255, 255, 255, 0.9); font-size: 1.2rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Use our free Random Food Generator to decide what to eat today. Get instant dinner ideas, meal suggestions, recipes, and random dishes with nutrition details—perfect as your online food randomizer and dinner decider. Each suggestion could be your next culinary obsession.
-                </p>
+        <!-- 上方：食物生成器部分 -->
+        <div class="generator-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 40px; border-radius: 0; margin-bottom: 0; text-align: center;">
+            <h1 class="generator-title" style="color: white; font-size: 3rem; font-weight: 700; margin-bottom: 20px;">🍕 Random Food Generator & Dinner Idea Picker</h1>
+            <p class="generator-description" style="color: rgba(255, 255, 255, 0.9); font-size: 1.2rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Use our free Random Food Generator to decide what to eat today. Get instant dinner ideas, meal suggestions, recipes, and random dishes with nutrition details—perfect as your online food randomizer and dinner decider. Each suggestion could be your next culinary obsession.
+            </p>
 
-                <div class="controls-section" style="max-width: 600px; margin: 0 auto;">
-                    <div class="control-group" style="margin-bottom: 20px;">
-                        <label for="mealType" class="control-label" style="color: white; font-weight: 600; margin-bottom: 8px; display: block;">Choose Meal Type:</label>
-                        <div style="position: relative;">
-                            <select id="mealType" class="control-select" style="width: 100%; padding: 12px 40px 12px 16px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background: rgba(255, 255, 255, 0.9); color: #333; font-size: 1rem; appearance: none; -webkit-appearance: none; -moz-appearance: none; cursor: pointer;">
-                                <option value="random">Random</option>
-                                <option value="breakfast">Breakfast</option>
-                                <option value="lunch">Lunch</option>
-                                <option value="dinner">Dinner</option>
-                            </select>
-                            <div style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px;">▼</div>
-                        </div>
+            <div class="controls-section" style="max-width: 600px; margin: 0 auto;">
+                <div class="control-group" style="margin-bottom: 20px;">
+                    <label for="mealType" class="control-label" style="color: white; font-weight: 600; margin-bottom: 8px; display: block;">Choose Meal Type:</label>
+                    <div style="position: relative;">
+                        <select id="mealType" class="control-select" style="width: 100%; padding: 12px 40px 12px 16px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background: rgba(255, 255, 255, 0.9); color: #333; font-size: 1rem; appearance: none; -webkit-appearance: none; -moz-appearance: none; cursor: pointer;">
+                            <option value="random">Random</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                        </select>
+                        <div style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px;">▼</div>
                     </div>
-
-                    <div class="control-group" style="margin-bottom: 30px;">
-                        <label for="lifestyle" class="control-label" style="color: white; font-weight: 600; margin-bottom: 8px; display: block;">Choose Lifestyle (Veg/Non-veg):</label>
-                        <div style="position: relative;">
-                            <select id="lifestyle" class="control-select" style="width: 100%; padding: 12px 40px 12px 16px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background: rgba(255, 255, 255, 0.9); color: #333; font-size: 1rem; appearance: none; -webkit-appearance: none; -moz-appearance: none; cursor: pointer;">
-                                <option value="random">Random</option>
-                                <option value="vegetarian">Vegetarian</option>
-                                <option value="non-vegetarian">Non-Vegetarian</option>
-                            </select>
-                            <div style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px;">▼</div>
-                        </div>
-                    </div>
-
-                    <button id="generateBtn" class="generate-btn" onclick="generateRandomFood()" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); color: #333; border: none; padding: 15px 40px; font-size: 1.2rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Generate Food</button>
                 </div>
-            </div>
 
-            <!-- 下方：食物结果显示区域 -->
-            <div id="food-result" class="food-result" style="margin-top: 40px;"></div>
+                <div class="control-group" style="margin-bottom: 30px;">
+                    <label for="lifestyle" class="control-label" style="color: white; font-weight: 600; margin-bottom: 8px; display: block;">Choose Lifestyle (Veg/Non-veg):</label>
+                    <div style="position: relative;">
+                        <select id="lifestyle" class="control-select" style="width: 100%; padding: 12px 40px 12px 16px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background: rgba(255, 255, 255, 0.9); color: #333; font-size: 1rem; appearance: none; -webkit-appearance: none; -moz-appearance: none; cursor: pointer;">
+                            <option value="random">Random</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="non-vegetarian">Non-Vegetarian</option>
+                        </select>
+                        <div style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px;">▼</div>
+                    </div>
+                </div>
+
+                <button id="generateBtn" class="generate-btn" onclick="generateRandomFood()" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); color: #333; border: none; padding: 15px 40px; font-size: 1.2rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Generate Food</button>
+            </div>
         </div>
+
+        <!-- 下方：食物结果显示区域 -->
+        <div id="food-result" class="food-result" style="margin-top: 40px;"></div>
     </main>
 
     <!-- What is the Random Food Generator -->
