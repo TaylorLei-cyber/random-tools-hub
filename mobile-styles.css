@@ -181,7 +181,7 @@
     /* 移动端食物生成器优化 */
     .generator-section {
         padding: 30px 15px;
-        margin-bottom: 30px;
+        margin-bottom: 0;
         border-radius: 0 !important; /* 确保移动端也没有圆角 */
     }
     
