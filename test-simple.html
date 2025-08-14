@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试食物生成器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            background: #ffe6e6;
+        }
+        .success {
+            color: green;
+            background: #e6ffe6;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍕 食物生成器测试页面</h1>
+    
+    <div class="test-section">
+        <h3>1. 测试数据加载</h3>
+        <button onclick="testDataLoading()">测试数据加载</button>
+        <div id="data-test-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>2. 测试食物生成</h3>
+        <button onclick="testFoodGeneration()">生成随机食物</button>
+        <div id="generation-test-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>3. 测试过滤功能</h3>
+        <button onclick="testFiltering()">测试过滤功能</button>
+        <div id="filter-test-result" class="result"></div>
+    </div>
+
+    <script src="food-data.js"></script>
+    <script>
+        function testDataLoading() {
+            const resultDiv = document.getElementById('data-test-result');
+            
+            try {
+                if (typeof foodDatabase !== 'undefined') {
+                    const totalFoods = Object.keys(foodDatabase).length;
+                    const sampleFood = Object.keys(foodDatabase)[0];
+                    const foodInfo = foodDatabase[sampleFood];
+                    
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            ✅ 数据加载成功！<br>
+                            📊 总食物数量: ${totalFoods}<br>
+                            🍽️ 示例食物: ${sampleFood}<br>
+                            🍳 餐点类型: ${foodInfo.mealType}<br>
+                            🥗 生活方式: ${foodInfo.lifestyle}<br>
+                            📝 配料: ${foodInfo.ingredients.split(',').length}个
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = '<div class="error">❌ foodDatabase 未定义</div>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">❌ 错误: ${error.message}</div>`;
+            }
+        }
+        
+        function testFoodGeneration() {
+            const resultDiv = document.getElementById('generation-test-result');
+            
+            try {
+                if (typeof foodDatabase !== 'undefined') {
+                    const availableFoods = Object.keys(foodDatabase);
+                    const randomFood = availableFoods[Math.floor(Math.random() * availableFoods.length)];
+                    const foodInfo = foodDatabase[randomFood];
+                    
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            🎲 生成成功！<br>
+                            🍽️ 食物名称: ${randomFood}<br>
+                            🍳 餐点类型: ${foodInfo.mealType}<br>
+                            🥗 生活方式: ${foodInfo.lifestyle}<br>
+                            ⏰ 准备时间: ${foodInfo.prepTime}<br>
+                            📝 配料: ${foodInfo.ingredients.split(',').length}个<br>
+                            🔥 卡路里: ${foodInfo.detailedNutrition.calories} kcal
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = '<div class="error">❌ foodDatabase 未定义</div>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">❌ 错误: ${error.message}</div>`;
+            }
+        }
+        
+        function testFiltering() {
+            const resultDiv = document.getElementById('filter-test-result');
+            
+            try {
+                if (typeof foodDatabase !== 'undefined') {
+                    // 测试早餐素食过滤
+                    const breakfastVeg = Object.keys(foodDatabase).filter(food => 
+                        foodDatabase[food].mealType === 'breakfast' && 
+                        foodDatabase[food].lifestyle === 'vegetarian'
+                    );
+                    
+                    // 测试晚餐非素食过滤
+                    const dinnerNonVeg = Object.keys(foodDatabase).filter(food => 
+                        foodDatabase[food].mealType === 'dinner' && 
+                        foodDatabase[food].lifestyle === 'non-vegetarian'
+                    );
+                    
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            🔍 过滤测试成功！<br>
+                            🍳 早餐素食: ${breakfastVeg.length}个<br>
+                            🍽️ 晚餐非素食: ${dinnerNonVeg.length}个<br>
+                            📊 总食物: ${Object.keys(foodDatabase).length}个
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = '<div class="error">❌ foodDatabase 未定义</div>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">❌ 错误: ${error.message}</div>`;
+            }
+        }
+        
+        // 页面加载时自动测试数据加载
+        window.addEventListener('load', function() {
+            setTimeout(testDataLoading, 1000);
+        });
+    </script>
+</body>
+</html> 

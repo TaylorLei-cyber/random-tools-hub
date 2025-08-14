@@ -311,6 +311,12 @@ main {
 }
 
 /* Responsive design */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
 
 /* Food Generator Styles - Matching Reference Design */
 .food-result-card {
@@ -476,3 +482,23 @@ main {
 }
 
 /* Responsive design for food generator */
+@media (max-width: 768px) {
+    .food-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .food-name-result {
+        font-size: 1.6rem;
+    }
+    
+    .food-details {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .food-tags {
+        justify-content: center;
+    }
+}

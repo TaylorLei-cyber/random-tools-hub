@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试Generate Food按钮</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .control-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .error {
+            background: #ffe6e6;
+            border-left-color: #dc3545;
+            color: #dc3545;
+        }
+        .success {
+            background: #e6ffe6;
+            border-left-color: #28a745;
+            color: #28a745;
+        }
+        .food-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        .food-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .food-tags {
+            margin-bottom: 15px;
+        }
+        .tag {
+            background: #ffd700;
+            color: #333;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
+        .ingredients {
+            margin-bottom: 15px;
+        }
+        .ingredients h4 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+        .ingredients li {
+            padding: 4px 0;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🍕 测试Generate Food按钮功能</h1>
+        
+        <div class="control-group">
+            <label for="mealType">选择餐点类型:</label>
+            <select id="mealType">
+                <option value="random">随机</option>
+                <option value="breakfast">早餐</option>
+                <option value="lunch">午餐</option>
+                <option value="dinner">晚餐</option>
+            </select>
+        </div>
+        
+        <div class="control-group">
+            <label for="lifestyle">选择生活方式:</label>
+            <select id="lifestyle">
+                <option value="random">随机</option>
+                <option value="vegetarian">素食</option>
+                <option value="non-vegetarian">非素食</option>
+            </select>
+        </div>
+        
+        <button onclick="testGenerateFood()">🍕 Generate Food</button>
+        <button onclick="testDataLoading()">📊 测试数据加载</button>
+        
+        <div id="test-result" class="result"></div>
+    </div>
+
+    <script src="food-data.js"></script>
+    <script>
+        function testDataLoading() {
+            const resultDiv = document.getElementById('test-result');
+            
+            try {
+                if (typeof foodDatabase !== 'undefined') {
+                    const totalFoods = Object.keys(foodDatabase).length;
+                    const sampleFood = Object.keys(foodDatabase)[0];
+                    const foodInfo = foodDatabase[sampleFood];
+                    
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            ✅ 数据加载成功！<br>
+                            📊 总食物数量: ${totalFoods}<br>
+                            🍽️ 示例食物: ${sampleFood}<br>
+                            🍳 餐点类型: ${foodInfo.mealType}<br>
+                            🥗 生活方式: ${foodInfo.lifestyle}<br>
+                            📝 配料数量: ${foodInfo.ingredients.split(',').length}个
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = '<div class="error">❌ foodDatabase 未定义</div>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">❌ 错误: ${error.message}</div>`;
+            }
+        }
+        
+        function testGenerateFood() {
+            const resultDiv = document.getElementById('test-result');
+            const mealType = document.getElementById('mealType').value;
+            const lifestyle = document.getElementById('lifestyle').value;
+            
+            try {
+                if (typeof foodDatabase === 'undefined') {
+                    resultDiv.innerHTML = '<div class="error">❌ foodDatabase 未定义，请先测试数据加载</div>';
+                    return;
+                }
+                
+                let availableFoods = Object.keys(foodDatabase);
+                
+                // 根据餐点类型过滤
+                if (mealType !== 'random') {
+                    availableFoods = availableFoods.filter(food => 
+                        foodDatabase[food].mealType === mealType
+                    );
+                }
+                
+                // 根据生活方式过滤
+                if (lifestyle !== 'random') {
+                    availableFoods = availableFoods.filter(food => 
+                        foodDatabase[food].lifestyle === lifestyle
+                    );
+                }
+                
+                if (availableFoods.length === 0) {
+                    resultDiv.innerHTML = '<div class="error">❌ 没有找到符合条件的食物选项</div>';
+                    return;
+                }
+                
+                const randomFood = availableFoods[Math.floor(Math.random() * availableFoods.length)];
+                const foodInfo = foodDatabase[randomFood];
+                const ingredients = foodInfo.ingredients.split(', ').map(ingredient => ingredient.trim());
+                
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        🎲 生成成功！找到 ${availableFoods.length} 个符合条件的食物
+                    </div>
+                    <div class="food-card">
+                        <div class="food-name">${randomFood}</div>
+                        <div class="food-tags">
+                            <span class="tag">${foodInfo.mealType}</span>
+                            <span class="tag">${foodInfo.lifestyle}</span>
+                            <span class="tag">${foodInfo.prepTime}</span>
+                        </div>
+                        <div class="ingredients">
+                            <h4>配料:</h4>
+                            <ul>
+                                ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>卡路里:</strong> ${foodInfo.detailedNutrition.calories} kcal<br>
+                            <strong>蛋白质:</strong> ${foodInfo.detailedNutrition.protein}g<br>
+                            <strong>脂肪:</strong> ${foodInfo.detailedNutrition.fat}g
+                        </div>
+                    </div>
+                `;
+                
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">❌ 生成食物时出错: ${error.message}</div>`;
+            }
+        }
+        
+        // 页面加载时自动测试数据加载
+        window.addEventListener('load', function() {
+            setTimeout(testDataLoading, 1000);
+        });
+    </script>
+</body>
+</html> 
