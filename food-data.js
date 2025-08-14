@@ -8,7 +8,7 @@ const foodDatabase = {
             "calories": 156,
             "protein": 11,
             "carbs": 42,
-            "fat": 8
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -17,8 +17,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup tempeh, 80 g oats, 1.9 cup broccoli, 1.5 cup carrot, 170 g cucumber, 1.5 cup dill, 1 tsp lemon juice, 1 tsp paprika, 3 tbsps olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 156,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 20,
+            "saturatedFat": 8,
             "cholesterol": 106,
             "sodium": 372,
             "carbohydrates": 42,
@@ -35,7 +35,7 @@ const foodDatabase = {
             "calories": 296,
             "protein": 40,
             "carbs": 6,
-            "fat": 10
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -44,8 +44,8 @@ const foodDatabase = {
         "ingredients": "190 g sweet potato, 1.1 cup oats, 1.6 cup kale, 1.7 cup carrot, 1.6 cup broccoli, 1.7 cup mint, 1 tsp lemon juice, 1 tsp turmeric, 1 tbsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 296,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 15,
+            "saturatedFat": 10,
             "cholesterol": 42,
             "sodium": 856,
             "carbohydrates": 6,
@@ -62,7 +62,7 @@ const foodDatabase = {
             "calories": 334,
             "protein": 14,
             "carbs": 56,
-            "fat": 11
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -71,8 +71,8 @@ const foodDatabase = {
         "ingredients": "110 g tempeh, 3 tbsps yogurt, 0.9 cup mushroom, 80 g lettuce, 2 tsps bell pepper, 80 g cilantro, 2 tbsps lemon juice, 2 tsps paprika, 2 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 334,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 14,
+            "saturatedFat": 11,
             "cholesterol": 29,
             "sodium": 582,
             "carbohydrates": 56,
@@ -89,7 +89,7 @@ const foodDatabase = {
             "calories": 311,
             "protein": 11,
             "carbs": 71,
-            "fat": 7
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -98,8 +98,8 @@ const foodDatabase = {
         "ingredients": "60 g paneer, 2 tsps yogurt, 1.5 cup carrot, 1.1 cup mushroom, 1.9 cup tomato, 0.9 cup dill, 2 cloves ginger, 3 tbsps soy sauce, 3 tbsps olive oil, 1 tsp garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 311,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 27,
+            "saturatedFat": 7,
             "cholesterol": 65,
             "sodium": 712,
             "carbohydrates": 71,
@@ -116,7 +116,7 @@ const foodDatabase = {
             "calories": 502,
             "protein": 41,
             "carbs": 37,
-            "fat": 2
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -125,8 +125,8 @@ const foodDatabase = {
         "ingredients": "1 cup eggplant, 1 piece wrap, 160 g carrot, 0.6 cup broccoli, 240 g cabbage, 1.9 cup dill, 3 tbsps lemon juice, 2 tsps turmeric, 2 tsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 502,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 29,
+            "saturatedFat": 2,
             "cholesterol": 76,
             "sodium": 509,
             "carbohydrates": 37,
@@ -143,7 +143,7 @@ const foodDatabase = {
             "calories": 294,
             "protein": 4,
             "carbs": 60,
-            "fat": 13
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -152,8 +152,8 @@ const foodDatabase = {
         "ingredients": "110 g sweet potato, 120 g congee, 1.5 cup cucumber, 210 g zucchini, 140 g mushroom, 2 cup mint, 2 tsps chili flakes, 1 tbsp sesame oil, 3 tbsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 294,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 6,
+            "saturatedFat": 13,
             "cholesterol": 57,
             "sodium": 254,
             "carbohydrates": 60,
@@ -180,7 +180,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 649,
             "fat": 11,
-            "saturatedFat": 3,
+            "saturatedFat": 11,
             "cholesterol": 120,
             "sodium": 780,
             "carbohydrates": 84,
@@ -197,7 +197,7 @@ const foodDatabase = {
             "calories": 616,
             "protein": 29,
             "carbs": 55,
-            "fat": 1
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -206,8 +206,8 @@ const foodDatabase = {
         "ingredients": "220 g black beans, 1.1 cup toast, 1.8 cup zucchini, 70 g lettuce, 2 tsps bell pepper, 0.9 cup thyme, 2 tsps lime juice, 2 tsps paprika, 3 tbsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 616,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 19,
+            "saturatedFat": 1,
             "cholesterol": 75,
             "sodium": 443,
             "carbohydrates": 55,
@@ -224,7 +224,7 @@ const foodDatabase = {
             "calories": 318,
             "protein": 42,
             "carbs": 84,
-            "fat": 9
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -233,8 +233,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup halloumi, 1 tbsp yogurt, 120 g zucchini, 220 g mushroom, 90 g cabbage, 1.2 cup basil, 1 tsp lime juice, 2 tsps sesame oil, 1 tbsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 318,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 30,
+            "saturatedFat": 9,
             "cholesterol": 2,
             "sodium": 68,
             "carbohydrates": 84,
@@ -251,7 +251,7 @@ const foodDatabase = {
             "calories": 541,
             "protein": 20,
             "carbs": 61,
-            "fat": 12
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -260,8 +260,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup quinoa, 0.7 cup rice, 1.2 cup mushroom, 90 g corn, 1.6 cup zucchini, 190 g parsley, 1.3 cup curry paste, 2 tsps chili flakes, 2 tsps olive oil, 2 tsps garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 541,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 28,
+            "saturatedFat": 12,
             "cholesterol": 60,
             "sodium": 807,
             "carbohydrates": 61,
@@ -278,7 +278,7 @@ const foodDatabase = {
             "calories": 527,
             "protein": 10,
             "carbs": 16,
-            "fat": 9
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -287,8 +287,8 @@ const foodDatabase = {
         "ingredients": "60 g lentils, 2 pieces tortilla, 1 tsp bell pepper, 1.3 cup kale, 2 cup tomato, 230 g cilantro, 3 tbsps vinegar, 3 tbsps curry paste, 1 tsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 527,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 21,
+            "saturatedFat": 9,
             "cholesterol": 1,
             "sodium": 506,
             "carbohydrates": 16,
@@ -305,7 +305,7 @@ const foodDatabase = {
             "calories": 544,
             "protein": 30,
             "carbs": 23,
-            "fat": 6
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -314,8 +314,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup zucchini, 1 piece tortilla, 1.7 cup broccoli, 1.9 cup tomato, 1.5 cup spinach, 220 g rosemary, 2 pieces curry paste, 1 tsp paprika, 1 tbsp olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 544,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 28,
+            "saturatedFat": 6,
             "cholesterol": 111,
             "sodium": 883,
             "carbohydrates": 23,
@@ -332,7 +332,7 @@ const foodDatabase = {
             "calories": 290,
             "protein": 36,
             "carbs": 31,
-            "fat": 2
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -341,8 +341,8 @@ const foodDatabase = {
         "ingredients": "150 g seitan, 1 piece toast, 120 g spinach, 0.7 cup carrot, 1.1 cup cabbage, 0.6 cup cilantro, 3 tbsps vinegar, 2 tsps ginger, 1 tbsp olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 290,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 2,
             "cholesterol": 17,
             "sodium": 458,
             "carbohydrates": 31,
@@ -359,7 +359,7 @@ const foodDatabase = {
             "calories": 430,
             "protein": 42,
             "carbs": 32,
-            "fat": 13
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -368,8 +368,8 @@ const foodDatabase = {
         "ingredients": "2 tsps pumpkin, 1 piece wrap, 2 tsps bell pepper, 140 g spinach, 1.5 cup lettuce, 1.6 cup dill, 2 tsps chili flakes, 1 tsp turmeric, 3 tbsps olive oil, 1 tsp garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 430,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 29,
+            "saturatedFat": 13,
             "cholesterol": 54,
             "sodium": 530,
             "carbohydrates": 32,
@@ -386,7 +386,7 @@ const foodDatabase = {
             "calories": 367,
             "protein": 40,
             "carbs": 30,
-            "fat": 11
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -395,8 +395,8 @@ const foodDatabase = {
         "ingredients": "100 g tempeh, 1 piece tortilla, 90 g cabbage, 1.7 cup corn, 1.3 cup broccoli, 230 g mint, 1 tsp curry paste, 1 tsp ginger, 1 tsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 367,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 30,
+            "saturatedFat": 11,
             "cholesterol": 104,
             "sodium": 481,
             "carbohydrates": 30,
@@ -413,7 +413,7 @@ const foodDatabase = {
             "calories": 410,
             "protein": 9,
             "carbs": 31,
-            "fat": 3
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -422,8 +422,8 @@ const foodDatabase = {
         "ingredients": "210 g seitan, 0.7 cup oats, 1.8 cup kale, 60 g carrot, 1.6 cup cabbage, 230 g mint, 1 tbsp soy sauce, 3 tbsps lime juice, 2 tsps olive oil, 1 clove garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 410,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 24,
+            "saturatedFat": 3,
             "cholesterol": 104,
             "sodium": 367,
             "carbohydrates": 31,
@@ -440,7 +440,7 @@ const foodDatabase = {
             "calories": 532,
             "protein": 30,
             "carbs": 77,
-            "fat": 2
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -449,8 +449,8 @@ const foodDatabase = {
         "ingredients": "2 cup tofu, 1 tbsp yogurt, 0.7 cup spinach, 60 g broccoli, 1.5 cup carrot, 1.5 cup parsley, 1 tsp turmeric, 3 tbsps lemon juice, 2 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 532,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 22,
+            "saturatedFat": 2,
             "cholesterol": 119,
             "sodium": 442,
             "carbohydrates": 77,
@@ -467,7 +467,7 @@ const foodDatabase = {
             "calories": 152,
             "protein": 34,
             "carbs": 24,
-            "fat": 4
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -476,8 +476,8 @@ const foodDatabase = {
         "ingredients": "100 g paneer, 1 cup rice, 1 cup tomato, 0.9 cup cucumber, 180 g mushroom, 1.3 cup parsley, 2 tsps cumin, 2 tsps lime juice, 2 tbsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 152,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 19,
+            "saturatedFat": 4,
             "cholesterol": 74,
             "sodium": 131,
             "carbohydrates": 24,
@@ -494,7 +494,7 @@ const foodDatabase = {
             "calories": 521,
             "protein": 43,
             "carbs": 11,
-            "fat": 0
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -503,7 +503,7 @@ const foodDatabase = {
         "ingredients": "210 g broccoli, 2 pieces wrap, 120 g carrot, 1.4 cup spinach, 70 g cabbage, 150 g thyme, 1 tsp chili flakes, 1 tsp sesame oil, 1 tsp olive oil, 1 clove garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 521,
-            "fat": 0,
+            "fat": 28,
             "saturatedFat": 0,
             "cholesterol": 59,
             "sodium": 145,
@@ -521,7 +521,7 @@ const foodDatabase = {
             "calories": 377,
             "protein": 33,
             "carbs": 67,
-            "fat": 14
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -530,8 +530,8 @@ const foodDatabase = {
         "ingredients": "170 g eggplant, 1 tsp yogurt, 110 g cucumber, 0.5 cup spinach, 2 cup broccoli, 100 g basil, 2 tsps paprika, 2 tsps sesame oil, 1 tsp olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 377,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 14,
             "cholesterol": 21,
             "sodium": 881,
             "carbohydrates": 67,
@@ -548,7 +548,7 @@ const foodDatabase = {
             "calories": 423,
             "protein": 11,
             "carbs": 48,
-            "fat": 1
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -557,8 +557,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup halloumi, 1.2 cup toast, 220 g cucumber, 90 g kale, 90 g broccoli, 1.9 cup dill, 1 tsp paprika, 1 tsp chili flakes, 2 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 423,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 13,
+            "saturatedFat": 1,
             "cholesterol": 88,
             "sodium": 859,
             "carbohydrates": 48,
@@ -575,7 +575,7 @@ const foodDatabase = {
             "calories": 219,
             "protein": 42,
             "carbs": 43,
-            "fat": 13
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -584,8 +584,8 @@ const foodDatabase = {
         "ingredients": "2 tbsps cauliflower, 170 g congee, 1.4 cup lettuce, 150 g pea, 1.7 cup kale, 0.6 cup cilantro, 1 tsp paprika, 2 tsps cumin, 1 tsp olive oil, 1 clove garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 219,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 25,
+            "saturatedFat": 13,
             "cholesterol": 2,
             "sodium": 96,
             "carbohydrates": 43,
@@ -602,7 +602,7 @@ const foodDatabase = {
             "calories": 288,
             "protein": 36,
             "carbs": 13,
-            "fat": 1
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -611,8 +611,8 @@ const foodDatabase = {
         "ingredients": "90 g broccoli, 1 piece wrap, 210 g kale, 240 g pea, 90 g mushroom, 0.9 cup parsley, 2 tsps cumin, 2 tsps chili flakes, 3 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 288,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 7,
+            "saturatedFat": 1,
             "cholesterol": 59,
             "sodium": 90,
             "carbohydrates": 13,
@@ -629,7 +629,7 @@ const foodDatabase = {
             "calories": 308,
             "protein": 40,
             "carbs": 66,
-            "fat": 14
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -638,8 +638,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps cauliflower, 2 pieces tortilla, 140 g kale, 0.9 cup cucumber, 240 g cabbage, 90 g mint, 2 tsps turmeric, 1 tsp ginger, 3 tbsps olive oil, 2 cloves garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 308,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 12,
+            "saturatedFat": 14,
             "cholesterol": 29,
             "sodium": 505,
             "carbohydrates": 66,
@@ -656,7 +656,7 @@ const foodDatabase = {
             "calories": 212,
             "protein": 17,
             "carbs": 44,
-            "fat": 1
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -665,8 +665,8 @@ const foodDatabase = {
         "ingredients": "90 g halloumi, 1.7 cup congee, 80 g corn, 160 g carrot, 180 g cabbage, 1.7 cup basil, 1 tbsp curry paste, 1 tsp vinegar, 1 tbsp olive oil, 2 tsps garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 212,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 20,
+            "saturatedFat": 1,
             "cholesterol": 101,
             "sodium": 251,
             "carbohydrates": 44,
@@ -683,7 +683,7 @@ const foodDatabase = {
             "calories": 579,
             "protein": 27,
             "carbs": 17,
-            "fat": 13
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -692,8 +692,8 @@ const foodDatabase = {
         "ingredients": "200 g black beans, 240 g oats, 170 g cabbage, 0.8 cup pea, 140 g lettuce, 180 g mint, 2 tsps curry paste, 1 tsp lime juice, 1 tsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 579,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 28,
+            "saturatedFat": 13,
             "cholesterol": 55,
             "sodium": 501,
             "carbohydrates": 17,
@@ -710,7 +710,7 @@ const foodDatabase = {
             "calories": 230,
             "protein": 9,
             "carbs": 8,
-            "fat": 0
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -719,7 +719,7 @@ const foodDatabase = {
         "ingredients": "1.1 cup tofu, 220 g toast, 230 g mushroom, 130 g zucchini, 1.3 cup corn, 0.9 cup cilantro, 2 tsps turmeric, 1 tsp ginger, 3 tbsps olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 230,
-            "fat": 0,
+            "fat": 3,
             "saturatedFat": 0,
             "cholesterol": 118,
             "sodium": 550,
@@ -737,7 +737,7 @@ const foodDatabase = {
             "calories": 244,
             "protein": 3,
             "carbs": 50,
-            "fat": 13
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -746,8 +746,8 @@ const foodDatabase = {
         "ingredients": "170 g paneer, 60 g oats, 2 tsps bell pepper, 1.9 cup pea, 1.1 cup corn, 130 g basil, 1 tsp paprika, 1 tsp soy sauce, 2 tsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 244,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 17,
+            "saturatedFat": 13,
             "cholesterol": 62,
             "sodium": 229,
             "carbohydrates": 50,
@@ -764,7 +764,7 @@ const foodDatabase = {
             "calories": 196,
             "protein": 6,
             "carbs": 28,
-            "fat": 8
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -773,8 +773,8 @@ const foodDatabase = {
         "ingredients": "160 g pumpkin, 1.9 cup toast, 230 g tomato, 100 g broccoli, 1.7 cup kale, 1.5 cup rosemary, 1 tsp turmeric, 1 tsp chili flakes, 1 tsp olive oil, 2 tsps garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 196,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 29,
+            "saturatedFat": 8,
             "cholesterol": 105,
             "sodium": 408,
             "carbohydrates": 28,
@@ -791,7 +791,7 @@ const foodDatabase = {
             "calories": 622,
             "protein": 23,
             "carbs": 27,
-            "fat": 4
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -800,8 +800,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup tempeh, 100 g rice, 1.5 cup cucumber, 140 g zucchini, 160 g corn, 0.9 cup dill, 2 tsps paprika, 1.4 cup curry paste, 2 tbsps olive oil, 3 cloves garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 622,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 14,
+            "saturatedFat": 4,
             "cholesterol": 101,
             "sodium": 186,
             "carbohydrates": 27,
@@ -818,7 +818,7 @@ const foodDatabase = {
             "calories": 337,
             "protein": 18,
             "carbs": 51,
-            "fat": 6
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -827,13 +827,13 @@ const foodDatabase = {
         "ingredients": "1.2 cup paneer, 2 tsps yogurt, 1.9 cup broccoli, 2 tsps bell pepper, 1.4 cup zucchini, 1 cup rosemary, 1 tsp soy sauce, 1 tsp turmeric, 2 tsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 337,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 22,
+            "saturatedFat": 6,
             "cholesterol": 104,
             "sodium": 529,
             "carbohydrates": 51,
             "fiber": 12,
-            "sugar": 10,
+            "sugar": 0,
             "protein": 18
         }
     },
@@ -845,7 +845,7 @@ const foodDatabase = {
             "calories": 425,
             "protein": 20,
             "carbs": 62,
-            "fat": 9
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -854,8 +854,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup broccoli, 2 tbsps yogurt, 150 g pea, 0.6 cup carrot, 1.3 cup basil, 1 tsp chili flakes, 1 tsp paprika, 1 tbsp olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 425,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 13,
+            "saturatedFat": 9,
             "cholesterol": 118,
             "sodium": 392,
             "carbohydrates": 62,
@@ -872,7 +872,7 @@ const foodDatabase = {
             "calories": 498,
             "protein": 31,
             "carbs": 8,
-            "fat": 14
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -881,8 +881,8 @@ const foodDatabase = {
         "ingredients": "240 g tempeh, 2 tsps toast, 170 g kale, 110 g tomato, 2 tsps bell pepper, 1.6 cup rosemary, 1 tsp lime juice, 2 tsps paprika, 2 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 498,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 21,
+            "saturatedFat": 14,
             "cholesterol": 86,
             "sodium": 211,
             "carbohydrates": 8,
@@ -899,7 +899,7 @@ const foodDatabase = {
             "calories": 193,
             "protein": 25,
             "carbs": 55,
-            "fat": 7
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -908,8 +908,8 @@ const foodDatabase = {
         "ingredients": "110 g zucchini, 1 piece wrap, 210 g mushroom, 1.6 cup broccoli, 180 g cabbage, 1 cup dill, 3 tbsps vinegar, 3 tbsps sesame oil, 1 tbsp olive oil, 2 tsps garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 193,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 6,
+            "saturatedFat": 7,
             "cholesterol": 46,
             "sodium": 792,
             "carbohydrates": 55,
@@ -926,7 +926,7 @@ const foodDatabase = {
             "calories": 164,
             "protein": 44,
             "carbs": 5,
-            "fat": 7
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -935,8 +935,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup cauliflower, 1.1 cup rice, 240 g broccoli, 130 g tomato, 1 cup cabbage, 0.6 cup cilantro, 2 tsps cumin, 1 tbsp soy sauce, 1 tsp olive oil, 1 clove garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 164,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 27,
+            "saturatedFat": 7,
             "cholesterol": 77,
             "sodium": 314,
             "carbohydrates": 5,
@@ -953,7 +953,7 @@ const foodDatabase = {
             "calories": 153,
             "protein": 10,
             "carbs": 25,
-            "fat": 5
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -962,8 +962,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup black beans, 1.4 cup oats, 140 g corn, 60 g kale, 1.8 cup lettuce, 1.3 cup basil, 1 tsp vinegar, 1 tsp sesame oil, 1 tsp olive oil, 2 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 153,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 22,
+            "saturatedFat": 5,
             "cholesterol": 72,
             "sodium": 553,
             "carbohydrates": 25,
@@ -980,7 +980,7 @@ const foodDatabase = {
             "calories": 490,
             "protein": 12,
             "carbs": 66,
-            "fat": 8
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -989,8 +989,8 @@ const foodDatabase = {
         "ingredients": "220 g halloumi, 2 tsps toast, 200 g tomato, 130 g spinach, 100 g zucchini, 110 g cilantro, 2 tbsps lime juice, 140 g curry paste, 1 tsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 490,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 15,
+            "saturatedFat": 8,
             "cholesterol": 69,
             "sodium": 829,
             "carbohydrates": 66,
@@ -1007,7 +1007,7 @@ const foodDatabase = {
             "calories": 335,
             "protein": 37,
             "carbs": 40,
-            "fat": 4
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1016,8 +1016,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps cauliflower, 3 tbsps toast, 1.4 cup pea, 1.5 cup lettuce, 230 g broccoli, 220 g mint, 1 tsp chili flakes, 1 piece curry paste, 2 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 335,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 23,
+            "saturatedFat": 4,
             "cholesterol": 113,
             "sodium": 611,
             "carbohydrates": 40,
@@ -1034,7 +1034,7 @@ const foodDatabase = {
             "calories": 569,
             "protein": 7,
             "carbs": 17,
-            "fat": 9
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1043,8 +1043,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup halloumi, 1.6 cup oats, 100 g cucumber, 220 g broccoli, 0.5 cup zucchini, 200 g mint, 2 tsps lemon juice, 3 tbsps curry paste, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 569,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 3,
+            "saturatedFat": 9,
             "cholesterol": 52,
             "sodium": 97,
             "carbohydrates": 17,
@@ -1061,7 +1061,7 @@ const foodDatabase = {
             "calories": 151,
             "protein": 19,
             "carbs": 42,
-            "fat": 4
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1070,8 +1070,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup chickpeas, 1 cup oats, 110 g cabbage, 1.2 cup kale, 1 cup carrot, 1 cup basil, 2 tbsps sesame oil, 2 tsps ginger, 1 tbsp olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 151,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 30,
+            "saturatedFat": 4,
             "cholesterol": 86,
             "sodium": 294,
             "carbohydrates": 42,
@@ -1088,7 +1088,7 @@ const foodDatabase = {
             "calories": 329,
             "protein": 22,
             "carbs": 22,
-            "fat": 2
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1097,8 +1097,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup sweet potato, 120 g congee, 0.8 cup corn, 190 g tomato, 0.5 cup lettuce, 1.1 cup cilantro, 2 tsps paprika, 1 clove ginger, 3 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 329,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 2,
             "cholesterol": 76,
             "sodium": 94,
             "carbohydrates": 22,
@@ -1115,7 +1115,7 @@ const foodDatabase = {
             "calories": 583,
             "protein": 30,
             "carbs": 9,
-            "fat": 1
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1124,8 +1124,8 @@ const foodDatabase = {
         "ingredients": "2 tsps pumpkin, 130 g oats, 0.6 cup cabbage, 1.6 cup pea, 1.3 cup spinach, 1.6 cup mint, 1 tsp lime juice, 2 tbsps sesame oil, 1 tsp olive oil, 2 cloves garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 583,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 6,
+            "saturatedFat": 1,
             "cholesterol": 85,
             "sodium": 449,
             "carbohydrates": 9,
@@ -1142,7 +1142,7 @@ const foodDatabase = {
             "calories": 406,
             "protein": 33,
             "carbs": 12,
-            "fat": 15
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1151,8 +1151,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup chickpeas, 1 tsp yogurt, 80 g kale, 0.9 cup carrot, 1.7 cup tomato, 240 g rosemary, 1 tbsp lime juice, 1 tsp cumin, 1 tsp olive oil, 3 cloves garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 406,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 29,
+            "saturatedFat": 15,
             "cholesterol": 49,
             "sodium": 364,
             "carbohydrates": 12,
@@ -1169,7 +1169,7 @@ const foodDatabase = {
             "calories": 545,
             "protein": 15,
             "carbs": 49,
-            "fat": 7
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1178,8 +1178,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps pumpkin, 1 tsp yogurt, 240 g spinach, 2 tsps bell pepper, 240 g broccoli, 1.7 cup thyme, 2 tsps vinegar, 2 tsps lime juice, 1 tsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 545,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 7,
             "cholesterol": 10,
             "sodium": 382,
             "carbohydrates": 49,
@@ -1196,7 +1196,7 @@ const foodDatabase = {
             "calories": 377,
             "protein": 40,
             "carbs": 18,
-            "fat": 6
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1205,8 +1205,8 @@ const foodDatabase = {
         "ingredients": "2 tbsps eggplant, 1 piece wrap, 1.5 cup corn, 1.7 cup tomato, 1.3 cup broccoli, 1.4 cup rosemary, 2 tbsps vinegar, 2 tsps sesame oil, 2 tbsps olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 377,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 16,
+            "saturatedFat": 6,
             "cholesterol": 29,
             "sodium": 611,
             "carbohydrates": 18,
@@ -1223,7 +1223,7 @@ const foodDatabase = {
             "calories": 373,
             "protein": 40,
             "carbs": 76,
-            "fat": 8
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1232,8 +1232,8 @@ const foodDatabase = {
         "ingredients": "100 g pumpkin, 2 pieces wrap, 100 g cabbage, 1 tsp bell pepper, 1.5 cup tomato, 200 g basil, 3 tbsps lemon juice, 2 cloves ginger, 2 tsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 373,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 27,
+            "saturatedFat": 8,
             "cholesterol": 106,
             "sodium": 437,
             "carbohydrates": 76,
@@ -1250,7 +1250,7 @@ const foodDatabase = {
             "calories": 307,
             "protein": 45,
             "carbs": 33,
-            "fat": 9
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1259,8 +1259,8 @@ const foodDatabase = {
         "ingredients": "1 cup broccoli, 230 g toast, 150 g zucchini, 200 g carrot, 150 g corn, 1 cup rosemary, 2 cloves ginger, 1 tsp curry paste, 1 tbsp olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 307,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 16,
+            "saturatedFat": 9,
             "cholesterol": 105,
             "sodium": 239,
             "carbohydrates": 33,
@@ -1277,7 +1277,7 @@ const foodDatabase = {
             "calories": 505,
             "protein": 25,
             "carbs": 83,
-            "fat": 3
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1286,8 +1286,8 @@ const foodDatabase = {
         "ingredients": "70 g quinoa, 1.7 cup rice, 170 g kale, 1.2 cup cabbage, 230 g cucumber, 1.8 cup cilantro, 1 tsp ginger, 3 tbsps soy sauce, 3 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 505,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 19,
+            "saturatedFat": 3,
             "cholesterol": 104,
             "sodium": 153,
             "carbohydrates": 83,
@@ -1304,7 +1304,7 @@ const foodDatabase = {
             "calories": 252,
             "protein": 37,
             "carbs": 12,
-            "fat": 11
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1313,8 +1313,8 @@ const foodDatabase = {
         "ingredients": "80 g tofu, 240 g oats, 70 g corn, 1.7 cup pea, 1.6 cup tomato, 100 g mint, 2 tbsps soy sauce, 2 tsps lemon juice, 1 tsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 252,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 29,
+            "saturatedFat": 11,
             "cholesterol": 28,
             "sodium": 270,
             "carbohydrates": 12,
@@ -1331,7 +1331,7 @@ const foodDatabase = {
             "calories": 256,
             "protein": 5,
             "carbs": 11,
-            "fat": 1
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1340,8 +1340,8 @@ const foodDatabase = {
         "ingredients": "190 g quinoa, 3 tbsps yogurt, 220 g kale, 200 g pea, 180 g tomato, 0.7 cup basil, 2 tsps cumin, 1 tbsp soy sauce, 2 tsps olive oil, 3 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 256,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 5,
+            "saturatedFat": 1,
             "cholesterol": 98,
             "sodium": 797,
             "carbohydrates": 11,
@@ -1358,7 +1358,7 @@ const foodDatabase = {
             "calories": 602,
             "protein": 39,
             "carbs": 66,
-            "fat": 2
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1367,8 +1367,8 @@ const foodDatabase = {
         "ingredients": "2 tsps pumpkin, 1 piece wrap, 1.2 cup cucumber, 0.9 cup broccoli, 110 g cabbage, 0.8 cup cilantro, 3 tbsps lemon juice, 1 tsp sesame oil, 1 tsp olive oil, 2 cloves garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 602,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 25,
+            "saturatedFat": 2,
             "cholesterol": 6,
             "sodium": 867,
             "carbohydrates": 66,
@@ -1385,7 +1385,7 @@ const foodDatabase = {
             "calories": 187,
             "protein": 17,
             "carbs": 84,
-            "fat": 4
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1394,8 +1394,8 @@ const foodDatabase = {
         "ingredients": "170 g black beans, 2 pieces tortilla, 90 g carrot, 190 g zucchini, 0.6 cup tomato, 160 g dill, 2 tsps ginger, 1 tbsp vinegar, 1 tsp olive oil, 2 tsps garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 187,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 16,
+            "saturatedFat": 4,
             "cholesterol": 105,
             "sodium": 641,
             "carbohydrates": 84,
@@ -1412,7 +1412,7 @@ const foodDatabase = {
             "calories": 199,
             "protein": 39,
             "carbs": 26,
-            "fat": 15
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1421,8 +1421,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup pumpkin, 240 g congee, 60 g carrot, 1.3 cup spinach, 2 cup lettuce, 1 cup dill, 3 tbsps lemon juice, 0.7 cup curry paste, 2 tbsps olive oil, 2 tsps garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 199,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 26,
+            "saturatedFat": 15,
             "cholesterol": 59,
             "sodium": 604,
             "carbohydrates": 26,
@@ -1439,7 +1439,7 @@ const foodDatabase = {
             "calories": 393,
             "protein": 19,
             "carbs": 78,
-            "fat": 1
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1448,8 +1448,8 @@ const foodDatabase = {
         "ingredients": "1 tsp cauliflower, 0.9 cup oats, 1.3 cup mushroom, 1.3 cup broccoli, 60 g spinach, 1.5 cup thyme, 2 tsps turmeric, 3 tbsps curry paste, 2 tsps olive oil, 2 tsps garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 393,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 19,
+            "saturatedFat": 1,
             "cholesterol": 50,
             "sodium": 93,
             "carbohydrates": 78,
@@ -1466,7 +1466,7 @@ const foodDatabase = {
             "calories": 563,
             "protein": 28,
             "carbs": 49,
-            "fat": 14
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1475,8 +1475,8 @@ const foodDatabase = {
         "ingredients": "190 g quinoa, 1.8 cup rice, 0.7 cup mushroom, 0.6 cup corn, 1.1 cup spinach, 0.7 cup basil, 2 tsps paprika, 2 pieces curry paste, 1 tsp olive oil, 1 tsp garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 563,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 25,
+            "saturatedFat": 14,
             "cholesterol": 107,
             "sodium": 155,
             "carbohydrates": 49,
@@ -1493,7 +1493,7 @@ const foodDatabase = {
             "calories": 603,
             "protein": 21,
             "carbs": 18,
-            "fat": 11
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1502,8 +1502,8 @@ const foodDatabase = {
         "ingredients": "230 g tofu, 1.6 cup congee, 0.5 cup corn, 170 g mushroom, 1.7 cup cabbage, 1 cup thyme, 1 tsp ginger, 1 tsp vinegar, 3 tbsps olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 603,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 4,
+            "saturatedFat": 11,
             "cholesterol": 107,
             "sodium": 385,
             "carbohydrates": 18,
@@ -1520,7 +1520,7 @@ const foodDatabase = {
             "calories": 586,
             "protein": 45,
             "carbs": 46,
-            "fat": 1
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1529,8 +1529,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup halloumi, 120 g oats, 1.4 cup lettuce, 170 g zucchini, 1.6 cup broccoli, 1.2 cup basil, 2 tsps ginger, 1 tsp lemon juice, 2 tbsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 586,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 18,
+            "saturatedFat": 1,
             "cholesterol": 61,
             "sodium": 72,
             "carbohydrates": 46,
@@ -1547,7 +1547,7 @@ const foodDatabase = {
             "calories": 362,
             "protein": 35,
             "carbs": 50,
-            "fat": 10
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1556,8 +1556,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup broccoli, 1 piece wrap, 2 tsps bell pepper, 1.1 cup zucchini, 0.7 cup carrot, 170 g thyme, 1 tsp paprika, 1 clove ginger, 1 tbsp olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 362,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 14,
+            "saturatedFat": 10,
             "cholesterol": 104,
             "sodium": 124,
             "carbohydrates": 50,
@@ -1574,7 +1574,7 @@ const foodDatabase = {
             "calories": 315,
             "protein": 19,
             "carbs": 57,
-            "fat": 2
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1583,8 +1583,8 @@ const foodDatabase = {
         "ingredients": "100 g broccoli, 2 pieces wrap, 190 g cabbage, 60 g carrot, 2 cup tomato, 120 g cilantro, 2 tsps vinegar, 2 tsps ginger, 2 tsps olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 315,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 12,
+            "saturatedFat": 2,
             "cholesterol": 107,
             "sodium": 519,
             "carbohydrates": 57,
@@ -1601,7 +1601,7 @@ const foodDatabase = {
             "calories": 255,
             "protein": 39,
             "carbs": 5,
-            "fat": 7
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1610,9 +1610,9 @@ const foodDatabase = {
         "ingredients": "190 g seitan, 170 g oats, 1 cup zucchini, 120 g corn, 170 g tomato, 0.6 cup rosemary, 1 tsp lemon juice, 1 tsp turmeric, 2 tbsps olive oil, 2 cloves garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 255,
-            "fat": 7,
-            "saturatedFat": 2,
-            "cholesterol": 30,
+            "fat": 24,
+            "saturatedFat": 7,
+            "cholesterol": 0,
             "sodium": 162,
             "carbohydrates": 5,
             "fiber": 3,
@@ -1628,7 +1628,7 @@ const foodDatabase = {
             "calories": 419,
             "protein": 30,
             "carbs": 10,
-            "fat": 4
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1637,8 +1637,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup paneer, 2 pieces wrap, 90 g tomato, 1.2 cup corn, 140 g cabbage, 220 g dill, 2 tsps turmeric, 1 tbsp soy sauce, 3 tbsps olive oil, 1 tsp garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 419,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 18,
+            "saturatedFat": 4,
             "cholesterol": 106,
             "sodium": 705,
             "carbohydrates": 10,
@@ -1655,7 +1655,7 @@ const foodDatabase = {
             "calories": 346,
             "protein": 5,
             "carbs": 21,
-            "fat": 9
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1664,8 +1664,8 @@ const foodDatabase = {
         "ingredients": "200 g pumpkin, 220 g rice, 60 g carrot, 0.6 cup pea, 1.4 cup kale, 1.8 cup thyme, 1 tsp cumin, 1 tsp sesame oil, 2 tsps olive oil, 2 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 346,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 5,
+            "saturatedFat": 9,
             "cholesterol": 101,
             "sodium": 870,
             "carbohydrates": 21,
@@ -1682,7 +1682,7 @@ const foodDatabase = {
             "calories": 319,
             "protein": 4,
             "carbs": 26,
-            "fat": 8
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1691,8 +1691,8 @@ const foodDatabase = {
         "ingredients": "110 g zucchini, 2 pieces tortilla, 0.8 cup cabbage, 110 g carrot, 110 g broccoli, 1 cup cilantro, 2 tsps sesame oil, 3 tbsps lime juice, 1 tsp olive oil, 1 tsp garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 319,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 11,
+            "saturatedFat": 8,
             "cholesterol": 92,
             "sodium": 742,
             "carbohydrates": 26,
@@ -1709,7 +1709,7 @@ const foodDatabase = {
             "calories": 255,
             "protein": 16,
             "carbs": 83,
-            "fat": 9
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1718,8 +1718,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup zucchini, 0.6 cup oats, 130 g broccoli, 1.6 cup tomato, 170 g mint, 2 tsps vinegar, 2 tsps ginger, 3 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 255,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 26,
+            "saturatedFat": 9,
             "cholesterol": 118,
             "sodium": 457,
             "carbohydrates": 83,
@@ -1736,7 +1736,7 @@ const foodDatabase = {
             "calories": 481,
             "protein": 4,
             "carbs": 45,
-            "fat": 11
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1745,8 +1745,8 @@ const foodDatabase = {
         "ingredients": "2 tbsps pumpkin, 2 pieces wrap, 1.7 cup spinach, 1.4 cup mushroom, 0.6 cup corn, 180 g dill, 2 tsps sesame oil, 1 tbsp lime juice, 2 tbsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 481,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 13,
+            "saturatedFat": 11,
             "cholesterol": 108,
             "sodium": 274,
             "carbohydrates": 45,
@@ -1763,7 +1763,7 @@ const foodDatabase = {
             "calories": 206,
             "protein": 12,
             "carbs": 34,
-            "fat": 0
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1772,7 +1772,7 @@ const foodDatabase = {
         "ingredients": "1.5 cup broccoli, 2 pieces tortilla, 2 tsps bell pepper, 0.9 cup spinach, 230 g cabbage, 0.6 cup mint, 1 tsp ginger, 2 tsps cumin, 2 tsps olive oil, 3 cloves garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 206,
-            "fat": 0,
+            "fat": 6,
             "saturatedFat": 0,
             "cholesterol": 29,
             "sodium": 262,
@@ -1790,7 +1790,7 @@ const foodDatabase = {
             "calories": 174,
             "protein": 43,
             "carbs": 77,
-            "fat": 0
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1799,7 +1799,7 @@ const foodDatabase = {
         "ingredients": "1.8 cup halloumi, 1 piece tortilla, 220 g cucumber, 210 g carrot, 1.6 cup cabbage, 240 g basil, 1 tsp chili flakes, 1 tsp ginger, 1 tsp olive oil, 1 tsp garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 174,
-            "fat": 0,
+            "fat": 11,
             "saturatedFat": 0,
             "cholesterol": 36,
             "sodium": 722,
@@ -1817,7 +1817,7 @@ const foodDatabase = {
             "calories": 286,
             "protein": 40,
             "carbs": 28,
-            "fat": 10
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1826,8 +1826,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup tofu, 230 g rice, 100 g tomato, 1.7 cup cabbage, 1.2 cup cucumber, 150 g basil, 3 tbsps curry paste, 1 clove ginger, 2 tsps olive oil, 2 tsps garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 286,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 8,
+            "saturatedFat": 10,
             "cholesterol": 34,
             "sodium": 172,
             "carbohydrates": 28,
@@ -1854,7 +1854,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 463,
             "fat": 8,
-            "saturatedFat": 2,
+            "saturatedFat": 8,
             "cholesterol": 77,
             "sodium": 775,
             "carbohydrates": 68,
@@ -1871,7 +1871,7 @@ const foodDatabase = {
             "calories": 569,
             "protein": 25,
             "carbs": 55,
-            "fat": 0
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1880,7 +1880,7 @@ const foodDatabase = {
         "ingredients": "1.9 cup sweet potato, 2 tsps yogurt, 60 g cucumber, 70 g kale, 170 g cabbage, 0.8 cup rosemary, 0.6 cup curry paste, 2 tsps lemon juice, 3 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 569,
-            "fat": 0,
+            "fat": 20,
             "saturatedFat": 0,
             "cholesterol": 23,
             "sodium": 661,
@@ -1898,7 +1898,7 @@ const foodDatabase = {
             "calories": 562,
             "protein": 11,
             "carbs": 53,
-            "fat": 15
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1907,8 +1907,8 @@ const foodDatabase = {
         "ingredients": "1 tsp eggplant, 60 g rice, 1 cup carrot, 2 tsps bell pepper, 1.8 cup lettuce, 1.5 cup mint, 2 tsps turmeric, 2 tsps soy sauce, 2 tsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 562,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 26,
+            "saturatedFat": 15,
             "cholesterol": 86,
             "sodium": 233,
             "carbohydrates": 53,
@@ -1925,7 +1925,7 @@ const foodDatabase = {
             "calories": 204,
             "protein": 5,
             "carbs": 42,
-            "fat": 11
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1934,8 +1934,8 @@ const foodDatabase = {
         "ingredients": "190 g paneer, 2 pieces toast, 1.7 cup zucchini, 0.9 cup lettuce, 130 g cucumber, 130 g parsley, 3 tbsps sesame oil, 1 tsp ginger, 1 tsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 204,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 4,
+            "saturatedFat": 11,
             "cholesterol": 40,
             "sodium": 854,
             "carbohydrates": 42,
@@ -1952,7 +1952,7 @@ const foodDatabase = {
             "calories": 361,
             "protein": 24,
             "carbs": 37,
-            "fat": 5
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1961,8 +1961,8 @@ const foodDatabase = {
         "ingredients": "2 pieces cauliflower, 1 piece wrap, 150 g zucchini, 240 g broccoli, 1.9 cup corn, 0.5 cup mint, 1 tsp lime juice, 1 tbsp soy sauce, 1 tsp olive oil, 1 clove garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 361,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 16,
+            "saturatedFat": 5,
             "cholesterol": 44,
             "sodium": 780,
             "carbohydrates": 37,
@@ -1979,7 +1979,7 @@ const foodDatabase = {
             "calories": 179,
             "protein": 34,
             "carbs": 48,
-            "fat": 9
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -1988,8 +1988,8 @@ const foodDatabase = {
         "ingredients": "230 g broccoli, 3 tbsps yogurt, 1.4 cup kale, 60 g zucchini, 1.8 cup cucumber, 150 g rosemary, 2 tsps cumin, 2 pieces curry paste, 3 tbsps olive oil, 1 tsp garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 179,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 4,
+            "saturatedFat": 9,
             "cholesterol": 91,
             "sodium": 571,
             "carbohydrates": 48,
@@ -2006,7 +2006,7 @@ const foodDatabase = {
             "calories": 466,
             "protein": 36,
             "carbs": 23,
-            "fat": 12
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2015,8 +2015,8 @@ const foodDatabase = {
         "ingredients": "110 g chickpeas, 1.2 cup toast, 150 g cucumber, 60 g broccoli, 1 cup carrot, 130 g parsley, 2 tsps vinegar, 1 tsp chili flakes, 3 tbsps olive oil, 1 tsp garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 466,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 13,
+            "saturatedFat": 12,
             "cholesterol": 66,
             "sodium": 847,
             "carbohydrates": 23,
@@ -2033,7 +2033,7 @@ const foodDatabase = {
             "calories": 157,
             "protein": 42,
             "carbs": 5,
-            "fat": 3
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2042,8 +2042,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup sweet potato, 2 pieces tortilla, 150 g lettuce, 1.6 cup pea, 170 g broccoli, 150 g cilantro, 1 tbsp curry paste, 2 tsps sesame oil, 2 tsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 157,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 5,
+            "saturatedFat": 3,
             "cholesterol": 46,
             "sodium": 469,
             "carbohydrates": 5,
@@ -2060,7 +2060,7 @@ const foodDatabase = {
             "calories": 552,
             "protein": 3,
             "carbs": 60,
-            "fat": 6
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2069,8 +2069,8 @@ const foodDatabase = {
         "ingredients": "170 g halloumi, 2 tbsps toast, 1.8 cup corn, 180 g broccoli, 180 g pea, 0.6 cup thyme, 3 tbsps vinegar, 1 tbsp lime juice, 1 tsp olive oil, 2 cloves garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 552,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 26,
+            "saturatedFat": 6,
             "cholesterol": 105,
             "sodium": 453,
             "carbohydrates": 60,
@@ -2087,7 +2087,7 @@ const foodDatabase = {
             "calories": 628,
             "protein": 35,
             "carbs": 43,
-            "fat": 9
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2096,8 +2096,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup zucchini, 1 piece tortilla, 140 g tomato, 1 tsp bell pepper, 2 cup spinach, 1.5 cup basil, 1 tsp curry paste, 2 tsps cumin, 1 tbsp olive oil, 1 clove garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 628,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 13,
+            "saturatedFat": 9,
             "cholesterol": 17,
             "sodium": 420,
             "carbohydrates": 43,
@@ -2114,7 +2114,7 @@ const foodDatabase = {
             "calories": 254,
             "protein": 36,
             "carbs": 6,
-            "fat": 0
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2123,7 +2123,7 @@ const foodDatabase = {
         "ingredients": "1.5 cup seitan, 180 g congee, 90 g broccoli, 210 g zucchini, 1.9 cup pea, 190 g cilantro, 2 tsps lime juice, 1 tbsp vinegar, 1 tbsp olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 254,
-            "fat": 0,
+            "fat": 22,
             "saturatedFat": 0,
             "cholesterol": 73,
             "sodium": 121,
@@ -2141,7 +2141,7 @@ const foodDatabase = {
             "calories": 259,
             "protein": 29,
             "carbs": 67,
-            "fat": 15
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2150,8 +2150,8 @@ const foodDatabase = {
         "ingredients": "160 g lentils, 1.5 cup congee, 1.2 cup pea, 80 g cabbage, 80 g corn, 100 g rosemary, 1 tsp cumin, 2 tbsps lime juice, 2 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 259,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 20,
+            "saturatedFat": 15,
             "cholesterol": 29,
             "sodium": 176,
             "carbohydrates": 67,
@@ -2168,7 +2168,7 @@ const foodDatabase = {
             "calories": 250,
             "protein": 35,
             "carbs": 33,
-            "fat": 12
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2177,8 +2177,8 @@ const foodDatabase = {
         "ingredients": "2 pieces cauliflower, 1 tsp yogurt, 2 tsps bell pepper, 1.8 cup corn, 1.6 cup tomato, 1 cup cilantro, 2 tsps ginger, 2 tbsps sesame oil, 2 tsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 250,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 11,
+            "saturatedFat": 12,
             "cholesterol": 110,
             "sodium": 201,
             "carbohydrates": 33,
@@ -2195,7 +2195,7 @@ const foodDatabase = {
             "calories": 447,
             "protein": 41,
             "carbs": 73,
-            "fat": 8
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2204,8 +2204,8 @@ const foodDatabase = {
         "ingredients": "120 g lentils, 140 g oats, 160 g carrot, 170 g tomato, 1.1 cup broccoli, 140 g dill, 2 tsps vinegar, 2 tsps curry paste, 2 tsps olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 447,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 22,
+            "saturatedFat": 8,
             "cholesterol": 47,
             "sodium": 164,
             "carbohydrates": 73,
@@ -2222,7 +2222,7 @@ const foodDatabase = {
             "calories": 353,
             "protein": 42,
             "carbs": 66,
-            "fat": 1
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2231,8 +2231,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup tofu, 1 tbsp yogurt, 1.9 cup tomato, 80 g zucchini, 140 g cabbage, 1.2 cup parsley, 1 clove ginger, 2 tsps vinegar, 3 tbsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 353,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 10,
+            "saturatedFat": 1,
             "cholesterol": 62,
             "sodium": 78,
             "carbohydrates": 66,
@@ -2249,7 +2249,7 @@ const foodDatabase = {
             "calories": 352,
             "protein": 10,
             "carbs": 49,
-            "fat": 13
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2258,8 +2258,8 @@ const foodDatabase = {
         "ingredients": "2 cup cauliflower, 1.9 cup oats, 140 g lettuce, 90 g pea, 0.6 cup corn, 0.8 cup parsley, 1 tbsp lemon juice, 2 tsps ginger, 1 tsp olive oil, 1 clove garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 352,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 26,
+            "saturatedFat": 13,
             "cholesterol": 46,
             "sodium": 715,
             "carbohydrates": 49,
@@ -2276,7 +2276,7 @@ const foodDatabase = {
             "calories": 593,
             "protein": 12,
             "carbs": 27,
-            "fat": 9
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2285,8 +2285,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup sweet potato, 2 cup oats, 1 cup tomato, 110 g kale, 1.4 cup corn, 170 g mint, 1 tsp chili flakes, 1 tbsp vinegar, 2 tbsps olive oil, 2 tsps garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 593,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 21,
+            "saturatedFat": 9,
             "cholesterol": 79,
             "sodium": 363,
             "carbohydrates": 27,
@@ -2303,7 +2303,7 @@ const foodDatabase = {
             "calories": 556,
             "protein": 20,
             "carbs": 79,
-            "fat": 4
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2312,8 +2312,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup sweet potato, 2 pieces wrap, 1.3 cup corn, 90 g lettuce, 70 g kale, 1.3 cup basil, 3 tbsps sesame oil, 1 tsp paprika, 2 tsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 556,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 4,
             "cholesterol": 73,
             "sodium": 261,
             "carbohydrates": 79,
@@ -2330,7 +2330,7 @@ const foodDatabase = {
             "calories": 502,
             "protein": 32,
             "carbs": 76,
-            "fat": 5
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2339,8 +2339,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup quinoa, 100 g congee, 170 g kale, 160 g cabbage, 240 g zucchini, 170 g cilantro, 3 tbsps sesame oil, 1 tsp ginger, 3 tbsps olive oil, 2 tsps garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 502,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 5,
             "cholesterol": 99,
             "sodium": 872,
             "carbohydrates": 76,
@@ -2357,7 +2357,7 @@ const foodDatabase = {
             "calories": 438,
             "protein": 28,
             "carbs": 48,
-            "fat": 7
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2366,8 +2366,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup mushrooms, 2 pieces toast, 1.1 cup zucchini, 0.6 cup lettuce, 0.8 cup corn, 1.7 cup basil, 1 tsp turmeric, 1 tsp soy sauce, 2 tsps olive oil, 1 tsp garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 438,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 15,
+            "saturatedFat": 7,
             "cholesterol": 6,
             "sodium": 281,
             "carbohydrates": 48,
@@ -2384,7 +2384,7 @@ const foodDatabase = {
             "calories": 263,
             "protein": 9,
             "carbs": 40,
-            "fat": 1
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2393,8 +2393,8 @@ const foodDatabase = {
         "ingredients": "200 g tofu, 1 tbsp yogurt, 60 g spinach, 240 g lettuce, 1 tsp bell pepper, 0.6 cup thyme, 2 tsps lemon juice, 2 tsps soy sauce, 1 tbsp olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 263,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 18,
+            "saturatedFat": 1,
             "cholesterol": 63,
             "sodium": 633,
             "carbohydrates": 40,
@@ -2411,7 +2411,7 @@ const foodDatabase = {
             "calories": 555,
             "protein": 20,
             "carbs": 69,
-            "fat": 7
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2420,8 +2420,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup lentils, 1.4 cup oats, 1 cup spinach, 80 g cucumber, 230 g kale, 0.7 cup cilantro, 1 tsp ginger, 1 tsp paprika, 2 tsps olive oil, 3 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 555,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 7,
             "cholesterol": 45,
             "sodium": 632,
             "carbohydrates": 69,
@@ -2438,7 +2438,7 @@ const foodDatabase = {
             "calories": 617,
             "protein": 25,
             "carbs": 76,
-            "fat": 0
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2447,7 +2447,7 @@ const foodDatabase = {
         "ingredients": "120 g seitan, 110 g congee, 150 g cucumber, 90 g cabbage, 100 g zucchini, 120 g cilantro, 2 tsps lime juice, 1 tsp lemon juice, 1 tbsp olive oil, 2 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 617,
-            "fat": 0,
+            "fat": 25,
             "saturatedFat": 0,
             "cholesterol": 118,
             "sodium": 650,
@@ -2465,7 +2465,7 @@ const foodDatabase = {
             "calories": 421,
             "protein": 23,
             "carbs": 25,
-            "fat": 3
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2474,8 +2474,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup sweet potato, 1.7 cup oats, 230 g broccoli, 1 cup kale, 0.7 cup lettuce, 1.5 cup parsley, 2 tsps sesame oil, 2 tsps curry paste, 1 tbsp olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 421,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 9,
+            "saturatedFat": 3,
             "cholesterol": 11,
             "sodium": 872,
             "carbohydrates": 25,
@@ -2492,7 +2492,7 @@ const foodDatabase = {
             "calories": 626,
             "protein": 7,
             "carbs": 32,
-            "fat": 4
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2501,8 +2501,8 @@ const foodDatabase = {
         "ingredients": "220 g halloumi, 3 tbsps yogurt, 90 g zucchini, 1.6 cup kale, 130 g cucumber, 160 g parsley, 2 tsps cumin, 1 tsp lemon juice, 3 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 626,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 8,
+            "saturatedFat": 4,
             "cholesterol": 117,
             "sodium": 99,
             "carbohydrates": 32,
@@ -2519,7 +2519,7 @@ const foodDatabase = {
             "calories": 460,
             "protein": 37,
             "carbs": 31,
-            "fat": 11
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2528,8 +2528,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup seitan, 1.3 cup oats, 210 g lettuce, 1 tsp bell pepper, 80 g zucchini, 240 g basil, 1 tsp lemon juice, 2 tsps sesame oil, 3 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 460,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 12,
+            "saturatedFat": 11,
             "cholesterol": 86,
             "sodium": 434,
             "carbohydrates": 31,
@@ -2546,7 +2546,7 @@ const foodDatabase = {
             "calories": 550,
             "protein": 33,
             "carbs": 31,
-            "fat": 0
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2555,7 +2555,7 @@ const foodDatabase = {
         "ingredients": "1.7 cup halloumi, 2 pieces wrap, 1.8 cup cucumber, 130 g mushroom, 1 tsp bell pepper, 200 g parsley, 1 tsp chili flakes, 2 tbsps sesame oil, 1 tsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 550,
-            "fat": 0,
+            "fat": 28,
             "saturatedFat": 0,
             "cholesterol": 116,
             "sodium": 472,
@@ -2573,7 +2573,7 @@ const foodDatabase = {
             "calories": 439,
             "protein": 14,
             "carbs": 30,
-            "fat": 9
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2582,8 +2582,8 @@ const foodDatabase = {
         "ingredients": "1 cup chickpeas, 200 g oats, 1.3 cup kale, 90 g carrot, 1.9 cup zucchini, 70 g thyme, 2 tsps cumin, 2 pieces curry paste, 2 tsps olive oil, 1 tsp garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 439,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 24,
+            "saturatedFat": 9,
             "cholesterol": 85,
             "sodium": 317,
             "carbohydrates": 30,
@@ -2600,7 +2600,7 @@ const foodDatabase = {
             "calories": 634,
             "protein": 10,
             "carbs": 73,
-            "fat": 7
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2609,8 +2609,8 @@ const foodDatabase = {
         "ingredients": "80 g paneer, 1 piece tortilla, 1.5 cup spinach, 1 tsp bell pepper, 90 g tomato, 0.7 cup rosemary, 1 tsp soy sauce, 1 tsp turmeric, 1 tsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 634,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 18,
+            "saturatedFat": 7,
             "cholesterol": 43,
             "sodium": 276,
             "carbohydrates": 73,
@@ -2627,7 +2627,7 @@ const foodDatabase = {
             "calories": 204,
             "protein": 40,
             "carbs": 70,
-            "fat": 4
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2636,8 +2636,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup halloumi, 1.8 cup congee, 180 g cabbage, 1 cup mushroom, 1 cup carrot, 1.6 cup dill, 3 tbsps vinegar, 1 piece curry paste, 2 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 204,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 14,
+            "saturatedFat": 4,
             "cholesterol": 117,
             "sodium": 298,
             "carbohydrates": 70,
@@ -2654,7 +2654,7 @@ const foodDatabase = {
             "calories": 269,
             "protein": 35,
             "carbs": 35,
-            "fat": 5
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2663,8 +2663,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup chickpeas, 1.6 cup rice, 1 tsp bell pepper, 220 g zucchini, 0.9 cup broccoli, 100 g dill, 2 tsps chili flakes, 1 tsp soy sauce, 2 tsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 269,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 30,
+            "saturatedFat": 5,
             "cholesterol": 21,
             "sodium": 760,
             "carbohydrates": 35,
@@ -2681,7 +2681,7 @@ const foodDatabase = {
             "calories": 498,
             "protein": 25,
             "carbs": 22,
-            "fat": 12
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2690,8 +2690,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup chickpeas, 1 piece toast, 0.6 cup carrot, 150 g lettuce, 200 g zucchini, 1.7 cup thyme, 2 tsps cumin, 2 tbsps soy sauce, 1 tsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 498,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 4,
+            "saturatedFat": 12,
             "cholesterol": 3,
             "sodium": 124,
             "carbohydrates": 22,
@@ -2708,7 +2708,7 @@ const foodDatabase = {
             "calories": 556,
             "protein": 45,
             "carbs": 34,
-            "fat": 5
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2717,13 +2717,13 @@ const foodDatabase = {
         "ingredients": "110 g crab, 120 g rice, 0.6 cup kale, 140 g pea, 1.4 cup broccoli, 1.8 cup rosemary, 3 cloves ginger, 1 tbsp lime juice, 1 tsp olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 556,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 3,
+            "saturatedFat": 5,
             "cholesterol": 85,
             "sodium": 451,
             "carbohydrates": 34,
             "fiber": 5,
-            "sugar": 6,
+            "sugar": 0,
             "protein": 45
         }
     },
@@ -2735,7 +2735,7 @@ const foodDatabase = {
             "calories": 650,
             "protein": 41,
             "carbs": 38,
-            "fat": 9
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2744,8 +2744,8 @@ const foodDatabase = {
         "ingredients": "2 cup crab, 2 pieces wrap, 0.6 cup cucumber, 120 g tomato, 190 g pea, 0.5 cup cilantro, 2 tsps cumin, 1 tbsp vinegar, 1 tbsp olive oil, 1 clove garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 650,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 5,
+            "saturatedFat": 9,
             "cholesterol": 69,
             "sodium": 290,
             "carbohydrates": 38,
@@ -2762,7 +2762,7 @@ const foodDatabase = {
             "calories": 179,
             "protein": 29,
             "carbs": 12,
-            "fat": 14
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2771,8 +2771,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup shrimp, 1 tbsp yogurt, 1.2 cup kale, 1.8 cup cucumber, 160 g carrot, 1.3 cup mint, 1 tsp sesame oil, 1 tsp vinegar, 1 tsp olive oil, 1 clove garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 179,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 30,
+            "saturatedFat": 14,
             "cholesterol": 12,
             "sodium": 469,
             "carbohydrates": 12,
@@ -2789,7 +2789,7 @@ const foodDatabase = {
             "calories": 507,
             "protein": 21,
             "carbs": 27,
-            "fat": 15
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2798,8 +2798,8 @@ const foodDatabase = {
         "ingredients": "120 g beef, 80 g rice, 90 g zucchini, 1 tsp bell pepper, 60 g carrot, 180 g basil, 1 tsp cumin, 2 tbsps vinegar, 2 tsps olive oil, 3 cloves garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 507,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 5,
+            "saturatedFat": 15,
             "cholesterol": 19,
             "sodium": 399,
             "carbohydrates": 27,
@@ -2816,7 +2816,7 @@ const foodDatabase = {
             "calories": 578,
             "protein": 30,
             "carbs": 25,
-            "fat": 4
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2825,8 +2825,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup shrimp, 120 g toast, 0.9 cup carrot, 2 tsps bell pepper, 1.2 cup kale, 0.7 cup dill, 1 tsp turmeric, 3 tbsps vinegar, 2 tsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 578,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 10,
+            "saturatedFat": 4,
             "cholesterol": 85,
             "sodium": 828,
             "carbohydrates": 25,
@@ -2843,7 +2843,7 @@ const foodDatabase = {
             "calories": 443,
             "protein": 31,
             "carbs": 68,
-            "fat": 14
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2852,8 +2852,8 @@ const foodDatabase = {
         "ingredients": "1 cup pork, 2 pieces tortilla, 100 g mushroom, 170 g tomato, 0.7 cup corn, 1.8 cup basil, 3 tbsps lime juice, 1 tsp turmeric, 1 tsp olive oil, 2 cloves garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 443,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 16,
+            "saturatedFat": 14,
             "cholesterol": 71,
             "sodium": 421,
             "carbohydrates": 68,
@@ -2870,7 +2870,7 @@ const foodDatabase = {
             "calories": 534,
             "protein": 18,
             "carbs": 24,
-            "fat": 0
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2879,7 +2879,7 @@ const foodDatabase = {
         "ingredients": "1.5 cup chicken, 1 piece wrap, 190 g cucumber, 2 cup spinach, 1 tsp bell pepper, 1.7 cup cilantro, 2 tbsps sesame oil, 2 tbsps lemon juice, 3 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 534,
-            "fat": 0,
+            "fat": 20,
             "saturatedFat": 0,
             "cholesterol": 45,
             "sodium": 66,
@@ -2897,7 +2897,7 @@ const foodDatabase = {
             "calories": 309,
             "protein": 32,
             "carbs": 63,
-            "fat": 1
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2906,8 +2906,8 @@ const foodDatabase = {
         "ingredients": "100 g salmon, 1 piece tortilla, 70 g corn, 210 g cucumber, 140 g spinach, 0.8 cup dill, 1 tbsp sesame oil, 2 tbsps lime juice, 2 tbsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 309,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 13,
+            "saturatedFat": 1,
             "cholesterol": 65,
             "sodium": 879,
             "carbohydrates": 63,
@@ -2924,7 +2924,7 @@ const foodDatabase = {
             "calories": 431,
             "protein": 23,
             "carbs": 30,
-            "fat": 14
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2933,8 +2933,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup turkey, 1.6 cup oats, 120 g lettuce, 230 g carrot, 140 g cabbage, 90 g thyme, 2 tsps paprika, 1 tbsp soy sauce, 2 tsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 431,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 21,
+            "saturatedFat": 14,
             "cholesterol": 56,
             "sodium": 244,
             "carbohydrates": 30,
@@ -2951,7 +2951,7 @@ const foodDatabase = {
             "calories": 344,
             "protein": 31,
             "carbs": 11,
-            "fat": 11
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2960,8 +2960,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup pork, 1 piece tortilla, 0.9 cup pea, 210 g tomato, 180 g lettuce, 100 g parsley, 1 tsp ginger, 2 tsps sesame oil, 2 tsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 344,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 30,
+            "saturatedFat": 11,
             "cholesterol": 7,
             "sodium": 425,
             "carbohydrates": 11,
@@ -2978,7 +2978,7 @@ const foodDatabase = {
             "calories": 327,
             "protein": 35,
             "carbs": 80,
-            "fat": 15
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -2987,8 +2987,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup crab, 2 pieces wrap, 1.6 cup lettuce, 180 g cabbage, 2 tsps bell pepper, 100 g rosemary, 1 tsp chili flakes, 1 tbsp vinegar, 1 tbsp olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 327,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 12,
+            "saturatedFat": 15,
             "cholesterol": 100,
             "sodium": 140,
             "carbohydrates": 80,
@@ -3005,7 +3005,7 @@ const foodDatabase = {
             "calories": 593,
             "protein": 5,
             "carbs": 61,
-            "fat": 8
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3014,8 +3014,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup tuna, 2 pieces toast, 0.5 cup lettuce, 100 g carrot, 1.9 cup pea, 240 g mint, 1 tsp turmeric, 2 tsps chili flakes, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 593,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 3,
+            "saturatedFat": 8,
             "cholesterol": 15,
             "sodium": 69,
             "carbohydrates": 61,
@@ -3032,7 +3032,7 @@ const foodDatabase = {
             "calories": 181,
             "protein": 34,
             "carbs": 77,
-            "fat": 6
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3041,8 +3041,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup chicken, 2 tbsps yogurt, 1.5 cup spinach, 0.9 cup corn, 1.1 cup lettuce, 1.4 cup basil, 1 tsp turmeric, 2 tsps ginger, 2 tsps olive oil, 1 tsp garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 181,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 16,
+            "saturatedFat": 6,
             "cholesterol": 82,
             "sodium": 801,
             "carbohydrates": 77,
@@ -3059,7 +3059,7 @@ const foodDatabase = {
             "calories": 173,
             "protein": 44,
             "carbs": 70,
-            "fat": 1
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3068,8 +3068,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup pork, 1 piece wrap, 70 g tomato, 80 g spinach, 1.8 cup broccoli, 1.6 cup cilantro, 2 tsps lime juice, 2 tsps ginger, 2 tsps olive oil, 1 tsp garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 173,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 7,
+            "saturatedFat": 1,
             "cholesterol": 12,
             "sodium": 68,
             "carbohydrates": 70,
@@ -3086,7 +3086,7 @@ const foodDatabase = {
             "calories": 165,
             "protein": 41,
             "carbs": 33,
-            "fat": 14
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3095,8 +3095,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup pork, 70 g congee, 2 tsps bell pepper, 1.6 cup zucchini, 230 g cucumber, 70 g basil, 1 tsp turmeric, 2 tsps curry paste, 2 tbsps olive oil, 2 tsps garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 165,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 4,
+            "saturatedFat": 14,
             "cholesterol": 27,
             "sodium": 792,
             "carbohydrates": 33,
@@ -3113,7 +3113,7 @@ const foodDatabase = {
             "calories": 305,
             "protein": 32,
             "carbs": 70,
-            "fat": 7
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3122,8 +3122,8 @@ const foodDatabase = {
         "ingredients": "120 g lamb, 2 tbsps yogurt, 2 cup lettuce, 1 cup mushroom, 1.4 cup kale, 2 cup rosemary, 1 tsp cumin, 2 tbsps soy sauce, 1 tsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 305,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 10,
+            "saturatedFat": 7,
             "cholesterol": 21,
             "sodium": 449,
             "carbohydrates": 70,
@@ -3140,7 +3140,7 @@ const foodDatabase = {
             "calories": 288,
             "protein": 13,
             "carbs": 39,
-            "fat": 13
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3149,8 +3149,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup duck, 2 tbsps toast, 120 g lettuce, 200 g cucumber, 0.9 cup carrot, 2 cup cilantro, 2 tsps vinegar, 1 clove ginger, 2 tsps olive oil, 1 clove garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 288,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 27,
+            "saturatedFat": 13,
             "cholesterol": 98,
             "sodium": 594,
             "carbohydrates": 39,
@@ -3167,7 +3167,7 @@ const foodDatabase = {
             "calories": 640,
             "protein": 20,
             "carbs": 8,
-            "fat": 8
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3176,8 +3176,8 @@ const foodDatabase = {
         "ingredients": "110 g cod, 80 g congee, 210 g cucumber, 0.9 cup carrot, 1.8 cup lettuce, 100 g dill, 1 tsp cumin, 2 tsps paprika, 2 tsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 640,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 29,
+            "saturatedFat": 8,
             "cholesterol": 50,
             "sodium": 583,
             "carbohydrates": 8,
@@ -3194,7 +3194,7 @@ const foodDatabase = {
             "calories": 518,
             "protein": 39,
             "carbs": 25,
-            "fat": 1
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3203,8 +3203,8 @@ const foodDatabase = {
         "ingredients": "1 cup tuna, 2 pieces wrap, 1.1 cup mushroom, 150 g kale, 110 g lettuce, 70 g mint, 1 tsp ginger, 2 tsps chili flakes, 1 tbsp olive oil, 3 cloves garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 518,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 28,
+            "saturatedFat": 1,
             "cholesterol": 45,
             "sodium": 709,
             "carbohydrates": 25,
@@ -3221,7 +3221,7 @@ const foodDatabase = {
             "calories": 423,
             "protein": 29,
             "carbs": 17,
-            "fat": 5
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3230,13 +3230,13 @@ const foodDatabase = {
         "ingredients": "230 g chicken, 1.5 cup oats, 180 g mushroom, 210 g zucchini, 1.9 cup pea, 160 g cilantro, 1 tsp cumin, 2 tsps turmeric, 1 tbsp olive oil, 2 tsps garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 423,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 30,
+            "saturatedFat": 5,
             "cholesterol": 12,
             "sodium": 571,
             "carbohydrates": 17,
             "fiber": 14,
-            "sugar": 3,
+            "sugar": 0,
             "protein": 29
         }
     },
@@ -3248,7 +3248,7 @@ const foodDatabase = {
             "calories": 427,
             "protein": 43,
             "carbs": 16,
-            "fat": 10
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3257,8 +3257,8 @@ const foodDatabase = {
         "ingredients": "210 g tuna, 0.5 cup oats, 80 g carrot, 70 g spinach, 0.9 cup cucumber, 200 g mint, 2 tsps chili flakes, 1 tsp lime juice, 3 tbsps olive oil, 2 tsps garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 427,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 23,
+            "saturatedFat": 10,
             "cholesterol": 55,
             "sodium": 546,
             "carbohydrates": 16,
@@ -3275,7 +3275,7 @@ const foodDatabase = {
             "calories": 264,
             "protein": 20,
             "carbs": 64,
-            "fat": 1
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3284,8 +3284,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup cod, 120 g oats, 1 tsp bell pepper, 0.7 cup corn, 180 g spinach, 1.1 cup basil, 2 tsps chili flakes, 1 tsp paprika, 1 tbsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 264,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 19,
+            "saturatedFat": 1,
             "cholesterol": 78,
             "sodium": 439,
             "carbohydrates": 64,
@@ -3302,7 +3302,7 @@ const foodDatabase = {
             "calories": 505,
             "protein": 8,
             "carbs": 16,
-            "fat": 9
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3311,8 +3311,8 @@ const foodDatabase = {
         "ingredients": "160 g cod, 1.6 cup congee, 200 g spinach, 2 tsps bell pepper, 160 g carrot, 1.8 cup dill, 2 tbsps lime juice, 2 tsps vinegar, 3 tbsps olive oil, 3 cloves garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 505,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 21,
+            "saturatedFat": 9,
             "cholesterol": 25,
             "sodium": 646,
             "carbohydrates": 16,
@@ -3329,7 +3329,7 @@ const foodDatabase = {
             "calories": 537,
             "protein": 37,
             "carbs": 82,
-            "fat": 2
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3338,8 +3338,8 @@ const foodDatabase = {
         "ingredients": "90 g cod, 140 g congee, 170 g pea, 1.3 cup kale, 230 g carrot, 240 g rosemary, 2 tsps chili flakes, 1 tsp turmeric, 2 tsps olive oil, 1 tsp garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 537,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 25,
+            "saturatedFat": 2,
             "cholesterol": 25,
             "sodium": 717,
             "carbohydrates": 82,
@@ -3356,7 +3356,7 @@ const foodDatabase = {
             "calories": 181,
             "protein": 41,
             "carbs": 60,
-            "fat": 11
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3365,8 +3365,8 @@ const foodDatabase = {
         "ingredients": "90 g crab, 2 pieces wrap, 240 g zucchini, 140 g spinach, 200 g tomato, 0.9 cup dill, 2 tsps cumin, 1 tbsp vinegar, 2 tbsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 181,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 4,
+            "saturatedFat": 11,
             "cholesterol": 60,
             "sodium": 145,
             "carbohydrates": 60,
@@ -3383,7 +3383,7 @@ const foodDatabase = {
             "calories": 428,
             "protein": 15,
             "carbs": 5,
-            "fat": 5
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3392,8 +3392,8 @@ const foodDatabase = {
         "ingredients": "200 g lamb, 2 pieces wrap, 140 g cucumber, 1 tsp bell pepper, 70 g kale, 0.5 cup cilantro, 1.1 cup curry paste, 2 tbsps soy sauce, 3 tbsps olive oil, 1 tsp garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 428,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 12,
+            "saturatedFat": 5,
             "cholesterol": 90,
             "sodium": 638,
             "carbohydrates": 5,
@@ -3410,7 +3410,7 @@ const foodDatabase = {
             "calories": 371,
             "protein": 41,
             "carbs": 6,
-            "fat": 3
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3419,13 +3419,13 @@ const foodDatabase = {
         "ingredients": "1 cup tuna, 2 tbsps toast, 200 g cabbage, 170 g tomato, 1.8 cup carrot, 1.5 cup rosemary, 2 tsps paprika, 1 tsp lemon juice, 1 tbsp olive oil, 2 cloves garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 371,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 16,
+            "saturatedFat": 3,
             "cholesterol": 63,
             "sodium": 333,
             "carbohydrates": 6,
             "fiber": 6,
-            "sugar": 1,
+            "sugar": 0,
             "protein": 41
         }
     },
@@ -3437,7 +3437,7 @@ const foodDatabase = {
             "calories": 588,
             "protein": 8,
             "carbs": 62,
-            "fat": 15
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3446,8 +3446,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup duck, 1 tbsp yogurt, 1.6 cup pea, 80 g carrot, 60 g tomato, 1 cup dill, 1 tsp ginger, 140 g curry paste, 2 tsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 588,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 26,
+            "saturatedFat": 15,
             "cholesterol": 55,
             "sodium": 310,
             "carbohydrates": 62,
@@ -3464,7 +3464,7 @@ const foodDatabase = {
             "calories": 460,
             "protein": 10,
             "carbs": 9,
-            "fat": 3
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3473,8 +3473,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup salmon, 2 tbsps yogurt, 1 cup spinach, 1.9 cup cucumber, 180 g pea, 80 g rosemary, 1 tsp lime juice, 2 tsps cumin, 3 tbsps olive oil, 2 tsps garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 460,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 8,
+            "saturatedFat": 3,
             "cholesterol": 80,
             "sodium": 364,
             "carbohydrates": 9,
@@ -3491,7 +3491,7 @@ const foodDatabase = {
             "calories": 453,
             "protein": 5,
             "carbs": 16,
-            "fat": 14
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3500,8 +3500,8 @@ const foodDatabase = {
         "ingredients": "190 g chicken, 1 piece wrap, 150 g broccoli, 130 g tomato, 0.5 cup pea, 200 g thyme, 1 tsp turmeric, 1 tsp chili flakes, 2 tsps olive oil, 3 cloves garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 453,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 14,
             "cholesterol": 71,
             "sodium": 545,
             "carbohydrates": 16,
@@ -3518,7 +3518,7 @@ const foodDatabase = {
             "calories": 335,
             "protein": 24,
             "carbs": 80,
-            "fat": 12
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3527,8 +3527,8 @@ const foodDatabase = {
         "ingredients": "140 g pork, 2 pieces wrap, 1 cup mushroom, 0.9 cup corn, 1.1 cup lettuce, 1.9 cup mint, 2 tsps paprika, 2 tsps chili flakes, 3 tbsps olive oil, 1 tsp garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 335,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 11,
+            "saturatedFat": 12,
             "cholesterol": 73,
             "sodium": 222,
             "carbohydrates": 80,
@@ -3545,7 +3545,7 @@ const foodDatabase = {
             "calories": 553,
             "protein": 22,
             "carbs": 10,
-            "fat": 1
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3554,8 +3554,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup lamb, 1 tsp yogurt, 1.1 cup corn, 1 tsp bell pepper, 230 g pea, 190 g basil, 1 tsp lemon juice, 2 tsps turmeric, 3 tbsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 553,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 15,
+            "saturatedFat": 1,
             "cholesterol": 10,
             "sodium": 409,
             "carbohydrates": 10,
@@ -3572,7 +3572,7 @@ const foodDatabase = {
             "calories": 463,
             "protein": 17,
             "carbs": 69,
-            "fat": 9
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3581,8 +3581,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup salmon, 1 tbsp yogurt, 2 cup kale, 120 g lettuce, 0.7 cup mushroom, 0.9 cup parsley, 1 tsp turmeric, 1 tsp soy sauce, 3 tbsps olive oil, 1 clove garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 463,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 6,
+            "saturatedFat": 9,
             "cholesterol": 117,
             "sodium": 346,
             "carbohydrates": 69,
@@ -3609,7 +3609,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 446,
             "fat": 14,
-            "saturatedFat": 4,
+            "saturatedFat": 14,
             "cholesterol": 97,
             "sodium": 493,
             "carbohydrates": 58,
@@ -3626,7 +3626,7 @@ const foodDatabase = {
             "calories": 339,
             "protein": 38,
             "carbs": 18,
-            "fat": 14
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3635,8 +3635,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup tuna, 210 g congee, 1.6 cup tomato, 2 tsps bell pepper, 1.5 cup pea, 90 g thyme, 1 tsp paprika, 2 tsps chili flakes, 2 tbsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 339,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 18,
+            "saturatedFat": 14,
             "cholesterol": 48,
             "sodium": 366,
             "carbohydrates": 18,
@@ -3653,7 +3653,7 @@ const foodDatabase = {
             "calories": 231,
             "protein": 22,
             "carbs": 14,
-            "fat": 11
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3662,8 +3662,8 @@ const foodDatabase = {
         "ingredients": "120 g crab, 1 tbsp yogurt, 240 g pea, 0.5 cup zucchini, 240 g kale, 1.1 cup cilantro, 2 tsps lemon juice, 1 tsp ginger, 2 tbsps olive oil, 1 tsp garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 231,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 14,
+            "saturatedFat": 11,
             "cholesterol": 53,
             "sodium": 686,
             "carbohydrates": 14,
@@ -3680,7 +3680,7 @@ const foodDatabase = {
             "calories": 511,
             "protein": 18,
             "carbs": 58,
-            "fat": 4
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3689,8 +3689,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup pork, 1 tbsp toast, 120 g spinach, 1 tsp bell pepper, 1.4 cup carrot, 180 g basil, 2 tsps turmeric, 2 tsps paprika, 1 tsp olive oil, 2 tsps garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 511,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 5,
+            "saturatedFat": 4,
             "cholesterol": 57,
             "sodium": 331,
             "carbohydrates": 58,
@@ -3707,7 +3707,7 @@ const foodDatabase = {
             "calories": 163,
             "protein": 25,
             "carbs": 29,
-            "fat": 15
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3716,8 +3716,8 @@ const foodDatabase = {
         "ingredients": "170 g lamb, 2 tsps yogurt, 0.5 cup mushroom, 0.5 cup corn, 1.1 cup broccoli, 1.2 cup thyme, 2 tsps ginger, 2 tsps curry paste, 3 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 163,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 9,
+            "saturatedFat": 15,
             "cholesterol": 18,
             "sodium": 213,
             "carbohydrates": 29,
@@ -3734,7 +3734,7 @@ const foodDatabase = {
             "calories": 583,
             "protein": 12,
             "carbs": 25,
-            "fat": 14
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3743,8 +3743,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup shrimp, 140 g oats, 1.4 cup tomato, 170 g corn, 2 tsps bell pepper, 120 g thyme, 2 tsps cumin, 2 tsps paprika, 1 tsp olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 583,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 22,
+            "saturatedFat": 14,
             "cholesterol": 101,
             "sodium": 452,
             "carbohydrates": 25,
@@ -3761,7 +3761,7 @@ const foodDatabase = {
             "calories": 506,
             "protein": 29,
             "carbs": 50,
-            "fat": 0
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3770,7 +3770,7 @@ const foodDatabase = {
         "ingredients": "1.1 cup turkey, 1.3 cup oats, 90 g pea, 170 g corn, 120 g zucchini, 1.2 cup cilantro, 3 tbsps vinegar, 3 tbsps lime juice, 2 tsps olive oil, 2 cloves garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 506,
-            "fat": 0,
+            "fat": 16,
             "saturatedFat": 0,
             "cholesterol": 14,
             "sodium": 650,
@@ -3788,7 +3788,7 @@ const foodDatabase = {
             "calories": 526,
             "protein": 8,
             "carbs": 39,
-            "fat": 0
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3797,7 +3797,7 @@ const foodDatabase = {
         "ingredients": "140 g beef, 2 pieces wrap, 1 cup pea, 60 g cabbage, 230 g tomato, 0.9 cup thyme, 2 tsps lemon juice, 2 tbsps sesame oil, 1 tsp olive oil, 2 tsps garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 526,
-            "fat": 0,
+            "fat": 22,
             "saturatedFat": 0,
             "cholesterol": 46,
             "sodium": 210,
@@ -3815,7 +3815,7 @@ const foodDatabase = {
             "calories": 204,
             "protein": 29,
             "carbs": 38,
-            "fat": 9
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3824,8 +3824,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup cod, 0.5 cup congee, 1.4 cup broccoli, 1.3 cup tomato, 240 g pea, 120 g thyme, 2 tsps vinegar, 2 tsps lime juice, 2 tsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 204,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 10,
+            "saturatedFat": 9,
             "cholesterol": 79,
             "sodium": 164,
             "carbohydrates": 38,
@@ -3842,7 +3842,7 @@ const foodDatabase = {
             "calories": 180,
             "protein": 37,
             "carbs": 53,
-            "fat": 14
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3851,8 +3851,8 @@ const foodDatabase = {
         "ingredients": "230 g shrimp, 2 tbsps toast, 0.9 cup pea, 130 g kale, 0.5 cup spinach, 1.3 cup thyme, 2 tsps chili flakes, 3 tbsps vinegar, 2 tsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 180,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 14,
             "cholesterol": 26,
             "sodium": 536,
             "carbohydrates": 53,
@@ -3869,7 +3869,7 @@ const foodDatabase = {
             "calories": 387,
             "protein": 40,
             "carbs": 70,
-            "fat": 1
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3878,8 +3878,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup lamb, 1 piece tortilla, 1.1 cup corn, 130 g pea, 160 g cabbage, 1.4 cup rosemary, 2 tsps paprika, 1 tsp cumin, 3 tbsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 387,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 11,
+            "saturatedFat": 1,
             "cholesterol": 92,
             "sodium": 204,
             "carbohydrates": 70,
@@ -3896,7 +3896,7 @@ const foodDatabase = {
             "calories": 178,
             "protein": 25,
             "carbs": 31,
-            "fat": 7
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3905,8 +3905,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup tuna, 1.3 cup rice, 90 g kale, 1.6 cup mushroom, 0.5 cup tomato, 150 g rosemary, 1 tsp vinegar, 1.6 cup curry paste, 1 tbsp olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 178,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 21,
+            "saturatedFat": 7,
             "cholesterol": 35,
             "sodium": 369,
             "carbohydrates": 31,
@@ -3923,7 +3923,7 @@ const foodDatabase = {
             "calories": 627,
             "protein": 24,
             "carbs": 82,
-            "fat": 5
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3932,8 +3932,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup pork, 1 piece toast, 2 tsps bell pepper, 150 g cabbage, 90 g carrot, 0.7 cup basil, 1 tsp turmeric, 1 tbsp soy sauce, 3 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 627,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 20,
+            "saturatedFat": 5,
             "cholesterol": 101,
             "sodium": 677,
             "carbohydrates": 82,
@@ -3950,7 +3950,7 @@ const foodDatabase = {
             "calories": 350,
             "protein": 9,
             "carbs": 63,
-            "fat": 1
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3959,8 +3959,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup chicken, 160 g toast, 200 g pea, 110 g corn, 1.3 cup cabbage, 160 g basil, 1 tbsp lime juice, 3 tbsps lemon juice, 3 tbsps olive oil, 1 clove garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 350,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 27,
+            "saturatedFat": 1,
             "cholesterol": 10,
             "sodium": 660,
             "carbohydrates": 63,
@@ -3977,7 +3977,7 @@ const foodDatabase = {
             "calories": 307,
             "protein": 40,
             "carbs": 54,
-            "fat": 7
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -3986,8 +3986,8 @@ const foodDatabase = {
         "ingredients": "150 g duck, 160 g rice, 0.8 cup carrot, 140 g pea, 100 g lettuce, 150 g basil, 2 tsps vinegar, 3 cloves ginger, 3 tbsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 307,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 7,
             "cholesterol": 93,
             "sodium": 674,
             "carbohydrates": 54,
@@ -4004,7 +4004,7 @@ const foodDatabase = {
             "calories": 159,
             "protein": 36,
             "carbs": 65,
-            "fat": 14
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4013,8 +4013,8 @@ const foodDatabase = {
         "ingredients": "230 g cod, 1.5 cup oats, 1.9 cup cabbage, 190 g corn, 190 g pea, 80 g parsley, 1 tsp cumin, 2 tsps lime juice, 1 tsp olive oil, 2 tsps garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 159,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 24,
+            "saturatedFat": 14,
             "cholesterol": 12,
             "sodium": 472,
             "carbohydrates": 65,
@@ -4031,7 +4031,7 @@ const foodDatabase = {
             "calories": 357,
             "protein": 40,
             "carbs": 37,
-            "fat": 5
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4040,8 +4040,8 @@ const foodDatabase = {
         "ingredients": "1 cup shrimp, 1 piece wrap, 150 g cucumber, 1.8 cup lettuce, 1 cup tomato, 1.5 cup basil, 2 tsps chili flakes, 1 tsp sesame oil, 3 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 357,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 27,
+            "saturatedFat": 5,
             "cholesterol": 88,
             "sodium": 72,
             "carbohydrates": 37,
@@ -4058,7 +4058,7 @@ const foodDatabase = {
             "calories": 259,
             "protein": 18,
             "carbs": 9,
-            "fat": 8
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4067,8 +4067,8 @@ const foodDatabase = {
         "ingredients": "80 g salmon, 2 pieces wrap, 2 cup cabbage, 1.4 cup mushroom, 160 g broccoli, 180 g mint, 1 tsp sesame oil, 2 tsps turmeric, 1 tsp olive oil, 2 tsps garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 259,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 21,
+            "saturatedFat": 8,
             "cholesterol": 60,
             "sodium": 120,
             "carbohydrates": 9,
@@ -4085,7 +4085,7 @@ const foodDatabase = {
             "calories": 355,
             "protein": 3,
             "carbs": 57,
-            "fat": 4
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4094,8 +4094,8 @@ const foodDatabase = {
         "ingredients": "60 g tuna, 2 tsps yogurt, 1.9 cup cabbage, 180 g carrot, 80 g cucumber, 1.5 cup mint, 1 tbsp lemon juice, 1 tsp paprika, 2 tbsps olive oil, 3 cloves garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 355,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 25,
+            "saturatedFat": 4,
             "cholesterol": 93,
             "sodium": 102,
             "carbohydrates": 57,
@@ -4122,7 +4122,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 495,
             "fat": 3,
-            "saturatedFat": 1,
+            "saturatedFat": 3,
             "cholesterol": 79,
             "sodium": 657,
             "carbohydrates": 49,
@@ -4139,7 +4139,7 @@ const foodDatabase = {
             "calories": 271,
             "protein": 25,
             "carbs": 65,
-            "fat": 8
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4148,8 +4148,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup turkey, 0.8 cup rice, 1.5 cup cabbage, 80 g spinach, 0.6 cup zucchini, 110 g dill, 2 tsps chili flakes, 2 tsps paprika, 3 tbsps olive oil, 2 cloves garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 271,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 4,
+            "saturatedFat": 8,
             "cholesterol": 50,
             "sodium": 75,
             "carbohydrates": 65,
@@ -4166,7 +4166,7 @@ const foodDatabase = {
             "calories": 637,
             "protein": 44,
             "carbs": 13,
-            "fat": 9
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4175,8 +4175,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup lamb, 230 g rice, 1.6 cup kale, 1.9 cup zucchini, 1.9 cup spinach, 240 g basil, 3 cloves ginger, 1 tsp lime juice, 3 tbsps olive oil, 1 clove garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 637,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 14,
+            "saturatedFat": 9,
             "cholesterol": 55,
             "sodium": 877,
             "carbohydrates": 13,
@@ -4193,7 +4193,7 @@ const foodDatabase = {
             "calories": 603,
             "protein": 11,
             "carbs": 83,
-            "fat": 7
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4202,13 +4202,13 @@ const foodDatabase = {
         "ingredients": "1.5 cup salmon, 2 pieces wrap, 90 g carrot, 150 g lettuce, 1.2 cup pea, 120 g thyme, 2 tsps lime juice, 2 tsps curry paste, 1 tbsp olive oil, 1 clove garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 603,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 7,
             "cholesterol": 105,
             "sodium": 759,
             "carbohydrates": 83,
             "fiber": 7,
-            "sugar": 16,
+            "sugar": 0,
             "protein": 11
         }
     },
@@ -4220,7 +4220,7 @@ const foodDatabase = {
             "calories": 631,
             "protein": 20,
             "carbs": 5,
-            "fat": 8
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4229,8 +4229,8 @@ const foodDatabase = {
         "ingredients": "190 g lamb, 1 piece wrap, 190 g tomato, 1 cup lettuce, 0.8 cup broccoli, 110 g dill, 3 tbsps soy sauce, 2 pieces curry paste, 1 tsp olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 631,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 16,
+            "saturatedFat": 8,
             "cholesterol": 60,
             "sodium": 804,
             "carbohydrates": 5,
@@ -4247,7 +4247,7 @@ const foodDatabase = {
             "calories": 430,
             "protein": 23,
             "carbs": 33,
-            "fat": 1
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4256,8 +4256,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup pork, 2 tbsps yogurt, 1.4 cup mushroom, 100 g pea, 0.6 cup cabbage, 1.8 cup thyme, 2 tbsps lemon juice, 2 tsps chili flakes, 1 tsp olive oil, 2 cloves garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 430,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 6,
+            "saturatedFat": 1,
             "cholesterol": 15,
             "sodium": 442,
             "carbohydrates": 33,
@@ -4284,7 +4284,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 615,
             "fat": 14,
-            "saturatedFat": 4,
+            "saturatedFat": 14,
             "cholesterol": 5,
             "sodium": 811,
             "carbohydrates": 78,
@@ -4301,7 +4301,7 @@ const foodDatabase = {
             "calories": 351,
             "protein": 29,
             "carbs": 28,
-            "fat": 15
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4310,13 +4310,13 @@ const foodDatabase = {
         "ingredients": "1 cup pork, 1 piece wrap, 200 g zucchini, 0.8 cup corn, 1.5 cup kale, 140 g dill, 1 tbsp vinegar, 1 tbsp sesame oil, 2 tsps olive oil, 2 tsps garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 351,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 9,
+            "saturatedFat": 15,
             "cholesterol": 50,
             "sodium": 366,
             "carbohydrates": 28,
             "fiber": 8,
-            "sugar": 5,
+            "sugar": 0,
             "protein": 29
         }
     },
@@ -4328,7 +4328,7 @@ const foodDatabase = {
             "calories": 412,
             "protein": 27,
             "carbs": 76,
-            "fat": 5
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4337,8 +4337,8 @@ const foodDatabase = {
         "ingredients": "100 g pork, 2 tsps toast, 150 g pea, 140 g cucumber, 0.9 cup mushroom, 1.8 cup dill, 1 tsp chili flakes, 1 tbsp soy sauce, 1 tbsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 412,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 20,
+            "saturatedFat": 5,
             "cholesterol": 87,
             "sodium": 402,
             "carbohydrates": 76,
@@ -4355,7 +4355,7 @@ const foodDatabase = {
             "calories": 453,
             "protein": 36,
             "carbs": 20,
-            "fat": 1
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4364,8 +4364,8 @@ const foodDatabase = {
         "ingredients": "80 g sardines, 1.2 cup oats, 1.7 cup spinach, 120 g corn, 100 g carrot, 0.8 cup cilantro, 1 tsp curry paste, 1 tbsp soy sauce, 1 tbsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 453,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 30,
+            "saturatedFat": 1,
             "cholesterol": 43,
             "sodium": 880,
             "carbohydrates": 20,
@@ -4382,7 +4382,7 @@ const foodDatabase = {
             "calories": 435,
             "protein": 5,
             "carbs": 56,
-            "fat": 12
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4391,8 +4391,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup shrimp, 70 g toast, 1.7 cup carrot, 2 cup corn, 1.4 cup cabbage, 1.3 cup parsley, 2 tbsps vinegar, 1 piece curry paste, 3 tbsps olive oil, 1 clove garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 435,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 30,
+            "saturatedFat": 12,
             "cholesterol": 90,
             "sodium": 540,
             "carbohydrates": 56,
@@ -4409,7 +4409,7 @@ const foodDatabase = {
             "calories": 394,
             "protein": 17,
             "carbs": 28,
-            "fat": 8
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4418,8 +4418,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup tuna, 1.8 cup rice, 0.8 cup kale, 210 g broccoli, 1.7 cup corn, 1.2 cup parsley, 2 tsps cumin, 1 tsp lemon juice, 2 tsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 394,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 25,
+            "saturatedFat": 8,
             "cholesterol": 108,
             "sodium": 239,
             "carbohydrates": 28,
@@ -4436,7 +4436,7 @@ const foodDatabase = {
             "calories": 319,
             "protein": 22,
             "carbs": 24,
-            "fat": 15
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4445,8 +4445,8 @@ const foodDatabase = {
         "ingredients": "80 g tuna, 80 g oats, 160 g pea, 0.7 cup kale, 2 cup lettuce, 220 g thyme, 1 tsp turmeric, 2 tsps ginger, 2 tbsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 319,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 5,
+            "saturatedFat": 15,
             "cholesterol": 59,
             "sodium": 393,
             "carbohydrates": 24,
@@ -4463,7 +4463,7 @@ const foodDatabase = {
             "calories": 443,
             "protein": 21,
             "carbs": 68,
-            "fat": 4
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4472,8 +4472,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup cod, 1.2 cup rice, 230 g corn, 220 g cabbage, 0.6 cup mushroom, 1.3 cup rosemary, 3 tbsps vinegar, 2 tbsps soy sauce, 1 tsp olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 443,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 13,
+            "saturatedFat": 4,
             "cholesterol": 9,
             "sodium": 727,
             "carbohydrates": 68,
@@ -4490,7 +4490,7 @@ const foodDatabase = {
             "calories": 480,
             "protein": 24,
             "carbs": 6,
-            "fat": 14
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4499,8 +4499,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup salmon, 1 piece wrap, 0.5 cup corn, 200 g pea, 160 g carrot, 1.3 cup mint, 1 tsp vinegar, 1 piece curry paste, 3 tbsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 480,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 11,
+            "saturatedFat": 14,
             "cholesterol": 20,
             "sodium": 661,
             "carbohydrates": 6,
@@ -4517,7 +4517,7 @@ const foodDatabase = {
             "calories": 530,
             "protein": 4,
             "carbs": 21,
-            "fat": 8
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4526,8 +4526,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup tuna, 2 pieces tortilla, 180 g zucchini, 1 tsp bell pepper, 1.5 cup mushroom, 0.7 cup rosemary, 220 g curry paste, 1 tsp paprika, 2 tbsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 530,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 10,
+            "saturatedFat": 8,
             "cholesterol": 38,
             "sodium": 869,
             "carbohydrates": 21,
@@ -4544,7 +4544,7 @@ const foodDatabase = {
             "calories": 434,
             "protein": 44,
             "carbs": 54,
-            "fat": 5
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4553,8 +4553,8 @@ const foodDatabase = {
         "ingredients": "220 g salmon, 160 g congee, 1 tsp bell pepper, 200 g lettuce, 150 g zucchini, 110 g basil, 2 tsps lemon juice, 3 tbsps sesame oil, 3 tbsps olive oil, 3 cloves garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 434,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 11,
+            "saturatedFat": 5,
             "cholesterol": 14,
             "sodium": 417,
             "carbohydrates": 54,
@@ -4571,7 +4571,7 @@ const foodDatabase = {
             "calories": 608,
             "protein": 19,
             "carbs": 27,
-            "fat": 4
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4580,8 +4580,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup lamb, 1 tbsp yogurt, 1.8 cup cucumber, 100 g carrot, 1.6 cup mushroom, 100 g mint, 1 tsp paprika, 3 tbsps vinegar, 1 tbsp olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 608,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 26,
+            "saturatedFat": 4,
             "cholesterol": 15,
             "sodium": 841,
             "carbohydrates": 27,
@@ -4598,7 +4598,7 @@ const foodDatabase = {
             "calories": 486,
             "protein": 30,
             "carbs": 79,
-            "fat": 5
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4607,8 +4607,8 @@ const foodDatabase = {
         "ingredients": "110 g cod, 1 cup congee, 90 g cucumber, 1.1 cup broccoli, 1.4 cup cabbage, 110 g mint, 2 tsps cumin, 2 tsps vinegar, 1 tbsp olive oil, 3 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 486,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 30,
+            "saturatedFat": 5,
             "cholesterol": 92,
             "sodium": 769,
             "carbohydrates": 79,
@@ -4625,7 +4625,7 @@ const foodDatabase = {
             "calories": 491,
             "protein": 34,
             "carbs": 9,
-            "fat": 1
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4634,8 +4634,8 @@ const foodDatabase = {
         "ingredients": "150 g beef, 1.4 cup rice, 0.9 cup mushroom, 1 cup cucumber, 0.6 cup corn, 90 g basil, 2 tsps sesame oil, 2 cloves ginger, 2 tsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 491,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 29,
+            "saturatedFat": 1,
             "cholesterol": 44,
             "sodium": 443,
             "carbohydrates": 9,
@@ -4652,7 +4652,7 @@ const foodDatabase = {
             "calories": 645,
             "protein": 9,
             "carbs": 47,
-            "fat": 5
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4661,8 +4661,8 @@ const foodDatabase = {
         "ingredients": "80 g beef, 2 pieces tortilla, 210 g lettuce, 2 cup corn, 1.9 cup pea, 210 g parsley, 2 tsps turmeric, 2 tbsps sesame oil, 2 tsps olive oil, 2 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 645,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 22,
+            "saturatedFat": 5,
             "cholesterol": 68,
             "sodium": 168,
             "carbohydrates": 47,
@@ -4679,7 +4679,7 @@ const foodDatabase = {
             "calories": 503,
             "protein": 44,
             "carbs": 49,
-            "fat": 15
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4688,8 +4688,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup tuna, 3 tbsps yogurt, 0.5 cup kale, 60 g lettuce, 190 g zucchini, 1.7 cup cilantro, 2 tbsps soy sauce, 2 cloves ginger, 2 tbsps olive oil, 2 cloves garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 503,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 17,
+            "saturatedFat": 15,
             "cholesterol": 105,
             "sodium": 207,
             "carbohydrates": 49,
@@ -4706,7 +4706,7 @@ const foodDatabase = {
             "calories": 320,
             "protein": 6,
             "carbs": 63,
-            "fat": 8
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4715,8 +4715,8 @@ const foodDatabase = {
         "ingredients": "120 g turkey, 1.4 cup rice, 200 g broccoli, 90 g pea, 60 g kale, 230 g rosemary, 1 tsp soy sauce, 1 tsp chili flakes, 1 tsp olive oil, 2 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 320,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 4,
+            "saturatedFat": 8,
             "cholesterol": 90,
             "sodium": 163,
             "carbohydrates": 63,
@@ -4733,7 +4733,7 @@ const foodDatabase = {
             "calories": 571,
             "protein": 9,
             "carbs": 76,
-            "fat": 11
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4742,8 +4742,8 @@ const foodDatabase = {
         "ingredients": "150 g shrimp, 0.8 cup congee, 80 g broccoli, 130 g corn, 1.5 cup spinach, 230 g rosemary, 1 tsp cumin, 1 tsp chili flakes, 1 tbsp olive oil, 2 tsps garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 571,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 3,
+            "saturatedFat": 11,
             "cholesterol": 69,
             "sodium": 203,
             "carbohydrates": 76,
@@ -4760,7 +4760,7 @@ const foodDatabase = {
             "calories": 444,
             "protein": 20,
             "carbs": 36,
-            "fat": 6
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4769,8 +4769,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup tuna, 140 g rice, 1.9 cup tomato, 220 g lettuce, 1.4 cup corn, 110 g cilantro, 2 tsps cumin, 1 tbsp lemon juice, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 444,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 6,
             "cholesterol": 117,
             "sodium": 242,
             "carbohydrates": 36,
@@ -4787,7 +4787,7 @@ const foodDatabase = {
             "calories": 240,
             "protein": 26,
             "carbs": 43,
-            "fat": 1
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4796,8 +4796,8 @@ const foodDatabase = {
         "ingredients": "130 g cod, 2 pieces wrap, 1.9 cup cucumber, 1 cup zucchini, 180 g pea, 0.7 cup mint, 2 tsps turmeric, 1 tbsp lime juice, 3 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 240,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 4,
+            "saturatedFat": 1,
             "cholesterol": 47,
             "sodium": 145,
             "carbohydrates": 43,
@@ -4814,7 +4814,7 @@ const foodDatabase = {
             "calories": 510,
             "protein": 40,
             "carbs": 46,
-            "fat": 7
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4823,13 +4823,13 @@ const foodDatabase = {
         "ingredients": "0.8 cup tuna, 130 g oats, 110 g carrot, 170 g mushroom, 1.1 cup cucumber, 170 g rosemary, 3 tbsps soy sauce, 1 tsp paprika, 3 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 510,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 22,
+            "saturatedFat": 7,
             "cholesterol": 22,
             "sodium": 714,
             "carbohydrates": 46,
             "fiber": 3,
-            "sugar": 9,
+            "sugar": 0,
             "protein": 40
         }
     },
@@ -4841,7 +4841,7 @@ const foodDatabase = {
             "calories": 294,
             "protein": 19,
             "carbs": 75,
-            "fat": 12
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4850,8 +4850,8 @@ const foodDatabase = {
         "ingredients": "210 g chicken, 160 g rice, 1 tsp bell pepper, 0.9 cup kale, 1.4 cup carrot, 160 g thyme, 2 tsps sesame oil, 1 clove ginger, 1 tbsp olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 294,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 12,
             "cholesterol": 107,
             "sodium": 165,
             "carbohydrates": 75,
@@ -4868,7 +4868,7 @@ const foodDatabase = {
             "calories": 396,
             "protein": 7,
             "carbs": 82,
-            "fat": 8
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4877,8 +4877,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup lamb, 1.7 cup toast, 150 g cabbage, 60 g zucchini, 180 g cucumber, 1 cup rosemary, 2 tbsps soy sauce, 2 tbsps vinegar, 3 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 396,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 27,
+            "saturatedFat": 8,
             "cholesterol": 37,
             "sodium": 246,
             "carbohydrates": 82,
@@ -4895,7 +4895,7 @@ const foodDatabase = {
             "calories": 157,
             "protein": 30,
             "carbs": 23,
-            "fat": 10
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4904,8 +4904,8 @@ const foodDatabase = {
         "ingredients": "170 g crab, 1.2 cup rice, 1.8 cup mushroom, 230 g carrot, 150 g corn, 1.5 cup dill, 3 cloves ginger, 1 tsp sesame oil, 2 tbsps olive oil, 3 cloves garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 157,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 11,
+            "saturatedFat": 10,
             "cholesterol": 9,
             "sodium": 159,
             "carbohydrates": 23,
@@ -4922,7 +4922,7 @@ const foodDatabase = {
             "calories": 302,
             "protein": 11,
             "carbs": 17,
-            "fat": 2
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4931,8 +4931,8 @@ const foodDatabase = {
         "ingredients": "1 cup beef, 170 g rice, 120 g zucchini, 1 cup corn, 1.9 cup carrot, 90 g dill, 2 tbsps lime juice, 1 tsp sesame oil, 1 tbsp olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 302,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 7,
+            "saturatedFat": 2,
             "cholesterol": 111,
             "sodium": 511,
             "carbohydrates": 17,
@@ -4949,7 +4949,7 @@ const foodDatabase = {
             "calories": 399,
             "protein": 21,
             "carbs": 66,
-            "fat": 3
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4958,8 +4958,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup turkey, 3 tbsps yogurt, 1 tsp bell pepper, 210 g zucchini, 120 g pea, 1.4 cup cilantro, 2 tsps cumin, 2 tsps vinegar, 1 tsp olive oil, 3 cloves garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 399,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 23,
+            "saturatedFat": 3,
             "cholesterol": 50,
             "sodium": 353,
             "carbohydrates": 66,
@@ -4976,7 +4976,7 @@ const foodDatabase = {
             "calories": 359,
             "protein": 37,
             "carbs": 57,
-            "fat": 0
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -4985,7 +4985,7 @@ const foodDatabase = {
         "ingredients": "70 g sardines, 160 g oats, 1.1 cup spinach, 80 g cucumber, 130 g zucchini, 1.7 cup thyme, 2 tsps turmeric, 2 tsps cumin, 1 tbsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 359,
-            "fat": 0,
+            "fat": 11,
             "saturatedFat": 0,
             "cholesterol": 85,
             "sodium": 629,
@@ -5003,7 +5003,7 @@ const foodDatabase = {
             "calories": 586,
             "protein": 21,
             "carbs": 19,
-            "fat": 12
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5012,8 +5012,8 @@ const foodDatabase = {
         "ingredients": "80 g tuna, 1 piece tortilla, 150 g corn, 110 g carrot, 170 g spinach, 230 g thyme, 2 tsps chili flakes, 2 tsps lemon juice, 2 tsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 586,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 27,
+            "saturatedFat": 12,
             "cholesterol": 22,
             "sodium": 782,
             "carbohydrates": 19,
@@ -5030,7 +5030,7 @@ const foodDatabase = {
             "calories": 508,
             "protein": 23,
             "carbs": 73,
-            "fat": 10
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5039,8 +5039,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup sardines, 2 pieces wrap, 1.9 cup cabbage, 60 g carrot, 70 g broccoli, 70 g mint, 2 tsps cumin, 1 tsp soy sauce, 2 tsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 508,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 9,
+            "saturatedFat": 10,
             "cholesterol": 102,
             "sodium": 113,
             "carbohydrates": 73,
@@ -5057,7 +5057,7 @@ const foodDatabase = {
             "calories": 649,
             "protein": 26,
             "carbs": 46,
-            "fat": 0
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5066,7 +5066,7 @@ const foodDatabase = {
         "ingredients": "220 g pork, 2 pieces wrap, 120 g carrot, 1.2 cup corn, 0.7 cup cucumber, 1.4 cup parsley, 1 tsp cumin, 2 tsps paprika, 2 tsps olive oil, 1 clove garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 649,
-            "fat": 0,
+            "fat": 11,
             "saturatedFat": 0,
             "cholesterol": 63,
             "sodium": 109,
@@ -5084,7 +5084,7 @@ const foodDatabase = {
             "calories": 320,
             "protein": 24,
             "carbs": 55,
-            "fat": 14
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5093,8 +5093,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup salmon, 2 pieces tortilla, 0.5 cup tomato, 0.5 cup broccoli, 1 tsp bell pepper, 1.2 cup rosemary, 2 tsps sesame oil, 3 cloves ginger, 2 tsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 320,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 30,
+            "saturatedFat": 14,
             "cholesterol": 47,
             "sodium": 882,
             "carbohydrates": 55,
@@ -5111,7 +5111,7 @@ const foodDatabase = {
             "calories": 465,
             "protein": 42,
             "carbs": 7,
-            "fat": 0
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5120,7 +5120,7 @@ const foodDatabase = {
         "ingredients": "110 g duck, 2 pieces wrap, 1.6 cup broccoli, 230 g cucumber, 230 g kale, 120 g thyme, 2 tsps cumin, 2 tsps lime juice, 1 tbsp olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 465,
-            "fat": 0,
+            "fat": 20,
             "saturatedFat": 0,
             "cholesterol": 97,
             "sodium": 300,
@@ -5138,7 +5138,7 @@ const foodDatabase = {
             "calories": 249,
             "protein": 20,
             "carbs": 14,
-            "fat": 0
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5147,7 +5147,7 @@ const foodDatabase = {
         "ingredients": "0.7 cup shrimp, 2 tsps toast, 190 g mushroom, 1.9 cup corn, 1.3 cup carrot, 1.2 cup rosemary, 2 tbsps lemon juice, 1 piece curry paste, 1 tbsp olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 249,
-            "fat": 0,
+            "fat": 9,
             "saturatedFat": 0,
             "cholesterol": 13,
             "sodium": 395,
@@ -5165,7 +5165,7 @@ const foodDatabase = {
             "calories": 432,
             "protein": 30,
             "carbs": 15,
-            "fat": 10
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5174,8 +5174,8 @@ const foodDatabase = {
         "ingredients": "210 g crab, 210 g oats, 0.6 cup lettuce, 1.3 cup tomato, 190 g carrot, 110 g basil, 2 tbsps lemon juice, 3 tbsps vinegar, 1 tsp olive oil, 2 tsps garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 432,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 4,
+            "saturatedFat": 10,
             "cholesterol": 38,
             "sodium": 455,
             "carbohydrates": 15,
@@ -5192,7 +5192,7 @@ const foodDatabase = {
             "calories": 612,
             "protein": 23,
             "carbs": 21,
-            "fat": 9
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5201,8 +5201,8 @@ const foodDatabase = {
         "ingredients": "200 g chicken, 140 g congee, 210 g broccoli, 1.1 cup cabbage, 0.9 cup mushroom, 170 g mint, 2 tsps turmeric, 2 tsps soy sauce, 2 tsps olive oil, 3 cloves garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 612,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 22,
+            "saturatedFat": 9,
             "cholesterol": 112,
             "sodium": 211,
             "carbohydrates": 21,
@@ -5219,7 +5219,7 @@ const foodDatabase = {
             "calories": 579,
             "protein": 19,
             "carbs": 51,
-            "fat": 11
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5228,8 +5228,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup beef, 1 piece toast, 2 tsps bell pepper, 240 g corn, 0.8 cup pea, 0.8 cup mint, 2 cloves ginger, 1 tbsp soy sauce, 1 tbsp olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 579,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 10,
+            "saturatedFat": 11,
             "cholesterol": 37,
             "sodium": 181,
             "carbohydrates": 51,
@@ -5256,7 +5256,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 568,
             "fat": 9,
-            "saturatedFat": 3,
+            "saturatedFat": 9,
             "cholesterol": 70,
             "sodium": 121,
             "carbohydrates": 85,
@@ -5273,7 +5273,7 @@ const foodDatabase = {
             "calories": 487,
             "protein": 22,
             "carbs": 79,
-            "fat": 15
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5282,8 +5282,8 @@ const foodDatabase = {
         "ingredients": "170 g tuna, 1.8 cup oats, 1.7 cup cucumber, 1 tsp bell pepper, 160 g lettuce, 220 g dill, 1 tsp ginger, 2 tsps turmeric, 2 tbsps olive oil, 3 cloves garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 487,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 4,
+            "saturatedFat": 15,
             "cholesterol": 1,
             "sodium": 270,
             "carbohydrates": 79,
@@ -5300,7 +5300,7 @@ const foodDatabase = {
             "calories": 567,
             "protein": 36,
             "carbs": 5,
-            "fat": 13
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5309,8 +5309,8 @@ const foodDatabase = {
         "ingredients": "140 g duck, 1.6 cup oats, 2 cup carrot, 240 g lettuce, 1.5 cup mushroom, 0.9 cup thyme, 1 tbsp curry paste, 1 tsp cumin, 1 tsp olive oil, 3 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 567,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 25,
+            "saturatedFat": 13,
             "cholesterol": 53,
             "sodium": 284,
             "carbohydrates": 5,
@@ -5327,7 +5327,7 @@ const foodDatabase = {
             "calories": 302,
             "protein": 38,
             "carbs": 28,
-            "fat": 0
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5336,7 +5336,7 @@ const foodDatabase = {
         "ingredients": "1.7 cup crab, 2 tbsps yogurt, 80 g corn, 1.7 cup spinach, 230 g zucchini, 1.7 cup rosemary, 2 pieces curry paste, 2 tsps paprika, 2 tsps olive oil, 2 tsps garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 302,
-            "fat": 0,
+            "fat": 16,
             "saturatedFat": 0,
             "cholesterol": 19,
             "sodium": 410,
@@ -5354,7 +5354,7 @@ const foodDatabase = {
             "calories": 251,
             "protein": 3,
             "carbs": 30,
-            "fat": 12
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5363,8 +5363,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup lamb, 2 pieces toast, 140 g corn, 2 tsps bell pepper, 210 g lettuce, 200 g basil, 3 tbsps lemon juice, 2 tsps lime juice, 1 tsp olive oil, 3 cloves garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 251,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 13,
+            "saturatedFat": 12,
             "cholesterol": 63,
             "sodium": 407,
             "carbohydrates": 30,
@@ -5381,7 +5381,7 @@ const foodDatabase = {
             "calories": 344,
             "protein": 3,
             "carbs": 72,
-            "fat": 7
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5390,8 +5390,8 @@ const foodDatabase = {
         "ingredients": "240 g pork, 2 pieces tortilla, 2 tsps bell pepper, 230 g tomato, 0.6 cup mushroom, 2 cup cilantro, 2 tsps cumin, 1 tsp soy sauce, 3 tbsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 344,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 4,
+            "saturatedFat": 7,
             "cholesterol": 89,
             "sodium": 845,
             "carbohydrates": 72,
@@ -5408,7 +5408,7 @@ const foodDatabase = {
             "calories": 246,
             "protein": 24,
             "carbs": 20,
-            "fat": 6
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5417,8 +5417,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup chickpeas, 1.4 cup udon, 1.5 cup corn, 170 g broccoli, 0.8 cup zucchini, 150 g mint, 2 cloves ginger, 2 tsps sesame oil, 1 tsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 246,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 24,
+            "saturatedFat": 6,
             "cholesterol": 15,
             "sodium": 831,
             "carbohydrates": 20,
@@ -5435,7 +5435,7 @@ const foodDatabase = {
             "calories": 297,
             "protein": 19,
             "carbs": 45,
-            "fat": 2
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5444,8 +5444,8 @@ const foodDatabase = {
         "ingredients": "90 g tempeh, 0.5 cup rice, 70 g corn, 240 g cabbage, 230 g mushroom, 1.6 cup basil, 3 tbsps curry paste, 2 tbsps sesame oil, 1 tsp olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 297,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 23,
+            "saturatedFat": 2,
             "cholesterol": 95,
             "sodium": 792,
             "carbohydrates": 45,
@@ -5462,7 +5462,7 @@ const foodDatabase = {
             "calories": 386,
             "protein": 43,
             "carbs": 65,
-            "fat": 9
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5471,8 +5471,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup tempeh, 2 cup soba, 0.7 cup cucumber, 160 g mushroom, 190 g zucchini, 1.8 cup mint, 2 tsps ginger, 1 tsp soy sauce, 1 tbsp olive oil, 2 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 386,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 19,
+            "saturatedFat": 9,
             "cholesterol": 119,
             "sodium": 665,
             "carbohydrates": 65,
@@ -5489,7 +5489,7 @@ const foodDatabase = {
             "calories": 611,
             "protein": 14,
             "carbs": 33,
-            "fat": 8
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5498,8 +5498,8 @@ const foodDatabase = {
         "ingredients": "70 g sweet potato, 1 piece bread, 230 g lettuce, 110 g zucchini, 0.6 cup tomato, 1.1 cup rosemary, 1 tsp turmeric, 1 tsp chili flakes, 2 tbsps olive oil, 2 cloves garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 611,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 23,
+            "saturatedFat": 8,
             "cholesterol": 60,
             "sodium": 475,
             "carbohydrates": 33,
@@ -5516,7 +5516,7 @@ const foodDatabase = {
             "calories": 490,
             "protein": 11,
             "carbs": 77,
-            "fat": 0
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5525,7 +5525,7 @@ const foodDatabase = {
         "ingredients": "150 g tofu, 1 tsp yogurt, 1.3 cup spinach, 1.9 cup mushroom, 0.7 cup tomato, 1.9 cup dill, 2 pieces curry paste, 2 tsps vinegar, 2 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 490,
-            "fat": 0,
+            "fat": 15,
             "saturatedFat": 0,
             "cholesterol": 46,
             "sodium": 368,
@@ -5543,7 +5543,7 @@ const foodDatabase = {
             "calories": 328,
             "protein": 17,
             "carbs": 84,
-            "fat": 3
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5552,8 +5552,8 @@ const foodDatabase = {
         "ingredients": "160 g zucchini, 210 g udon, 0.7 cup pea, 2 tsps bell pepper, 160 g cucumber, 0.9 cup parsley, 1 tbsp sesame oil, 3 tbsps curry paste, 2 tbsps olive oil, 2 cloves garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 328,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 3,
             "cholesterol": 37,
             "sodium": 285,
             "carbohydrates": 84,
@@ -5570,7 +5570,7 @@ const foodDatabase = {
             "calories": 624,
             "protein": 45,
             "carbs": 8,
-            "fat": 6
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5579,8 +5579,8 @@ const foodDatabase = {
         "ingredients": "180 g paneer, 0.5 cup oats, 220 g mushroom, 180 g spinach, 170 g tomato, 0.5 cup rosemary, 2 tsps paprika, 2 tsps cumin, 2 tsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 624,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 9,
+            "saturatedFat": 6,
             "cholesterol": 75,
             "sodium": 792,
             "carbohydrates": 8,
@@ -5597,7 +5597,7 @@ const foodDatabase = {
             "calories": 301,
             "protein": 43,
             "carbs": 73,
-            "fat": 0
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5606,7 +5606,7 @@ const foodDatabase = {
         "ingredients": "1.8 cup broccoli, 1.3 cup oats, 130 g lettuce, 0.7 cup kale, 0.7 cup pea, 140 g parsley, 1 tsp turmeric, 1 tbsp lemon juice, 2 tsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 301,
-            "fat": 0,
+            "fat": 17,
             "saturatedFat": 0,
             "cholesterol": 34,
             "sodium": 425,
@@ -5624,7 +5624,7 @@ const foodDatabase = {
             "calories": 150,
             "protein": 5,
             "carbs": 14,
-            "fat": 5
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5633,8 +5633,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps pumpkin, 1 piece tortilla, 200 g cabbage, 2 tsps bell pepper, 150 g lettuce, 70 g mint, 2 tsps paprika, 2 tbsps lime juice, 2 tbsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 150,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 5,
             "cholesterol": 77,
             "sodium": 739,
             "carbohydrates": 14,
@@ -5651,7 +5651,7 @@ const foodDatabase = {
             "calories": 465,
             "protein": 7,
             "carbs": 15,
-            "fat": 3
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5660,8 +5660,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup seitan, 2 pieces tortilla, 1.7 cup broccoli, 1.5 cup tomato, 1.4 cup cabbage, 90 g parsley, 2 tsps cumin, 1 tsp paprika, 1 tbsp olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 465,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 30,
+            "saturatedFat": 3,
             "cholesterol": 51,
             "sodium": 530,
             "carbohydrates": 15,
@@ -5678,7 +5678,7 @@ const foodDatabase = {
             "calories": 470,
             "protein": 38,
             "carbs": 28,
-            "fat": 9
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5687,8 +5687,8 @@ const foodDatabase = {
         "ingredients": "1 piece eggplant, 160 g quinoa, 0.6 cup spinach, 1.5 cup pea, 100 g tomato, 1.6 cup parsley, 2 tsps turmeric, 2 tsps ginger, 2 tsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 470,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 27,
+            "saturatedFat": 9,
             "cholesterol": 46,
             "sodium": 625,
             "carbohydrates": 28,
@@ -5705,7 +5705,7 @@ const foodDatabase = {
             "calories": 419,
             "protein": 23,
             "carbs": 25,
-            "fat": 3
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5714,8 +5714,8 @@ const foodDatabase = {
         "ingredients": "1 piece cauliflower, 80 g rice, 1.5 cup zucchini, 0.9 cup cucumber, 1.7 cup carrot, 170 g parsley, 1 tsp ginger, 2 tsps cumin, 2 tsps olive oil, 1 tsp garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 419,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 30,
+            "saturatedFat": 3,
             "cholesterol": 28,
             "sodium": 380,
             "carbohydrates": 25,
@@ -5732,7 +5732,7 @@ const foodDatabase = {
             "calories": 237,
             "protein": 44,
             "carbs": 51,
-            "fat": 12
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5741,8 +5741,8 @@ const foodDatabase = {
         "ingredients": "100 g tofu, 140 g soba, 170 g tomato, 1.9 cup broccoli, 230 g mushroom, 0.6 cup basil, 2 tbsps lime juice, 3 tbsps lemon juice, 3 tbsps olive oil, 1 clove garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 237,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 16,
+            "saturatedFat": 12,
             "cholesterol": 63,
             "sodium": 735,
             "carbohydrates": 51,
@@ -5759,7 +5759,7 @@ const foodDatabase = {
             "calories": 365,
             "protein": 43,
             "carbs": 15,
-            "fat": 14
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5768,8 +5768,8 @@ const foodDatabase = {
         "ingredients": "2 pieces eggplant, 1.9 cup udon, 1.7 cup cabbage, 1.4 cup tomato, 140 g lettuce, 1.5 cup basil, 2 tsps cumin, 1 tsp turmeric, 3 tbsps olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 365,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 12,
+            "saturatedFat": 14,
             "cholesterol": 53,
             "sodium": 193,
             "carbohydrates": 15,
@@ -5786,7 +5786,7 @@ const foodDatabase = {
             "calories": 586,
             "protein": 37,
             "carbs": 5,
-            "fat": 7
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5795,8 +5795,8 @@ const foodDatabase = {
         "ingredients": "120 g tempeh, 1 cup soba, 0.8 cup kale, 220 g spinach, 1.9 cup lettuce, 110 g basil, 3 tbsps lemon juice, 2 tsps ginger, 1 tsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 586,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 6,
+            "saturatedFat": 7,
             "cholesterol": 16,
             "sodium": 397,
             "carbohydrates": 5,
@@ -5813,7 +5813,7 @@ const foodDatabase = {
             "calories": 359,
             "protein": 41,
             "carbs": 8,
-            "fat": 5
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5822,13 +5822,13 @@ const foodDatabase = {
         "ingredients": "0.9 cup broccoli, 1 tsp yogurt, 0.7 cup carrot, 1.6 cup mushroom, 1.5 cup corn, 220 g mint, 2 tsps lime juice, 1 tsp ginger, 1 tbsp olive oil, 1 tsp garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 359,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 3,
+            "saturatedFat": 5,
             "cholesterol": 17,
             "sodium": 374,
             "carbohydrates": 8,
             "fiber": 13,
-            "sugar": 1,
+            "sugar": 0,
             "protein": 41
         }
     },
@@ -5840,7 +5840,7 @@ const foodDatabase = {
             "calories": 530,
             "protein": 31,
             "carbs": 16,
-            "fat": 0
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5849,7 +5849,7 @@ const foodDatabase = {
         "ingredients": "0.7 cup chickpeas, 1.1 cup noodles, 1.9 cup broccoli, 80 g lettuce, 1.5 cup spinach, 0.6 cup mint, 1 tsp soy sauce, 1 tsp chili flakes, 2 tbsps olive oil, 1 clove garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 530,
-            "fat": 0,
+            "fat": 14,
             "saturatedFat": 0,
             "cholesterol": 62,
             "sodium": 485,
@@ -5867,7 +5867,7 @@ const foodDatabase = {
             "calories": 398,
             "protein": 16,
             "carbs": 6,
-            "fat": 10
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5876,8 +5876,8 @@ const foodDatabase = {
         "ingredients": "2 tsps pumpkin, 1.1 cup soba, 2 tsps bell pepper, 190 g broccoli, 170 g cabbage, 120 g rosemary, 3 tbsps lemon juice, 3 tbsps sesame oil, 3 tbsps olive oil, 2 tsps garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 398,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 11,
+            "saturatedFat": 10,
             "cholesterol": 79,
             "sodium": 589,
             "carbohydrates": 6,
@@ -5894,7 +5894,7 @@ const foodDatabase = {
             "calories": 457,
             "protein": 4,
             "carbs": 76,
-            "fat": 6
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5903,8 +5903,8 @@ const foodDatabase = {
         "ingredients": "120 g lentils, 240 g bulgur, 240 g cucumber, 1 tsp bell pepper, 1.7 cup kale, 80 g thyme, 2 tsps sesame oil, 2 tsps turmeric, 1 tbsp olive oil, 1 clove garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 457,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 29,
+            "saturatedFat": 6,
             "cholesterol": 40,
             "sodium": 231,
             "carbohydrates": 76,
@@ -5921,7 +5921,7 @@ const foodDatabase = {
             "calories": 319,
             "protein": 7,
             "carbs": 51,
-            "fat": 3
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5930,8 +5930,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup black beans, 1.5 cup soba, 0.5 cup tomato, 1.9 cup lettuce, 130 g carrot, 80 g parsley, 1 tsp cumin, 1 tsp curry paste, 1 tbsp olive oil, 2 tsps garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 319,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 14,
+            "saturatedFat": 3,
             "cholesterol": 102,
             "sodium": 301,
             "carbohydrates": 51,
@@ -5948,7 +5948,7 @@ const foodDatabase = {
             "calories": 333,
             "protein": 26,
             "carbs": 67,
-            "fat": 13
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5957,8 +5957,8 @@ const foodDatabase = {
         "ingredients": "240 g tofu, 1 piece bread, 1 cup pea, 1.7 cup kale, 2 tsps bell pepper, 230 g cilantro, 2 tsps vinegar, 3 tbsps lime juice, 1 tbsp olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 333,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 18,
+            "saturatedFat": 13,
             "cholesterol": 6,
             "sodium": 457,
             "carbohydrates": 67,
@@ -5975,7 +5975,7 @@ const foodDatabase = {
             "calories": 415,
             "protein": 6,
             "carbs": 78,
-            "fat": 8
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -5984,8 +5984,8 @@ const foodDatabase = {
         "ingredients": "130 g zucchini, 1.9 cup quinoa, 1.1 cup lettuce, 2 tsps bell pepper, 0.9 cup corn, 80 g basil, 2 tsps cumin, 2 tsps chili flakes, 2 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 415,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 25,
+            "saturatedFat": 8,
             "cholesterol": 49,
             "sodium": 189,
             "carbohydrates": 78,
@@ -6002,7 +6002,7 @@ const foodDatabase = {
             "calories": 457,
             "protein": 24,
             "carbs": 33,
-            "fat": 12
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6011,8 +6011,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup halloumi, 0.6 cup bulgur, 1.3 cup cucumber, 60 g kale, 2 tsps bell pepper, 2 cup cilantro, 1 tsp cumin, 2 tsps paprika, 2 tbsps olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 457,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 21,
+            "saturatedFat": 12,
             "cholesterol": 107,
             "sodium": 384,
             "carbohydrates": 33,
@@ -6029,7 +6029,7 @@ const foodDatabase = {
             "calories": 207,
             "protein": 39,
             "carbs": 60,
-            "fat": 11
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6038,8 +6038,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps pumpkin, 210 g spaghetti, 160 g lettuce, 1.4 cup kale, 160 g spinach, 1.4 cup basil, 1 tsp sesame oil, 2 tsps turmeric, 3 tbsps olive oil, 1 clove garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 207,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 25,
+            "saturatedFat": 11,
             "cholesterol": 82,
             "sodium": 185,
             "carbohydrates": 60,
@@ -6056,7 +6056,7 @@ const foodDatabase = {
             "calories": 229,
             "protein": 27,
             "carbs": 31,
-            "fat": 6
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6065,8 +6065,8 @@ const foodDatabase = {
         "ingredients": "1 piece pumpkin, 2 pieces bread, 0.8 cup carrot, 220 g cucumber, 1.8 cup zucchini, 90 g mint, 3 tbsps lime juice, 1 tsp soy sauce, 2 tsps olive oil, 2 cloves garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 229,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 24,
+            "saturatedFat": 6,
             "cholesterol": 80,
             "sodium": 717,
             "carbohydrates": 31,
@@ -6083,7 +6083,7 @@ const foodDatabase = {
             "calories": 477,
             "protein": 16,
             "carbs": 71,
-            "fat": 8
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6092,8 +6092,8 @@ const foodDatabase = {
         "ingredients": "60 g broccoli, 2 tsps yogurt, 120 g tomato, 1.1 cup carrot, 140 g cabbage, 120 g rosemary, 2 tbsps vinegar, 1 tsp chili flakes, 2 tbsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 477,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 8,
             "cholesterol": 96,
             "sodium": 463,
             "carbohydrates": 71,
@@ -6110,7 +6110,7 @@ const foodDatabase = {
             "calories": 337,
             "protein": 37,
             "carbs": 33,
-            "fat": 2
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6119,8 +6119,8 @@ const foodDatabase = {
         "ingredients": "60 g lentils, 1.7 cup spaghetti, 130 g tomato, 1.7 cup lettuce, 1.9 cup spinach, 130 g basil, 2 tbsps sesame oil, 3 tbsps soy sauce, 1 tsp olive oil, 2 cloves garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 337,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 14,
+            "saturatedFat": 2,
             "cholesterol": 23,
             "sodium": 802,
             "carbohydrates": 33,
@@ -6137,7 +6137,7 @@ const foodDatabase = {
             "calories": 390,
             "protein": 8,
             "carbs": 80,
-            "fat": 11
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6146,8 +6146,8 @@ const foodDatabase = {
         "ingredients": "1 cup black beans, 2 pieces wrap, 80 g spinach, 1.8 cup zucchini, 1 tsp bell pepper, 0.6 cup rosemary, 2 tsps paprika, 2 tsps sesame oil, 1 tsp olive oil, 1 clove garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 390,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 21,
+            "saturatedFat": 11,
             "cholesterol": 112,
             "sodium": 140,
             "carbohydrates": 80,
@@ -6164,7 +6164,7 @@ const foodDatabase = {
             "calories": 338,
             "protein": 33,
             "carbs": 29,
-            "fat": 12
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6173,8 +6173,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup sweet potato, 110 g couscous, 0.6 cup tomato, 1 cup mushroom, 1.1 cup spinach, 70 g cilantro, 1 tbsp soy sauce, 1 tsp paprika, 1 tsp olive oil, 2 tsps garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 338,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 5,
+            "saturatedFat": 12,
             "cholesterol": 29,
             "sodium": 676,
             "carbohydrates": 29,
@@ -6191,7 +6191,7 @@ const foodDatabase = {
             "calories": 333,
             "protein": 29,
             "carbs": 32,
-            "fat": 9
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6200,8 +6200,8 @@ const foodDatabase = {
         "ingredients": "110 g chickpeas, 1 tsp yogurt, 210 g carrot, 60 g mushroom, 60 g zucchini, 1.1 cup rosemary, 2 tbsps sesame oil, 2 tsps soy sauce, 2 tsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 333,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 19,
+            "saturatedFat": 9,
             "cholesterol": 25,
             "sodium": 851,
             "carbohydrates": 32,
@@ -6218,7 +6218,7 @@ const foodDatabase = {
             "calories": 386,
             "protein": 4,
             "carbs": 28,
-            "fat": 7
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6227,8 +6227,8 @@ const foodDatabase = {
         "ingredients": "210 g quinoa, 0.8 cup couscous, 2 tsps bell pepper, 220 g carrot, 60 g broccoli, 100 g mint, 1 tbsp lemon juice, 1 tsp paprika, 2 tsps olive oil, 3 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 386,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 25,
+            "saturatedFat": 7,
             "cholesterol": 74,
             "sodium": 280,
             "carbohydrates": 28,
@@ -6245,7 +6245,7 @@ const foodDatabase = {
             "calories": 515,
             "protein": 42,
             "carbs": 40,
-            "fat": 2
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6254,8 +6254,8 @@ const foodDatabase = {
         "ingredients": "230 g broccoli, 1.9 cup quinoa, 2 tsps bell pepper, 0.7 cup lettuce, 1.3 cup zucchini, 0.9 cup cilantro, 2 tsps ginger, 1 tsp sesame oil, 1 tsp olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 515,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 5,
+            "saturatedFat": 2,
             "cholesterol": 90,
             "sodium": 247,
             "carbohydrates": 40,
@@ -6282,7 +6282,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 524,
             "fat": 12,
-            "saturatedFat": 4,
+            "saturatedFat": 12,
             "cholesterol": 46,
             "sodium": 651,
             "carbohydrates": 37,
@@ -6299,7 +6299,7 @@ const foodDatabase = {
             "calories": 224,
             "protein": 17,
             "carbs": 61,
-            "fat": 4
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6308,8 +6308,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup lentils, 120 g soba, 80 g pea, 0.8 cup kale, 80 g cucumber, 1.7 cup rosemary, 1.3 cup curry paste, 2 tsps turmeric, 2 tsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 224,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 30,
+            "saturatedFat": 4,
             "cholesterol": 81,
             "sodium": 587,
             "carbohydrates": 61,
@@ -6326,7 +6326,7 @@ const foodDatabase = {
             "calories": 314,
             "protein": 9,
             "carbs": 9,
-            "fat": 11
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6335,8 +6335,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup broccoli, 1 piece bread, 1 tsp bell pepper, 90 g cabbage, 190 g rosemary, 2 tsps paprika, 3 tbsps soy sauce, 1 tsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 314,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 19,
+            "saturatedFat": 11,
             "cholesterol": 26,
             "sodium": 727,
             "carbohydrates": 9,
@@ -6353,7 +6353,7 @@ const foodDatabase = {
             "calories": 259,
             "protein": 27,
             "carbs": 71,
-            "fat": 11
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6362,8 +6362,8 @@ const foodDatabase = {
         "ingredients": "200 g mushrooms, 0.6 cup bulgur, 1.1 cup carrot, 0.5 cup tomato, 2 cup pea, 0.7 cup dill, 2 tsps lemon juice, 1 clove ginger, 2 tsps olive oil, 2 tsps garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 259,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 9,
+            "saturatedFat": 11,
             "cholesterol": 112,
             "sodium": 282,
             "carbohydrates": 71,
@@ -6380,7 +6380,7 @@ const foodDatabase = {
             "calories": 523,
             "protein": 42,
             "carbs": 49,
-            "fat": 3
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6389,8 +6389,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup zucchini, 2 pieces wrap, 0.7 cup kale, 70 g pea, 1.9 cup basil, 2 tsps chili flakes, 1 tsp lime juice, 1 tsp olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 523,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 26,
+            "saturatedFat": 3,
             "cholesterol": 52,
             "sodium": 432,
             "carbohydrates": 49,
@@ -6407,7 +6407,7 @@ const foodDatabase = {
             "calories": 642,
             "protein": 28,
             "carbs": 82,
-            "fat": 5
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6416,8 +6416,8 @@ const foodDatabase = {
         "ingredients": "140 g lentils, 1 piece bread, 1.7 cup zucchini, 1.7 cup mushroom, 1 cup broccoli, 1.8 cup rosemary, 1 tsp sesame oil, 3 tbsps lime juice, 3 tbsps olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 642,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 18,
+            "saturatedFat": 5,
             "cholesterol": 93,
             "sodium": 781,
             "carbohydrates": 82,
@@ -6434,7 +6434,7 @@ const foodDatabase = {
             "calories": 562,
             "protein": 10,
             "carbs": 32,
-            "fat": 3
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6443,8 +6443,8 @@ const foodDatabase = {
         "ingredients": "2 tbsps cauliflower, 3 tbsps yogurt, 1.6 cup kale, 1.9 cup spinach, 1.3 cup corn, 240 g dill, 2 tsps cumin, 2 tbsps curry paste, 3 tbsps olive oil, 2 tsps garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 562,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 13,
+            "saturatedFat": 3,
             "cholesterol": 15,
             "sodium": 374,
             "carbohydrates": 32,
@@ -6461,7 +6461,7 @@ const foodDatabase = {
             "calories": 269,
             "protein": 17,
             "carbs": 70,
-            "fat": 15
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6470,8 +6470,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup tempeh, 0.5 cup spaghetti, 1 tsp bell pepper, 190 g cucumber, 100 g pea, 0.8 cup mint, 1 tsp vinegar, 2 tsps chili flakes, 1 tbsp olive oil, 2 tsps garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 269,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 20,
+            "saturatedFat": 15,
             "cholesterol": 1,
             "sodium": 327,
             "carbohydrates": 70,
@@ -6488,7 +6488,7 @@ const foodDatabase = {
             "calories": 306,
             "protein": 12,
             "carbs": 41,
-            "fat": 8
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6497,8 +6497,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup seitan, 1 tsp yogurt, 210 g broccoli, 1 tsp bell pepper, 180 g cucumber, 1.4 cup dill, 2 tsps soy sauce, 2 tsps chili flakes, 2 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 306,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 5,
+            "saturatedFat": 8,
             "cholesterol": 66,
             "sodium": 702,
             "carbohydrates": 41,
@@ -6515,7 +6515,7 @@ const foodDatabase = {
             "calories": 439,
             "protein": 37,
             "carbs": 48,
-            "fat": 2
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6524,8 +6524,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup lentils, 1 piece wrap, 240 g spinach, 1.4 cup carrot, 80 g cucumber, 70 g mint, 2 tsps vinegar, 2 tsps paprika, 2 tsps olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 439,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 29,
+            "saturatedFat": 2,
             "cholesterol": 18,
             "sodium": 353,
             "carbohydrates": 48,
@@ -6542,7 +6542,7 @@ const foodDatabase = {
             "calories": 440,
             "protein": 13,
             "carbs": 35,
-            "fat": 1
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6551,8 +6551,8 @@ const foodDatabase = {
         "ingredients": "170 g sweet potato, 230 g spaghetti, 220 g cabbage, 200 g zucchini, 230 g corn, 1.7 cup basil, 2 tbsps lemon juice, 1 tsp ginger, 2 tsps olive oil, 3 cloves garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 440,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 10,
+            "saturatedFat": 1,
             "cholesterol": 71,
             "sodium": 118,
             "carbohydrates": 35,
@@ -6569,7 +6569,7 @@ const foodDatabase = {
             "calories": 507,
             "protein": 35,
             "carbs": 69,
-            "fat": 14
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6578,8 +6578,8 @@ const foodDatabase = {
         "ingredients": "1 piece pumpkin, 1.8 cup noodles, 1.9 cup broccoli, 2 tsps bell pepper, 130 g mushroom, 1.3 cup basil, 1 tbsp sesame oil, 3 tbsps lime juice, 2 tbsps olive oil, 2 tsps garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 507,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 21,
+            "saturatedFat": 14,
             "cholesterol": 39,
             "sodium": 682,
             "carbohydrates": 69,
@@ -6596,7 +6596,7 @@ const foodDatabase = {
             "calories": 266,
             "protein": 32,
             "carbs": 37,
-            "fat": 13
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6605,8 +6605,8 @@ const foodDatabase = {
         "ingredients": "90 g tempeh, 60 g udon, 220 g carrot, 1.1 cup tomato, 80 g cucumber, 1 cup thyme, 2 tbsps soy sauce, 1 tbsp lime juice, 2 tsps olive oil, 2 tsps garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 266,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 15,
+            "saturatedFat": 13,
             "cholesterol": 10,
             "sodium": 619,
             "carbohydrates": 37,
@@ -6623,7 +6623,7 @@ const foodDatabase = {
             "calories": 408,
             "protein": 13,
             "carbs": 8,
-            "fat": 13
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6632,8 +6632,8 @@ const foodDatabase = {
         "ingredients": "140 g chickpeas, 2 pieces bread, 0.9 cup mushroom, 240 g broccoli, 100 g spinach, 1.1 cup mint, 2 tsps lime juice, 1 tsp paprika, 1 tbsp olive oil, 1 clove garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 408,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 12,
+            "saturatedFat": 13,
             "cholesterol": 61,
             "sodium": 618,
             "carbohydrates": 8,
@@ -6650,7 +6650,7 @@ const foodDatabase = {
             "calories": 604,
             "protein": 19,
             "carbs": 57,
-            "fat": 1
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6659,8 +6659,8 @@ const foodDatabase = {
         "ingredients": "230 g quinoa, 0.9 cup udon, 1.8 cup kale, 1 cup pea, 150 g carrot, 220 g thyme, 1 tsp paprika, 2 tsps sesame oil, 2 tsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 604,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 8,
+            "saturatedFat": 1,
             "cholesterol": 110,
             "sodium": 406,
             "carbohydrates": 57,
@@ -6677,7 +6677,7 @@ const foodDatabase = {
             "calories": 340,
             "protein": 33,
             "carbs": 76,
-            "fat": 5
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6686,8 +6686,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup cauliflower, 0.9 cup noodles, 1.4 cup lettuce, 0.6 cup kale, 230 g broccoli, 210 g thyme, 2 tsps chili flakes, 1 tsp cumin, 1 tsp olive oil, 3 cloves garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 340,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 3,
+            "saturatedFat": 5,
             "cholesterol": 97,
             "sodium": 782,
             "carbohydrates": 76,
@@ -6704,7 +6704,7 @@ const foodDatabase = {
             "calories": 502,
             "protein": 36,
             "carbs": 50,
-            "fat": 13
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6713,8 +6713,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup broccoli, 2 tsps yogurt, 0.9 cup tomato, 1 tsp bell pepper, 1.4 cup kale, 200 g parsley, 1 tsp vinegar, 1 tsp ginger, 1 tsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 502,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 29,
+            "saturatedFat": 13,
             "cholesterol": 116,
             "sodium": 758,
             "carbohydrates": 50,
@@ -6731,7 +6731,7 @@ const foodDatabase = {
             "calories": 154,
             "protein": 38,
             "carbs": 42,
-            "fat": 5
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6740,8 +6740,8 @@ const foodDatabase = {
         "ingredients": "90 g seitan, 1.2 cup rice, 1.1 cup cucumber, 1.9 cup spinach, 170 g kale, 170 g parsley, 1 tsp paprika, 1 tsp chili flakes, 3 tbsps olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 154,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 23,
+            "saturatedFat": 5,
             "cholesterol": 25,
             "sodium": 453,
             "carbohydrates": 42,
@@ -6758,7 +6758,7 @@ const foodDatabase = {
             "calories": 369,
             "protein": 13,
             "carbs": 65,
-            "fat": 0
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6767,7 +6767,7 @@ const foodDatabase = {
         "ingredients": "220 g quinoa, 220 g rice, 120 g cabbage, 2 tsps bell pepper, 1 cup spinach, 60 g dill, 2 tbsps lime juice, 2 tsps turmeric, 2 tbsps olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 369,
-            "fat": 0,
+            "fat": 29,
             "saturatedFat": 0,
             "cholesterol": 48,
             "sodium": 817,
@@ -6785,7 +6785,7 @@ const foodDatabase = {
             "calories": 163,
             "protein": 26,
             "carbs": 44,
-            "fat": 5
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6794,8 +6794,8 @@ const foodDatabase = {
         "ingredients": "210 g seitan, 2 tbsps yogurt, 200 g zucchini, 220 g cucumber, 70 g carrot, 1.7 cup dill, 3 tbsps vinegar, 2 tbsps soy sauce, 2 tsps olive oil, 2 tsps garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 163,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 23,
+            "saturatedFat": 5,
             "cholesterol": 107,
             "sodium": 616,
             "carbohydrates": 44,
@@ -6812,7 +6812,7 @@ const foodDatabase = {
             "calories": 519,
             "protein": 39,
             "carbs": 54,
-            "fat": 13
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6821,8 +6821,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup eggplant, 1 piece tortilla, 1.4 cup mushroom, 90 g tomato, 1.9 cup broccoli, 240 g basil, 2 tsps cumin, 1 tbsp sesame oil, 1 tbsp olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 519,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 21,
+            "saturatedFat": 13,
             "cholesterol": 79,
             "sodium": 404,
             "carbohydrates": 54,
@@ -6839,7 +6839,7 @@ const foodDatabase = {
             "calories": 519,
             "protein": 19,
             "carbs": 46,
-            "fat": 5
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6848,8 +6848,8 @@ const foodDatabase = {
         "ingredients": "110 g lentils, 80 g rice, 0.9 cup lettuce, 220 g broccoli, 140 g mushroom, 1.2 cup basil, 2 tsps cumin, 2 tsps curry paste, 2 tsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 519,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 11,
+            "saturatedFat": 5,
             "cholesterol": 48,
             "sodium": 482,
             "carbohydrates": 46,
@@ -6866,7 +6866,7 @@ const foodDatabase = {
             "calories": 590,
             "protein": 29,
             "carbs": 30,
-            "fat": 13
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6875,8 +6875,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup lentils, 110 g spaghetti, 1 cup zucchini, 110 g pea, 1.6 cup cabbage, 180 g parsley, 1 tsp chili flakes, 2 tbsps sesame oil, 1 tsp olive oil, 1 tsp garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 590,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 3,
+            "saturatedFat": 13,
             "cholesterol": 85,
             "sodium": 377,
             "carbohydrates": 30,
@@ -6893,7 +6893,7 @@ const foodDatabase = {
             "calories": 414,
             "protein": 14,
             "carbs": 84,
-            "fat": 3
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6902,8 +6902,8 @@ const foodDatabase = {
         "ingredients": "130 g seitan, 1.3 cup noodles, 90 g cucumber, 2 tsps bell pepper, 0.9 cup zucchini, 220 g mint, 2 tsps cumin, 1 tbsp sesame oil, 2 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 414,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 18,
+            "saturatedFat": 3,
             "cholesterol": 14,
             "sodium": 701,
             "carbohydrates": 84,
@@ -6920,7 +6920,7 @@ const foodDatabase = {
             "calories": 326,
             "protein": 26,
             "carbs": 21,
-            "fat": 6
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6929,8 +6929,8 @@ const foodDatabase = {
         "ingredients": "60 g sweet potato, 2 pieces tortilla, 220 g lettuce, 80 g mushroom, 0.7 cup kale, 0.6 cup basil, 2 tsps chili flakes, 3 cloves ginger, 2 tsps olive oil, 2 cloves garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 326,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 11,
+            "saturatedFat": 6,
             "cholesterol": 16,
             "sodium": 835,
             "carbohydrates": 21,
@@ -6947,7 +6947,7 @@ const foodDatabase = {
             "calories": 201,
             "protein": 44,
             "carbs": 9,
-            "fat": 14
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6956,8 +6956,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps eggplant, 1 cup spaghetti, 2 tsps bell pepper, 140 g cabbage, 1.5 cup pea, 230 g parsley, 1 tsp turmeric, 1 tsp cumin, 1 tsp olive oil, 3 cloves garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 201,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 15,
+            "saturatedFat": 14,
             "cholesterol": 30,
             "sodium": 381,
             "carbohydrates": 9,
@@ -6974,7 +6974,7 @@ const foodDatabase = {
             "calories": 468,
             "protein": 42,
             "carbs": 48,
-            "fat": 9
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -6983,8 +6983,8 @@ const foodDatabase = {
         "ingredients": "150 g sweet potato, 1 piece wrap, 0.9 cup broccoli, 200 g pea, 1.1 cup corn, 230 g mint, 2 tbsps curry paste, 1 tsp cumin, 2 tsps olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 468,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 20,
+            "saturatedFat": 9,
             "cholesterol": 106,
             "sodium": 68,
             "carbohydrates": 48,
@@ -7001,7 +7001,7 @@ const foodDatabase = {
             "calories": 562,
             "protein": 9,
             "carbs": 47,
-            "fat": 7
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7010,8 +7010,8 @@ const foodDatabase = {
         "ingredients": "240 g zucchini, 140 g rice, 80 g corn, 110 g carrot, 140 g broccoli, 160 g cilantro, 1 tsp lime juice, 0.5 cup curry paste, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 562,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 7,
             "cholesterol": 60,
             "sodium": 720,
             "carbohydrates": 47,
@@ -7028,7 +7028,7 @@ const foodDatabase = {
             "calories": 201,
             "protein": 3,
             "carbs": 49,
-            "fat": 10
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7037,8 +7037,8 @@ const foodDatabase = {
         "ingredients": "180 g paneer, 230 g couscous, 140 g lettuce, 1.3 cup zucchini, 1.8 cup cabbage, 0.7 cup mint, 2 tsps turmeric, 1 tsp ginger, 1 tsp olive oil, 2 cloves garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 201,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 25,
+            "saturatedFat": 10,
             "cholesterol": 80,
             "sodium": 536,
             "carbohydrates": 49,
@@ -7055,7 +7055,7 @@ const foodDatabase = {
             "calories": 486,
             "protein": 45,
             "carbs": 11,
-            "fat": 5
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7064,8 +7064,8 @@ const foodDatabase = {
         "ingredients": "110 g halloumi, 190 g soba, 1.2 cup cucumber, 70 g carrot, 1.8 cup tomato, 210 g dill, 1 tsp soy sauce, 3 tbsps lime juice, 1 tbsp olive oil, 1 clove garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 486,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 23,
+            "saturatedFat": 5,
             "cholesterol": 113,
             "sodium": 293,
             "carbohydrates": 11,
@@ -7082,7 +7082,7 @@ const foodDatabase = {
             "calories": 514,
             "protein": 6,
             "carbs": 9,
-            "fat": 0
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7091,7 +7091,7 @@ const foodDatabase = {
         "ingredients": "180 g sweet potato, 0.6 cup noodles, 0.5 cup spinach, 0.6 cup broccoli, 170 g tomato, 220 g rosemary, 2 tsps paprika, 2 tsps vinegar, 2 tbsps olive oil, 1 tsp garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 514,
-            "fat": 0,
+            "fat": 6,
             "saturatedFat": 0,
             "cholesterol": 109,
             "sodium": 604,
@@ -7109,7 +7109,7 @@ const foodDatabase = {
             "calories": 405,
             "protein": 18,
             "carbs": 32,
-            "fat": 3
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7118,8 +7118,8 @@ const foodDatabase = {
         "ingredients": "100 g tempeh, 1.2 cup noodles, 190 g mushroom, 220 g cabbage, 190 g carrot, 100 g parsley, 2 tsps turmeric, 2 tsps lemon juice, 1 tsp olive oil, 3 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 405,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 26,
+            "saturatedFat": 3,
             "cholesterol": 86,
             "sodium": 688,
             "carbohydrates": 32,
@@ -7136,7 +7136,7 @@ const foodDatabase = {
             "calories": 151,
             "protein": 41,
             "carbs": 76,
-            "fat": 3
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7145,8 +7145,8 @@ const foodDatabase = {
         "ingredients": "240 g quinoa, 0.6 cup potato, 0.6 cup pea, 90 g broccoli, 1 tsp bell pepper, 1.2 cup parsley, 2 pieces curry paste, 2 tsps lime juice, 3 tbsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 151,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 10,
+            "saturatedFat": 3,
             "cholesterol": 76,
             "sodium": 82,
             "carbohydrates": 76,
@@ -7163,7 +7163,7 @@ const foodDatabase = {
             "calories": 325,
             "protein": 34,
             "carbs": 45,
-            "fat": 7
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7172,8 +7172,8 @@ const foodDatabase = {
         "ingredients": "2 tsps mushrooms, 1 piece bread, 80 g cabbage, 230 g broccoli, 210 g mushroom, 90 g parsley, 2 cloves ginger, 2 tsps paprika, 2 tsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 325,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 7,
             "cholesterol": 115,
             "sodium": 746,
             "carbohydrates": 45,
@@ -7190,7 +7190,7 @@ const foodDatabase = {
             "calories": 171,
             "protein": 32,
             "carbs": 61,
-            "fat": 4
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7199,8 +7199,8 @@ const foodDatabase = {
         "ingredients": "70 g sweet potato, 2 pieces tortilla, 90 g carrot, 200 g spinach, 1.3 cup pea, 110 g dill, 1 tsp paprika, 2 tsps lime juice, 3 tbsps olive oil, 2 cloves garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 171,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 27,
+            "saturatedFat": 4,
             "cholesterol": 91,
             "sodium": 736,
             "carbohydrates": 61,
@@ -7217,7 +7217,7 @@ const foodDatabase = {
             "calories": 180,
             "protein": 18,
             "carbs": 79,
-            "fat": 12
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7226,13 +7226,13 @@ const foodDatabase = {
         "ingredients": "160 g broccoli, 1 tbsp yogurt, 200 g zucchini, 160 g mushroom, 1.2 cup lettuce, 190 g rosemary, 3 tbsps lemon juice, 1 tsp ginger, 1 tbsp olive oil, 1 clove garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 180,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 26,
+            "saturatedFat": 12,
             "cholesterol": 48,
             "sodium": 594,
             "carbohydrates": 79,
             "fiber": 13,
-            "sugar": 15,
+            "sugar": 0,
             "protein": 18
         }
     },
@@ -7244,7 +7244,7 @@ const foodDatabase = {
             "calories": 619,
             "protein": 37,
             "carbs": 15,
-            "fat": 1
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7253,8 +7253,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup cauliflower, 180 g soba, 1.6 cup tomato, 160 g spinach, 2 tsps bell pepper, 1.8 cup parsley, 1 tsp ginger, 1 tsp lime juice, 2 tsps olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 619,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 10,
+            "saturatedFat": 1,
             "cholesterol": 101,
             "sodium": 325,
             "carbohydrates": 15,
@@ -7271,7 +7271,7 @@ const foodDatabase = {
             "calories": 515,
             "protein": 24,
             "carbs": 29,
-            "fat": 11
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7280,13 +7280,13 @@ const foodDatabase = {
         "ingredients": "1 tsp eggplant, 1 piece bread, 70 g mushroom, 1.8 cup lettuce, 1 tsp bell pepper, 230 g basil, 2 tbsps vinegar, 1 piece curry paste, 2 tbsps olive oil, 3 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 515,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 6,
+            "saturatedFat": 11,
             "cholesterol": 66,
             "sodium": 549,
             "carbohydrates": 29,
             "fiber": 5,
-            "sugar": 5,
+            "sugar": 0,
             "protein": 24
         }
     },
@@ -7298,7 +7298,7 @@ const foodDatabase = {
             "calories": 295,
             "protein": 30,
             "carbs": 54,
-            "fat": 8
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7307,8 +7307,8 @@ const foodDatabase = {
         "ingredients": "2 tsps cauliflower, 240 g couscous, 1.4 cup kale, 2 tsps bell pepper, 1.5 cup spinach, 120 g dill, 2 tsps soy sauce, 1 tsp chili flakes, 3 tbsps olive oil, 2 tsps garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 295,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 8,
             "cholesterol": 84,
             "sodium": 412,
             "carbohydrates": 54,
@@ -7325,7 +7325,7 @@ const foodDatabase = {
             "calories": 577,
             "protein": 26,
             "carbs": 73,
-            "fat": 4
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7334,8 +7334,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup pumpkin, 1 piece bread, 1.8 cup carrot, 1.1 cup kale, 1.8 cup corn, 100 g mint, 1 tsp ginger, 2 tsps turmeric, 1 tbsp olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 577,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 28,
+            "saturatedFat": 4,
             "cholesterol": 35,
             "sodium": 173,
             "carbohydrates": 73,
@@ -7352,7 +7352,7 @@ const foodDatabase = {
             "calories": 219,
             "protein": 31,
             "carbs": 78,
-            "fat": 4
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7361,8 +7361,8 @@ const foodDatabase = {
         "ingredients": "1 cup broccoli, 110 g rice, 120 g cabbage, 200 g kale, 170 g carrot, 80 g cilantro, 1 tsp soy sauce, 1 tsp chili flakes, 2 tsps olive oil, 2 tsps garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 219,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 13,
+            "saturatedFat": 4,
             "cholesterol": 43,
             "sodium": 874,
             "carbohydrates": 78,
@@ -7379,7 +7379,7 @@ const foodDatabase = {
             "calories": 410,
             "protein": 12,
             "carbs": 41,
-            "fat": 13
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7388,8 +7388,8 @@ const foodDatabase = {
         "ingredients": "180 g seitan, 2 pieces wrap, 230 g cucumber, 210 g carrot, 240 g cabbage, 110 g dill, 0.7 cup curry paste, 1 tsp chili flakes, 2 tsps olive oil, 3 cloves garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 410,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 30,
+            "saturatedFat": 13,
             "cholesterol": 75,
             "sodium": 280,
             "carbohydrates": 41,
@@ -7406,7 +7406,7 @@ const foodDatabase = {
             "calories": 625,
             "protein": 24,
             "carbs": 22,
-            "fat": 12
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7415,8 +7415,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup sweet potato, 1 tsp yogurt, 2 cup cucumber, 160 g broccoli, 1.2 cup kale, 190 g mint, 1 tsp vinegar, 2 tsps cumin, 2 tsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 625,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 12,
             "cholesterol": 98,
             "sodium": 372,
             "carbohydrates": 22,
@@ -7433,7 +7433,7 @@ const foodDatabase = {
             "calories": 234,
             "protein": 5,
             "carbs": 22,
-            "fat": 6
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7442,8 +7442,8 @@ const foodDatabase = {
         "ingredients": "170 g tempeh, 1.3 cup udon, 1.4 cup corn, 2 tsps bell pepper, 60 g cucumber, 210 g rosemary, 2 tsps soy sauce, 2 tbsps vinegar, 2 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 234,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 14,
+            "saturatedFat": 6,
             "cholesterol": 74,
             "sodium": 201,
             "carbohydrates": 22,
@@ -7460,7 +7460,7 @@ const foodDatabase = {
             "calories": 625,
             "protein": 10,
             "carbs": 30,
-            "fat": 12
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7469,8 +7469,8 @@ const foodDatabase = {
         "ingredients": "1 tsp pumpkin, 2 pieces wrap, 190 g cabbage, 80 g spinach, 1.8 cup broccoli, 60 g mint, 2 tsps cumin, 2 tbsps vinegar, 1 tsp olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 625,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 26,
+            "saturatedFat": 12,
             "cholesterol": 13,
             "sodium": 586,
             "carbohydrates": 30,
@@ -7497,7 +7497,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 425,
             "fat": 12,
-            "saturatedFat": 4,
+            "saturatedFat": 12,
             "cholesterol": 98,
             "sodium": 603,
             "carbohydrates": 74,
@@ -7514,7 +7514,7 @@ const foodDatabase = {
             "calories": 569,
             "protein": 8,
             "carbs": 54,
-            "fat": 10
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7523,8 +7523,8 @@ const foodDatabase = {
         "ingredients": "2 tsps pumpkin, 1 piece tortilla, 0.6 cup zucchini, 0.6 cup mushroom, 180 g cucumber, 1.3 cup dill, 2 tsps vinegar, 1.3 cup curry paste, 3 tbsps olive oil, 1 clove garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 569,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 12,
+            "saturatedFat": 10,
             "cholesterol": 15,
             "sodium": 123,
             "carbohydrates": 54,
@@ -7541,7 +7541,7 @@ const foodDatabase = {
             "calories": 549,
             "protein": 27,
             "carbs": 25,
-            "fat": 8
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7550,8 +7550,8 @@ const foodDatabase = {
         "ingredients": "130 g lentils, 1.6 cup noodles, 170 g broccoli, 1.3 cup carrot, 170 g cabbage, 210 g rosemary, 1 tsp sesame oil, 1 tsp curry paste, 2 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 549,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 8,
             "cholesterol": 24,
             "sodium": 82,
             "carbohydrates": 25,
@@ -7568,7 +7568,7 @@ const foodDatabase = {
             "calories": 537,
             "protein": 27,
             "carbs": 58,
-            "fat": 0
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7577,7 +7577,7 @@ const foodDatabase = {
         "ingredients": "60 g quinoa, 100 g rice, 1.4 cup lettuce, 180 g pea, 130 g carrot, 1.9 cup thyme, 1 tsp soy sauce, 2 tsps vinegar, 1 tbsp olive oil, 3 cloves garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 537,
-            "fat": 0,
+            "fat": 10,
             "saturatedFat": 0,
             "cholesterol": 10,
             "sodium": 626,
@@ -7595,7 +7595,7 @@ const foodDatabase = {
             "calories": 397,
             "protein": 40,
             "carbs": 72,
-            "fat": 12
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7604,8 +7604,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup halloumi, 220 g oats, 160 g broccoli, 120 g tomato, 1.9 cup kale, 0.7 cup basil, 2 tsps sesame oil, 2 tsps lime juice, 2 tbsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 397,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 29,
+            "saturatedFat": 12,
             "cholesterol": 15,
             "sodium": 244,
             "carbohydrates": 72,
@@ -7622,7 +7622,7 @@ const foodDatabase = {
             "calories": 322,
             "protein": 24,
             "carbs": 79,
-            "fat": 11
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7631,8 +7631,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup quinoa, 0.6 cup soba, 1.3 cup lettuce, 1.7 cup zucchini, 0.9 cup corn, 100 g thyme, 2 tbsps soy sauce, 1 tsp sesame oil, 1 tbsp olive oil, 3 cloves garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 322,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 3,
+            "saturatedFat": 11,
             "cholesterol": 60,
             "sodium": 306,
             "carbohydrates": 79,
@@ -7649,7 +7649,7 @@ const foodDatabase = {
             "calories": 388,
             "protein": 7,
             "carbs": 62,
-            "fat": 10
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7658,8 +7658,8 @@ const foodDatabase = {
         "ingredients": "140 g sweet potato, 1 cup rice, 180 g corn, 1.5 cup pea, 1.4 cup zucchini, 190 g cilantro, 0.8 cup curry paste, 1 tsp chili flakes, 2 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 388,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 13,
+            "saturatedFat": 10,
             "cholesterol": 31,
             "sodium": 770,
             "carbohydrates": 62,
@@ -7676,7 +7676,7 @@ const foodDatabase = {
             "calories": 377,
             "protein": 44,
             "carbs": 46,
-            "fat": 14
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7685,8 +7685,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup quinoa, 1 cup tomato, 170 g mushroom, 110 g kale, 1.3 cup thyme, 1 tsp ginger, 1 tsp lemon juice, 2 tbsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 377,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 26,
+            "saturatedFat": 14,
             "cholesterol": 58,
             "sodium": 884,
             "carbohydrates": 46,
@@ -7703,7 +7703,7 @@ const foodDatabase = {
             "calories": 417,
             "protein": 37,
             "carbs": 78,
-            "fat": 4
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7712,8 +7712,8 @@ const foodDatabase = {
         "ingredients": "240 g sweet potato, 1.7 cup couscous, 190 g cabbage, 220 g tomato, 230 g spinach, 230 g mint, 1 tbsp lemon juice, 2 tsps paprika, 1 tbsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 417,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 12,
+            "saturatedFat": 4,
             "cholesterol": 87,
             "sodium": 643,
             "carbohydrates": 78,
@@ -7730,7 +7730,7 @@ const foodDatabase = {
             "calories": 311,
             "protein": 38,
             "carbs": 68,
-            "fat": 9
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7739,8 +7739,8 @@ const foodDatabase = {
         "ingredients": "1 tsp cauliflower, 1 piece tortilla, 170 g zucchini, 190 g pea, 170 g broccoli, 1.6 cup parsley, 80 g curry paste, 2 tsps turmeric, 2 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 311,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 6,
+            "saturatedFat": 9,
             "cholesterol": 106,
             "sodium": 737,
             "carbohydrates": 68,
@@ -7757,7 +7757,7 @@ const foodDatabase = {
             "calories": 411,
             "protein": 29,
             "carbs": 53,
-            "fat": 8
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7766,8 +7766,8 @@ const foodDatabase = {
         "ingredients": "160 g tempeh, 1 tsp yogurt, 1.8 cup mushroom, 1.3 cup cabbage, 2 tsps bell pepper, 1.2 cup cilantro, 3 cloves ginger, 2 tsps lime juice, 2 tsps olive oil, 1 tsp garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 411,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 22,
+            "saturatedFat": 8,
             "cholesterol": 39,
             "sodium": 609,
             "carbohydrates": 53,
@@ -7784,7 +7784,7 @@ const foodDatabase = {
             "calories": 346,
             "protein": 41,
             "carbs": 42,
-            "fat": 4
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7793,8 +7793,8 @@ const foodDatabase = {
         "ingredients": "100 g chickpeas, 60 g spaghetti, 1.6 cup pea, 180 g cabbage, 1.4 cup lettuce, 1.5 cup thyme, 2 tsps turmeric, 1 tsp vinegar, 2 tsps olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 346,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 14,
+            "saturatedFat": 4,
             "cholesterol": 41,
             "sodium": 335,
             "carbohydrates": 42,
@@ -7811,7 +7811,7 @@ const foodDatabase = {
             "calories": 440,
             "protein": 14,
             "carbs": 62,
-            "fat": 3
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7820,8 +7820,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup sweet potato, 1 piece bread, 180 g cucumber, 0.8 cup pea, 1.4 cup broccoli, 1.3 cup thyme, 2 cloves ginger, 1 tsp cumin, 1 tsp olive oil, 1 tsp garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 440,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 7,
+            "saturatedFat": 3,
             "cholesterol": 66,
             "sodium": 312,
             "carbohydrates": 62,
@@ -7838,7 +7838,7 @@ const foodDatabase = {
             "calories": 176,
             "protein": 30,
             "carbs": 37,
-            "fat": 5
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7847,8 +7847,8 @@ const foodDatabase = {
         "ingredients": "70 g paneer, 2 pieces bread, 1.2 cup cabbage, 190 g kale, 2 tsps bell pepper, 90 g thyme, 2 tsps paprika, 1 tsp sesame oil, 2 tsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 176,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 8,
+            "saturatedFat": 5,
             "cholesterol": 10,
             "sodium": 590,
             "carbohydrates": 37,
@@ -7865,7 +7865,7 @@ const foodDatabase = {
             "calories": 260,
             "protein": 29,
             "carbs": 41,
-            "fat": 8
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7874,8 +7874,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup pumpkin, 160 g couscous, 2 tsps bell pepper, 2 cup spinach, 0.8 cup cucumber, 0.8 cup parsley, 0.8 cup curry paste, 1 tsp lime juice, 1 tsp olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 260,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 7,
+            "saturatedFat": 8,
             "cholesterol": 21,
             "sodium": 487,
             "carbohydrates": 41,
@@ -7892,7 +7892,7 @@ const foodDatabase = {
             "calories": 503,
             "protein": 26,
             "carbs": 65,
-            "fat": 0
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7901,7 +7901,7 @@ const foodDatabase = {
         "ingredients": "1.6 cup paneer, 1.2 cup noodles, 1.5 cup pea, 0.9 cup zucchini, 110 g corn, 160 g mint, 2 tsps vinegar, 2 tsps ginger, 1 tsp olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 503,
-            "fat": 0,
+            "fat": 10,
             "saturatedFat": 0,
             "cholesterol": 78,
             "sodium": 746,
@@ -7919,7 +7919,7 @@ const foodDatabase = {
             "calories": 242,
             "protein": 29,
             "carbs": 73,
-            "fat": 6
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7928,8 +7928,8 @@ const foodDatabase = {
         "ingredients": "70 g halloumi, 60 g potato, 1.6 cup tomato, 1 cup spinach, 180 g pea, 1.5 cup dill, 2 tsps turmeric, 2 tsps vinegar, 2 tsps olive oil, 1 clove garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 242,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 9,
+            "saturatedFat": 6,
             "cholesterol": 55,
             "sodium": 539,
             "carbohydrates": 73,
@@ -7946,7 +7946,7 @@ const foodDatabase = {
             "calories": 262,
             "protein": 11,
             "carbs": 63,
-            "fat": 2
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7955,8 +7955,8 @@ const foodDatabase = {
         "ingredients": "1 cup sweet potato, 0.8 cup oats, 0.5 cup spinach, 230 g corn, 2 cup pea, 190 g cilantro, 1 tsp turmeric, 2 tsps cumin, 3 tbsps olive oil, 3 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 262,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 15,
+            "saturatedFat": 2,
             "cholesterol": 15,
             "sodium": 751,
             "carbohydrates": 63,
@@ -7973,7 +7973,7 @@ const foodDatabase = {
             "calories": 563,
             "protein": 45,
             "carbs": 81,
-            "fat": 8
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -7982,8 +7982,8 @@ const foodDatabase = {
         "ingredients": "100 g quinoa, 210 g rice, 2 cup cucumber, 100 g zucchini, 210 g kale, 1.7 cup basil, 1 tsp lemon juice, 2 tbsps sesame oil, 1 tsp olive oil, 2 cloves garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 563,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 15,
+            "saturatedFat": 8,
             "cholesterol": 65,
             "sodium": 595,
             "carbohydrates": 81,
@@ -8000,7 +8000,7 @@ const foodDatabase = {
             "calories": 530,
             "protein": 42,
             "carbs": 38,
-            "fat": 0
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8009,7 +8009,7 @@ const foodDatabase = {
         "ingredients": "1.6 cup zucchini, 230 g quinoa, 0.8 cup spinach, 170 g cucumber, 190 g mint, 2 tsps turmeric, 1 tsp chili flakes, 2 tbsps olive oil, 2 tsps garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 530,
-            "fat": 0,
+            "fat": 7,
             "saturatedFat": 0,
             "cholesterol": 6,
             "sodium": 468,
@@ -8027,7 +8027,7 @@ const foodDatabase = {
             "calories": 617,
             "protein": 36,
             "carbs": 78,
-            "fat": 13
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8036,8 +8036,8 @@ const foodDatabase = {
         "ingredients": "220 g tempeh, 1 cup rice, 1.8 cup zucchini, 80 g cabbage, 200 g carrot, 1.5 cup thyme, 2 tsps chili flakes, 2 tsps turmeric, 2 tsps olive oil, 1 clove garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 617,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 8,
+            "saturatedFat": 13,
             "cholesterol": 43,
             "sodium": 244,
             "carbohydrates": 78,
@@ -8054,7 +8054,7 @@ const foodDatabase = {
             "calories": 479,
             "protein": 9,
             "carbs": 80,
-            "fat": 4
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8063,8 +8063,8 @@ const foodDatabase = {
         "ingredients": "180 g broccoli, 110 g couscous, 230 g cabbage, 0.9 cup cucumber, 0.6 cup basil, 2 tsps chili flakes, 1 tsp lime juice, 1 tbsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 479,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 28,
+            "saturatedFat": 4,
             "cholesterol": 26,
             "sodium": 469,
             "carbohydrates": 80,
@@ -8081,7 +8081,7 @@ const foodDatabase = {
             "calories": 189,
             "protein": 43,
             "carbs": 9,
-            "fat": 1
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8090,8 +8090,8 @@ const foodDatabase = {
         "ingredients": "1 tsp cauliflower, 1.4 cup quinoa, 1.2 cup spinach, 220 g pea, 2 tsps bell pepper, 1.7 cup basil, 2 pieces curry paste, 2 tsps soy sauce, 2 tbsps olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 189,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 28,
+            "saturatedFat": 1,
             "cholesterol": 45,
             "sodium": 568,
             "carbohydrates": 9,
@@ -8108,7 +8108,7 @@ const foodDatabase = {
             "calories": 542,
             "protein": 27,
             "carbs": 66,
-            "fat": 2
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8117,8 +8117,8 @@ const foodDatabase = {
         "ingredients": "180 g cod, 210 g bulgur, 200 g carrot, 1.3 cup pea, 140 g tomato, 170 g thyme, 2 tsps turmeric, 1 tsp chili flakes, 1 tbsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 542,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 27,
+            "saturatedFat": 2,
             "cholesterol": 66,
             "sodium": 860,
             "carbohydrates": 66,
@@ -8135,7 +8135,7 @@ const foodDatabase = {
             "calories": 266,
             "protein": 38,
             "carbs": 11,
-            "fat": 3
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8144,8 +8144,8 @@ const foodDatabase = {
         "ingredients": "210 g lamb, 210 g soba, 70 g spinach, 180 g broccoli, 0.8 cup cucumber, 100 g rosemary, 1 tbsp sesame oil, 2 tsps vinegar, 1 tsp olive oil, 2 tsps garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 266,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 3,
             "cholesterol": 69,
             "sodium": 871,
             "carbohydrates": 11,
@@ -8172,7 +8172,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 525,
             "fat": 14,
-            "saturatedFat": 4,
+            "saturatedFat": 14,
             "cholesterol": 42,
             "sodium": 357,
             "carbohydrates": 33,
@@ -8189,7 +8189,7 @@ const foodDatabase = {
             "calories": 338,
             "protein": 41,
             "carbs": 28,
-            "fat": 13
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8198,8 +8198,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup cod, 2 cup quinoa, 1.4 cup spinach, 1.7 cup pea, 1.1 cup kale, 120 g cilantro, 3 tbsps soy sauce, 2 tsps cumin, 2 tsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 338,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 23,
+            "saturatedFat": 13,
             "cholesterol": 36,
             "sodium": 543,
             "carbohydrates": 28,
@@ -8216,7 +8216,7 @@ const foodDatabase = {
             "calories": 561,
             "protein": 42,
             "carbs": 26,
-            "fat": 14
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8225,8 +8225,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup turkey, 2 pieces bread, 1.9 cup kale, 1.6 cup cabbage, 1.8 cup cucumber, 160 g basil, 2 tsps lemon juice, 1 tsp turmeric, 3 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 561,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 9,
+            "saturatedFat": 14,
             "cholesterol": 30,
             "sodium": 681,
             "carbohydrates": 26,
@@ -8243,7 +8243,7 @@ const foodDatabase = {
             "calories": 535,
             "protein": 35,
             "carbs": 18,
-            "fat": 1
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8252,8 +8252,8 @@ const foodDatabase = {
         "ingredients": "80 g shrimp, 1.6 cup quinoa, 0.7 cup corn, 2 tsps bell pepper, 1.8 cup broccoli, 1 cup thyme, 2 pieces curry paste, 1 tsp chili flakes, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 535,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 7,
+            "saturatedFat": 1,
             "cholesterol": 8,
             "sodium": 177,
             "carbohydrates": 18,
@@ -8270,7 +8270,7 @@ const foodDatabase = {
             "calories": 199,
             "protein": 40,
             "carbs": 14,
-            "fat": 7
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8279,13 +8279,13 @@ const foodDatabase = {
         "ingredients": "1.7 cup sardines, 1.7 cup bulgur, 180 g lettuce, 170 g tomato, 1 tsp bell pepper, 150 g mint, 2 tsps turmeric, 1 tsp chili flakes, 1 tbsp olive oil, 2 tsps garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 199,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 20,
+            "saturatedFat": 7,
             "cholesterol": 113,
             "sodium": 668,
             "carbohydrates": 14,
             "fiber": 7,
-            "sugar": 2,
+            "sugar": 0,
             "protein": 40
         }
     },
@@ -8297,7 +8297,7 @@ const foodDatabase = {
             "calories": 267,
             "protein": 8,
             "carbs": 79,
-            "fat": 13
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8306,8 +8306,8 @@ const foodDatabase = {
         "ingredients": "150 g duck, 1.7 cup soba, 0.9 cup broccoli, 240 g zucchini, 130 g lettuce, 160 g dill, 3 cloves ginger, 2 tsps soy sauce, 1 tbsp olive oil, 1 tsp garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 267,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 26,
+            "saturatedFat": 13,
             "cholesterol": 55,
             "sodium": 241,
             "carbohydrates": 79,
@@ -8324,7 +8324,7 @@ const foodDatabase = {
             "calories": 611,
             "protein": 18,
             "carbs": 9,
-            "fat": 0
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8333,7 +8333,7 @@ const foodDatabase = {
         "ingredients": "1.5 cup chicken, 90 g potato, 1.9 cup corn, 190 g cucumber, 200 g mushroom, 200 g thyme, 1 tbsp sesame oil, 2 tsps turmeric, 1 tsp olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 611,
-            "fat": 0,
+            "fat": 22,
             "saturatedFat": 0,
             "cholesterol": 85,
             "sodium": 508,
@@ -8351,7 +8351,7 @@ const foodDatabase = {
             "calories": 551,
             "protein": 39,
             "carbs": 80,
-            "fat": 7
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8360,8 +8360,8 @@ const foodDatabase = {
         "ingredients": "220 g cod, 240 g noodles, 0.9 cup spinach, 220 g tomato, 190 g cucumber, 170 g dill, 1 tsp ginger, 1 tsp lemon juice, 1 tsp olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 551,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 11,
+            "saturatedFat": 7,
             "cholesterol": 37,
             "sodium": 91,
             "carbohydrates": 80,
@@ -8378,7 +8378,7 @@ const foodDatabase = {
             "calories": 567,
             "protein": 13,
             "carbs": 73,
-            "fat": 4
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8387,8 +8387,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup sardines, 220 g quinoa, 0.7 cup spinach, 1.9 cup corn, 70 g mushroom, 1.1 cup parsley, 1 tsp paprika, 1 tsp turmeric, 2 tsps olive oil, 1 clove garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 567,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 4,
             "cholesterol": 89,
             "sodium": 133,
             "carbohydrates": 73,
@@ -8405,7 +8405,7 @@ const foodDatabase = {
             "calories": 437,
             "protein": 18,
             "carbs": 80,
-            "fat": 2
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8414,8 +8414,8 @@ const foodDatabase = {
         "ingredients": "110 g crab, 1 piece bread, 1.5 cup lettuce, 140 g tomato, 1.7 cup carrot, 210 g cilantro, 1 tsp soy sauce, 1 tsp vinegar, 1 tbsp olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 437,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 27,
+            "saturatedFat": 2,
             "cholesterol": 59,
             "sodium": 571,
             "carbohydrates": 80,
@@ -8432,7 +8432,7 @@ const foodDatabase = {
             "calories": 579,
             "protein": 39,
             "carbs": 6,
-            "fat": 3
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8441,8 +8441,8 @@ const foodDatabase = {
         "ingredients": "80 g cod, 1.4 cup quinoa, 170 g kale, 1.3 cup broccoli, 170 g corn, 130 g parsley, 2 tsps cumin, 1 tbsp vinegar, 1 tbsp olive oil, 1 clove garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 579,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 20,
+            "saturatedFat": 3,
             "cholesterol": 102,
             "sodium": 454,
             "carbohydrates": 6,
@@ -8459,7 +8459,7 @@ const foodDatabase = {
             "calories": 346,
             "protein": 17,
             "carbs": 39,
-            "fat": 5
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8468,8 +8468,8 @@ const foodDatabase = {
         "ingredients": "220 g crab, 0.9 cup potato, 230 g carrot, 1.2 cup pea, 150 g broccoli, 200 g dill, 2 tsps turmeric, 1 tsp lime juice, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 346,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 18,
+            "saturatedFat": 5,
             "cholesterol": 30,
             "sodium": 255,
             "carbohydrates": 39,
@@ -8486,7 +8486,7 @@ const foodDatabase = {
             "calories": 321,
             "protein": 9,
             "carbs": 77,
-            "fat": 13
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8495,8 +8495,8 @@ const foodDatabase = {
         "ingredients": "1 cup pork, 1 tsp yogurt, 1.8 cup broccoli, 0.7 cup cabbage, 90 g pea, 70 g thyme, 2 tsps lime juice, 1 tsp paprika, 1 tsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 321,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 28,
+            "saturatedFat": 13,
             "cholesterol": 115,
             "sodium": 843,
             "carbohydrates": 77,
@@ -8513,7 +8513,7 @@ const foodDatabase = {
             "calories": 291,
             "protein": 33,
             "carbs": 73,
-            "fat": 1
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8522,8 +8522,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup pork, 100 g couscous, 240 g mushroom, 130 g zucchini, 130 g carrot, 1.5 cup cilantro, 1 tsp chili flakes, 1 tsp turmeric, 2 tbsps olive oil, 2 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 291,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 29,
+            "saturatedFat": 1,
             "cholesterol": 75,
             "sodium": 248,
             "carbohydrates": 73,
@@ -8540,7 +8540,7 @@ const foodDatabase = {
             "calories": 502,
             "protein": 25,
             "carbs": 80,
-            "fat": 3
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8549,8 +8549,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup salmon, 150 g rice, 2 tsps bell pepper, 180 g pea, 220 g mushroom, 0.6 cup cilantro, 2 tsps cumin, 1 tsp sesame oil, 1 tbsp olive oil, 1 tsp garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 502,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 22,
+            "saturatedFat": 3,
             "cholesterol": 46,
             "sodium": 305,
             "carbohydrates": 80,
@@ -8567,7 +8567,7 @@ const foodDatabase = {
             "calories": 631,
             "protein": 23,
             "carbs": 53,
-            "fat": 14
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8576,8 +8576,8 @@ const foodDatabase = {
         "ingredients": "1 cup crab, 3 tbsps yogurt, 170 g kale, 170 g mushroom, 160 g carrot, 90 g thyme, 2 tsps chili flakes, 3 tbsps soy sauce, 2 tsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 631,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 21,
+            "saturatedFat": 14,
             "cholesterol": 23,
             "sodium": 161,
             "carbohydrates": 53,
@@ -8594,7 +8594,7 @@ const foodDatabase = {
             "calories": 345,
             "protein": 23,
             "carbs": 76,
-            "fat": 4
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8603,8 +8603,8 @@ const foodDatabase = {
         "ingredients": "180 g beef, 160 g couscous, 190 g cucumber, 1 cup broccoli, 70 g pea, 240 g parsley, 2 tsps cumin, 3 tbsps lemon juice, 1 tsp olive oil, 1 clove garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 345,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 12,
+            "saturatedFat": 4,
             "cholesterol": 2,
             "sodium": 615,
             "carbohydrates": 76,
@@ -8621,7 +8621,7 @@ const foodDatabase = {
             "calories": 187,
             "protein": 33,
             "carbs": 43,
-            "fat": 8
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8630,8 +8630,8 @@ const foodDatabase = {
         "ingredients": "160 g salmon, 2 pieces wrap, 190 g cucumber, 1.9 cup mushroom, 1.2 cup carrot, 90 g basil, 2 tsps ginger, 2 tsps vinegar, 1 tbsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 187,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 8,
             "cholesterol": 99,
             "sodium": 696,
             "carbohydrates": 43,
@@ -8648,7 +8648,7 @@ const foodDatabase = {
             "calories": 295,
             "protein": 33,
             "carbs": 71,
-            "fat": 4
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8657,8 +8657,8 @@ const foodDatabase = {
         "ingredients": "190 g chicken, 1 tsp yogurt, 1.3 cup mushroom, 1.6 cup zucchini, 210 g carrot, 240 g rosemary, 1 tsp lemon juice, 1 tsp cumin, 2 tsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 295,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 23,
+            "saturatedFat": 4,
             "cholesterol": 9,
             "sodium": 694,
             "carbohydrates": 71,
@@ -8675,7 +8675,7 @@ const foodDatabase = {
             "calories": 552,
             "protein": 27,
             "carbs": 48,
-            "fat": 7
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8684,8 +8684,8 @@ const foodDatabase = {
         "ingredients": "170 g pork, 1 piece wrap, 0.7 cup tomato, 0.8 cup corn, 1.9 cup pea, 1.1 cup mint, 2 tsps soy sauce, 2 tsps turmeric, 2 tsps olive oil, 3 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 552,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 8,
+            "saturatedFat": 7,
             "cholesterol": 108,
             "sodium": 496,
             "carbohydrates": 48,
@@ -8702,7 +8702,7 @@ const foodDatabase = {
             "calories": 235,
             "protein": 21,
             "carbs": 54,
-            "fat": 6
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8711,8 +8711,8 @@ const foodDatabase = {
         "ingredients": "120 g turkey, 1 cup rice, 2 tsps bell pepper, 1.6 cup cucumber, 0.9 cup spinach, 80 g mint, 2 tsps paprika, 2 tsps cumin, 1 tsp olive oil, 1 tsp garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 235,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 10,
+            "saturatedFat": 6,
             "cholesterol": 61,
             "sodium": 415,
             "carbohydrates": 54,
@@ -8729,7 +8729,7 @@ const foodDatabase = {
             "calories": 577,
             "protein": 7,
             "carbs": 63,
-            "fat": 4
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8738,8 +8738,8 @@ const foodDatabase = {
         "ingredients": "70 g pork, 1 piece tortilla, 0.8 cup corn, 1.9 cup cabbage, 1.5 cup mushroom, 80 g mint, 1 tsp cumin, 2 tsps soy sauce, 1 tsp olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 577,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 17,
+            "saturatedFat": 4,
             "cholesterol": 104,
             "sodium": 223,
             "carbohydrates": 63,
@@ -8756,7 +8756,7 @@ const foodDatabase = {
             "calories": 374,
             "protein": 41,
             "carbs": 16,
-            "fat": 4
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8765,8 +8765,8 @@ const foodDatabase = {
         "ingredients": "140 g crab, 1 piece wrap, 150 g carrot, 1.1 cup cucumber, 1.7 cup pea, 1.8 cup dill, 3 tbsps vinegar, 1 tsp sesame oil, 2 tbsps olive oil, 2 tsps garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 374,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 4,
             "cholesterol": 78,
             "sodium": 99,
             "carbohydrates": 16,
@@ -8783,7 +8783,7 @@ const foodDatabase = {
             "calories": 319,
             "protein": 16,
             "carbs": 68,
-            "fat": 11
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8792,8 +8792,8 @@ const foodDatabase = {
         "ingredients": "140 g lamb, 1.7 cup bulgur, 100 g cucumber, 1.8 cup pea, 180 g zucchini, 150 g parsley, 2 tsps turmeric, 1 tsp cumin, 2 tsps olive oil, 1 tsp garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 319,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 8,
+            "saturatedFat": 11,
             "cholesterol": 42,
             "sodium": 572,
             "carbohydrates": 68,
@@ -8810,7 +8810,7 @@ const foodDatabase = {
             "calories": 456,
             "protein": 8,
             "carbs": 40,
-            "fat": 7
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8819,8 +8819,8 @@ const foodDatabase = {
         "ingredients": "210 g salmon, 2 pieces tortilla, 230 g zucchini, 0.8 cup cucumber, 1.4 cup kale, 230 g basil, 1 tsp vinegar, 1 tsp cumin, 1 tsp olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 456,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 28,
+            "saturatedFat": 7,
             "cholesterol": 20,
             "sodium": 192,
             "carbohydrates": 40,
@@ -8837,7 +8837,7 @@ const foodDatabase = {
             "calories": 279,
             "protein": 35,
             "carbs": 46,
-            "fat": 11
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8846,8 +8846,8 @@ const foodDatabase = {
         "ingredients": "150 g sardines, 1.3 cup noodles, 190 g spinach, 160 g tomato, 1.8 cup lettuce, 180 g parsley, 2 tsps lime juice, 2 tsps paprika, 1 tsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 279,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 29,
+            "saturatedFat": 11,
             "cholesterol": 66,
             "sodium": 830,
             "carbohydrates": 46,
@@ -8874,7 +8874,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 564,
             "fat": 14,
-            "saturatedFat": 4,
+            "saturatedFat": 14,
             "cholesterol": 26,
             "sodium": 584,
             "carbohydrates": 85,
@@ -8891,7 +8891,7 @@ const foodDatabase = {
             "calories": 283,
             "protein": 31,
             "carbs": 83,
-            "fat": 0
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8900,7 +8900,7 @@ const foodDatabase = {
         "ingredients": "1.7 cup salmon, 210 g oats, 0.9 cup tomato, 180 g kale, 1.6 cup spinach, 1.7 cup thyme, 2 tbsps lime juice, 2 tsps sesame oil, 1 tbsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 283,
-            "fat": 0,
+            "fat": 25,
             "saturatedFat": 0,
             "cholesterol": 1,
             "sodium": 692,
@@ -8918,7 +8918,7 @@ const foodDatabase = {
             "calories": 475,
             "protein": 39,
             "carbs": 70,
-            "fat": 12
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8927,8 +8927,8 @@ const foodDatabase = {
         "ingredients": "100 g cod, 0.8 cup couscous, 190 g cucumber, 1.5 cup broccoli, 0.7 cup lettuce, 1.1 cup parsley, 2 tsps lemon juice, 1 tsp chili flakes, 1 tsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 475,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 28,
+            "saturatedFat": 12,
             "cholesterol": 20,
             "sodium": 140,
             "carbohydrates": 70,
@@ -8945,7 +8945,7 @@ const foodDatabase = {
             "calories": 305,
             "protein": 3,
             "carbs": 10,
-            "fat": 9
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8954,8 +8954,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup salmon, 180 g couscous, 0.6 cup cabbage, 0.5 cup kale, 170 g cucumber, 0.8 cup cilantro, 2 tsps soy sauce, 1 tsp vinegar, 2 tsps olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 305,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 15,
+            "saturatedFat": 9,
             "cholesterol": 1,
             "sodium": 533,
             "carbohydrates": 10,
@@ -8972,7 +8972,7 @@ const foodDatabase = {
             "calories": 276,
             "protein": 24,
             "carbs": 76,
-            "fat": 15
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -8981,8 +8981,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup turkey, 240 g spaghetti, 1.4 cup mushroom, 1.4 cup tomato, 1.7 cup spinach, 1.9 cup dill, 2 tsps lime juice, 3 tbsps soy sauce, 2 tsps olive oil, 2 cloves garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 276,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 30,
+            "saturatedFat": 15,
             "cholesterol": 51,
             "sodium": 463,
             "carbohydrates": 76,
@@ -8999,7 +8999,7 @@ const foodDatabase = {
             "calories": 357,
             "protein": 22,
             "carbs": 9,
-            "fat": 0
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9008,7 +9008,7 @@ const foodDatabase = {
         "ingredients": "1.8 cup duck, 0.8 cup noodles, 0.9 cup cucumber, 1.5 cup carrot, 1.3 cup kale, 1.4 cup dill, 2 tbsps lime juice, 2 tsps turmeric, 2 tsps olive oil, 1 tsp garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 357,
-            "fat": 0,
+            "fat": 17,
             "saturatedFat": 0,
             "cholesterol": 67,
             "sodium": 748,
@@ -9026,7 +9026,7 @@ const foodDatabase = {
             "calories": 333,
             "protein": 30,
             "carbs": 42,
-            "fat": 0
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9035,7 +9035,7 @@ const foodDatabase = {
         "ingredients": "220 g turkey, 100 g soba, 220 g cabbage, 130 g pea, 190 g lettuce, 100 g thyme, 1 tsp lime juice, 1 tsp cumin, 2 tsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 333,
-            "fat": 0,
+            "fat": 21,
             "saturatedFat": 0,
             "cholesterol": 20,
             "sodium": 684,
@@ -9053,7 +9053,7 @@ const foodDatabase = {
             "calories": 253,
             "protein": 35,
             "carbs": 78,
-            "fat": 2
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9062,13 +9062,13 @@ const foodDatabase = {
         "ingredients": "190 g duck, 80 g rice, 130 g cabbage, 140 g spinach, 0.9 cup corn, 70 g parsley, 2 tsps vinegar, 1 tsp lemon juice, 1 tsp olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 253,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 18,
+            "saturatedFat": 2,
             "cholesterol": 83,
             "sodium": 181,
             "carbohydrates": 78,
             "fiber": 13,
-            "sugar": 15,
+            "sugar": 0,
             "protein": 35
         }
     },
@@ -9080,7 +9080,7 @@ const foodDatabase = {
             "calories": 618,
             "protein": 13,
             "carbs": 60,
-            "fat": 9
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9089,8 +9089,8 @@ const foodDatabase = {
         "ingredients": "60 g lamb, 2 pieces tortilla, 110 g tomato, 190 g broccoli, 1.9 cup corn, 1.2 cup basil, 2 tsps vinegar, 1 clove ginger, 1 tbsp olive oil, 1 clove garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 618,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 22,
+            "saturatedFat": 9,
             "cholesterol": 13,
             "sodium": 848,
             "carbohydrates": 60,
@@ -9117,7 +9117,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 427,
             "fat": 13,
-            "saturatedFat": 4,
+            "saturatedFat": 13,
             "cholesterol": 82,
             "sodium": 195,
             "carbohydrates": 25,
@@ -9134,7 +9134,7 @@ const foodDatabase = {
             "calories": 634,
             "protein": 25,
             "carbs": 15,
-            "fat": 9
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9143,8 +9143,8 @@ const foodDatabase = {
         "ingredients": "150 g cod, 170 g soba, 2 tsps bell pepper, 230 g kale, 0.7 cup cucumber, 90 g parsley, 2 tbsps lemon juice, 2 tsps cumin, 3 tbsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 634,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 21,
+            "saturatedFat": 9,
             "cholesterol": 119,
             "sodium": 854,
             "carbohydrates": 15,
@@ -9161,7 +9161,7 @@ const foodDatabase = {
             "calories": 297,
             "protein": 40,
             "carbs": 51,
-            "fat": 1
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9170,8 +9170,8 @@ const foodDatabase = {
         "ingredients": "200 g chicken, 2 tbsps yogurt, 1.7 cup lettuce, 1 tsp bell pepper, 180 g carrot, 110 g thyme, 1 tsp turmeric, 1 tsp chili flakes, 2 tsps olive oil, 2 cloves garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 297,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 21,
+            "saturatedFat": 1,
             "cholesterol": 79,
             "sodium": 500,
             "carbohydrates": 51,
@@ -9188,7 +9188,7 @@ const foodDatabase = {
             "calories": 266,
             "protein": 18,
             "carbs": 27,
-            "fat": 14
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9197,8 +9197,8 @@ const foodDatabase = {
         "ingredients": "120 g shrimp, 2 pieces bread, 2 tsps bell pepper, 160 g cabbage, 100 g cucumber, 210 g dill, 1 clove ginger, 2 tsps chili flakes, 2 tbsps olive oil, 1 clove garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 266,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 13,
+            "saturatedFat": 14,
             "cholesterol": 61,
             "sodium": 237,
             "carbohydrates": 27,
@@ -9215,7 +9215,7 @@ const foodDatabase = {
             "calories": 440,
             "protein": 38,
             "carbs": 57,
-            "fat": 11
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9224,8 +9224,8 @@ const foodDatabase = {
         "ingredients": "180 g pork, 140 g quinoa, 2 tsps bell pepper, 160 g spinach, 160 g kale, 1 cup cilantro, 1 tsp paprika, 1 tsp lime juice, 2 tbsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 440,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 5,
+            "saturatedFat": 11,
             "cholesterol": 49,
             "sodium": 66,
             "carbohydrates": 57,
@@ -9242,7 +9242,7 @@ const foodDatabase = {
             "calories": 151,
             "protein": 13,
             "carbs": 65,
-            "fat": 8
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9251,8 +9251,8 @@ const foodDatabase = {
         "ingredients": "100 g duck, 160 g noodles, 0.9 cup mushroom, 90 g broccoli, 120 g spinach, 1.1 cup thyme, 1 tsp turmeric, 3 cloves ginger, 1 tsp olive oil, 1 clove garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 151,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 21,
+            "saturatedFat": 8,
             "cholesterol": 52,
             "sodium": 108,
             "carbohydrates": 65,
@@ -9279,12 +9279,12 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 481,
             "fat": 9,
-            "saturatedFat": 3,
+            "saturatedFat": 9,
             "cholesterol": 114,
             "sodium": 314,
             "carbohydrates": 32,
             "fiber": 2,
-            "sugar": 6,
+            "sugar": 0,
             "protein": 33
         }
     },
@@ -9296,7 +9296,7 @@ const foodDatabase = {
             "calories": 169,
             "protein": 41,
             "carbs": 55,
-            "fat": 0
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9305,7 +9305,7 @@ const foodDatabase = {
         "ingredients": "1.2 cup salmon, 1 piece wrap, 1.1 cup broccoli, 230 g tomato, 180 g spinach, 150 g parsley, 2 tbsps lemon juice, 2 tsps paprika, 1 tbsp olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 169,
-            "fat": 0,
+            "fat": 11,
             "saturatedFat": 0,
             "cholesterol": 22,
             "sodium": 391,
@@ -9323,7 +9323,7 @@ const foodDatabase = {
             "calories": 420,
             "protein": 6,
             "carbs": 58,
-            "fat": 14
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9332,8 +9332,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup cod, 2 cup couscous, 100 g lettuce, 90 g carrot, 1 tsp bell pepper, 1.3 cup dill, 2 tsps soy sauce, 1 tbsp lime juice, 1 tsp olive oil, 2 cloves garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 420,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 12,
+            "saturatedFat": 14,
             "cholesterol": 49,
             "sodium": 223,
             "carbohydrates": 58,
@@ -9350,7 +9350,7 @@ const foodDatabase = {
             "calories": 217,
             "protein": 4,
             "carbs": 45,
-            "fat": 12
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9359,8 +9359,8 @@ const foodDatabase = {
         "ingredients": "80 g duck, 190 g oats, 130 g spinach, 110 g tomato, 1.4 cup mushroom, 1.4 cup parsley, 1 tbsp soy sauce, 1 tsp ginger, 3 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 217,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 7,
+            "saturatedFat": 12,
             "cholesterol": 63,
             "sodium": 203,
             "carbohydrates": 45,
@@ -9377,7 +9377,7 @@ const foodDatabase = {
             "calories": 315,
             "protein": 18,
             "carbs": 74,
-            "fat": 1
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9386,8 +9386,8 @@ const foodDatabase = {
         "ingredients": "240 g salmon, 0.8 cup oats, 100 g pea, 200 g kale, 0.8 cup zucchini, 1.4 cup rosemary, 2 tsps cumin, 1 tsp vinegar, 2 tbsps olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 315,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 4,
+            "saturatedFat": 1,
             "cholesterol": 111,
             "sodium": 194,
             "carbohydrates": 74,
@@ -9404,7 +9404,7 @@ const foodDatabase = {
             "calories": 530,
             "protein": 4,
             "carbs": 78,
-            "fat": 10
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9413,8 +9413,8 @@ const foodDatabase = {
         "ingredients": "160 g lamb, 1.8 cup soba, 150 g cabbage, 2 tsps bell pepper, 140 g carrot, 1.1 cup thyme, 1 tsp lemon juice, 2 tbsps lime juice, 1 tsp olive oil, 3 cloves garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 530,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 30,
+            "saturatedFat": 10,
             "cholesterol": 78,
             "sodium": 819,
             "carbohydrates": 78,
@@ -9431,7 +9431,7 @@ const foodDatabase = {
             "calories": 230,
             "protein": 25,
             "carbs": 57,
-            "fat": 7
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9440,8 +9440,8 @@ const foodDatabase = {
         "ingredients": "100 g chicken, 1.7 cup couscous, 140 g mushroom, 0.9 cup lettuce, 170 g pea, 1.9 cup mint, 1 tsp ginger, 2 tbsps vinegar, 2 tsps olive oil, 3 cloves garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 230,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 29,
+            "saturatedFat": 7,
             "cholesterol": 59,
             "sodium": 506,
             "carbohydrates": 57,
@@ -9458,7 +9458,7 @@ const foodDatabase = {
             "calories": 469,
             "protein": 17,
             "carbs": 66,
-            "fat": 3
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9467,8 +9467,8 @@ const foodDatabase = {
         "ingredients": "80 g sardines, 0.8 cup spaghetti, 160 g kale, 1.5 cup cabbage, 1.3 cup cucumber, 1.3 cup cilantro, 1 tsp chili flakes, 1.2 cup curry paste, 2 tsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 469,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 17,
+            "saturatedFat": 3,
             "cholesterol": 86,
             "sodium": 95,
             "carbohydrates": 66,
@@ -9485,7 +9485,7 @@ const foodDatabase = {
             "calories": 216,
             "protein": 6,
             "carbs": 74,
-            "fat": 11
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9494,8 +9494,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup lamb, 2 pieces tortilla, 160 g cabbage, 1.7 cup spinach, 240 g zucchini, 100 g rosemary, 2 tsps sesame oil, 2 tsps soy sauce, 1 tsp olive oil, 1 clove garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 216,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 22,
+            "saturatedFat": 11,
             "cholesterol": 33,
             "sodium": 708,
             "carbohydrates": 74,
@@ -9512,7 +9512,7 @@ const foodDatabase = {
             "calories": 376,
             "protein": 30,
             "carbs": 67,
-            "fat": 15
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9521,8 +9521,8 @@ const foodDatabase = {
         "ingredients": "70 g salmon, 0.6 cup rice, 1.2 cup zucchini, 220 g kale, 240 g spinach, 170 g parsley, 1 clove ginger, 1 tsp turmeric, 1 tsp olive oil, 2 tsps garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 376,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 22,
+            "saturatedFat": 15,
             "cholesterol": 23,
             "sodium": 755,
             "carbohydrates": 67,
@@ -9539,7 +9539,7 @@ const foodDatabase = {
             "calories": 258,
             "protein": 38,
             "carbs": 80,
-            "fat": 10
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9548,8 +9548,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup chicken, 180 g oats, 220 g kale, 150 g pea, 180 g cucumber, 70 g basil, 1 tsp cumin, 1 tsp soy sauce, 2 tbsps olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 258,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 12,
+            "saturatedFat": 10,
             "cholesterol": 92,
             "sodium": 380,
             "carbohydrates": 80,
@@ -9566,7 +9566,7 @@ const foodDatabase = {
             "calories": 168,
             "protein": 33,
             "carbs": 47,
-            "fat": 6
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9575,8 +9575,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup beef, 170 g bulgur, 2 tsps bell pepper, 0.8 cup spinach, 1.9 cup tomato, 1.1 cup cilantro, 1 tsp paprika, 1 tsp chili flakes, 2 tbsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 168,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 8,
+            "saturatedFat": 6,
             "cholesterol": 4,
             "sodium": 214,
             "carbohydrates": 47,
@@ -9593,7 +9593,7 @@ const foodDatabase = {
             "calories": 174,
             "protein": 4,
             "carbs": 36,
-            "fat": 3
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9602,8 +9602,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup beef, 1.1 cup spaghetti, 190 g cucumber, 0.5 cup corn, 210 g pea, 70 g thyme, 2 tsps curry paste, 1 tsp chili flakes, 3 tbsps olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 174,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 6,
+            "saturatedFat": 3,
             "cholesterol": 114,
             "sodium": 498,
             "carbohydrates": 36,
@@ -9620,7 +9620,7 @@ const foodDatabase = {
             "calories": 518,
             "protein": 3,
             "carbs": 42,
-            "fat": 14
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9629,8 +9629,8 @@ const foodDatabase = {
         "ingredients": "80 g lamb, 100 g oats, 200 g corn, 0.8 cup pea, 1 tsp bell pepper, 1.5 cup basil, 2 tsps soy sauce, 2 tsps paprika, 2 tbsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 518,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 6,
+            "saturatedFat": 14,
             "cholesterol": 69,
             "sodium": 579,
             "carbohydrates": 42,
@@ -9647,7 +9647,7 @@ const foodDatabase = {
             "calories": 644,
             "protein": 26,
             "carbs": 7,
-            "fat": 5
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9656,8 +9656,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup sardines, 1.1 cup quinoa, 110 g pea, 1 tsp bell pepper, 170 g cabbage, 1.5 cup parsley, 1 tbsp lime juice, 2 tsps ginger, 2 tsps olive oil, 2 cloves garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 644,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 14,
+            "saturatedFat": 5,
             "cholesterol": 60,
             "sodium": 375,
             "carbohydrates": 7,
@@ -9684,7 +9684,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 239,
             "fat": 7,
-            "saturatedFat": 2,
+            "saturatedFat": 7,
             "cholesterol": 8,
             "sodium": 656,
             "carbohydrates": 67,
@@ -9701,7 +9701,7 @@ const foodDatabase = {
             "calories": 412,
             "protein": 5,
             "carbs": 16,
-            "fat": 2
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9710,8 +9710,8 @@ const foodDatabase = {
         "ingredients": "190 g turkey, 180 g quinoa, 200 g cucumber, 190 g kale, 170 g pea, 1.7 cup thyme, 3 tbsps lime juice, 1 tsp sesame oil, 1 tbsp olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 412,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 9,
+            "saturatedFat": 2,
             "cholesterol": 29,
             "sodium": 536,
             "carbohydrates": 16,
@@ -9728,7 +9728,7 @@ const foodDatabase = {
             "calories": 335,
             "protein": 14,
             "carbs": 38,
-            "fat": 6
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9737,8 +9737,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup shrimp, 180 g quinoa, 2 tsps bell pepper, 180 g kale, 1.4 cup broccoli, 190 g basil, 60 g curry paste, 1 tsp paprika, 2 tsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 335,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 23,
+            "saturatedFat": 6,
             "cholesterol": 74,
             "sodium": 848,
             "carbohydrates": 38,
@@ -9765,7 +9765,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 485,
             "fat": 13,
-            "saturatedFat": 4,
+            "saturatedFat": 13,
             "cholesterol": 119,
             "sodium": 413,
             "carbohydrates": 5,
@@ -9782,7 +9782,7 @@ const foodDatabase = {
             "calories": 157,
             "protein": 24,
             "carbs": 73,
-            "fat": 1
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9791,8 +9791,8 @@ const foodDatabase = {
         "ingredients": "200 g tuna, 0.6 cup soba, 0.9 cup broccoli, 230 g lettuce, 1.7 cup pea, 80 g cilantro, 2 pieces curry paste, 2 tsps ginger, 3 tbsps olive oil, 2 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 157,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 8,
+            "saturatedFat": 1,
             "cholesterol": 53,
             "sodium": 479,
             "carbohydrates": 73,
@@ -9809,7 +9809,7 @@ const foodDatabase = {
             "calories": 509,
             "protein": 8,
             "carbs": 27,
-            "fat": 5
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9818,8 +9818,8 @@ const foodDatabase = {
         "ingredients": "220 g lamb, 1 piece tortilla, 100 g broccoli, 180 g tomato, 70 g mushroom, 90 g thyme, 1.9 cup curry paste, 1 tsp vinegar, 3 tbsps olive oil, 1 clove garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 509,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 25,
+            "saturatedFat": 5,
             "cholesterol": 15,
             "sodium": 120,
             "carbohydrates": 27,
@@ -9836,7 +9836,7 @@ const foodDatabase = {
             "calories": 516,
             "protein": 7,
             "carbs": 82,
-            "fat": 12
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9845,8 +9845,8 @@ const foodDatabase = {
         "ingredients": "160 g crab, 160 g oats, 1 tsp bell pepper, 180 g pea, 240 g cabbage, 0.5 cup mint, 2 tsps paprika, 2 tsps chili flakes, 1 tsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 516,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 20,
+            "saturatedFat": 12,
             "cholesterol": 43,
             "sodium": 189,
             "carbohydrates": 82,
@@ -9863,7 +9863,7 @@ const foodDatabase = {
             "calories": 154,
             "protein": 41,
             "carbs": 29,
-            "fat": 2
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9872,8 +9872,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup cod, 220 g soba, 200 g zucchini, 230 g mushroom, 1 tsp bell pepper, 190 g mint, 3 cloves ginger, 1 tsp cumin, 1 tbsp olive oil, 1 clove garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 154,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 15,
+            "saturatedFat": 2,
             "cholesterol": 42,
             "sodium": 70,
             "carbohydrates": 29,
@@ -9890,7 +9890,7 @@ const foodDatabase = {
             "calories": 604,
             "protein": 20,
             "carbs": 31,
-            "fat": 14
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9899,8 +9899,8 @@ const foodDatabase = {
         "ingredients": "70 g tuna, 140 g couscous, 1.7 cup corn, 160 g pea, 1.6 cup lettuce, 230 g parsley, 3 tbsps lime juice, 1 piece curry paste, 1 tsp olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 604,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 8,
+            "saturatedFat": 14,
             "cholesterol": 8,
             "sodium": 662,
             "carbohydrates": 31,
@@ -9927,7 +9927,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 395,
             "fat": 14,
-            "saturatedFat": 4,
+            "saturatedFat": 14,
             "cholesterol": 72,
             "sodium": 96,
             "carbohydrates": 82,
@@ -9944,7 +9944,7 @@ const foodDatabase = {
             "calories": 265,
             "protein": 13,
             "carbs": 11,
-            "fat": 4
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9953,8 +9953,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup crab, 1 piece bread, 90 g mushroom, 1.3 cup kale, 1.4 cup spinach, 110 g basil, 2 tsps paprika, 2 tsps chili flakes, 2 tsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 265,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 29,
+            "saturatedFat": 4,
             "cholesterol": 5,
             "sodium": 810,
             "carbohydrates": 11,
@@ -9971,7 +9971,7 @@ const foodDatabase = {
             "calories": 598,
             "protein": 14,
             "carbs": 58,
-            "fat": 15
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -9980,8 +9980,8 @@ const foodDatabase = {
         "ingredients": "2 cup salmon, 1.7 cup couscous, 1.7 cup corn, 230 g spinach, 230 g pea, 180 g rosemary, 3 cloves ginger, 1 tsp cumin, 1 tsp olive oil, 1 tsp garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 598,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 24,
+            "saturatedFat": 15,
             "cholesterol": 16,
             "sodium": 326,
             "carbohydrates": 58,
@@ -9998,7 +9998,7 @@ const foodDatabase = {
             "calories": 330,
             "protein": 12,
             "carbs": 12,
-            "fat": 5
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10007,8 +10007,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup tuna, 0.9 cup soba, 230 g lettuce, 90 g carrot, 1.9 cup cabbage, 1.6 cup cilantro, 1 tbsp sesame oil, 1 piece curry paste, 1 tbsp olive oil, 1 tsp garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 330,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 14,
+            "saturatedFat": 5,
             "cholesterol": 76,
             "sodium": 373,
             "carbohydrates": 12,
@@ -10025,7 +10025,7 @@ const foodDatabase = {
             "calories": 637,
             "protein": 19,
             "carbs": 55,
-            "fat": 4
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10034,8 +10034,8 @@ const foodDatabase = {
         "ingredients": "170 g duck, 180 g udon, 0.7 cup zucchini, 1.4 cup corn, 120 g carrot, 80 g parsley, 2 tsps curry paste, 2 tbsps sesame oil, 3 tbsps olive oil, 3 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 637,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 29,
+            "saturatedFat": 4,
             "cholesterol": 107,
             "sodium": 447,
             "carbohydrates": 55,
@@ -10052,7 +10052,7 @@ const foodDatabase = {
             "calories": 354,
             "protein": 24,
             "carbs": 37,
-            "fat": 11
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10061,8 +10061,8 @@ const foodDatabase = {
         "ingredients": "140 g sardines, 0.6 cup oats, 210 g spinach, 60 g broccoli, 190 g cabbage, 1.1 cup basil, 3 cloves ginger, 2 tsps soy sauce, 3 tbsps olive oil, 2 tsps garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 354,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 7,
+            "saturatedFat": 11,
             "cholesterol": 47,
             "sodium": 221,
             "carbohydrates": 37,
@@ -10079,7 +10079,7 @@ const foodDatabase = {
             "calories": 250,
             "protein": 19,
             "carbs": 55,
-            "fat": 0
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10088,7 +10088,7 @@ const foodDatabase = {
         "ingredients": "160 g crab, 70 g soba, 1.1 cup broccoli, 120 g cucumber, 130 g lettuce, 0.7 cup parsley, 1 tsp lemon juice, 1 tsp paprika, 2 tsps olive oil, 1 tsp garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 250,
-            "fat": 0,
+            "fat": 4,
             "saturatedFat": 0,
             "cholesterol": 63,
             "sodium": 516,
@@ -10106,7 +10106,7 @@ const foodDatabase = {
             "calories": 568,
             "protein": 13,
             "carbs": 15,
-            "fat": 8
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10115,8 +10115,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup chicken, 2 pieces tortilla, 230 g spinach, 160 g tomato, 70 g broccoli, 1.2 cup parsley, 1 tsp chili flakes, 2 tbsps sesame oil, 2 tsps olive oil, 1 clove garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 568,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 3,
+            "saturatedFat": 8,
             "cholesterol": 33,
             "sodium": 647,
             "carbohydrates": 15,
@@ -10133,7 +10133,7 @@ const foodDatabase = {
             "calories": 337,
             "protein": 8,
             "carbs": 28,
-            "fat": 12
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10142,8 +10142,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup duck, 200 g noodles, 0.9 cup zucchini, 110 g carrot, 1.5 cup kale, 1 cup cilantro, 1 tbsp curry paste, 3 tbsps sesame oil, 2 tsps olive oil, 2 tsps garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 337,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 7,
+            "saturatedFat": 12,
             "cholesterol": 75,
             "sodium": 875,
             "carbohydrates": 28,
@@ -10160,7 +10160,7 @@ const foodDatabase = {
             "calories": 320,
             "protein": 39,
             "carbs": 36,
-            "fat": 12
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10169,8 +10169,8 @@ const foodDatabase = {
         "ingredients": "90 g tuna, 1.4 cup soba, 1 tsp bell pepper, 0.8 cup pea, 170 g tomato, 220 g mint, 2 pieces curry paste, 2 tsps turmeric, 1 tbsp olive oil, 2 tsps garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 320,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 20,
+            "saturatedFat": 12,
             "cholesterol": 65,
             "sodium": 148,
             "carbohydrates": 36,
@@ -10187,7 +10187,7 @@ const foodDatabase = {
             "calories": 351,
             "protein": 22,
             "carbs": 6,
-            "fat": 12
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10196,8 +10196,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup tuna, 2 tsps yogurt, 1 cup mushroom, 2 cup spinach, 1.7 cup cabbage, 210 g cilantro, 2 tsps turmeric, 2 tsps chili flakes, 2 tsps olive oil, 1 tsp garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 351,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 4,
+            "saturatedFat": 12,
             "cholesterol": 118,
             "sodium": 807,
             "carbohydrates": 6,
@@ -10214,7 +10214,7 @@ const foodDatabase = {
             "calories": 523,
             "protein": 5,
             "carbs": 34,
-            "fat": 4
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10223,8 +10223,8 @@ const foodDatabase = {
         "ingredients": "60 g beef, 230 g quinoa, 1.3 cup cabbage, 1.1 cup zucchini, 70 g lettuce, 1.6 cup mint, 1 tsp paprika, 140 g curry paste, 3 tbsps olive oil, 2 tsps garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 523,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 29,
+            "saturatedFat": 4,
             "cholesterol": 28,
             "sodium": 138,
             "carbohydrates": 34,
@@ -10241,7 +10241,7 @@ const foodDatabase = {
             "calories": 197,
             "protein": 18,
             "carbs": 37,
-            "fat": 15
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10250,13 +10250,13 @@ const foodDatabase = {
         "ingredients": "1.1 cup crab, 1 piece tortilla, 0.7 cup zucchini, 140 g cabbage, 60 g lettuce, 170 g mint, 1 tsp cumin, 3 tbsps soy sauce, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 197,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 7,
+            "saturatedFat": 15,
             "cholesterol": 6,
             "sodium": 565,
             "carbohydrates": 37,
             "fiber": 15,
-            "sugar": 7,
+            "sugar": 0,
             "protein": 18
         }
     },
@@ -10268,7 +10268,7 @@ const foodDatabase = {
             "calories": 642,
             "protein": 38,
             "carbs": 56,
-            "fat": 13
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10277,8 +10277,8 @@ const foodDatabase = {
         "ingredients": "240 g turkey, 1.2 cup bulgur, 1.5 cup broccoli, 2 tsps bell pepper, 1.2 cup corn, 100 g cilantro, 2 tbsps vinegar, 180 g curry paste, 3 tbsps olive oil, 1 clove garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 642,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 18,
+            "saturatedFat": 13,
             "cholesterol": 18,
             "sodium": 190,
             "carbohydrates": 56,
@@ -10295,7 +10295,7 @@ const foodDatabase = {
             "calories": 509,
             "protein": 3,
             "carbs": 82,
-            "fat": 10
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10304,8 +10304,8 @@ const foodDatabase = {
         "ingredients": "150 g salmon, 2 cup oats, 80 g lettuce, 130 g zucchini, 0.9 cup carrot, 1.5 cup basil, 2 tsps vinegar, 1 tbsp lime juice, 2 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 509,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 4,
+            "saturatedFat": 10,
             "cholesterol": 40,
             "sodium": 62,
             "carbohydrates": 82,
@@ -10322,7 +10322,7 @@ const foodDatabase = {
             "calories": 230,
             "protein": 22,
             "carbs": 85,
-            "fat": 9
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10331,8 +10331,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup beef, 2 tsps yogurt, 1.7 cup cabbage, 1.3 cup kale, 210 g mushroom, 160 g mint, 1 tsp lemon juice, 1 tbsp vinegar, 1 tbsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 230,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 16,
+            "saturatedFat": 9,
             "cholesterol": 44,
             "sodium": 560,
             "carbohydrates": 85,
@@ -10349,7 +10349,7 @@ const foodDatabase = {
             "calories": 484,
             "protein": 33,
             "carbs": 84,
-            "fat": 9
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10358,8 +10358,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup duck, 1.1 cup potato, 0.8 cup pea, 1.3 cup lettuce, 60 g mushroom, 0.8 cup cilantro, 2 tsps curry paste, 1 tsp lemon juice, 1 tbsp olive oil, 2 cloves garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 484,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 21,
+            "saturatedFat": 9,
             "cholesterol": 66,
             "sodium": 340,
             "carbohydrates": 84,
@@ -10376,7 +10376,7 @@ const foodDatabase = {
             "calories": 560,
             "protein": 24,
             "carbs": 5,
-            "fat": 15
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10385,8 +10385,8 @@ const foodDatabase = {
         "ingredients": "230 g salmon, 1.2 cup couscous, 1.4 cup broccoli, 2 tsps bell pepper, 150 g spinach, 210 g dill, 2 tsps sesame oil, 2 tsps paprika, 1 tbsp olive oil, 1 clove garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 560,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 22,
+            "saturatedFat": 15,
             "cholesterol": 17,
             "sodium": 502,
             "carbohydrates": 5,
@@ -10403,7 +10403,7 @@ const foodDatabase = {
             "calories": 303,
             "protein": 37,
             "carbs": 30,
-            "fat": 10
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10412,8 +10412,8 @@ const foodDatabase = {
         "ingredients": "90 g shrimp, 80 g noodles, 210 g tomato, 0.7 cup broccoli, 150 g lettuce, 0.7 cup dill, 1 tsp curry paste, 3 tbsps lemon juice, 1 tsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 303,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 12,
+            "saturatedFat": 10,
             "cholesterol": 57,
             "sodium": 430,
             "carbohydrates": 30,
@@ -10430,7 +10430,7 @@ const foodDatabase = {
             "calories": 454,
             "protein": 9,
             "carbs": 70,
-            "fat": 10
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10439,8 +10439,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup tuna, 2 tbsps yogurt, 1.5 cup broccoli, 70 g tomato, 1.7 cup pea, 1.4 cup cilantro, 2 tsps soy sauce, 2 tbsps lemon juice, 3 tbsps olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 454,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 14,
+            "saturatedFat": 10,
             "cholesterol": 77,
             "sodium": 763,
             "carbohydrates": 70,
@@ -10457,7 +10457,7 @@ const foodDatabase = {
             "calories": 243,
             "protein": 27,
             "carbs": 54,
-            "fat": 6
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10466,8 +10466,8 @@ const foodDatabase = {
         "ingredients": "2 cup cod, 1 piece bread, 160 g pea, 220 g mushroom, 130 g spinach, 180 g parsley, 2 tsps chili flakes, 1 tbsp vinegar, 3 tbsps olive oil, 1 tsp garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 243,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 8,
+            "saturatedFat": 6,
             "cholesterol": 70,
             "sodium": 601,
             "carbohydrates": 54,
@@ -10484,7 +10484,7 @@ const foodDatabase = {
             "calories": 621,
             "protein": 21,
             "carbs": 12,
-            "fat": 5
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10493,8 +10493,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup chicken, 1 piece wrap, 1.6 cup carrot, 1.3 cup lettuce, 120 g mushroom, 1.2 cup rosemary, 1 tsp chili flakes, 2 tsps lemon juice, 3 tbsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 621,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 6,
+            "saturatedFat": 5,
             "cholesterol": 105,
             "sodium": 292,
             "carbohydrates": 12,
@@ -10511,7 +10511,7 @@ const foodDatabase = {
             "calories": 548,
             "protein": 14,
             "carbs": 84,
-            "fat": 15
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10520,8 +10520,8 @@ const foodDatabase = {
         "ingredients": "60 g lamb, 230 g potato, 1.1 cup kale, 1.1 cup mushroom, 1.4 cup pea, 140 g mint, 80 g curry paste, 2 tsps cumin, 2 tbsps olive oil, 1 tsp garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 548,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 29,
+            "saturatedFat": 15,
             "cholesterol": 108,
             "sodium": 305,
             "carbohydrates": 84,
@@ -10538,7 +10538,7 @@ const foodDatabase = {
             "calories": 492,
             "protein": 8,
             "carbs": 15,
-            "fat": 0
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10547,7 +10547,7 @@ const foodDatabase = {
         "ingredients": "1.4 cup tuna, 1 tsp yogurt, 210 g corn, 210 g carrot, 1 tsp bell pepper, 110 g cilantro, 1 tsp lime juice, 1 tsp turmeric, 3 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 492,
-            "fat": 0,
+            "fat": 3,
             "saturatedFat": 0,
             "cholesterol": 88,
             "sodium": 208,
@@ -10565,7 +10565,7 @@ const foodDatabase = {
             "calories": 381,
             "protein": 45,
             "carbs": 34,
-            "fat": 7
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10574,8 +10574,8 @@ const foodDatabase = {
         "ingredients": "2 cup sardines, 180 g oats, 130 g spinach, 110 g zucchini, 200 g kale, 110 g thyme, 1 clove ginger, 2 tsps sesame oil, 1 tbsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 381,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 22,
+            "saturatedFat": 7,
             "cholesterol": 62,
             "sodium": 777,
             "carbohydrates": 34,
@@ -10592,7 +10592,7 @@ const foodDatabase = {
             "calories": 443,
             "protein": 26,
             "carbs": 48,
-            "fat": 1
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10601,8 +10601,8 @@ const foodDatabase = {
         "ingredients": "190 g pork, 0.7 cup oats, 0.5 cup pea, 90 g kale, 230 g broccoli, 90 g basil, 1 tsp cumin, 3 tbsps lime juice, 1 tsp olive oil, 2 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 443,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 19,
+            "saturatedFat": 1,
             "cholesterol": 106,
             "sodium": 854,
             "carbohydrates": 48,
@@ -10619,7 +10619,7 @@ const foodDatabase = {
             "calories": 337,
             "protein": 15,
             "carbs": 42,
-            "fat": 13
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10628,8 +10628,8 @@ const foodDatabase = {
         "ingredients": "210 g lamb, 190 g noodles, 170 g tomato, 1.6 cup pea, 1.4 cup zucchini, 1.7 cup thyme, 70 g curry paste, 2 tbsps soy sauce, 1 tsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 337,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 4,
+            "saturatedFat": 13,
             "cholesterol": 74,
             "sodium": 473,
             "carbohydrates": 42,
@@ -10646,7 +10646,7 @@ const foodDatabase = {
             "calories": 409,
             "protein": 39,
             "carbs": 35,
-            "fat": 0
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10655,7 +10655,7 @@ const foodDatabase = {
         "ingredients": "110 g pork, 2 tsps yogurt, 1 cup zucchini, 0.5 cup tomato, 160 g kale, 1.8 cup rosemary, 1 tsp turmeric, 1 tsp chili flakes, 1 tsp olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 409,
-            "fat": 0,
+            "fat": 6,
             "saturatedFat": 0,
             "cholesterol": 90,
             "sodium": 562,
@@ -10673,7 +10673,7 @@ const foodDatabase = {
             "calories": 275,
             "protein": 21,
             "carbs": 81,
-            "fat": 8
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10682,8 +10682,8 @@ const foodDatabase = {
         "ingredients": "70 g shrimp, 70 g soba, 140 g broccoli, 240 g kale, 130 g spinach, 0.7 cup rosemary, 1 tsp ginger, 2 tbsps vinegar, 2 tsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 275,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 4,
+            "saturatedFat": 8,
             "cholesterol": 99,
             "sodium": 697,
             "carbohydrates": 81,
@@ -10700,7 +10700,7 @@ const foodDatabase = {
             "calories": 163,
             "protein": 30,
             "carbs": 85,
-            "fat": 10
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10709,9 +10709,9 @@ const foodDatabase = {
         "ingredients": "160 g pork, 210 g noodles, 0.5 cup tomato, 240 g kale, 0.6 cup corn, 0.9 cup dill, 2 tbsps lime juice, 1 tsp vinegar, 2 tsps olive oil, 3 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 163,
-            "fat": 10,
-            "saturatedFat": 3,
-            "cholesterol": 30,
+            "fat": 18,
+            "saturatedFat": 10,
+            "cholesterol": 0,
             "sodium": 351,
             "carbohydrates": 85,
             "fiber": 3,
@@ -10727,7 +10727,7 @@ const foodDatabase = {
             "calories": 446,
             "protein": 13,
             "carbs": 34,
-            "fat": 14
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10736,8 +10736,8 @@ const foodDatabase = {
         "ingredients": "220 g salmon, 1.5 cup noodles, 100 g lettuce, 60 g carrot, 1 tsp bell pepper, 130 g rosemary, 1 tsp chili flakes, 1 tbsp lime juice, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 446,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 14,
             "cholesterol": 44,
             "sodium": 152,
             "carbohydrates": 34,
@@ -10754,7 +10754,7 @@ const foodDatabase = {
             "calories": 570,
             "protein": 37,
             "carbs": 53,
-            "fat": 7
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10763,8 +10763,8 @@ const foodDatabase = {
         "ingredients": "90 g beef, 130 g udon, 1 cup zucchini, 1.8 cup cucumber, 1 tsp bell pepper, 60 g rosemary, 2 tsps cumin, 3 tbsps lime juice, 2 tsps olive oil, 3 cloves garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 570,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 6,
+            "saturatedFat": 7,
             "cholesterol": 5,
             "sodium": 630,
             "carbohydrates": 53,
@@ -10781,7 +10781,7 @@ const foodDatabase = {
             "calories": 458,
             "protein": 18,
             "carbs": 26,
-            "fat": 5
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10790,8 +10790,8 @@ const foodDatabase = {
         "ingredients": "230 g crab, 1 piece tortilla, 130 g broccoli, 160 g carrot, 0.8 cup kale, 110 g cilantro, 2 tsps cumin, 2 tsps sesame oil, 2 tbsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 458,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 5,
             "cholesterol": 81,
             "sodium": 483,
             "carbohydrates": 26,
@@ -10808,7 +10808,7 @@ const foodDatabase = {
             "calories": 609,
             "protein": 35,
             "carbs": 5,
-            "fat": 10
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10817,8 +10817,8 @@ const foodDatabase = {
         "ingredients": "240 g tempeh, 2 pieces tortilla, 70 g mushroom, 110 g carrot, 2 tsps bell pepper, 130 g parsley, 2 tbsps vinegar, 2 tsps soy sauce, 1 tbsp olive oil, 2 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 609,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 15,
+            "saturatedFat": 10,
             "cholesterol": 7,
             "sodium": 429,
             "carbohydrates": 5,
@@ -10835,7 +10835,7 @@ const foodDatabase = {
             "calories": 206,
             "protein": 24,
             "carbs": 33,
-            "fat": 11
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10844,8 +10844,8 @@ const foodDatabase = {
         "ingredients": "120 g black beans, 100 g soba, 1.1 cup zucchini, 1.3 cup cabbage, 1 cup kale, 200 g parsley, 1 tsp chili flakes, 2 tbsps soy sauce, 1 tsp olive oil, 2 tsps garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 206,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 27,
+            "saturatedFat": 11,
             "cholesterol": 19,
             "sodium": 697,
             "carbohydrates": 33,
@@ -10862,7 +10862,7 @@ const foodDatabase = {
             "calories": 520,
             "protein": 35,
             "carbs": 57,
-            "fat": 9
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10871,8 +10871,8 @@ const foodDatabase = {
         "ingredients": "80 g zucchini, 0.9 cup quinoa, 80 g pea, 1.4 cup broccoli, 1.7 cup carrot, 110 g rosemary, 3 tbsps soy sauce, 1 tsp turmeric, 2 tsps olive oil, 2 cloves garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 520,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 14,
+            "saturatedFat": 9,
             "cholesterol": 83,
             "sodium": 728,
             "carbohydrates": 57,
@@ -10889,7 +10889,7 @@ const foodDatabase = {
             "calories": 367,
             "protein": 36,
             "carbs": 12,
-            "fat": 15
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10898,8 +10898,8 @@ const foodDatabase = {
         "ingredients": "170 g tempeh, 2 pieces wrap, 140 g mushroom, 1 cup carrot, 2 cup lettuce, 230 g thyme, 2 tsps soy sauce, 1.9 cup curry paste, 2 tbsps olive oil, 2 tsps garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 367,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 29,
+            "saturatedFat": 15,
             "cholesterol": 10,
             "sodium": 569,
             "carbohydrates": 12,
@@ -10916,7 +10916,7 @@ const foodDatabase = {
             "calories": 426,
             "protein": 4,
             "carbs": 52,
-            "fat": 1
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10925,8 +10925,8 @@ const foodDatabase = {
         "ingredients": "1 tsp mushrooms, 80 g soba, 1.3 cup spinach, 190 g corn, 220 g carrot, 60 g parsley, 1 tsp lemon juice, 1 tsp cumin, 1 tsp olive oil, 3 cloves garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 426,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 23,
+            "saturatedFat": 1,
             "cholesterol": 64,
             "sodium": 99,
             "carbohydrates": 52,
@@ -10943,7 +10943,7 @@ const foodDatabase = {
             "calories": 312,
             "protein": 38,
             "carbs": 19,
-            "fat": 14
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10952,8 +10952,8 @@ const foodDatabase = {
         "ingredients": "80 g lentils, 1.6 cup couscous, 160 g carrot, 1 cup spinach, 120 g zucchini, 1.6 cup parsley, 1 tsp paprika, 1 clove ginger, 3 tbsps olive oil, 1 clove garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 312,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 11,
+            "saturatedFat": 14,
             "cholesterol": 106,
             "sodium": 822,
             "carbohydrates": 19,
@@ -10970,7 +10970,7 @@ const foodDatabase = {
             "calories": 432,
             "protein": 11,
             "carbs": 23,
-            "fat": 12
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -10979,8 +10979,8 @@ const foodDatabase = {
         "ingredients": "1 piece mushrooms, 1 piece tortilla, 0.7 cup broccoli, 1 tsp bell pepper, 1.2 cup cabbage, 90 g parsley, 1 tsp chili flakes, 2 tsps vinegar, 2 tsps olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 432,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 27,
+            "saturatedFat": 12,
             "cholesterol": 89,
             "sodium": 353,
             "carbohydrates": 23,
@@ -10997,7 +10997,7 @@ const foodDatabase = {
             "calories": 192,
             "protein": 14,
             "carbs": 18,
-            "fat": 15
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11006,8 +11006,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup paneer, 1.8 cup couscous, 60 g pea, 90 g broccoli, 0.6 cup cabbage, 110 g cilantro, 1 tsp lime juice, 1 tsp lemon juice, 1 tbsp olive oil, 2 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 192,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 23,
+            "saturatedFat": 15,
             "cholesterol": 15,
             "sodium": 286,
             "carbohydrates": 18,
@@ -11024,7 +11024,7 @@ const foodDatabase = {
             "calories": 642,
             "protein": 44,
             "carbs": 13,
-            "fat": 9
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11033,8 +11033,8 @@ const foodDatabase = {
         "ingredients": "2 pieces eggplant, 1.8 cup potato, 120 g pea, 0.6 cup kale, 0.7 cup carrot, 80 g rosemary, 2 tsps soy sauce, 2 cloves ginger, 1 tsp olive oil, 3 cloves garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 642,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 7,
+            "saturatedFat": 9,
             "cholesterol": 63,
             "sodium": 836,
             "carbohydrates": 13,
@@ -11051,7 +11051,7 @@ const foodDatabase = {
             "calories": 640,
             "protein": 17,
             "carbs": 23,
-            "fat": 1
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11060,8 +11060,8 @@ const foodDatabase = {
         "ingredients": "240 g seitan, 1 piece tortilla, 150 g broccoli, 1.4 cup carrot, 230 g tomato, 200 g dill, 2 tsps lime juice, 1 tsp ginger, 1 tbsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 640,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 22,
+            "saturatedFat": 1,
             "cholesterol": 112,
             "sodium": 195,
             "carbohydrates": 23,
@@ -11078,7 +11078,7 @@ const foodDatabase = {
             "calories": 642,
             "protein": 3,
             "carbs": 52,
-            "fat": 10
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11087,8 +11087,8 @@ const foodDatabase = {
         "ingredients": "2 pieces cauliflower, 2 pieces tortilla, 150 g cabbage, 150 g broccoli, 1 tsp bell pepper, 170 g rosemary, 2 tsps vinegar, 1 tbsp lime juice, 2 tsps olive oil, 2 tsps garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 642,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 28,
+            "saturatedFat": 10,
             "cholesterol": 87,
             "sodium": 881,
             "carbohydrates": 52,
@@ -11105,7 +11105,7 @@ const foodDatabase = {
             "calories": 639,
             "protein": 23,
             "carbs": 34,
-            "fat": 4
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11114,8 +11114,8 @@ const foodDatabase = {
         "ingredients": "70 g eggplant, 2 pieces tortilla, 1.9 cup cabbage, 1.4 cup pea, 80 g spinach, 60 g rosemary, 1 tbsp sesame oil, 2 tsps chili flakes, 3 tbsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 639,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 28,
+            "saturatedFat": 4,
             "cholesterol": 20,
             "sodium": 110,
             "carbohydrates": 34,
@@ -11132,7 +11132,7 @@ const foodDatabase = {
             "calories": 294,
             "protein": 23,
             "carbs": 47,
-            "fat": 7
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11141,8 +11141,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup tofu, 1.7 cup soba, 70 g lettuce, 1.9 cup cabbage, 2 tsps bell pepper, 130 g basil, 1 tbsp vinegar, 2 tsps soy sauce, 2 tbsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 294,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 26,
+            "saturatedFat": 7,
             "cholesterol": 110,
             "sodium": 517,
             "carbohydrates": 47,
@@ -11159,7 +11159,7 @@ const foodDatabase = {
             "calories": 581,
             "protein": 16,
             "carbs": 15,
-            "fat": 14
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11168,8 +11168,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup halloumi, 1.8 cup oats, 180 g spinach, 180 g kale, 230 g pea, 70 g cilantro, 2 cloves ginger, 1 tsp chili flakes, 3 tbsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 581,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 14,
             "cholesterol": 116,
             "sodium": 220,
             "carbohydrates": 15,
@@ -11186,7 +11186,7 @@ const foodDatabase = {
             "calories": 572,
             "protein": 31,
             "carbs": 55,
-            "fat": 6
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11195,13 +11195,13 @@ const foodDatabase = {
         "ingredients": "80 g tempeh, 1 piece bread, 1 cup broccoli, 210 g cucumber, 190 g carrot, 1 cup rosemary, 1 tsp turmeric, 2 tbsps lime juice, 2 tbsps olive oil, 1 tsp garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 572,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 6,
             "cholesterol": 37,
             "sodium": 432,
             "carbohydrates": 55,
             "fiber": 4,
-            "sugar": 11,
+            "sugar": 0,
             "protein": 31
         }
     },
@@ -11213,7 +11213,7 @@ const foodDatabase = {
             "calories": 236,
             "protein": 6,
             "carbs": 5,
-            "fat": 7
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11222,8 +11222,8 @@ const foodDatabase = {
         "ingredients": "220 g sweet potato, 1.4 cup quinoa, 1.1 cup corn, 1.7 cup pea, 1.9 cup cucumber, 1.7 cup dill, 2 tbsps soy sauce, 1 tsp cumin, 1 tsp olive oil, 1 tsp garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 236,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 7,
             "cholesterol": 48,
             "sodium": 401,
             "carbohydrates": 5,
@@ -11240,7 +11240,7 @@ const foodDatabase = {
             "calories": 248,
             "protein": 10,
             "carbs": 30,
-            "fat": 8
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11249,8 +11249,8 @@ const foodDatabase = {
         "ingredients": "80 g quinoa, 160 g rice, 210 g pea, 110 g zucchini, 0.6 cup corn, 1.5 cup dill, 1 tsp soy sauce, 2 tsps curry paste, 1 tsp olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 248,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 25,
+            "saturatedFat": 8,
             "cholesterol": 9,
             "sodium": 596,
             "carbohydrates": 30,
@@ -11267,7 +11267,7 @@ const foodDatabase = {
             "calories": 258,
             "protein": 11,
             "carbs": 74,
-            "fat": 3
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11276,8 +11276,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup lentils, 1.9 cup quinoa, 1.6 cup cabbage, 230 g tomato, 240 g kale, 1.6 cup cilantro, 2 tbsps vinegar, 2 tsps turmeric, 1 tsp olive oil, 3 cloves garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 258,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 8,
+            "saturatedFat": 3,
             "cholesterol": 4,
             "sodium": 452,
             "carbohydrates": 74,
@@ -11294,7 +11294,7 @@ const foodDatabase = {
             "calories": 569,
             "protein": 20,
             "carbs": 67,
-            "fat": 0
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11303,7 +11303,7 @@ const foodDatabase = {
         "ingredients": "200 g tempeh, 0.9 cup spaghetti, 1.5 cup corn, 100 g lettuce, 100 g cabbage, 80 g thyme, 1 tsp chili flakes, 2 pieces curry paste, 2 tsps olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 569,
-            "fat": 0,
+            "fat": 8,
             "saturatedFat": 0,
             "cholesterol": 91,
             "sodium": 655,
@@ -11321,7 +11321,7 @@ const foodDatabase = {
             "calories": 435,
             "protein": 37,
             "carbs": 15,
-            "fat": 0
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11330,7 +11330,7 @@ const foodDatabase = {
         "ingredients": "90 g sweet potato, 120 g oats, 160 g tomato, 1 tsp bell pepper, 220 g cabbage, 1.6 cup mint, 2 tsps turmeric, 2 tsps lemon juice, 1 tsp olive oil, 1 tsp garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 435,
-            "fat": 0,
+            "fat": 29,
             "saturatedFat": 0,
             "cholesterol": 50,
             "sodium": 439,
@@ -11348,7 +11348,7 @@ const foodDatabase = {
             "calories": 463,
             "protein": 5,
             "carbs": 35,
-            "fat": 6
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11357,8 +11357,8 @@ const foodDatabase = {
         "ingredients": "170 g quinoa, 1 piece bread, 80 g spinach, 0.8 cup cucumber, 1.7 cup broccoli, 1.1 cup cilantro, 3 tbsps lime juice, 2 tsps chili flakes, 2 tsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 463,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 6,
             "cholesterol": 1,
             "sodium": 414,
             "carbohydrates": 35,
@@ -11375,7 +11375,7 @@ const foodDatabase = {
             "calories": 266,
             "protein": 35,
             "carbs": 61,
-            "fat": 10
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11384,8 +11384,8 @@ const foodDatabase = {
         "ingredients": "110 g quinoa, 1.3 cup soba, 1.8 cup carrot, 1.9 cup tomato, 1.9 cup spinach, 240 g thyme, 2 tsps cumin, 1 piece curry paste, 2 tsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 266,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 28,
+            "saturatedFat": 10,
             "cholesterol": 1,
             "sodium": 98,
             "carbohydrates": 61,
@@ -11402,7 +11402,7 @@ const foodDatabase = {
             "calories": 435,
             "protein": 44,
             "carbs": 80,
-            "fat": 9
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11411,8 +11411,8 @@ const foodDatabase = {
         "ingredients": "2 pieces eggplant, 220 g noodles, 2 cup corn, 1 tsp bell pepper, 90 g lettuce, 150 g rosemary, 2 tsps soy sauce, 2 tsps curry paste, 1 tsp olive oil, 2 tsps garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 435,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 29,
+            "saturatedFat": 9,
             "cholesterol": 96,
             "sodium": 73,
             "carbohydrates": 80,
@@ -11439,7 +11439,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 644,
             "fat": 14,
-            "saturatedFat": 4,
+            "saturatedFat": 14,
             "cholesterol": 87,
             "sodium": 388,
             "carbohydrates": 8,
@@ -11456,7 +11456,7 @@ const foodDatabase = {
             "calories": 602,
             "protein": 32,
             "carbs": 9,
-            "fat": 13
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11465,8 +11465,8 @@ const foodDatabase = {
         "ingredients": "1 tsp mushrooms, 1.9 cup spaghetti, 60 g broccoli, 1 tsp bell pepper, 1.5 cup pea, 1.5 cup rosemary, 2 tsps soy sauce, 2 tbsps lime juice, 1 tsp olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 602,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 5,
+            "saturatedFat": 13,
             "cholesterol": 80,
             "sodium": 627,
             "carbohydrates": 9,
@@ -11483,7 +11483,7 @@ const foodDatabase = {
             "calories": 240,
             "protein": 19,
             "carbs": 42,
-            "fat": 13
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11492,8 +11492,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup halloumi, 1.3 cup noodles, 120 g carrot, 1.4 cup broccoli, 60 g pea, 1.1 cup thyme, 1.4 cup curry paste, 2 tbsps soy sauce, 1 tbsp olive oil, 1 tsp garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 240,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 13,
             "cholesterol": 22,
             "sodium": 134,
             "carbohydrates": 42,
@@ -11510,7 +11510,7 @@ const foodDatabase = {
             "calories": 320,
             "protein": 38,
             "carbs": 75,
-            "fat": 0
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11519,7 +11519,7 @@ const foodDatabase = {
         "ingredients": "160 g black beans, 1 piece bread, 1.5 cup tomato, 150 g cabbage, 60 g cucumber, 70 g parsley, 2 tsps ginger, 1.6 cup curry paste, 1 tbsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 320,
-            "fat": 0,
+            "fat": 8,
             "saturatedFat": 0,
             "cholesterol": 110,
             "sodium": 490,
@@ -11537,7 +11537,7 @@ const foodDatabase = {
             "calories": 631,
             "protein": 7,
             "carbs": 19,
-            "fat": 13
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11546,8 +11546,8 @@ const foodDatabase = {
         "ingredients": "240 g broccoli, 120 g soba, 0.6 cup pea, 1 tsp bell pepper, 190 g cabbage, 70 g rosemary, 2 tsps ginger, 3 tbsps lime juice, 2 tbsps olive oil, 3 cloves garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 631,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 8,
+            "saturatedFat": 13,
             "cholesterol": 114,
             "sodium": 432,
             "carbohydrates": 19,
@@ -11564,7 +11564,7 @@ const foodDatabase = {
             "calories": 593,
             "protein": 29,
             "carbs": 80,
-            "fat": 3
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11573,8 +11573,8 @@ const foodDatabase = {
         "ingredients": "190 g paneer, 70 g potato, 130 g mushroom, 140 g pea, 160 g zucchini, 210 g basil, 1 tsp chili flakes, 2 tsps cumin, 1 tsp olive oil, 1 tsp garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 593,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 12,
+            "saturatedFat": 3,
             "cholesterol": 4,
             "sodium": 835,
             "carbohydrates": 80,
@@ -11591,7 +11591,7 @@ const foodDatabase = {
             "calories": 160,
             "protein": 24,
             "carbs": 22,
-            "fat": 8
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11600,8 +11600,8 @@ const foodDatabase = {
         "ingredients": "1 tbsp eggplant, 1 piece tortilla, 160 g mushroom, 180 g broccoli, 2 tsps bell pepper, 1.6 cup mint, 2 tsps soy sauce, 2 tsps turmeric, 2 tsps olive oil, 2 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 160,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 27,
+            "saturatedFat": 8,
             "cholesterol": 51,
             "sodium": 161,
             "carbohydrates": 22,
@@ -11618,7 +11618,7 @@ const foodDatabase = {
             "calories": 550,
             "protein": 6,
             "carbs": 42,
-            "fat": 11
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11627,8 +11627,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup tofu, 210 g spaghetti, 90 g broccoli, 180 g lettuce, 0.9 cup corn, 210 g basil, 1 clove ginger, 1.9 cup curry paste, 3 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 550,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 25,
+            "saturatedFat": 11,
             "cholesterol": 33,
             "sodium": 760,
             "carbohydrates": 42,
@@ -11645,7 +11645,7 @@ const foodDatabase = {
             "calories": 356,
             "protein": 22,
             "carbs": 38,
-            "fat": 2
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11654,8 +11654,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup mushrooms, 2 tbsps yogurt, 1.8 cup mushroom, 120 g zucchini, 2 tsps bell pepper, 90 g rosemary, 2 tsps paprika, 1 tsp chili flakes, 1 tsp olive oil, 2 tsps garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 356,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 2,
             "cholesterol": 22,
             "sodium": 377,
             "carbohydrates": 38,
@@ -11672,7 +11672,7 @@ const foodDatabase = {
             "calories": 615,
             "protein": 8,
             "carbs": 71,
-            "fat": 10
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11681,8 +11681,8 @@ const foodDatabase = {
         "ingredients": "130 g tempeh, 190 g bulgur, 220 g tomato, 1.6 cup pea, 100 g broccoli, 130 g cilantro, 3 cloves ginger, 2 tsps sesame oil, 1 tbsp olive oil, 1 clove garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 615,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 9,
+            "saturatedFat": 10,
             "cholesterol": 110,
             "sodium": 680,
             "carbohydrates": 71,
@@ -11699,7 +11699,7 @@ const foodDatabase = {
             "calories": 229,
             "protein": 39,
             "carbs": 61,
-            "fat": 7
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11708,8 +11708,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup seitan, 220 g oats, 1.6 cup cucumber, 1.3 cup pea, 1.6 cup spinach, 0.6 cup parsley, 2 tsps sesame oil, 1 tsp cumin, 2 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 229,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 20,
+            "saturatedFat": 7,
             "cholesterol": 114,
             "sodium": 537,
             "carbohydrates": 61,
@@ -11726,7 +11726,7 @@ const foodDatabase = {
             "calories": 280,
             "protein": 9,
             "carbs": 70,
-            "fat": 7
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11735,8 +11735,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup seitan, 210 g quinoa, 140 g corn, 210 g tomato, 120 g cucumber, 180 g mint, 1 tsp chili flakes, 1 piece curry paste, 1 tbsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 280,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 6,
+            "saturatedFat": 7,
             "cholesterol": 58,
             "sodium": 445,
             "carbohydrates": 70,
@@ -11753,7 +11753,7 @@ const foodDatabase = {
             "calories": 220,
             "protein": 3,
             "carbs": 85,
-            "fat": 2
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11762,8 +11762,8 @@ const foodDatabase = {
         "ingredients": "1 tsp eggplant, 1 piece tortilla, 240 g zucchini, 1.5 cup broccoli, 150 g lettuce, 190 g thyme, 2 tbsps soy sauce, 1 tsp chili flakes, 2 tsps olive oil, 2 tsps garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 220,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 24,
+            "saturatedFat": 2,
             "cholesterol": 16,
             "sodium": 222,
             "carbohydrates": 85,
@@ -11780,7 +11780,7 @@ const foodDatabase = {
             "calories": 637,
             "protein": 40,
             "carbs": 37,
-            "fat": 0
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11789,7 +11789,7 @@ const foodDatabase = {
         "ingredients": "1 cup broccoli, 1.2 cup noodles, 0.9 cup corn, 0.9 cup lettuce, 230 g rosemary, 1 tsp lime juice, 1 tsp sesame oil, 2 tsps olive oil, 2 cloves garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 637,
-            "fat": 0,
+            "fat": 7,
             "saturatedFat": 0,
             "cholesterol": 68,
             "sodium": 880,
@@ -11807,7 +11807,7 @@ const foodDatabase = {
             "calories": 255,
             "protein": 10,
             "carbs": 60,
-            "fat": 6
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11816,8 +11816,8 @@ const foodDatabase = {
         "ingredients": "120 g quinoa, 1 tsp yogurt, 220 g corn, 210 g carrot, 1.1 cup tomato, 0.7 cup mint, 2 tbsps lemon juice, 1 tsp ginger, 2 tsps olive oil, 2 tsps garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 255,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 16,
+            "saturatedFat": 6,
             "cholesterol": 86,
             "sodium": 281,
             "carbohydrates": 60,
@@ -11834,7 +11834,7 @@ const foodDatabase = {
             "calories": 465,
             "protein": 24,
             "carbs": 10,
-            "fat": 2
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11843,8 +11843,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup halloumi, 1.6 cup udon, 190 g kale, 1.5 cup carrot, 150 g broccoli, 110 g basil, 1 tsp turmeric, 190 g curry paste, 2 tsps olive oil, 2 tsps garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 465,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 9,
+            "saturatedFat": 2,
             "cholesterol": 69,
             "sodium": 354,
             "carbohydrates": 10,
@@ -11861,7 +11861,7 @@ const foodDatabase = {
             "calories": 210,
             "protein": 34,
             "carbs": 46,
-            "fat": 15
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11870,8 +11870,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps mushrooms, 80 g potato, 130 g corn, 220 g pea, 130 g carrot, 120 g rosemary, 0.7 cup curry paste, 1 clove ginger, 2 tsps olive oil, 3 cloves garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 210,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 13,
+            "saturatedFat": 15,
             "cholesterol": 88,
             "sodium": 480,
             "carbohydrates": 46,
@@ -11888,7 +11888,7 @@ const foodDatabase = {
             "calories": 471,
             "protein": 40,
             "carbs": 29,
-            "fat": 12
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11897,8 +11897,8 @@ const foodDatabase = {
         "ingredients": "170 g broccoli, 60 g oats, 230 g cucumber, 240 g cabbage, 0.6 cup spinach, 2 cup thyme, 1 tsp soy sauce, 1 tsp paprika, 1 tsp olive oil, 2 tsps garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 471,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 5,
+            "saturatedFat": 12,
             "cholesterol": 8,
             "sodium": 323,
             "carbohydrates": 29,
@@ -11915,7 +11915,7 @@ const foodDatabase = {
             "calories": 483,
             "protein": 12,
             "carbs": 76,
-            "fat": 14
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11924,8 +11924,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup paneer, 1.6 cup couscous, 0.7 cup cucumber, 190 g corn, 1.1 cup carrot, 60 g mint, 2 tsps lime juice, 1 tsp paprika, 2 tsps olive oil, 1 tsp garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 483,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 27,
+            "saturatedFat": 14,
             "cholesterol": 81,
             "sodium": 287,
             "carbohydrates": 76,
@@ -11942,7 +11942,7 @@ const foodDatabase = {
             "calories": 202,
             "protein": 23,
             "carbs": 50,
-            "fat": 9
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11951,8 +11951,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup sweet potato, 1.4 cup spaghetti, 1.7 cup kale, 100 g mushroom, 90 g tomato, 130 g rosemary, 3 cloves ginger, 2 tsps soy sauce, 1 tsp olive oil, 1 tsp garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 202,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 3,
+            "saturatedFat": 9,
             "cholesterol": 38,
             "sodium": 191,
             "carbohydrates": 50,
@@ -11969,7 +11969,7 @@ const foodDatabase = {
             "calories": 236,
             "protein": 17,
             "carbs": 53,
-            "fat": 1
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -11978,8 +11978,8 @@ const foodDatabase = {
         "ingredients": "200 g lentils, 0.9 cup udon, 2 tsps bell pepper, 80 g pea, 140 g corn, 160 g mint, 1 tbsp sesame oil, 2 tsps soy sauce, 2 tsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 236,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 19,
+            "saturatedFat": 1,
             "cholesterol": 16,
             "sodium": 92,
             "carbohydrates": 53,
@@ -11996,7 +11996,7 @@ const foodDatabase = {
             "calories": 289,
             "protein": 15,
             "carbs": 49,
-            "fat": 14
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12005,8 +12005,8 @@ const foodDatabase = {
         "ingredients": "100 g chickpeas, 0.8 cup oats, 190 g mushroom, 220 g cabbage, 140 g broccoli, 0.7 cup parsley, 1 tsp turmeric, 1 tbsp vinegar, 2 tbsps olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 289,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 15,
+            "saturatedFat": 14,
             "cholesterol": 81,
             "sodium": 386,
             "carbohydrates": 49,
@@ -12023,7 +12023,7 @@ const foodDatabase = {
             "calories": 392,
             "protein": 19,
             "carbs": 55,
-            "fat": 15
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12032,8 +12032,8 @@ const foodDatabase = {
         "ingredients": "230 g halloumi, 1.8 cup noodles, 0.9 cup mushroom, 60 g carrot, 1 cup cucumber, 1.4 cup basil, 2 tsps paprika, 1 tsp lime juice, 2 tbsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 392,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 9,
+            "saturatedFat": 15,
             "cholesterol": 2,
             "sodium": 187,
             "carbohydrates": 55,
@@ -12050,7 +12050,7 @@ const foodDatabase = {
             "calories": 625,
             "protein": 3,
             "carbs": 8,
-            "fat": 0
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12059,7 +12059,7 @@ const foodDatabase = {
         "ingredients": "2 cup zucchini, 190 g noodles, 200 g cabbage, 0.7 cup spinach, 110 g parsley, 1 tsp paprika, 1 tsp lemon juice, 1 tbsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 625,
-            "fat": 0,
+            "fat": 24,
             "saturatedFat": 0,
             "cholesterol": 49,
             "sodium": 857,
@@ -12077,7 +12077,7 @@ const foodDatabase = {
             "calories": 370,
             "protein": 7,
             "carbs": 34,
-            "fat": 3
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12086,8 +12086,8 @@ const foodDatabase = {
         "ingredients": "80 g tempeh, 1 piece wrap, 2 cup zucchini, 230 g carrot, 1.4 cup cabbage, 0.7 cup cilantro, 3 tbsps sesame oil, 1 tsp chili flakes, 1 tsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 370,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 22,
+            "saturatedFat": 3,
             "cholesterol": 48,
             "sodium": 214,
             "carbohydrates": 34,
@@ -12104,7 +12104,7 @@ const foodDatabase = {
             "calories": 501,
             "protein": 5,
             "carbs": 23,
-            "fat": 13
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12113,8 +12113,8 @@ const foodDatabase = {
         "ingredients": "130 g eggplant, 2 pieces wrap, 1 cup cabbage, 1.4 cup kale, 1.9 cup tomato, 130 g rosemary, 2 tsps turmeric, 2 tsps paprika, 1 tbsp olive oil, 3 cloves garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 501,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 13,
             "cholesterol": 69,
             "sodium": 193,
             "carbohydrates": 23,
@@ -12141,7 +12141,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 567,
             "fat": 15,
-            "saturatedFat": 5,
+            "saturatedFat": 15,
             "cholesterol": 9,
             "sodium": 520,
             "carbohydrates": 19,
@@ -12158,7 +12158,7 @@ const foodDatabase = {
             "calories": 613,
             "protein": 44,
             "carbs": 57,
-            "fat": 13
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12167,8 +12167,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup seitan, 0.8 cup spaghetti, 160 g broccoli, 90 g mushroom, 110 g lettuce, 100 g cilantro, 1 tsp ginger, 2 tsps lemon juice, 1 tsp olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 613,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 9,
+            "saturatedFat": 13,
             "cholesterol": 81,
             "sodium": 392,
             "carbohydrates": 57,
@@ -12185,7 +12185,7 @@ const foodDatabase = {
             "calories": 647,
             "protein": 38,
             "carbs": 19,
-            "fat": 7
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12194,8 +12194,8 @@ const foodDatabase = {
         "ingredients": "120 g pumpkin, 240 g quinoa, 230 g corn, 60 g zucchini, 110 g mushroom, 110 g cilantro, 180 g curry paste, 2 tsps cumin, 3 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 647,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 27,
+            "saturatedFat": 7,
             "cholesterol": 88,
             "sodium": 390,
             "carbohydrates": 19,
@@ -12212,7 +12212,7 @@ const foodDatabase = {
             "calories": 213,
             "protein": 27,
             "carbs": 59,
-            "fat": 10
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12221,8 +12221,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup black beans, 1 piece tortilla, 240 g kale, 1.3 cup carrot, 190 g lettuce, 170 g cilantro, 1 tsp sesame oil, 1 tsp vinegar, 1 tbsp olive oil, 2 tsps garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 213,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 21,
+            "saturatedFat": 10,
             "cholesterol": 118,
             "sodium": 233,
             "carbohydrates": 59,
@@ -12239,7 +12239,7 @@ const foodDatabase = {
             "calories": 566,
             "protein": 15,
             "carbs": 63,
-            "fat": 11
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12248,8 +12248,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps eggplant, 1.7 cup oats, 240 g pea, 1.4 cup cabbage, 220 g kale, 60 g rosemary, 2 tsps sesame oil, 2 tsps vinegar, 3 tbsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 566,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 22,
+            "saturatedFat": 11,
             "cholesterol": 63,
             "sodium": 159,
             "carbohydrates": 63,
@@ -12266,7 +12266,7 @@ const foodDatabase = {
             "calories": 439,
             "protein": 13,
             "carbs": 56,
-            "fat": 7
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12275,8 +12275,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup chickpeas, 220 g soba, 1.2 cup kale, 160 g lettuce, 2 tsps bell pepper, 240 g rosemary, 1 clove ginger, 1 tsp paprika, 2 tbsps olive oil, 2 tsps garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 439,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 18,
+            "saturatedFat": 7,
             "cholesterol": 31,
             "sodium": 708,
             "carbohydrates": 56,
@@ -12293,7 +12293,7 @@ const foodDatabase = {
             "calories": 387,
             "protein": 30,
             "carbs": 67,
-            "fat": 5
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12302,8 +12302,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup black beans, 1.9 cup soba, 1.7 cup tomato, 200 g carrot, 2 tsps bell pepper, 200 g thyme, 3 tbsps soy sauce, 1 tsp chili flakes, 1 tbsp olive oil, 1 tsp garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 387,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 13,
+            "saturatedFat": 5,
             "cholesterol": 22,
             "sodium": 900,
             "carbohydrates": 67,
@@ -12320,7 +12320,7 @@ const foodDatabase = {
             "calories": 211,
             "protein": 23,
             "carbs": 33,
-            "fat": 6
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12329,8 +12329,8 @@ const foodDatabase = {
         "ingredients": "130 g black beans, 1.3 cup quinoa, 0.5 cup spinach, 1.6 cup cucumber, 1.5 cup zucchini, 100 g mint, 3 tbsps lime juice, 1 tsp chili flakes, 2 tsps olive oil, 1 tsp garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 211,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 20,
+            "saturatedFat": 6,
             "cholesterol": 59,
             "sodium": 539,
             "carbohydrates": 33,
@@ -12347,7 +12347,7 @@ const foodDatabase = {
             "calories": 295,
             "protein": 24,
             "carbs": 5,
-            "fat": 7
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12356,8 +12356,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup lentils, 1 piece wrap, 140 g mushroom, 1 cup tomato, 100 g broccoli, 1.4 cup mint, 3 tbsps vinegar, 1 tsp chili flakes, 3 tbsps olive oil, 3 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 295,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 30,
+            "saturatedFat": 7,
             "cholesterol": 37,
             "sodium": 229,
             "carbohydrates": 5,
@@ -12374,7 +12374,7 @@ const foodDatabase = {
             "calories": 612,
             "protein": 24,
             "carbs": 17,
-            "fat": 5
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12383,8 +12383,8 @@ const foodDatabase = {
         "ingredients": "2 tsps pumpkin, 2 tsps yogurt, 0.5 cup broccoli, 1 cup lettuce, 190 g pea, 240 g cilantro, 2 tbsps curry paste, 1 tsp soy sauce, 2 tsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 612,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 25,
+            "saturatedFat": 5,
             "cholesterol": 4,
             "sodium": 328,
             "carbohydrates": 17,
@@ -12411,7 +12411,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 171,
             "fat": 13,
-            "saturatedFat": 4,
+            "saturatedFat": 13,
             "cholesterol": 57,
             "sodium": 407,
             "carbohydrates": 20,
@@ -12428,7 +12428,7 @@ const foodDatabase = {
             "calories": 540,
             "protein": 41,
             "carbs": 85,
-            "fat": 7
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12437,8 +12437,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup black beans, 130 g soba, 1.4 cup mushroom, 1.9 cup broccoli, 190 g zucchini, 1.5 cup mint, 2 tsps ginger, 2 tsps vinegar, 2 tsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 540,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 7,
             "cholesterol": 64,
             "sodium": 116,
             "carbohydrates": 85,
@@ -12455,7 +12455,7 @@ const foodDatabase = {
             "calories": 457,
             "protein": 24,
             "carbs": 51,
-            "fat": 9
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12464,8 +12464,8 @@ const foodDatabase = {
         "ingredients": "130 g seitan, 120 g quinoa, 1.2 cup carrot, 1.6 cup mushroom, 1 cup spinach, 60 g cilantro, 2 tsps cumin, 2 cloves ginger, 1 tbsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 457,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 24,
+            "saturatedFat": 9,
             "cholesterol": 64,
             "sodium": 248,
             "carbohydrates": 51,
@@ -12482,7 +12482,7 @@ const foodDatabase = {
             "calories": 466,
             "protein": 27,
             "carbs": 42,
-            "fat": 15
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12491,8 +12491,8 @@ const foodDatabase = {
         "ingredients": "100 g tempeh, 1 tbsp yogurt, 130 g zucchini, 1.5 cup spinach, 1.4 cup lettuce, 0.7 cup thyme, 1 tsp ginger, 1 tbsp vinegar, 2 tsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 466,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 25,
+            "saturatedFat": 15,
             "cholesterol": 55,
             "sodium": 606,
             "carbohydrates": 42,
@@ -12509,7 +12509,7 @@ const foodDatabase = {
             "calories": 625,
             "protein": 23,
             "carbs": 60,
-            "fat": 12
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12518,8 +12518,8 @@ const foodDatabase = {
         "ingredients": "130 g paneer, 1.8 cup quinoa, 160 g zucchini, 1.3 cup mushroom, 130 g lettuce, 160 g basil, 1 tbsp vinegar, 1 tsp ginger, 3 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 625,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 6,
+            "saturatedFat": 12,
             "cholesterol": 71,
             "sodium": 210,
             "carbohydrates": 60,
@@ -12536,7 +12536,7 @@ const foodDatabase = {
             "calories": 453,
             "protein": 7,
             "carbs": 61,
-            "fat": 2
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12545,8 +12545,8 @@ const foodDatabase = {
         "ingredients": "150 g tempeh, 1.1 cup couscous, 1.7 cup carrot, 120 g kale, 2 tsps bell pepper, 230 g basil, 2 tsps cumin, 2 tbsps lemon juice, 1 tbsp olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 453,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 23,
+            "saturatedFat": 2,
             "cholesterol": 95,
             "sodium": 899,
             "carbohydrates": 61,
@@ -12563,7 +12563,7 @@ const foodDatabase = {
             "calories": 255,
             "protein": 39,
             "carbs": 78,
-            "fat": 11
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12572,8 +12572,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup sweet potato, 200 g udon, 1 tsp bell pepper, 210 g spinach, 1.4 cup zucchini, 0.9 cup basil, 1 tsp cumin, 2 tsps lime juice, 1 tsp olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 255,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 15,
+            "saturatedFat": 11,
             "cholesterol": 7,
             "sodium": 463,
             "carbohydrates": 78,
@@ -12590,7 +12590,7 @@ const foodDatabase = {
             "calories": 446,
             "protein": 7,
             "carbs": 5,
-            "fat": 14
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12599,8 +12599,8 @@ const foodDatabase = {
         "ingredients": "230 g mushrooms, 1 piece tortilla, 1.6 cup broccoli, 200 g cucumber, 90 g carrot, 0.8 cup dill, 120 g curry paste, 1 tsp lemon juice, 2 tsps olive oil, 2 cloves garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 446,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 4,
+            "saturatedFat": 14,
             "cholesterol": 24,
             "sodium": 405,
             "carbohydrates": 5,
@@ -12617,7 +12617,7 @@ const foodDatabase = {
             "calories": 549,
             "protein": 43,
             "carbs": 69,
-            "fat": 12
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12626,8 +12626,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup chickpeas, 1.6 cup potato, 1 tsp bell pepper, 0.6 cup corn, 150 g broccoli, 120 g dill, 3 tbsps sesame oil, 2 tsps cumin, 1 tsp olive oil, 1 tsp garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 549,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 22,
+            "saturatedFat": 12,
             "cholesterol": 13,
             "sodium": 145,
             "carbohydrates": 69,
@@ -12644,7 +12644,7 @@ const foodDatabase = {
             "calories": 483,
             "protein": 15,
             "carbs": 49,
-            "fat": 4
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12653,8 +12653,8 @@ const foodDatabase = {
         "ingredients": "2 tsps eggplant, 1.1 cup rice, 0.9 cup spinach, 100 g broccoli, 180 g zucchini, 0.7 cup cilantro, 1 tsp lime juice, 2 tsps vinegar, 1 tbsp olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 483,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 25,
+            "saturatedFat": 4,
             "cholesterol": 25,
             "sodium": 811,
             "carbohydrates": 49,
@@ -12671,7 +12671,7 @@ const foodDatabase = {
             "calories": 475,
             "protein": 17,
             "carbs": 31,
-            "fat": 10
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12680,8 +12680,8 @@ const foodDatabase = {
         "ingredients": "150 g halloumi, 220 g noodles, 1.1 cup carrot, 1.8 cup cabbage, 1.6 cup kale, 180 g rosemary, 1 tbsp lime juice, 1 tsp ginger, 2 tbsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 475,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 12,
+            "saturatedFat": 10,
             "cholesterol": 51,
             "sodium": 425,
             "carbohydrates": 31,
@@ -12698,7 +12698,7 @@ const foodDatabase = {
             "calories": 487,
             "protein": 3,
             "carbs": 8,
-            "fat": 1
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12707,8 +12707,8 @@ const foodDatabase = {
         "ingredients": "120 g quinoa, 1.4 cup bulgur, 210 g zucchini, 110 g mushroom, 0.9 cup pea, 1 cup parsley, 3 tbsps vinegar, 2 tsps lemon juice, 1 tbsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 487,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 25,
+            "saturatedFat": 1,
             "cholesterol": 40,
             "sodium": 106,
             "carbohydrates": 8,
@@ -12725,7 +12725,7 @@ const foodDatabase = {
             "calories": 520,
             "protein": 33,
             "carbs": 68,
-            "fat": 0
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12734,7 +12734,7 @@ const foodDatabase = {
         "ingredients": "1 piece eggplant, 2 pieces wrap, 1.4 cup lettuce, 0.7 cup zucchini, 230 g cabbage, 190 g dill, 1 tsp turmeric, 2 tsps vinegar, 2 tsps olive oil, 1 tsp garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 520,
-            "fat": 0,
+            "fat": 12,
             "saturatedFat": 0,
             "cholesterol": 75,
             "sodium": 167,
@@ -12752,7 +12752,7 @@ const foodDatabase = {
             "calories": 609,
             "protein": 24,
             "carbs": 85,
-            "fat": 2
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12761,8 +12761,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup tofu, 1.4 cup noodles, 110 g corn, 130 g spinach, 1.5 cup lettuce, 1.6 cup rosemary, 1 tbsp lemon juice, 3 tbsps soy sauce, 1 tbsp olive oil, 2 cloves garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 609,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 27,
+            "saturatedFat": 2,
             "cholesterol": 4,
             "sodium": 88,
             "carbohydrates": 85,
@@ -12779,7 +12779,7 @@ const foodDatabase = {
             "calories": 355,
             "protein": 23,
             "carbs": 81,
-            "fat": 14
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12788,8 +12788,8 @@ const foodDatabase = {
         "ingredients": "100 g paneer, 150 g udon, 1.4 cup cabbage, 230 g tomato, 1.9 cup cucumber, 230 g basil, 2 tsps chili flakes, 2 pieces curry paste, 2 tsps olive oil, 1 clove garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 355,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 16,
+            "saturatedFat": 14,
             "cholesterol": 40,
             "sodium": 302,
             "carbohydrates": 81,
@@ -12806,7 +12806,7 @@ const foodDatabase = {
             "calories": 244,
             "protein": 14,
             "carbs": 33,
-            "fat": 5
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12815,8 +12815,8 @@ const foodDatabase = {
         "ingredients": "60 g broccoli, 1.5 cup oats, 220 g mushroom, 230 g cucumber, 140 g tomato, 180 g rosemary, 1 tsp vinegar, 2 tsps lemon juice, 1 tbsp olive oil, 1 tsp garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 244,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 9,
+            "saturatedFat": 5,
             "cholesterol": 76,
             "sodium": 299,
             "carbohydrates": 33,
@@ -12833,7 +12833,7 @@ const foodDatabase = {
             "calories": 483,
             "protein": 37,
             "carbs": 51,
-            "fat": 8
+            "fat": 14
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12842,13 +12842,13 @@ const foodDatabase = {
         "ingredients": "1 tsp cauliflower, 1 piece wrap, 100 g cucumber, 1.6 cup cabbage, 2 tsps bell pepper, 70 g rosemary, 1 tbsp vinegar, 1 tsp chili flakes, 2 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 483,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 14,
+            "saturatedFat": 8,
             "cholesterol": 21,
             "sodium": 101,
             "carbohydrates": 51,
             "fiber": 14,
-            "sugar": 10,
+            "sugar": 0,
             "protein": 37
         }
     },
@@ -12860,7 +12860,7 @@ const foodDatabase = {
             "calories": 353,
             "protein": 40,
             "carbs": 77,
-            "fat": 2
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12869,8 +12869,8 @@ const foodDatabase = {
         "ingredients": "170 g lentils, 90 g rice, 1.6 cup cucumber, 1 cup lettuce, 240 g corn, 0.9 cup parsley, 2 tsps chili flakes, 1 tsp lime juice, 3 tbsps olive oil, 3 cloves garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 353,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 9,
+            "saturatedFat": 2,
             "cholesterol": 14,
             "sodium": 509,
             "carbohydrates": 77,
@@ -12897,7 +12897,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 194,
             "fat": 12,
-            "saturatedFat": 4,
+            "saturatedFat": 12,
             "cholesterol": 54,
             "sodium": 573,
             "carbohydrates": 49,
@@ -12914,7 +12914,7 @@ const foodDatabase = {
             "calories": 247,
             "protein": 43,
             "carbs": 68,
-            "fat": 7
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12923,8 +12923,8 @@ const foodDatabase = {
         "ingredients": "2 tbsps eggplant, 110 g udon, 210 g cabbage, 2 tsps bell pepper, 190 g tomato, 220 g mint, 1 tbsp lime juice, 1 tbsp soy sauce, 1 tsp olive oil, 2 cloves garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 247,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 22,
+            "saturatedFat": 7,
             "cholesterol": 110,
             "sodium": 571,
             "carbohydrates": 68,
@@ -12941,7 +12941,7 @@ const foodDatabase = {
             "calories": 602,
             "protein": 28,
             "carbs": 73,
-            "fat": 12
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12950,8 +12950,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup quinoa, 140 g oats, 1.4 cup lettuce, 1.5 cup kale, 90 g cucumber, 1.7 cup parsley, 1 tsp lemon juice, 2 tsps lime juice, 2 tsps olive oil, 1 tsp garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 602,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 13,
+            "saturatedFat": 12,
             "cholesterol": 118,
             "sodium": 703,
             "carbohydrates": 73,
@@ -12968,7 +12968,7 @@ const foodDatabase = {
             "calories": 569,
             "protein": 12,
             "carbs": 23,
-            "fat": 14
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -12977,8 +12977,8 @@ const foodDatabase = {
         "ingredients": "100 g paneer, 1.6 cup noodles, 110 g carrot, 140 g mushroom, 0.6 cup cabbage, 190 g thyme, 1 tsp curry paste, 1 tsp sesame oil, 2 tsps olive oil, 2 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 569,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 9,
+            "saturatedFat": 14,
             "cholesterol": 14,
             "sodium": 772,
             "carbohydrates": 23,
@@ -12995,7 +12995,7 @@ const foodDatabase = {
             "calories": 260,
             "protein": 30,
             "carbs": 77,
-            "fat": 5
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13004,8 +13004,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup tofu, 220 g quinoa, 1.9 cup cucumber, 0.7 cup carrot, 170 g spinach, 1.5 cup dill, 1 tsp lime juice, 1 tsp cumin, 1 tbsp olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 260,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 6,
+            "saturatedFat": 5,
             "cholesterol": 26,
             "sodium": 509,
             "carbohydrates": 77,
@@ -13022,7 +13022,7 @@ const foodDatabase = {
             "calories": 312,
             "protein": 12,
             "carbs": 84,
-            "fat": 15
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13031,8 +13031,8 @@ const foodDatabase = {
         "ingredients": "3 tbsps mushrooms, 210 g quinoa, 110 g tomato, 1.3 cup cabbage, 170 g lettuce, 170 g mint, 1 tbsp soy sauce, 2 tsps cumin, 1 tsp olive oil, 3 cloves garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 312,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 7,
+            "saturatedFat": 15,
             "cholesterol": 38,
             "sodium": 726,
             "carbohydrates": 84,
@@ -13049,7 +13049,7 @@ const foodDatabase = {
             "calories": 399,
             "protein": 11,
             "carbs": 8,
-            "fat": 4
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13058,8 +13058,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup black beans, 1 tbsp yogurt, 1.2 cup kale, 2 tsps bell pepper, 160 g lettuce, 90 g rosemary, 1 tsp vinegar, 1 tbsp lime juice, 3 tbsps olive oil, 1 tsp garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 399,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 22,
+            "saturatedFat": 4,
             "cholesterol": 51,
             "sodium": 99,
             "carbohydrates": 8,
@@ -13076,7 +13076,7 @@ const foodDatabase = {
             "calories": 286,
             "protein": 40,
             "carbs": 22,
-            "fat": 0
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13085,7 +13085,7 @@ const foodDatabase = {
         "ingredients": "1 tbsp pumpkin, 2 pieces tortilla, 2 tsps bell pepper, 70 g kale, 1.2 cup carrot, 1.7 cup basil, 1 tbsp soy sauce, 2 tsps turmeric, 3 tbsps olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 286,
-            "fat": 0,
+            "fat": 25,
             "saturatedFat": 0,
             "cholesterol": 6,
             "sodium": 622,
@@ -13103,7 +13103,7 @@ const foodDatabase = {
             "calories": 287,
             "protein": 17,
             "carbs": 25,
-            "fat": 13
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13112,13 +13112,13 @@ const foodDatabase = {
         "ingredients": "1.2 cup tempeh, 1.6 cup bulgur, 1.8 cup zucchini, 1.4 cup carrot, 2 tsps bell pepper, 170 g mint, 1 tsp sesame oil, 2 tsps lime juice, 3 tbsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 287,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 15,
+            "saturatedFat": 13,
             "cholesterol": 40,
             "sodium": 275,
             "carbohydrates": 25,
             "fiber": 10,
-            "sugar": 5,
+            "sugar": 0,
             "protein": 17
         }
     },
@@ -13130,7 +13130,7 @@ const foodDatabase = {
             "calories": 387,
             "protein": 7,
             "carbs": 30,
-            "fat": 14
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13139,8 +13139,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup chickpeas, 1.8 cup udon, 1 tsp bell pepper, 110 g tomato, 0.9 cup spinach, 0.6 cup parsley, 1 tsp chili flakes, 2 tsps paprika, 2 tsps olive oil, 2 cloves garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 387,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 29,
+            "saturatedFat": 14,
             "cholesterol": 68,
             "sodium": 339,
             "carbohydrates": 30,
@@ -13157,7 +13157,7 @@ const foodDatabase = {
             "calories": 626,
             "protein": 10,
             "carbs": 74,
-            "fat": 15
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13166,8 +13166,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup pumpkin, 1.1 cup soba, 1.5 cup cucumber, 160 g spinach, 170 g broccoli, 2 cup thyme, 1 tbsp lime juice, 1 tbsp vinegar, 2 tsps olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 626,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 17,
+            "saturatedFat": 15,
             "cholesterol": 13,
             "sodium": 808,
             "carbohydrates": 74,
@@ -13184,7 +13184,7 @@ const foodDatabase = {
             "calories": 436,
             "protein": 12,
             "carbs": 71,
-            "fat": 11
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13193,8 +13193,8 @@ const foodDatabase = {
         "ingredients": "80 g tofu, 220 g couscous, 220 g corn, 210 g kale, 1.4 cup pea, 220 g rosemary, 3 tbsps curry paste, 2 tsps chili flakes, 1 tbsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 436,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 26,
+            "saturatedFat": 11,
             "cholesterol": 95,
             "sodium": 72,
             "carbohydrates": 71,
@@ -13211,7 +13211,7 @@ const foodDatabase = {
             "calories": 571,
             "protein": 33,
             "carbs": 14,
-            "fat": 14
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13220,8 +13220,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup tofu, 0.6 cup rice, 100 g carrot, 110 g corn, 130 g lettuce, 0.8 cup rosemary, 1 tsp chili flakes, 1 tsp vinegar, 2 tsps olive oil, 1 clove garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 571,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 24,
+            "saturatedFat": 14,
             "cholesterol": 81,
             "sodium": 815,
             "carbohydrates": 14,
@@ -13238,7 +13238,7 @@ const foodDatabase = {
             "calories": 577,
             "protein": 26,
             "carbs": 58,
-            "fat": 12
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13247,8 +13247,8 @@ const foodDatabase = {
         "ingredients": "190 g broccoli, 130 g quinoa, 100 g carrot, 0.9 cup zucchini, 210 g thyme, 1 tsp cumin, 2 tbsps lime juice, 1 tbsp olive oil, 2 cloves garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 577,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 13,
+            "saturatedFat": 12,
             "cholesterol": 108,
             "sodium": 692,
             "carbohydrates": 58,
@@ -13265,7 +13265,7 @@ const foodDatabase = {
             "calories": 385,
             "protein": 26,
             "carbs": 79,
-            "fat": 8
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13274,8 +13274,8 @@ const foodDatabase = {
         "ingredients": "2 pieces mushrooms, 240 g couscous, 1.5 cup lettuce, 1 cup zucchini, 1 tsp bell pepper, 1.5 cup basil, 1 tsp vinegar, 1 tsp lime juice, 1 tbsp olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 385,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 23,
+            "saturatedFat": 8,
             "cholesterol": 55,
             "sodium": 458,
             "carbohydrates": 79,
@@ -13292,7 +13292,7 @@ const foodDatabase = {
             "calories": 635,
             "protein": 42,
             "carbs": 33,
-            "fat": 9
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13301,8 +13301,8 @@ const foodDatabase = {
         "ingredients": "1 piece cauliflower, 210 g soba, 0.8 cup broccoli, 2 tsps bell pepper, 0.9 cup carrot, 120 g dill, 1 tbsp vinegar, 2 tsps cumin, 3 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 635,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 27,
+            "saturatedFat": 9,
             "cholesterol": 64,
             "sodium": 108,
             "carbohydrates": 33,
@@ -13319,7 +13319,7 @@ const foodDatabase = {
             "calories": 594,
             "protein": 25,
             "carbs": 25,
-            "fat": 4
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13328,8 +13328,8 @@ const foodDatabase = {
         "ingredients": "1 cup lentils, 0.5 cup rice, 110 g lettuce, 230 g broccoli, 1 tsp bell pepper, 70 g cilantro, 1 tsp paprika, 2 tbsps soy sauce, 1 tsp olive oil, 2 tsps garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 594,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 4,
             "cholesterol": 81,
             "sodium": 502,
             "carbohydrates": 25,
@@ -13346,7 +13346,7 @@ const foodDatabase = {
             "calories": 600,
             "protein": 43,
             "carbs": 25,
-            "fat": 13
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13355,8 +13355,8 @@ const foodDatabase = {
         "ingredients": "60 g chickpeas, 1 piece bread, 200 g tomato, 110 g zucchini, 80 g pea, 0.7 cup rosemary, 1 tbsp soy sauce, 2 tbsps lime juice, 1 tsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 600,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 9,
+            "saturatedFat": 13,
             "cholesterol": 63,
             "sodium": 480,
             "carbohydrates": 25,
@@ -13373,7 +13373,7 @@ const foodDatabase = {
             "calories": 479,
             "protein": 29,
             "carbs": 45,
-            "fat": 11
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13382,8 +13382,8 @@ const foodDatabase = {
         "ingredients": "1 tbsp eggplant, 0.9 cup udon, 110 g corn, 0.7 cup cucumber, 1.7 cup carrot, 0.9 cup basil, 1 tsp cumin, 2 tsps ginger, 1 tbsp olive oil, 2 tsps garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 479,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 20,
+            "saturatedFat": 11,
             "cholesterol": 85,
             "sodium": 798,
             "carbohydrates": 45,
@@ -13400,7 +13400,7 @@ const foodDatabase = {
             "calories": 561,
             "protein": 37,
             "carbs": 30,
-            "fat": 1
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13409,8 +13409,8 @@ const foodDatabase = {
         "ingredients": "60 g tofu, 1.1 cup noodles, 1.8 cup zucchini, 1.7 cup corn, 2 tsps bell pepper, 1.3 cup dill, 1 tsp ginger, 1 tbsp vinegar, 1 tsp olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 561,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 5,
+            "saturatedFat": 1,
             "cholesterol": 118,
             "sodium": 278,
             "carbohydrates": 30,
@@ -13427,7 +13427,7 @@ const foodDatabase = {
             "calories": 427,
             "protein": 33,
             "carbs": 9,
-            "fat": 11
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13436,8 +13436,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup halloumi, 120 g bulgur, 1.9 cup lettuce, 230 g cucumber, 2 tsps bell pepper, 110 g rosemary, 1 tsp chili flakes, 2 tsps soy sauce, 1 tbsp olive oil, 2 tsps garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 427,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 24,
+            "saturatedFat": 11,
             "cholesterol": 110,
             "sodium": 508,
             "carbohydrates": 9,
@@ -13454,7 +13454,7 @@ const foodDatabase = {
             "calories": 240,
             "protein": 12,
             "carbs": 66,
-            "fat": 1
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13463,8 +13463,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup chickpeas, 2 pieces bread, 130 g kale, 2 tsps bell pepper, 140 g tomato, 0.7 cup mint, 2 tbsps soy sauce, 1 tbsp vinegar, 1 tsp olive oil, 1 tsp garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 240,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 3,
+            "saturatedFat": 1,
             "cholesterol": 112,
             "sodium": 710,
             "carbohydrates": 66,
@@ -13481,7 +13481,7 @@ const foodDatabase = {
             "calories": 421,
             "protein": 11,
             "carbs": 15,
-            "fat": 9
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13490,8 +13490,8 @@ const foodDatabase = {
         "ingredients": "180 g chickpeas, 190 g spaghetti, 2 tsps bell pepper, 110 g corn, 100 g spinach, 1.9 cup basil, 1 tsp chili flakes, 2 tsps cumin, 1 tsp olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 421,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 15,
+            "saturatedFat": 9,
             "cholesterol": 115,
             "sodium": 181,
             "carbohydrates": 15,
@@ -13508,7 +13508,7 @@ const foodDatabase = {
             "calories": 354,
             "protein": 29,
             "carbs": 76,
-            "fat": 1
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13517,8 +13517,8 @@ const foodDatabase = {
         "ingredients": "150 g duck, 2 tbsps yogurt, 0.9 cup pea, 210 g zucchini, 1 cup corn, 1.5 cup cilantro, 2 tsps turmeric, 1 tsp vinegar, 1 tsp olive oil, 2 tsps garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 354,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 26,
+            "saturatedFat": 1,
             "cholesterol": 44,
             "sodium": 142,
             "carbohydrates": 76,
@@ -13545,7 +13545,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 356,
             "fat": 11,
-            "saturatedFat": 3,
+            "saturatedFat": 11,
             "cholesterol": 84,
             "sodium": 164,
             "carbohydrates": 24,
@@ -13562,7 +13562,7 @@ const foodDatabase = {
             "calories": 200,
             "protein": 12,
             "carbs": 83,
-            "fat": 13
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13571,8 +13571,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup salmon, 1.6 cup oats, 200 g spinach, 230 g kale, 1 tsp bell pepper, 0.9 cup cilantro, 1 tsp turmeric, 1 tsp sesame oil, 3 tbsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 200,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 19,
+            "saturatedFat": 13,
             "cholesterol": 97,
             "sodium": 263,
             "carbohydrates": 83,
@@ -13589,7 +13589,7 @@ const foodDatabase = {
             "calories": 454,
             "protein": 25,
             "carbs": 65,
-            "fat": 1
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13598,8 +13598,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup duck, 100 g potato, 80 g lettuce, 150 g spinach, 90 g tomato, 1.8 cup cilantro, 1 tsp paprika, 2 tsps lime juice, 2 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 454,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 18,
+            "saturatedFat": 1,
             "cholesterol": 69,
             "sodium": 646,
             "carbohydrates": 65,
@@ -13616,7 +13616,7 @@ const foodDatabase = {
             "calories": 246,
             "protein": 42,
             "carbs": 85,
-            "fat": 2
+            "fat": 11
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13625,13 +13625,13 @@ const foodDatabase = {
         "ingredients": "210 g duck, 1.7 cup bulgur, 1.8 cup mushroom, 1.7 cup cucumber, 1 tsp bell pepper, 1.6 cup cilantro, 2 tbsps vinegar, 1 piece curry paste, 1 tsp olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 246,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 11,
+            "saturatedFat": 2,
             "cholesterol": 3,
             "sodium": 479,
             "carbohydrates": 85,
             "fiber": 1,
-            "sugar": 17,
+            "sugar": 0,
             "protein": 42
         }
     },
@@ -13643,7 +13643,7 @@ const foodDatabase = {
             "calories": 451,
             "protein": 11,
             "carbs": 47,
-            "fat": 1
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13652,8 +13652,8 @@ const foodDatabase = {
         "ingredients": "200 g tuna, 170 g udon, 210 g mushroom, 180 g corn, 140 g kale, 1.5 cup rosemary, 1 tsp soy sauce, 2 tsps sesame oil, 2 tsps olive oil, 3 cloves garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 451,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 30,
+            "saturatedFat": 1,
             "cholesterol": 19,
             "sodium": 325,
             "carbohydrates": 47,
@@ -13670,7 +13670,7 @@ const foodDatabase = {
             "calories": 355,
             "protein": 33,
             "carbs": 8,
-            "fat": 10
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13679,8 +13679,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup tuna, 2 tsps yogurt, 240 g carrot, 2 tsps bell pepper, 60 g tomato, 160 g basil, 1 tbsp sesame oil, 3 tbsps soy sauce, 2 tsps olive oil, 2 tsps garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 355,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 25,
+            "saturatedFat": 10,
             "cholesterol": 24,
             "sodium": 534,
             "carbohydrates": 8,
@@ -13697,7 +13697,7 @@ const foodDatabase = {
             "calories": 242,
             "protein": 19,
             "carbs": 8,
-            "fat": 9
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13706,8 +13706,8 @@ const foodDatabase = {
         "ingredients": "2 cup duck, 1.8 cup spaghetti, 1 cup tomato, 170 g corn, 1.5 cup pea, 1.9 cup thyme, 2 tsps paprika, 2 tsps turmeric, 2 tbsps olive oil, 1 clove garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 242,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 4,
+            "saturatedFat": 9,
             "cholesterol": 4,
             "sodium": 891,
             "carbohydrates": 8,
@@ -13724,7 +13724,7 @@ const foodDatabase = {
             "calories": 485,
             "protein": 33,
             "carbs": 20,
-            "fat": 1
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13733,8 +13733,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup cod, 1 piece wrap, 90 g mushroom, 1.1 cup corn, 210 g cucumber, 1 cup dill, 1 tsp paprika, 1 tbsp vinegar, 2 tsps olive oil, 3 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 485,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 4,
+            "saturatedFat": 1,
             "cholesterol": 23,
             "sodium": 81,
             "carbohydrates": 20,
@@ -13751,7 +13751,7 @@ const foodDatabase = {
             "calories": 197,
             "protein": 38,
             "carbs": 73,
-            "fat": 9
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13760,8 +13760,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup crab, 1 cup spaghetti, 1 cup spinach, 1.5 cup pea, 1.4 cup tomato, 100 g thyme, 2 tsps vinegar, 1.5 cup curry paste, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 197,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 17,
+            "saturatedFat": 9,
             "cholesterol": 42,
             "sodium": 695,
             "carbohydrates": 73,
@@ -13778,7 +13778,7 @@ const foodDatabase = {
             "calories": 437,
             "protein": 29,
             "carbs": 49,
-            "fat": 9
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13787,8 +13787,8 @@ const foodDatabase = {
         "ingredients": "240 g sardines, 120 g potato, 2 tsps bell pepper, 90 g mushroom, 0.5 cup corn, 210 g mint, 1 tsp vinegar, 2 tsps chili flakes, 1 tsp olive oil, 2 tsps garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 437,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 6,
+            "saturatedFat": 9,
             "cholesterol": 75,
             "sodium": 395,
             "carbohydrates": 49,
@@ -13805,7 +13805,7 @@ const foodDatabase = {
             "calories": 606,
             "protein": 37,
             "carbs": 73,
-            "fat": 0
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13814,7 +13814,7 @@ const foodDatabase = {
         "ingredients": "1.5 cup salmon, 1.4 cup noodles, 170 g cabbage, 170 g pea, 1.6 cup corn, 1.8 cup cilantro, 2 tsps cumin, 2 tsps chili flakes, 1 tsp olive oil, 3 cloves garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 606,
-            "fat": 0,
+            "fat": 7,
             "saturatedFat": 0,
             "cholesterol": 31,
             "sodium": 674,
@@ -13832,7 +13832,7 @@ const foodDatabase = {
             "calories": 582,
             "protein": 31,
             "carbs": 60,
-            "fat": 15
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13841,8 +13841,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup lamb, 1 piece wrap, 180 g lettuce, 190 g cabbage, 180 g spinach, 230 g thyme, 3 tbsps vinegar, 1 tsp chili flakes, 1 tsp olive oil, 2 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 582,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 28,
+            "saturatedFat": 15,
             "cholesterol": 21,
             "sodium": 878,
             "carbohydrates": 60,
@@ -13859,7 +13859,7 @@ const foodDatabase = {
             "calories": 482,
             "protein": 13,
             "carbs": 49,
-            "fat": 7
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13868,8 +13868,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup salmon, 80 g bulgur, 80 g kale, 190 g corn, 170 g cabbage, 0.6 cup parsley, 3 tbsps lime juice, 2 tsps lemon juice, 1 tbsp olive oil, 2 tsps garlic, 1.1 cup onion",
         "detailedNutrition": {
             "calories": 482,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 17,
+            "saturatedFat": 7,
             "cholesterol": 24,
             "sodium": 231,
             "carbohydrates": 49,
@@ -13886,7 +13886,7 @@ const foodDatabase = {
             "calories": 327,
             "protein": 40,
             "carbs": 7,
-            "fat": 4
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13895,8 +13895,8 @@ const foodDatabase = {
         "ingredients": "80 g cod, 0.8 cup quinoa, 180 g zucchini, 60 g mushroom, 220 g cabbage, 1.3 cup parsley, 2 tsps turmeric, 1 tsp paprika, 1 tsp olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 327,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 3,
+            "saturatedFat": 4,
             "cholesterol": 5,
             "sodium": 409,
             "carbohydrates": 7,
@@ -13913,7 +13913,7 @@ const foodDatabase = {
             "calories": 509,
             "protein": 3,
             "carbs": 82,
-            "fat": 5
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13922,8 +13922,8 @@ const foodDatabase = {
         "ingredients": "100 g pork, 180 g oats, 1.4 cup zucchini, 90 g pea, 2 tsps bell pepper, 130 g thyme, 1 tsp ginger, 1 tsp soy sauce, 2 tsps olive oil, 2 cloves garlic, 1.8 cup onion",
         "detailedNutrition": {
             "calories": 509,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 24,
+            "saturatedFat": 5,
             "cholesterol": 60,
             "sodium": 382,
             "carbohydrates": 82,
@@ -13940,7 +13940,7 @@ const foodDatabase = {
             "calories": 282,
             "protein": 22,
             "carbs": 44,
-            "fat": 2
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13949,8 +13949,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup duck, 1.9 cup noodles, 1.3 cup kale, 1.2 cup corn, 210 g cabbage, 1.1 cup thyme, 1 tsp turmeric, 1 tsp vinegar, 2 tsps olive oil, 2 cloves garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 282,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 18,
+            "saturatedFat": 2,
             "cholesterol": 107,
             "sodium": 611,
             "carbohydrates": 44,
@@ -13967,7 +13967,7 @@ const foodDatabase = {
             "calories": 404,
             "protein": 22,
             "carbs": 64,
-            "fat": 14
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -13976,8 +13976,8 @@ const foodDatabase = {
         "ingredients": "100 g beef, 1 piece tortilla, 0.5 cup zucchini, 80 g corn, 60 g mushroom, 190 g basil, 1 tsp vinegar, 2 tbsps lemon juice, 1 tsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 404,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 4,
+            "saturatedFat": 14,
             "cholesterol": 43,
             "sodium": 561,
             "carbohydrates": 64,
@@ -13994,7 +13994,7 @@ const foodDatabase = {
             "calories": 542,
             "protein": 31,
             "carbs": 37,
-            "fat": 13
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14003,8 +14003,8 @@ const foodDatabase = {
         "ingredients": "1 cup shrimp, 1.7 cup rice, 0.5 cup carrot, 1 tsp bell pepper, 80 g spinach, 190 g basil, 3 tbsps vinegar, 1 tbsp lemon juice, 1 tbsp olive oil, 1 tsp garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 542,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 29,
+            "saturatedFat": 13,
             "cholesterol": 15,
             "sodium": 575,
             "carbohydrates": 37,
@@ -14021,7 +14021,7 @@ const foodDatabase = {
             "calories": 560,
             "protein": 40,
             "carbs": 52,
-            "fat": 5
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14030,8 +14030,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup sardines, 190 g oats, 1.9 cup kale, 2 tsps bell pepper, 1 cup pea, 190 g basil, 2 tbsps lime juice, 1 clove ginger, 1 tsp olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 560,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 4,
+            "saturatedFat": 5,
             "cholesterol": 113,
             "sodium": 327,
             "carbohydrates": 52,
@@ -14048,7 +14048,7 @@ const foodDatabase = {
             "calories": 576,
             "protein": 19,
             "carbs": 51,
-            "fat": 5
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14057,8 +14057,8 @@ const foodDatabase = {
         "ingredients": "90 g beef, 1 piece wrap, 230 g cucumber, 1.1 cup cabbage, 170 g tomato, 230 g mint, 1 tsp cumin, 2 tsps sesame oil, 3 tbsps olive oil, 3 cloves garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 576,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 28,
+            "saturatedFat": 5,
             "cholesterol": 118,
             "sodium": 514,
             "carbohydrates": 51,
@@ -14075,7 +14075,7 @@ const foodDatabase = {
             "calories": 628,
             "protein": 6,
             "carbs": 77,
-            "fat": 8
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14084,8 +14084,8 @@ const foodDatabase = {
         "ingredients": "170 g pork, 70 g udon, 80 g carrot, 130 g cabbage, 70 g mushroom, 110 g basil, 2 tbsps sesame oil, 1 tbsp soy sauce, 1 tbsp olive oil, 2 tsps garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 628,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 3,
+            "saturatedFat": 8,
             "cholesterol": 62,
             "sodium": 785,
             "carbohydrates": 77,
@@ -14102,7 +14102,7 @@ const foodDatabase = {
             "calories": 196,
             "protein": 25,
             "carbs": 75,
-            "fat": 4
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14111,8 +14111,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup turkey, 1.9 cup bulgur, 1.8 cup kale, 220 g mushroom, 150 g broccoli, 180 g rosemary, 2 tsps lemon juice, 1 tsp soy sauce, 1 tbsp olive oil, 2 tsps garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 196,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 21,
+            "saturatedFat": 4,
             "cholesterol": 69,
             "sodium": 562,
             "carbohydrates": 75,
@@ -14129,7 +14129,7 @@ const foodDatabase = {
             "calories": 248,
             "protein": 21,
             "carbs": 6,
-            "fat": 1
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14138,8 +14138,8 @@ const foodDatabase = {
         "ingredients": "90 g sardines, 1.9 cup rice, 1.6 cup kale, 200 g tomato, 120 g carrot, 130 g rosemary, 2 tsps cumin, 3 tbsps lime juice, 2 tsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 248,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 4,
+            "saturatedFat": 1,
             "cholesterol": 82,
             "sodium": 697,
             "carbohydrates": 6,
@@ -14156,7 +14156,7 @@ const foodDatabase = {
             "calories": 289,
             "protein": 37,
             "carbs": 27,
-            "fat": 10
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14165,8 +14165,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup sardines, 2 pieces bread, 120 g cabbage, 120 g zucchini, 140 g kale, 120 g dill, 1 tsp lime juice, 1 tsp cumin, 3 tbsps olive oil, 1 tsp garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 289,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 4,
+            "saturatedFat": 10,
             "cholesterol": 40,
             "sodium": 223,
             "carbohydrates": 27,
@@ -14183,7 +14183,7 @@ const foodDatabase = {
             "calories": 532,
             "protein": 37,
             "carbs": 65,
-            "fat": 0
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14192,7 +14192,7 @@ const foodDatabase = {
         "ingredients": "1.2 cup lamb, 1 piece tortilla, 0.9 cup kale, 140 g carrot, 1.4 cup corn, 0.8 cup mint, 1 tsp vinegar, 1 tbsp sesame oil, 2 tbsps olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 532,
-            "fat": 0,
+            "fat": 3,
             "saturatedFat": 0,
             "cholesterol": 92,
             "sodium": 526,
@@ -14210,7 +14210,7 @@ const foodDatabase = {
             "calories": 582,
             "protein": 26,
             "carbs": 36,
-            "fat": 2
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14219,8 +14219,8 @@ const foodDatabase = {
         "ingredients": "100 g salmon, 140 g potato, 2 tsps bell pepper, 170 g cabbage, 0.7 cup kale, 0.6 cup thyme, 1 tsp lemon juice, 1 tbsp vinegar, 2 tsps olive oil, 2 tsps garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 582,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 6,
+            "saturatedFat": 2,
             "cholesterol": 93,
             "sodium": 101,
             "carbohydrates": 36,
@@ -14237,7 +14237,7 @@ const foodDatabase = {
             "calories": 501,
             "protein": 25,
             "carbs": 41,
-            "fat": 11
+            "fat": 28
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14246,8 +14246,8 @@ const foodDatabase = {
         "ingredients": "120 g crab, 100 g couscous, 90 g spinach, 220 g kale, 60 g tomato, 1.8 cup thyme, 1 tbsp sesame oil, 3 tbsps soy sauce, 1 tbsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 501,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 28,
+            "saturatedFat": 11,
             "cholesterol": 79,
             "sodium": 337,
             "carbohydrates": 41,
@@ -14264,7 +14264,7 @@ const foodDatabase = {
             "calories": 611,
             "protein": 42,
             "carbs": 55,
-            "fat": 13
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14273,8 +14273,8 @@ const foodDatabase = {
         "ingredients": "2 cup salmon, 2 tbsps yogurt, 1.2 cup pea, 1.6 cup cabbage, 1.8 cup corn, 180 g thyme, 1 tsp sesame oil, 2 pieces curry paste, 1 tsp olive oil, 2 cloves garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 611,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 29,
+            "saturatedFat": 13,
             "cholesterol": 21,
             "sodium": 301,
             "carbohydrates": 55,
@@ -14291,7 +14291,7 @@ const foodDatabase = {
             "calories": 156,
             "protein": 44,
             "carbs": 58,
-            "fat": 14
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14300,8 +14300,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup crab, 80 g soba, 1.9 cup carrot, 1.9 cup tomato, 2 tsps bell pepper, 1.4 cup parsley, 2 tsps paprika, 1 tbsp vinegar, 2 tsps olive oil, 2 tsps garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 156,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 27,
+            "saturatedFat": 14,
             "cholesterol": 19,
             "sodium": 541,
             "carbohydrates": 58,
@@ -14318,7 +14318,7 @@ const foodDatabase = {
             "calories": 532,
             "protein": 29,
             "carbs": 77,
-            "fat": 4
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14327,8 +14327,8 @@ const foodDatabase = {
         "ingredients": "240 g chicken, 0.7 cup couscous, 1.9 cup cucumber, 210 g carrot, 1.5 cup broccoli, 70 g thyme, 1 tsp paprika, 1 tsp chili flakes, 1 tsp olive oil, 1 tsp garlic, 1.3 cup onion",
         "detailedNutrition": {
             "calories": 532,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 3,
+            "saturatedFat": 4,
             "cholesterol": 109,
             "sodium": 62,
             "carbohydrates": 77,
@@ -14345,7 +14345,7 @@ const foodDatabase = {
             "calories": 406,
             "protein": 19,
             "carbs": 56,
-            "fat": 1
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14354,8 +14354,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup beef, 210 g quinoa, 150 g corn, 70 g carrot, 1 cup mushroom, 1.3 cup mint, 3 tbsps curry paste, 1 tsp cumin, 2 tsps olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 406,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 29,
+            "saturatedFat": 1,
             "cholesterol": 12,
             "sodium": 790,
             "carbohydrates": 56,
@@ -14372,7 +14372,7 @@ const foodDatabase = {
             "calories": 549,
             "protein": 5,
             "carbs": 49,
-            "fat": 3
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14381,8 +14381,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup turkey, 1.9 cup soba, 2 cup zucchini, 1.5 cup pea, 2 cup lettuce, 1.8 cup rosemary, 2 tsps chili flakes, 2 tsps paprika, 3 tbsps olive oil, 1 tsp garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 549,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 6,
+            "saturatedFat": 3,
             "cholesterol": 64,
             "sodium": 580,
             "carbohydrates": 49,
@@ -14399,7 +14399,7 @@ const foodDatabase = {
             "calories": 317,
             "protein": 9,
             "carbs": 28,
-            "fat": 9
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14408,8 +14408,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup beef, 1.8 cup oats, 170 g zucchini, 1.7 cup carrot, 1.3 cup corn, 0.8 cup parsley, 3 tbsps soy sauce, 1 tbsp lemon juice, 1 tsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 317,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 19,
+            "saturatedFat": 9,
             "cholesterol": 19,
             "sodium": 846,
             "carbohydrates": 28,
@@ -14426,7 +14426,7 @@ const foodDatabase = {
             "calories": 397,
             "protein": 21,
             "carbs": 5,
-            "fat": 10
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14435,8 +14435,8 @@ const foodDatabase = {
         "ingredients": "1 cup turkey, 1.5 cup noodles, 1.8 cup mushroom, 2 tsps bell pepper, 180 g tomato, 150 g thyme, 3 tbsps lime juice, 2 tsps chili flakes, 3 tbsps olive oil, 2 cloves garlic, 0.6 cup onion",
         "detailedNutrition": {
             "calories": 397,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 6,
+            "saturatedFat": 10,
             "cholesterol": 84,
             "sodium": 634,
             "carbohydrates": 5,
@@ -14453,7 +14453,7 @@ const foodDatabase = {
             "calories": 648,
             "protein": 16,
             "carbs": 73,
-            "fat": 11
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14462,8 +14462,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup tuna, 0.5 cup potato, 90 g carrot, 220 g pea, 2 tsps bell pepper, 240 g basil, 2 tbsps sesame oil, 1 tsp soy sauce, 3 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 648,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 6,
+            "saturatedFat": 11,
             "cholesterol": 51,
             "sodium": 844,
             "carbohydrates": 73,
@@ -14480,7 +14480,7 @@ const foodDatabase = {
             "calories": 264,
             "protein": 45,
             "carbs": 64,
-            "fat": 8
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14489,8 +14489,8 @@ const foodDatabase = {
         "ingredients": "220 g pork, 1 tsp yogurt, 1.9 cup broccoli, 190 g mushroom, 1.2 cup lettuce, 1.5 cup cilantro, 2 tsps vinegar, 3 tbsps soy sauce, 2 tbsps olive oil, 2 tsps garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 264,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 25,
+            "saturatedFat": 8,
             "cholesterol": 96,
             "sodium": 439,
             "carbohydrates": 64,
@@ -14507,7 +14507,7 @@ const foodDatabase = {
             "calories": 631,
             "protein": 14,
             "carbs": 29,
-            "fat": 11
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14516,8 +14516,8 @@ const foodDatabase = {
         "ingredients": "240 g beef, 130 g couscous, 1.5 cup zucchini, 1.7 cup broccoli, 220 g carrot, 0.6 cup basil, 2 tsps sesame oil, 1.3 cup curry paste, 2 tsps olive oil, 2 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 631,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 24,
+            "saturatedFat": 11,
             "cholesterol": 55,
             "sodium": 367,
             "carbohydrates": 29,
@@ -14534,7 +14534,7 @@ const foodDatabase = {
             "calories": 404,
             "protein": 37,
             "carbs": 42,
-            "fat": 7
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14543,8 +14543,8 @@ const foodDatabase = {
         "ingredients": "1 cup turkey, 170 g spaghetti, 0.6 cup pea, 0.5 cup kale, 190 g spinach, 160 g thyme, 1 tsp vinegar, 1 tsp cumin, 1 tsp olive oil, 2 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 404,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 16,
+            "saturatedFat": 7,
             "cholesterol": 58,
             "sodium": 792,
             "carbohydrates": 42,
@@ -14561,7 +14561,7 @@ const foodDatabase = {
             "calories": 534,
             "protein": 7,
             "carbs": 7,
-            "fat": 14
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14570,8 +14570,8 @@ const foodDatabase = {
         "ingredients": "1.9 cup chicken, 1.1 cup udon, 100 g broccoli, 1.3 cup zucchini, 190 g spinach, 170 g rosemary, 2 tsps turmeric, 2 tsps chili flakes, 1 tbsp olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 534,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 7,
+            "saturatedFat": 14,
             "cholesterol": 17,
             "sodium": 416,
             "carbohydrates": 7,
@@ -14588,7 +14588,7 @@ const foodDatabase = {
             "calories": 547,
             "protein": 44,
             "carbs": 47,
-            "fat": 1
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14597,8 +14597,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup cod, 140 g spaghetti, 1 tsp bell pepper, 0.9 cup cabbage, 0.8 cup kale, 120 g dill, 1 tsp chili flakes, 1 tsp lemon juice, 1 tsp olive oil, 1 tsp garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 547,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 26,
+            "saturatedFat": 1,
             "cholesterol": 25,
             "sodium": 439,
             "carbohydrates": 47,
@@ -14615,7 +14615,7 @@ const foodDatabase = {
             "calories": 294,
             "protein": 33,
             "carbs": 79,
-            "fat": 14
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14624,8 +14624,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup chicken, 1.1 cup soba, 170 g kale, 0.7 cup cucumber, 1.4 cup tomato, 1 cup parsley, 3 tbsps sesame oil, 1 tsp chili flakes, 1 tsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 294,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 5,
+            "saturatedFat": 14,
             "cholesterol": 73,
             "sodium": 423,
             "carbohydrates": 79,
@@ -14642,7 +14642,7 @@ const foodDatabase = {
             "calories": 467,
             "protein": 32,
             "carbs": 83,
-            "fat": 4
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14651,8 +14651,8 @@ const foodDatabase = {
         "ingredients": "190 g shrimp, 200 g quinoa, 1 cup kale, 2 tsps bell pepper, 210 g corn, 1.2 cup mint, 1 tsp ginger, 2 tsps turmeric, 2 tsps olive oil, 2 tsps garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 467,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 25,
+            "saturatedFat": 4,
             "cholesterol": 93,
             "sodium": 485,
             "carbohydrates": 83,
@@ -14669,7 +14669,7 @@ const foodDatabase = {
             "calories": 401,
             "protein": 19,
             "carbs": 7,
-            "fat": 3
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14678,8 +14678,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup pork, 1 tsp yogurt, 1.9 cup tomato, 1.5 cup cabbage, 1.9 cup broccoli, 1.8 cup thyme, 2 tsps chili flakes, 1 piece curry paste, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 401,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 6,
+            "saturatedFat": 3,
             "cholesterol": 10,
             "sodium": 749,
             "carbohydrates": 7,
@@ -14696,7 +14696,7 @@ const foodDatabase = {
             "calories": 583,
             "protein": 22,
             "carbs": 70,
-            "fat": 10
+            "fat": 29
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14705,8 +14705,8 @@ const foodDatabase = {
         "ingredients": "210 g duck, 70 g potato, 120 g cucumber, 0.8 cup corn, 2 tsps bell pepper, 60 g parsley, 2 tsps soy sauce, 2 tsps chili flakes, 2 tbsps olive oil, 1 tsp garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 583,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 29,
+            "saturatedFat": 10,
             "cholesterol": 113,
             "sodium": 109,
             "carbohydrates": 70,
@@ -14723,7 +14723,7 @@ const foodDatabase = {
             "calories": 317,
             "protein": 27,
             "carbs": 84,
-            "fat": 10
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14732,8 +14732,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup duck, 1 piece bread, 0.8 cup cucumber, 1.4 cup zucchini, 100 g pea, 1 cup rosemary, 3 tbsps vinegar, 1 tsp chili flakes, 1 tbsp olive oil, 2 tsps garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 317,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 25,
+            "saturatedFat": 10,
             "cholesterol": 10,
             "sodium": 693,
             "carbohydrates": 84,
@@ -14750,7 +14750,7 @@ const foodDatabase = {
             "calories": 192,
             "protein": 25,
             "carbs": 32,
-            "fat": 9
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14759,8 +14759,8 @@ const foodDatabase = {
         "ingredients": "90 g beef, 140 g soba, 2 tsps bell pepper, 0.7 cup cabbage, 80 g kale, 60 g parsley, 1 tsp lime juice, 1 tsp turmeric, 2 tbsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 192,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 13,
+            "saturatedFat": 9,
             "cholesterol": 14,
             "sodium": 605,
             "carbohydrates": 32,
@@ -14777,7 +14777,7 @@ const foodDatabase = {
             "calories": 453,
             "protein": 30,
             "carbs": 73,
-            "fat": 11
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14786,8 +14786,8 @@ const foodDatabase = {
         "ingredients": "150 g turkey, 0.6 cup noodles, 100 g lettuce, 1.2 cup tomato, 220 g zucchini, 210 g mint, 1 tsp sesame oil, 1 tsp turmeric, 1 tsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 453,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 16,
+            "saturatedFat": 11,
             "cholesterol": 16,
             "sodium": 274,
             "carbohydrates": 73,
@@ -14804,7 +14804,7 @@ const foodDatabase = {
             "calories": 608,
             "protein": 40,
             "carbs": 12,
-            "fat": 14
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14813,8 +14813,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup sardines, 2 tbsps yogurt, 140 g cucumber, 1.6 cup mushroom, 180 g carrot, 1.7 cup dill, 2 tsps turmeric, 1 tsp paprika, 2 tsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 608,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 20,
+            "saturatedFat": 14,
             "cholesterol": 41,
             "sodium": 527,
             "carbohydrates": 12,
@@ -14831,7 +14831,7 @@ const foodDatabase = {
             "calories": 418,
             "protein": 10,
             "carbs": 10,
-            "fat": 1
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14840,8 +14840,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup chicken, 230 g noodles, 240 g kale, 0.9 cup cabbage, 70 g pea, 80 g parsley, 2 tsps paprika, 1 tsp chili flakes, 2 tsps olive oil, 1 tsp garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 418,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 7,
+            "saturatedFat": 1,
             "cholesterol": 74,
             "sodium": 523,
             "carbohydrates": 10,
@@ -14858,7 +14858,7 @@ const foodDatabase = {
             "calories": 159,
             "protein": 39,
             "carbs": 18,
-            "fat": 11
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14867,8 +14867,8 @@ const foodDatabase = {
         "ingredients": "150 g chicken, 2 pieces bread, 1.3 cup mushroom, 1 cup cabbage, 0.6 cup lettuce, 0.8 cup basil, 1 tbsp soy sauce, 2 pieces curry paste, 1 tbsp olive oil, 2 cloves garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 159,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 25,
+            "saturatedFat": 11,
             "cholesterol": 78,
             "sodium": 861,
             "carbohydrates": 18,
@@ -14885,7 +14885,7 @@ const foodDatabase = {
             "calories": 550,
             "protein": 42,
             "carbs": 40,
-            "fat": 3
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14894,8 +14894,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup duck, 0.7 cup oats, 1.9 cup pea, 1.6 cup cucumber, 1.7 cup carrot, 1.5 cup cilantro, 1 tsp turmeric, 2 tsps lemon juice, 1 tsp olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 550,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 23,
+            "saturatedFat": 3,
             "cholesterol": 119,
             "sodium": 833,
             "carbohydrates": 40,
@@ -14912,7 +14912,7 @@ const foodDatabase = {
             "calories": 533,
             "protein": 34,
             "carbs": 13,
-            "fat": 2
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14921,8 +14921,8 @@ const foodDatabase = {
         "ingredients": "1.6 cup tuna, 0.6 cup noodles, 1.6 cup pea, 0.6 cup carrot, 150 g lettuce, 240 g cilantro, 2 tsps chili flakes, 3 tbsps sesame oil, 3 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 533,
-            "fat": 2,
-            "saturatedFat": 1,
+            "fat": 17,
+            "saturatedFat": 2,
             "cholesterol": 36,
             "sodium": 569,
             "carbohydrates": 13,
@@ -14939,7 +14939,7 @@ const foodDatabase = {
             "calories": 209,
             "protein": 9,
             "carbs": 49,
-            "fat": 9
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14948,8 +14948,8 @@ const foodDatabase = {
         "ingredients": "220 g duck, 230 g oats, 150 g broccoli, 1 tsp bell pepper, 1.8 cup corn, 1.3 cup rosemary, 2 tsps soy sauce, 2 tsps turmeric, 2 tsps olive oil, 3 cloves garlic, 0.5 cup onion",
         "detailedNutrition": {
             "calories": 209,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 25,
+            "saturatedFat": 9,
             "cholesterol": 12,
             "sodium": 367,
             "carbohydrates": 49,
@@ -14966,7 +14966,7 @@ const foodDatabase = {
             "calories": 629,
             "protein": 4,
             "carbs": 73,
-            "fat": 5
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -14975,8 +14975,8 @@ const foodDatabase = {
         "ingredients": "0.7 cup chicken, 0.9 cup noodles, 1.6 cup broccoli, 1.1 cup carrot, 130 g mushroom, 200 g parsley, 2 tbsps lemon juice, 3 cloves ginger, 2 tsps olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 629,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 4,
+            "saturatedFat": 5,
             "cholesterol": 97,
             "sodium": 128,
             "carbohydrates": 73,
@@ -14993,7 +14993,7 @@ const foodDatabase = {
             "calories": 433,
             "protein": 10,
             "carbs": 37,
-            "fat": 15
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15002,13 +15002,13 @@ const foodDatabase = {
         "ingredients": "150 g sardines, 70 g potato, 1.9 cup kale, 1.9 cup broccoli, 0.9 cup zucchini, 1 cup cilantro, 2 tsps paprika, 2 tbsps vinegar, 2 tsps olive oil, 2 cloves garlic, 0.7 cup onion",
         "detailedNutrition": {
             "calories": 433,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 19,
+            "saturatedFat": 15,
             "cholesterol": 37,
             "sodium": 366,
             "carbohydrates": 37,
             "fiber": 13,
-            "sugar": 7,
+            "sugar": 0,
             "protein": 10
         }
     },
@@ -15020,7 +15020,7 @@ const foodDatabase = {
             "calories": 171,
             "protein": 23,
             "carbs": 45,
-            "fat": 12
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15029,8 +15029,8 @@ const foodDatabase = {
         "ingredients": "140 g tuna, 180 g bulgur, 140 g mushroom, 1.1 cup pea, 0.5 cup tomato, 1.9 cup dill, 1 tsp sesame oil, 3 tbsps vinegar, 1 tbsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 171,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 17,
+            "saturatedFat": 12,
             "cholesterol": 107,
             "sodium": 766,
             "carbohydrates": 45,
@@ -15047,7 +15047,7 @@ const foodDatabase = {
             "calories": 537,
             "protein": 27,
             "carbs": 56,
-            "fat": 7
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15056,8 +15056,8 @@ const foodDatabase = {
         "ingredients": "1.8 cup chicken, 110 g quinoa, 1.7 cup cabbage, 1 tsp bell pepper, 70 g cucumber, 1.5 cup thyme, 1 tbsp soy sauce, 2 tsps vinegar, 3 tbsps olive oil, 3 cloves garlic, 2 cup onion",
         "detailedNutrition": {
             "calories": 537,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 18,
+            "saturatedFat": 7,
             "cholesterol": 25,
             "sodium": 383,
             "carbohydrates": 56,
@@ -15074,7 +15074,7 @@ const foodDatabase = {
             "calories": 293,
             "protein": 3,
             "carbs": 51,
-            "fat": 4
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15083,8 +15083,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup pork, 0.5 cup couscous, 0.8 cup mushroom, 80 g spinach, 60 g kale, 1.6 cup dill, 2 tsps lime juice, 2 tsps cumin, 2 tsps olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 293,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 13,
+            "saturatedFat": 4,
             "cholesterol": 47,
             "sodium": 113,
             "carbohydrates": 51,
@@ -15101,7 +15101,7 @@ const foodDatabase = {
             "calories": 534,
             "protein": 22,
             "carbs": 43,
-            "fat": 8
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15110,8 +15110,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup tuna, 1 piece wrap, 1 tsp bell pepper, 190 g zucchini, 180 g cabbage, 180 g mint, 1 tsp lime juice, 2 cloves ginger, 1 tbsp olive oil, 3 cloves garlic, 1.5 cup onion",
         "detailedNutrition": {
             "calories": 534,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 15,
+            "saturatedFat": 8,
             "cholesterol": 117,
             "sodium": 444,
             "carbohydrates": 43,
@@ -15128,7 +15128,7 @@ const foodDatabase = {
             "calories": 340,
             "protein": 26,
             "carbs": 70,
-            "fat": 6
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15137,8 +15137,8 @@ const foodDatabase = {
         "ingredients": "140 g salmon, 2 pieces bread, 1.9 cup spinach, 1.3 cup corn, 0.8 cup kale, 110 g dill, 2 tsps chili flakes, 1 tbsp curry paste, 2 tsps olive oil, 1 tsp garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 340,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 10,
+            "saturatedFat": 6,
             "cholesterol": 22,
             "sodium": 243,
             "carbohydrates": 70,
@@ -15155,7 +15155,7 @@ const foodDatabase = {
             "calories": 158,
             "protein": 39,
             "carbs": 80,
-            "fat": 14
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15164,8 +15164,8 @@ const foodDatabase = {
         "ingredients": "130 g pork, 1 tsp yogurt, 0.6 cup lettuce, 170 g cucumber, 150 g mushroom, 1.8 cup mint, 1 tbsp sesame oil, 2 tsps ginger, 1 tsp olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 158,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 15,
+            "saturatedFat": 14,
             "cholesterol": 116,
             "sodium": 554,
             "carbohydrates": 80,
@@ -15182,7 +15182,7 @@ const foodDatabase = {
             "calories": 253,
             "protein": 32,
             "carbs": 8,
-            "fat": 0
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15191,9 +15191,9 @@ const foodDatabase = {
         "ingredients": "0.8 cup beef, 1.5 cup bulgur, 0.8 cup kale, 160 g mushroom, 220 g cucumber, 1.5 cup basil, 2 tsps paprika, 1 tbsp sesame oil, 2 tsps olive oil, 2 tsps garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 253,
-            "fat": 0,
+            "fat": 23,
             "saturatedFat": 0,
-            "cholesterol": 30,
+            "cholesterol": 0,
             "sodium": 194,
             "carbohydrates": 8,
             "fiber": 3,
@@ -15209,7 +15209,7 @@ const foodDatabase = {
             "calories": 222,
             "protein": 10,
             "carbs": 49,
-            "fat": 4
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15218,8 +15218,8 @@ const foodDatabase = {
         "ingredients": "240 g crab, 1 piece bread, 0.9 cup zucchini, 70 g tomato, 1.4 cup cabbage, 1.8 cup dill, 2 tbsps vinegar, 1 tsp cumin, 2 tsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 222,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 30,
+            "saturatedFat": 4,
             "cholesterol": 14,
             "sodium": 400,
             "carbohydrates": 49,
@@ -15236,7 +15236,7 @@ const foodDatabase = {
             "calories": 302,
             "protein": 20,
             "carbs": 60,
-            "fat": 14
+            "fat": 10
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15245,8 +15245,8 @@ const foodDatabase = {
         "ingredients": "150 g pork, 1.6 cup couscous, 110 g carrot, 1.3 cup cucumber, 90 g lettuce, 170 g basil, 2 tbsps curry paste, 1 tsp lime juice, 3 tbsps olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 302,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 10,
+            "saturatedFat": 14,
             "cholesterol": 55,
             "sodium": 544,
             "carbohydrates": 60,
@@ -15263,7 +15263,7 @@ const foodDatabase = {
             "calories": 643,
             "protein": 35,
             "carbs": 66,
-            "fat": 4
+            "fat": 5
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15272,8 +15272,8 @@ const foodDatabase = {
         "ingredients": "160 g sardines, 110 g potato, 1.6 cup lettuce, 1.8 cup corn, 60 g spinach, 1.4 cup mint, 1 tsp turmeric, 2 tsps paprika, 2 tsps olive oil, 2 tsps garlic, 0.8 cup onion",
         "detailedNutrition": {
             "calories": 643,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 5,
+            "saturatedFat": 4,
             "cholesterol": 86,
             "sodium": 484,
             "carbohydrates": 66,
@@ -15290,7 +15290,7 @@ const foodDatabase = {
             "calories": 601,
             "protein": 4,
             "carbs": 81,
-            "fat": 10
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15299,8 +15299,8 @@ const foodDatabase = {
         "ingredients": "0.9 cup duck, 1.4 cup noodles, 60 g pea, 240 g corn, 230 g lettuce, 1.9 cup mint, 1 tsp turmeric, 2 tsps sesame oil, 1 tsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 601,
-            "fat": 10,
-            "saturatedFat": 3,
+            "fat": 23,
+            "saturatedFat": 10,
             "cholesterol": 68,
             "sodium": 834,
             "carbohydrates": 81,
@@ -15317,7 +15317,7 @@ const foodDatabase = {
             "calories": 335,
             "protein": 8,
             "carbs": 14,
-            "fat": 6
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15326,8 +15326,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup cod, 1.7 cup soba, 1.6 cup corn, 1.7 cup lettuce, 110 g cucumber, 150 g dill, 1 tsp turmeric, 1 tsp vinegar, 1 tsp olive oil, 1 clove garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 335,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 3,
+            "saturatedFat": 6,
             "cholesterol": 46,
             "sodium": 672,
             "carbohydrates": 14,
@@ -15344,7 +15344,7 @@ const foodDatabase = {
             "calories": 597,
             "protein": 25,
             "carbs": 61,
-            "fat": 14
+            "fat": 25
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15353,8 +15353,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup tuna, 2 cup noodles, 0.9 cup spinach, 1 cup tomato, 190 g carrot, 70 g cilantro, 1 tsp lemon juice, 2 tsps turmeric, 2 tsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 597,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 25,
+            "saturatedFat": 14,
             "cholesterol": 49,
             "sodium": 228,
             "carbohydrates": 61,
@@ -15371,7 +15371,7 @@ const foodDatabase = {
             "calories": 576,
             "protein": 24,
             "carbs": 80,
-            "fat": 7
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15380,8 +15380,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup shrimp, 1.2 cup soba, 1.1 cup broccoli, 2 tsps bell pepper, 60 g cucumber, 1.7 cup dill, 1 tsp paprika, 2 tsps chili flakes, 1 tsp olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 576,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 30,
+            "saturatedFat": 7,
             "cholesterol": 39,
             "sodium": 644,
             "carbohydrates": 80,
@@ -15398,7 +15398,7 @@ const foodDatabase = {
             "calories": 273,
             "protein": 31,
             "carbs": 5,
-            "fat": 4
+            "fat": 8
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15407,8 +15407,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup shrimp, 0.9 cup spaghetti, 210 g mushroom, 210 g cabbage, 60 g pea, 1.6 cup rosemary, 1 tbsp sesame oil, 3 tbsps lemon juice, 3 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 273,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 8,
+            "saturatedFat": 4,
             "cholesterol": 10,
             "sodium": 431,
             "carbohydrates": 5,
@@ -15425,7 +15425,7 @@ const foodDatabase = {
             "calories": 615,
             "protein": 14,
             "carbs": 10,
-            "fat": 8
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15434,13 +15434,13 @@ const foodDatabase = {
         "ingredients": "0.9 cup cod, 1 piece wrap, 2 tsps bell pepper, 1.7 cup tomato, 0.6 cup cucumber, 0.9 cup parsley, 1 tsp cumin, 2 tbsps soy sauce, 1 tsp olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 615,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 23,
+            "saturatedFat": 8,
             "cholesterol": 83,
             "sodium": 358,
             "carbohydrates": 10,
             "fiber": 10,
-            "sugar": 2,
+            "sugar": 0,
             "protein": 14
         }
     },
@@ -15452,7 +15452,7 @@ const foodDatabase = {
             "calories": 165,
             "protein": 36,
             "carbs": 46,
-            "fat": 4
+            "fat": 7
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15461,8 +15461,8 @@ const foodDatabase = {
         "ingredients": "200 g lamb, 1 cup couscous, 2 tsps bell pepper, 190 g pea, 90 g spinach, 160 g cilantro, 2 tbsps sesame oil, 1 tbsp vinegar, 2 tsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 165,
-            "fat": 4,
-            "saturatedFat": 1,
+            "fat": 7,
+            "saturatedFat": 4,
             "cholesterol": 101,
             "sodium": 267,
             "carbohydrates": 46,
@@ -15479,7 +15479,7 @@ const foodDatabase = {
             "calories": 505,
             "protein": 19,
             "carbs": 62,
-            "fat": 7
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15488,8 +15488,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup beef, 0.8 cup potato, 190 g pea, 1.9 cup carrot, 1.9 cup spinach, 1.6 cup dill, 1 tsp paprika, 1 tsp lime juice, 2 tbsps olive oil, 2 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 505,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 24,
+            "saturatedFat": 7,
             "cholesterol": 11,
             "sodium": 786,
             "carbohydrates": 62,
@@ -15506,7 +15506,7 @@ const foodDatabase = {
             "calories": 229,
             "protein": 39,
             "carbs": 31,
-            "fat": 15
+            "fat": 6
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15515,8 +15515,8 @@ const foodDatabase = {
         "ingredients": "200 g chicken, 1.6 cup potato, 0.9 cup zucchini, 230 g pea, 240 g lettuce, 1.8 cup mint, 1 tsp lime juice, 1 tsp soy sauce, 2 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 229,
-            "fat": 15,
-            "saturatedFat": 5,
+            "fat": 6,
+            "saturatedFat": 15,
             "cholesterol": 46,
             "sodium": 848,
             "carbohydrates": 31,
@@ -15533,7 +15533,7 @@ const foodDatabase = {
             "calories": 210,
             "protein": 24,
             "carbs": 58,
-            "fat": 7
+            "fat": 3
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15542,8 +15542,8 @@ const foodDatabase = {
         "ingredients": "1.2 cup beef, 1 cup rice, 0.7 cup spinach, 1.1 cup carrot, 1 tsp bell pepper, 1.9 cup basil, 1 tsp chili flakes, 3 tbsps soy sauce, 2 tsps olive oil, 2 tsps garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 210,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 3,
+            "saturatedFat": 7,
             "cholesterol": 103,
             "sodium": 894,
             "carbohydrates": 58,
@@ -15560,7 +15560,7 @@ const foodDatabase = {
             "calories": 406,
             "protein": 31,
             "carbs": 30,
-            "fat": 13
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15569,8 +15569,8 @@ const foodDatabase = {
         "ingredients": "1.5 cup pork, 100 g couscous, 0.6 cup mushroom, 170 g cucumber, 1.5 cup corn, 1.5 cup cilantro, 1 tsp chili flakes, 2 tsps lime juice, 2 tbsps olive oil, 2 tsps garlic, 1.7 cup onion",
         "detailedNutrition": {
             "calories": 406,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 26,
+            "saturatedFat": 13,
             "cholesterol": 56,
             "sodium": 357,
             "carbohydrates": 30,
@@ -15587,7 +15587,7 @@ const foodDatabase = {
             "calories": 167,
             "protein": 24,
             "carbs": 16,
-            "fat": 3
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15596,8 +15596,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup tuna, 100 g udon, 140 g zucchini, 1.2 cup kale, 110 g cabbage, 100 g basil, 2 cloves ginger, 1 tbsp soy sauce, 1 tsp olive oil, 2 cloves garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 167,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 15,
+            "saturatedFat": 3,
             "cholesterol": 14,
             "sodium": 552,
             "carbohydrates": 16,
@@ -15614,7 +15614,7 @@ const foodDatabase = {
             "calories": 388,
             "protein": 25,
             "carbs": 37,
-            "fat": 12
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15623,8 +15623,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup cod, 90 g potato, 70 g corn, 1 tsp bell pepper, 1.6 cup zucchini, 1.9 cup dill, 2 tsps turmeric, 3 tbsps lemon juice, 1 tbsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 388,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 9,
+            "saturatedFat": 12,
             "cholesterol": 31,
             "sodium": 354,
             "carbohydrates": 37,
@@ -15641,7 +15641,7 @@ const foodDatabase = {
             "calories": 484,
             "protein": 24,
             "carbs": 36,
-            "fat": 14
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15650,8 +15650,8 @@ const foodDatabase = {
         "ingredients": "1 cup chicken, 1 piece bread, 170 g zucchini, 1 tsp bell pepper, 140 g mushroom, 170 g thyme, 2 tsps chili flakes, 1 tbsp curry paste, 3 tbsps olive oil, 1 clove garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 484,
-            "fat": 14,
-            "saturatedFat": 4,
+            "fat": 9,
+            "saturatedFat": 14,
             "cholesterol": 79,
             "sodium": 404,
             "carbohydrates": 36,
@@ -15668,7 +15668,7 @@ const foodDatabase = {
             "calories": 638,
             "protein": 44,
             "carbs": 49,
-            "fat": 12
+            "fat": 13
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15677,8 +15677,8 @@ const foodDatabase = {
         "ingredients": "120 g duck, 110 g bulgur, 1.4 cup zucchini, 0.7 cup spinach, 1.1 cup lettuce, 1.2 cup cilantro, 3 cloves ginger, 1 tsp lemon juice, 1 tsp olive oil, 1 clove garlic, 1.2 cup onion",
         "detailedNutrition": {
             "calories": 638,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 13,
+            "saturatedFat": 12,
             "cholesterol": 26,
             "sodium": 448,
             "carbohydrates": 49,
@@ -15695,7 +15695,7 @@ const foodDatabase = {
             "calories": 640,
             "protein": 33,
             "carbs": 43,
-            "fat": 9
+            "fat": 22
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15704,8 +15704,8 @@ const foodDatabase = {
         "ingredients": "220 g tuna, 240 g potato, 0.8 cup corn, 1.3 cup kale, 2 cup mushroom, 240 g mint, 1 tsp ginger, 140 g curry paste, 2 tbsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 640,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 22,
+            "saturatedFat": 9,
             "cholesterol": 46,
             "sodium": 757,
             "carbohydrates": 43,
@@ -15722,7 +15722,7 @@ const foodDatabase = {
             "calories": 170,
             "protein": 13,
             "carbs": 72,
-            "fat": 11
+            "fat": 20
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15731,8 +15731,8 @@ const foodDatabase = {
         "ingredients": "220 g salmon, 220 g spaghetti, 160 g kale, 0.9 cup tomato, 1.7 cup cabbage, 240 g rosemary, 2 tsps ginger, 2 tsps turmeric, 2 tsps olive oil, 3 cloves garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 170,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 20,
+            "saturatedFat": 11,
             "cholesterol": 33,
             "sodium": 236,
             "carbohydrates": 72,
@@ -15749,7 +15749,7 @@ const foodDatabase = {
             "calories": 262,
             "protein": 35,
             "carbs": 42,
-            "fat": 1
+            "fat": 26
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15758,8 +15758,8 @@ const foodDatabase = {
         "ingredients": "1.3 cup salmon, 1.8 cup noodles, 1.2 cup cabbage, 170 g broccoli, 180 g tomato, 1.4 cup rosemary, 2 tsps turmeric, 1 tsp chili flakes, 1 tbsp olive oil, 2 tsps garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 262,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 26,
+            "saturatedFat": 1,
             "cholesterol": 108,
             "sodium": 77,
             "carbohydrates": 42,
@@ -15776,7 +15776,7 @@ const foodDatabase = {
             "calories": 313,
             "protein": 17,
             "carbs": 53,
-            "fat": 8
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15785,8 +15785,8 @@ const foodDatabase = {
         "ingredients": "0.5 cup shrimp, 1 tbsp yogurt, 110 g carrot, 60 g zucchini, 1 tsp bell pepper, 160 g cilantro, 60 g curry paste, 1 tsp lime juice, 3 tbsps olive oil, 2 tsps garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 313,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 24,
+            "saturatedFat": 8,
             "cholesterol": 115,
             "sodium": 382,
             "carbohydrates": 53,
@@ -15803,7 +15803,7 @@ const foodDatabase = {
             "calories": 452,
             "protein": 25,
             "carbs": 10,
-            "fat": 5
+            "fat": 18
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15812,8 +15812,8 @@ const foodDatabase = {
         "ingredients": "230 g duck, 1.3 cup spaghetti, 1.3 cup pea, 1 tsp bell pepper, 1.6 cup carrot, 0.5 cup dill, 3 tbsps soy sauce, 3 tbsps lime juice, 2 tbsps olive oil, 2 cloves garlic, 1 cup onion",
         "detailedNutrition": {
             "calories": 452,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 18,
+            "saturatedFat": 5,
             "cholesterol": 12,
             "sodium": 756,
             "carbohydrates": 10,
@@ -15830,7 +15830,7 @@ const foodDatabase = {
             "calories": 545,
             "protein": 34,
             "carbs": 9,
-            "fat": 11
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15839,13 +15839,13 @@ const foodDatabase = {
         "ingredients": "0.8 cup turkey, 130 g potato, 1.2 cup cabbage, 1.9 cup tomato, 1.4 cup carrot, 170 g thyme, 1 tsp cumin, 2 tsps chili flakes, 1 tbsp olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 545,
-            "fat": 11,
-            "saturatedFat": 3,
+            "fat": 15,
+            "saturatedFat": 11,
             "cholesterol": 33,
             "sodium": 384,
             "carbohydrates": 9,
             "fiber": 3,
-            "sugar": 1,
+            "sugar": 0,
             "protein": 34
         }
     },
@@ -15857,7 +15857,7 @@ const foodDatabase = {
             "calories": 415,
             "protein": 17,
             "carbs": 12,
-            "fat": 9
+            "fat": 16
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15866,8 +15866,8 @@ const foodDatabase = {
         "ingredients": "0.6 cup lamb, 90 g quinoa, 150 g corn, 1.5 cup tomato, 1.4 cup pea, 1.1 cup rosemary, 1 tsp chili flakes, 1 tbsp vinegar, 3 tbsps olive oil, 3 cloves garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 415,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 16,
+            "saturatedFat": 9,
             "cholesterol": 31,
             "sodium": 525,
             "carbohydrates": 12,
@@ -15884,7 +15884,7 @@ const foodDatabase = {
             "calories": 336,
             "protein": 5,
             "carbs": 65,
-            "fat": 1
+            "fat": 12
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15893,8 +15893,8 @@ const foodDatabase = {
         "ingredients": "1.7 cup tuna, 1 cup oats, 1.3 cup mushroom, 170 g pea, 170 g corn, 220 g rosemary, 3 tbsps sesame oil, 1 tsp cumin, 1 tbsp olive oil, 3 cloves garlic, 1.9 cup onion",
         "detailedNutrition": {
             "calories": 336,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 12,
+            "saturatedFat": 1,
             "cholesterol": 94,
             "sodium": 84,
             "carbohydrates": 65,
@@ -15911,7 +15911,7 @@ const foodDatabase = {
             "calories": 424,
             "protein": 29,
             "carbs": 48,
-            "fat": 5
+            "fat": 21
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15920,8 +15920,8 @@ const foodDatabase = {
         "ingredients": "150 g beef, 1.8 cup rice, 1 cup pea, 1.1 cup spinach, 1.9 cup corn, 220 g parsley, 3 tbsps lemon juice, 1 tsp turmeric, 3 tbsps olive oil, 1 tsp garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 424,
-            "fat": 5,
-            "saturatedFat": 2,
+            "fat": 21,
+            "saturatedFat": 5,
             "cholesterol": 45,
             "sodium": 166,
             "carbohydrates": 48,
@@ -15938,7 +15938,7 @@ const foodDatabase = {
             "calories": 306,
             "protein": 35,
             "carbs": 15,
-            "fat": 1
+            "fat": 24
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15947,8 +15947,8 @@ const foodDatabase = {
         "ingredients": "120 g cod, 2 tbsps yogurt, 160 g lettuce, 0.9 cup kale, 1.5 cup tomato, 130 g rosemary, 1 tsp paprika, 2 tbsps lemon juice, 2 tbsps olive oil, 2 tsps garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 306,
-            "fat": 1,
-            "saturatedFat": 0,
+            "fat": 24,
+            "saturatedFat": 1,
             "cholesterol": 58,
             "sodium": 669,
             "carbohydrates": 15,
@@ -15965,7 +15965,7 @@ const foodDatabase = {
             "calories": 200,
             "protein": 39,
             "carbs": 58,
-            "fat": 12
+            "fat": 30
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -15974,8 +15974,8 @@ const foodDatabase = {
         "ingredients": "120 g beef, 1 tbsp yogurt, 110 g cabbage, 2 tsps bell pepper, 1.1 cup kale, 210 g mint, 1 tsp turmeric, 1 tsp cumin, 1 tsp olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 200,
-            "fat": 12,
-            "saturatedFat": 4,
+            "fat": 30,
+            "saturatedFat": 12,
             "cholesterol": 111,
             "sodium": 838,
             "carbohydrates": 58,
@@ -15992,7 +15992,7 @@ const foodDatabase = {
             "calories": 295,
             "protein": 34,
             "carbs": 66,
-            "fat": 7
+            "fat": 27
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -16001,8 +16001,8 @@ const foodDatabase = {
         "ingredients": "60 g crab, 200 g bulgur, 120 g spinach, 160 g corn, 190 g carrot, 60 g thyme, 3 tbsps soy sauce, 2 tsps paprika, 2 tsps olive oil, 1 tsp garlic, 3 tbsps onion",
         "detailedNutrition": {
             "calories": 295,
-            "fat": 7,
-            "saturatedFat": 2,
+            "fat": 27,
+            "saturatedFat": 7,
             "cholesterol": 12,
             "sodium": 254,
             "carbohydrates": 66,
@@ -16019,7 +16019,7 @@ const foodDatabase = {
             "calories": 231,
             "protein": 33,
             "carbs": 16,
-            "fat": 0
+            "fat": 23
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -16028,13 +16028,13 @@ const foodDatabase = {
         "ingredients": "110 g lamb, 1 piece bread, 1.5 cup cabbage, 1.8 cup kale, 70 g tomato, 1.9 cup parsley, 3 tbsps lemon juice, 2 tsps vinegar, 2 tsps olive oil, 1 tsp garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 231,
-            "fat": 0,
+            "fat": 23,
             "saturatedFat": 0,
             "cholesterol": 37,
             "sodium": 297,
             "carbohydrates": 16,
             "fiber": 11,
-            "sugar": 3,
+            "sugar": 0,
             "protein": 33
         }
     },
@@ -16046,7 +16046,7 @@ const foodDatabase = {
             "calories": 427,
             "protein": 33,
             "carbs": 48,
-            "fat": 13
+            "fat": 4
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -16055,8 +16055,8 @@ const foodDatabase = {
         "ingredients": "0.8 cup cod, 230 g spaghetti, 1.4 cup broccoli, 1.6 cup mushroom, 1.2 cup zucchini, 70 g cilantro, 1 tsp lime juice, 140 g curry paste, 1 tbsp olive oil, 1 tsp garlic, 1 tbsp onion",
         "detailedNutrition": {
             "calories": 427,
-            "fat": 13,
-            "saturatedFat": 4,
+            "fat": 4,
+            "saturatedFat": 13,
             "cholesterol": 89,
             "sodium": 232,
             "carbohydrates": 48,
@@ -16073,7 +16073,7 @@ const foodDatabase = {
             "calories": 357,
             "protein": 27,
             "carbs": 41,
-            "fat": 9
+            "fat": 17
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -16082,8 +16082,8 @@ const foodDatabase = {
         "ingredients": "70 g sardines, 1.9 cup spaghetti, 1.2 cup kale, 1.2 cup corn, 1.5 cup zucchini, 1.1 cup mint, 2 tsps paprika, 1 tsp vinegar, 1 tsp olive oil, 3 cloves garlic, 1.6 cup onion",
         "detailedNutrition": {
             "calories": 357,
-            "fat": 9,
-            "saturatedFat": 3,
+            "fat": 17,
+            "saturatedFat": 9,
             "cholesterol": 3,
             "sodium": 420,
             "carbohydrates": 41,
@@ -16100,7 +16100,7 @@ const foodDatabase = {
             "calories": 556,
             "protein": 35,
             "carbs": 71,
-            "fat": 3
+            "fat": 9
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -16109,8 +16109,8 @@ const foodDatabase = {
         "ingredients": "180 g cod, 1.1 cup quinoa, 140 g broccoli, 1.6 cup cucumber, 0.7 cup lettuce, 110 g cilantro, 3 tbsps soy sauce, 1 tsp cumin, 3 tbsps olive oil, 1 clove garlic, 2 tbsps onion",
         "detailedNutrition": {
             "calories": 556,
-            "fat": 3,
-            "saturatedFat": 1,
+            "fat": 9,
+            "saturatedFat": 3,
             "cholesterol": 92,
             "sodium": 395,
             "carbohydrates": 71,
@@ -16127,7 +16127,7 @@ const foodDatabase = {
             "calories": 424,
             "protein": 9,
             "carbs": 23,
-            "fat": 6
+            "fat": 19
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -16136,8 +16136,8 @@ const foodDatabase = {
         "ingredients": "1.1 cup salmon, 1.5 cup quinoa, 160 g broccoli, 1.8 cup zucchini, 170 g mushroom, 1.1 cup parsley, 2 tsps soy sauce, 2 tsps chili flakes, 1 tsp olive oil, 1 tsp garlic, 0.9 cup onion",
         "detailedNutrition": {
             "calories": 424,
-            "fat": 6,
-            "saturatedFat": 2,
+            "fat": 19,
+            "saturatedFat": 6,
             "cholesterol": 14,
             "sodium": 492,
             "carbohydrates": 23,
@@ -16164,7 +16164,7 @@ const foodDatabase = {
         "detailedNutrition": {
             "calories": 306,
             "fat": 15,
-            "saturatedFat": 5,
+            "saturatedFat": 15,
             "cholesterol": 17,
             "sodium": 290,
             "carbohydrates": 45,
@@ -16181,7 +16181,7 @@ const foodDatabase = {
             "calories": 511,
             "protein": 37,
             "carbs": 29,
-            "fat": 8
+            "fat": 15
         },
         "prepTime": "15-20 minutes",
         "difficulty": "Easy",
@@ -16190,8 +16190,8 @@ const foodDatabase = {
         "ingredients": "1.4 cup salmon, 80 g couscous, 170 g zucchini, 0.7 cup carrot, 1.9 cup tomato, 1.6 cup mint, 1 clove ginger, 1 tsp chili flakes, 2 tbsps olive oil, 2 tsps garlic, 1.4 cup onion",
         "detailedNutrition": {
             "calories": 511,
-            "fat": 8,
-            "saturatedFat": 2,
+            "fat": 15,
+            "saturatedFat": 8,
             "cholesterol": 63,
             "sodium": 704,
             "carbohydrates": 29,

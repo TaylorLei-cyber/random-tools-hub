@@ -11,10 +11,10 @@ const parseNutrition = (nutritionStr) => {
         const trimmed = part.trim();
         if (trimmed.includes('Calories:')) {
             nutrition.calories = parseInt(trimmed.split(':')[1].replace('kcal', '').trim());
-        } else if (trimmed.includes('Fat:')) {
-            nutrition.fat = parseInt(trimmed.split(':')[1].replace('g', '').trim());
         } else if (trimmed.includes('Saturated Fat:')) {
             nutrition.saturatedFat = parseInt(trimmed.split(':')[1].replace('g', '').trim());
+        } else if (trimmed.includes('Fat:')) {
+            nutrition.fat = parseInt(trimmed.split(':')[1].replace('g', '').trim());
         } else if (trimmed.includes('Cholesterol:')) {
             nutrition.cholesterol = parseInt(trimmed.split(':')[1].replace('mg', '').trim());
         } else if (trimmed.includes('Sodium:')) {
@@ -142,12 +142,12 @@ try {
             detailedNutrition: {
                 calories: parsedNutrition.calories,
                 fat: parsedNutrition.fat,
-                saturatedFat: parsedNutrition.saturatedFat || Math.round(parsedNutrition.fat * 0.3),
-                cholesterol: parsedNutrition.cholesterol || 30,
-                sodium: parsedNutrition.sodium || 300,
+                saturatedFat: parsedNutrition.saturatedFat,
+                cholesterol: parsedNutrition.cholesterol,
+                sodium: parsedNutrition.sodium,
                 carbohydrates: parsedNutrition.carbs,
-                fiber: parsedNutrition.fiber || Math.floor(parsedNutrition.carbs * 0.1),
-                sugar: parsedNutrition.sugar || Math.floor(parsedNutrition.carbs * 0.2),
+                fiber: parsedNutrition.fiber,
+                sugar: parsedNutrition.sugar,
                 protein: parsedNutrition.protein
             }
         };
