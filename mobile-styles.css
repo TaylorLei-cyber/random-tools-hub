@@ -378,6 +378,15 @@
         order: 2 !important;
     }
     
+    /* 更具体的选择器，确保第一个feature的文字容器在上 */
+    .content-section .section-content > div:first-child > div:nth-child(2) {
+        order: 1 !important;
+    }
+    
+    .content-section .section-content > div:first-child > div:nth-child(1) {
+        order: 2 !important;
+    }
+    
     .content-section .section-content img {
         width: 100%;
         height: auto;
