@@ -33,6 +33,7 @@
 
 .content-section:first-of-type {
     padding-top: 0;
+    padding-bottom: 80px;
 }
 
 .content-section.gray {
