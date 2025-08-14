@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 如果是下拉菜单内的链接，只关闭菜单，不阻止默认行为
             if (this.closest('.dropdown-menu')) {
-                // 关闭所有菜单
+            // 关闭所有菜单
                 if (navMenu) navMenu.classList.remove('active');
                 if (mobileNavToggle) mobileNavToggle.classList.remove('active');
                 if (dropdown) dropdown.classList.remove('active');

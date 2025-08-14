@@ -74,7 +74,7 @@
     },
     {
       "source": "/random-food-generator",
-      "destination": "/random-food.html"
+      "destination": "/random-food-new.html"
     },
     {
       "source": "/random-travel-generator",

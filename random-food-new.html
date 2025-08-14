@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍕 Random Food Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="recipe-styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="/" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/MyGenTool.svg" alt="MyGenTool" style="height: 35px; width: auto;">
+                    <span style="margin-left: 10px; font-weight: 600; font-size: 1.2rem; color: #333;">MyGenTool</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/random-bible-verse-generator">Random Bible Verse Generator</a></li>
+                    <li><a href="/random-animal-generator">Random Animal Generator</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">All Tools</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/random-number-generator">Random Number Generator</a></li>
+                            <li><a href="/random-color-generator">Random Color Generator</a></li>
+                            <li><a href="/random-password-generator">Random Password Generator</a></li>
+                            <li><a href="random-food-new.html" class="active">Random Food Generator</a></li>
+                            <li><a href="/random-travel-generator">Random Travel Generator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="generator-section">
+                <h1 class="generator-title">🍕 Random Food Generator</h1>
+                <p class="generator-description">
+                    Craving something different but can't decide? Explore a universe of flavors with our Random Food Generator. 
+                    From local favorites to exotic cuisine, our Food Randomizer offers a taste of the world! 
+                    Each suggestion could be your next culinary obsession.
+                </p>
+
+                <div class="controls-section">
+                    <div class="control-group">
+                        <label for="mealType" class="control-label">Choose Meal Type:</label>
+                        <select id="mealType" class="control-select">
+                            <option value="random">Random</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="lifestyle" class="control-label">Choose Lifestyle (Veg/Non-veg):</label>
+                        <select id="lifestyle" class="control-select">
+                            <option value="random">Random</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="non-vegetarian">Non-Vegetarian</option>
+                        </select>
+                    </div>
+
+                    <button id="generateBtn" class="generate-btn" onclick="generateRandomFood()">Generate Food</button>
+                </div>
+
+                <div id="food-result" class="food-result"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="food-data.js"></script>
+    <script>
+        function generateRandomFood() {
+            const mealType = document.getElementById('mealType').value;
+            const lifestyle = document.getElementById('lifestyle').value;
+            
+            let availableFoods = Object.keys(foodDatabase);
+            
+            // 根据餐点类型过滤
+            if (mealType !== 'random') {
+                availableFoods = availableFoods.filter(food => 
+                    foodDatabase[food].mealType === mealType
+                );
+            }
+            
+            // 根据生活方式过滤
+            if (lifestyle !== 'random') {
+                availableFoods = availableFoods.filter(food => 
+                    foodDatabase[food].lifestyle === lifestyle
+                );
+            }
+            
+            if (availableFoods.length === 0) {
+                alert('No food options available for the selected criteria! Please try different options.');
+                return;
+            }
+            
+            const randomFood = availableFoods[Math.floor(Math.random() * availableFoods.length)];
+            const resultElement = document.getElementById('food-result');
+            
+            const foodInfo = foodDatabase[randomFood];
+            
+            // 生成配料列表
+            const ingredients = generateIngredients(randomFood, foodInfo);
+            
+            resultElement.innerHTML = `
+                <div class="food-result-card">
+                    <div class="food-header">
+                        <div class="food-info">
+                            <div class="food-name-result">${randomFood}</div>
+                            <div class="food-tags">
+                                <span class="food-tag">${getLifestyleName(foodInfo.lifestyle)}</span>
+                                <span class="food-tag">${getMealTypeName(foodInfo.mealType)}</span>
+                                <span class="food-tag">Prep ${foodInfo.prepTime}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-details">
+                        <div class="detail-section">
+                            <div class="detail-title ingredients">Ingredients</div>
+                            <ul class="ingredients-list">
+                                ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-title recipe">Recipe</div>
+                            <div class="recipe-instructions">
+                                ${foodInfo.recipe}
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-title nutrition">Nutrition (per serving)</div>
+                            <div class="nutrition-grid">
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label calories">Calories:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.calories} kcal</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label fat">Fat Content:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.fat}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Saturated Fat:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.saturatedFat}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Cholesterol:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.cholesterol}mg</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Sodium:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.sodium}mg</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Carbohydrates:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.carbohydrates}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Fiber:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.fiber}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Sugar:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.sugar}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Protein:</span>
+                                    <span class="nutrition-value">${foodInfo.detailedNutrition.protein}g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function generateIngredients(foodName, foodInfo) {
+            // 使用真实的配料数据
+            if (foodInfo.ingredients) {
+                // 将配料字符串分割成数组
+                return foodInfo.ingredients.split(', ').map(ingredient => ingredient.trim());
+            }
+            
+            // 如果没有配料数据，使用默认配料
+            const baseIngredients = {
+                'breakfast': ['2 cups flour', '1 cup milk', '2 eggs', '1 tbsp sugar', '1 tsp salt'],
+                'lunch': ['1 cup rice', '2 cups vegetables', '1 tbsp oil', '1 tsp spices', '1 cup broth'],
+                'dinner': ['1 lb protein', '2 cups vegetables', '1 cup grains', '1 tbsp oil', '1 tsp herbs']
+            };
+            
+            const mealIngredients = baseIngredients[foodInfo.mealType] || baseIngredients['dinner'];
+            return mealIngredients;
+        }
+
+        function getMealTypeName(mealType) {
+            const mealTypeNames = {
+                'breakfast': 'Breakfast',
+                'lunch': 'Lunch',
+                'dinner': 'Dinner'
+            };
+            return mealTypeNames[mealType] || 'Unknown Meal Type';
+        }
+
+        function getLifestyleName(lifestyle) {
+            const lifestyleNames = {
+                'vegetarian': 'Vegetarian',
+                'non-vegetarian': 'Non-Vegetarian'
+            };
+            return lifestyleNames[lifestyle] || 'Unknown Lifestyle';
+        }
+
+        // 移动端下拉菜单功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 食物生成器特定的JavaScript代码
+        });
+    </script>
+    <script src="mobile-nav.js"></script>
+</body>
+</html> 
