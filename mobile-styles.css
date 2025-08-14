@@ -182,6 +182,7 @@
     .generator-section {
         padding: 30px 15px;
         margin-bottom: 30px;
+        border-radius: 0 !important; /* 确保移动端也没有圆角 */
     }
     
     .generator-title {
