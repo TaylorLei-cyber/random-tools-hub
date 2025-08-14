@@ -186,45 +186,44 @@
             <div class="faq-content">
                 <div class="faq-item">
                     <div class="faq-question" style="position: relative; cursor: pointer;">
-                        How does the Random Food Generator work?
-                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px; transition: transform 0.3s ease;">▼</div>
+                        How does the Random Food Generator work?▼
                     </div>
                     <div class="faq-answer">Our generator uses a carefully curated database of 600 food items from various cuisines and meal types. When you click the generate button, it randomly selects a food item based on your chosen meal type and dietary preferences, providing you with complete recipe information including ingredients, instructions, and nutrition facts.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" style="position: relative; cursor: pointer;">
-                        Is it free to use the Random Food Generator?
-                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px; transition: transform 0.3s ease;">▼</div>
+                        Is it free to use the Random Food Generator?▼
                     </div>
                     <div class="faq-answer">Yes, our Random Food Generator is completely free to use. No registration or payment required.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" style="position: relative; cursor: pointer;">
-                        What types of food can I expect to see?
-                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px; transition: transform 0.3s ease;">▼</div>
-                    </div>
-                    <div class="faq-answer">Our database includes a wide variety of food options covering different categories: Breakfast items (cereals, eggs, smoothies, etc.), Lunch options (salads, sandwiches, soups, etc.), Dinner recipes (pasta, rice dishes, meat dishes, etc.), Vegetarian and non-vegetarian options, Various cuisines and cooking styles.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" style="position: relative; cursor: pointer;">
-                        Can I use this tool for meal planning?
-                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px; transition: transform 0.3s ease;">▼</div>
+                        Can I use this tool for meal planning?▼
                     </div>
                     <div class="faq-answer">Absolutely! Our tool is perfect for meal planning, weekly menu creation, or finding inspiration for your next grocery shopping trip. Many users find it helpful for breaking out of cooking ruts and discovering new recipes.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" style="position: relative; cursor: pointer;">
-                        How many times can I generate food?
-                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px; transition: transform 0.3s ease;">▼</div>
+                        What types of food can I expect to see?▼
                     </div>
-                    <div class="faq-answer">You can generate food as many times as you want! There's no limit to how many times you can use our generator.</div>
+                    <div class="faq-answer">Our database includes a wide variety of food options covering different categories:
+* Breakfast items (cereals, eggs, smoothies, etc.)
+* Lunch options (salads, sandwiches, soups, etc.)
+* Dinner recipes (pasta, rice dishes, meat dishes, etc.)
+* Vegetarian and non-vegetarian options
+* Various cuisines and cooking styles</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" style="position: relative; cursor: pointer;">
-                        Are the recipes suitable for beginners?
-                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666; font-size: 12px; transition: transform 0.3s ease;">▼</div>
+                        Can I share recipes with others?▼
                     </div>
-                    <div class="faq-answer">Yes! Our recipes include detailed step-by-step instructions and ingredient lists with precise quantities, making them perfect for cooks of all skill levels, from beginners to experienced chefs.</div>
+                    <div class="faq-answer">Yes! You're encouraged to share delicious recipes with friends, family, or your cooking community. Our recipes are meant to be shared and can provide inspiration and enjoyment to others.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" style="position: relative; cursor: pointer;">
+                        How many times can I generate food?▼
+                    </div>
+                    <div class="faq-answer">You can generate food as many times as you want! There's no limit to how many times you can use our generator.</div>
                 </div>
             </div>
         </div>
@@ -396,7 +395,6 @@
             const faqItems = document.querySelectorAll('.faq-item');
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
-                const arrow = question.querySelector('div');
                 
                 question.addEventListener('click', () => {
                     const isActive = item.classList.contains('active');
@@ -404,22 +402,18 @@
                     // Close all other FAQ items
                     faqItems.forEach(otherItem => {
                         otherItem.classList.remove('active');
-                        const otherArrow = otherItem.querySelector('.faq-question div');
-                        if (otherArrow) {
-                            otherArrow.style.transform = 'translateY(-50%) rotate(0deg)';
+                        const otherQuestion = otherItem.querySelector('.faq-question');
+                        if (otherQuestion) {
+                            otherQuestion.innerHTML = otherQuestion.innerHTML.replace('▲', '▼');
                         }
                     });
                     
                     // Toggle current item
                     if (!isActive) {
                         item.classList.add('active');
-                        if (arrow) {
-                            arrow.style.transform = 'translateY(-50%) rotate(180deg)';
-                        }
+                        question.innerHTML = question.innerHTML.replace('▼', '▲');
                     } else {
-                        if (arrow) {
-                            arrow.style.transform = 'translateY(-50%) rotate(0deg)';
-                        }
+                        question.innerHTML = question.innerHTML.replace('▲', '▼');
                     }
                 });
             });
