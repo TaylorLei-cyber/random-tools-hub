@@ -322,6 +322,14 @@
         margin-top: 25px;
     }
     
+    .content-section.gray .section-content > div > div:first-child {
+        order: 1;
+    }
+    
+    .content-section.gray .section-content > div > div:last-child {
+        order: 2;
+    }
+    
     .content-section.gray .section-content img {
         width: 100%;
         height: auto;
@@ -335,6 +343,14 @@
         flex-direction: column;
         gap: 25px;
         margin-bottom: 40px;
+    }
+    
+    .content-section .section-content > div > div:first-child {
+        order: 1;
+    }
+    
+    .content-section .section-content > div > div:last-child {
+        order: 2;
     }
     
     .content-section .section-content img {
