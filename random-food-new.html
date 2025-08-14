@@ -277,7 +277,7 @@
             }
             
             if (dietType !== 'random') {
-                filteredFoods = filteredFoods.filter(food => food.dietType === dietType);
+                filteredFoods = filteredFoods.filter(food => food.lifestyle === dietType);
             }
             
             if (filteredFoods.length === 0) {
@@ -293,7 +293,7 @@
                 <div class="food-result-card" style="background: #1a1a1a; border-radius: 16px; padding: 25px; margin: 20px 0; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border: 3px solid #ffd700; color: white;">
                     <div class="food-header" style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 25px;">
                         <div class="food-info" style="flex: 1;">
-                            <h2 class="food-name-result" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 15px; line-height: 1.2; text-align: center;">${randomFood.name}</h2>
+                            <h2 class="food-name-result" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 15px; line-height: 1.2; text-align: center;">${Object.keys(foodDatabase).find(key => foodDatabase[key] === randomFood)}</h2>
                             <div class="food-tags" style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 15px; justify-content: center;">
                                 <span class="food-tag" style="background: #333; color: #ccc; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px;">
                                     <span style="width: 8px; height: 8px; border-radius: 50%; background: #ffd700; display: inline-block;"></span>
@@ -301,7 +301,7 @@
                                 </span>
                                 <span class="food-tag" style="background: #333; color: #ccc; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px;">
                                     <span style="width: 8px; height: 8px; border-radius: 50%; background: #ffd700; display: inline-block;"></span>
-                                    ${randomFood.dietType}
+                                    ${randomFood.lifestyle}
                                 </span>
                             </div>
                         </div>
