@@ -345,12 +345,28 @@
         margin-bottom: 40px;
     }
     
+    /* 确保所有feature的文字在上，图片在下 */
     .content-section .section-content > div > div:first-child {
-        order: 1;
+        order: 1 !important;
     }
     
     .content-section .section-content > div > div:last-child {
-        order: 2;
+        order: 2 !important;
+    }
+    
+    /* 针对每个feature的具体布局 */
+    .content-section .section-content > div:nth-child(1) > div:first-child,
+    .content-section .section-content > div:nth-child(2) > div:first-child,
+    .content-section .section-content > div:nth-child(3) > div:first-child,
+    .content-section .section-content > div:nth-child(4) > div:first-child {
+        order: 1 !important;
+    }
+    
+    .content-section .section-content > div:nth-child(1) > div:last-child,
+    .content-section .section-content > div:nth-child(2) > div:last-child,
+    .content-section .section-content > div:nth-child(3) > div:last-child,
+    .content-section .section-content > div:nth-child(4) > div:last-child {
+        order: 2 !important;
     }
     
     .content-section .section-content img {
