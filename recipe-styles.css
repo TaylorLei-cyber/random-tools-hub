@@ -84,8 +84,8 @@
 }
 
 .faq-list {
-    max-width: none !important;
-    margin: 0;
+    max-width: 850px !important;
+    margin: 0 auto;
 }
 
 .faq-item {
