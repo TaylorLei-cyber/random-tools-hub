@@ -1,0 +1,58 @@
+# 需要下载的食物图片列表
+# 请从 Unsplash 或其他免费图片网站下载以下图片
+
+## 中餐 (Chinese Food)
+chinese/kung-pao-chicken.jpg - 宫保鸡丁
+chinese/mapo-tofu.jpg - 麻婆豆腐
+chinese/sweet-sour-pork.jpg - 糖醋里脊
+chinese/boiled-fish.jpg - 水煮鱼
+chinese/twice-cooked-pork.jpg - 回锅肉
+chinese/fish-fragrant-pork.jpg - 鱼香肉丝
+chinese/braised-pork.jpg - 红烧肉
+chinese/xiaolongbao.jpg - 小笼包
+chinese/zhajiang-noodles.jpg - 炸酱面
+chinese/lanzhou-noodles.jpg - 兰州拉面
+chinese/chongqing-hotpot.jpg - 重庆火锅
+chinese/beijing-duck.jpg - 北京烤鸭
+chinese/white-cut-chicken.jpg - 白切鸡
+chinese/char-siu-bao.jpg - 叉烧包
+chinese/fried-rice.jpg - 炒饭
+chinese/sour-fish.jpg - 酸菜鱼
+
+## 西餐 (Western Food)
+western/spaghetti.jpg - 意大利面
+western/pizza.jpg - 披萨
+western/hamburger.jpg - 汉堡
+western/steak.jpg - 牛排
+western/sandwich.jpg - 三明治
+western/salad.jpg - 沙拉
+western/sushi.jpg - 寿司
+western/taco.jpg - 墨西哥卷饼
+
+## 甜点 (Dessert)
+dessert/tiramisu.jpg - 提拉米苏
+dessert/macaron.jpg - 马卡龙
+dessert/cheesecake.jpg - 芝士蛋糕
+dessert/chocolate-mousse.jpg - 巧克力慕斯
+dessert/ice-cream.jpg - 冰淇淋
+dessert/pudding.jpg - 布丁
+dessert/egg-tart.jpg - 蛋挞
+dessert/cream-puff.jpg - 泡芙
+
+## 饮品 (Drinks)
+drinks/bubble-tea.jpg - 珍珠奶茶
+drinks/latte.jpg - 拿铁咖啡
+drinks/matcha-latte.jpg - 抹茶拿铁
+drinks/lemonade.jpg - 柠檬水
+drinks/juice.jpg - 果汁
+drinks/cola.jpg - 可乐
+drinks/beer.jpg - 啤酒
+drinks/red-wine.jpg - 红酒
+
+# 下载说明：
+# 1. 访问 https://unsplash.com/
+# 2. 搜索对应的食物名称（如 "kung pao chicken"）
+# 3. 选择高质量图片
+# 4. 下载并重命名为对应的文件名
+# 5. 建议图片尺寸：400x300 像素
+# 6. 文件格式：JPG 或 PNG 

@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 🍕 Random Food Generator - Random Food Generator</title>
-    <script>
-        // Redirect to the new food generator page
-        window.location.href = 'random-food-new.html';
-    </script>
+    <title>🍕 Random Food Generator - Random Food Generator</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Navigation bar styles */
@@ -341,6 +337,11 @@
                 gap: 15px;
             }
             
+            .food-icon-result {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
             
             .food-name-result {
                 font-size: 1.5rem;
@@ -588,6 +589,15 @@
             margin-bottom: 25px;
         }
         
+        .food-icon-result {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            border: 3px solid #ffd700;
+            flex-shrink: 0;
+            object-fit: cover;
+            background: #2a2a2a;
+        }
         
         .food-info {
             flex: 1;
@@ -745,6 +755,11 @@
                 gap: 15px;
             }
             
+            .food-icon-result {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+            }
             
             .food-name-result {
                 font-size: 1.6rem;
@@ -780,7 +795,7 @@
                             <li><a href="/random-number-generator">Random Number Generator</a></li>
                             <li><a href="/random-color-generator">Random Color Generator</a></li>
                             <li><a href="/random-password-generator">Random Password Generator</a></li>
-                            <li><a href="/random-food-generator">🍕 Random Food Generator</a></li>
+                            <li><a href="/random-food-generator">Random Food Generator</a></li>
                             <li><a href="/random-travel-generator">Random Travel Generator</a></li>
                         </ul>
                     </li>
@@ -799,7 +814,7 @@
     <div class="single-page">
         <div class="main-content">
             <header>
-                <h1> 🍕 Random Food Generator</h1>
+                <h1>🍕 Random Food Generator</h1>
                 <p>Discover food, randomly select your next meal</p>
             </header>
             
@@ -861,7 +876,7 @@
                 nutrition: { calories: 320, protein: 28, carbs: 15, fat: 18 },
                 prepTime: '25 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food-webp/chinese/kung-pao-chicken.webp'
             },
             'Mapo Tofu': { 
                 mealType: 'dinner', 
@@ -870,7 +885,7 @@
                 nutrition: { calories: 180, protein: 12, carbs: 8, fat: 12 },
                 prepTime: '20 minutes',
                 difficulty: 'Easy',
-                
+                image: 'images/food-webp/chinese/mapo-tofu.webp'
             },
             'Twice Cooked Pork': { 
                 mealType: 'dinner', 
@@ -879,7 +894,7 @@
                 nutrition: { calories: 350, protein: 25, carbs: 12, fat: 22 },
                 prepTime: '40 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food-webp/chinese/twice-cooked-pork.webp'
             },
             'Fish Fragrant Shredded Pork': { 
                 mealType: 'dinner', 
@@ -888,7 +903,7 @@
                 nutrition: { calories: 280, protein: 20, carbs: 10, fat: 18 },
                 prepTime: '30 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food-webp/chinese/kung-pao-chicken.webp'
             },
             'Braised Pork': { 
                 mealType: 'dinner', 
@@ -897,7 +912,7 @@
                 nutrition: { calories: 420, protein: 30, carbs: 8, fat: 28 },
                 prepTime: '90 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food-webp/chinese/braised-pork.webp'
             },
             'Chongqing Hot Pot': { 
                 mealType: 'dinner', 
@@ -906,7 +921,7 @@
                 nutrition: { calories: 280, protein: 25, carbs: 12, fat: 16 },
                 prepTime: '30 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food-webp/chinese/chongqing-hotpot.webp'
             },
             'Sour Fish': { 
                 mealType: 'dinner', 
@@ -915,7 +930,7 @@
                 nutrition: { calories: 240, protein: 28, carbs: 8, fat: 12 },
                 prepTime: '35 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food-webp/chinese/boiled-fish.webp'
             },
             'Hui Guo Rou': { 
                 mealType: 'dinner', 
@@ -924,7 +939,7 @@
                 nutrition: { calories: 380, protein: 22, carbs: 15, fat: 25 },
                 prepTime: '45 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/hui-guo-rou.jpg'
             },
             'Fu Qi Fei Pian': { 
                 mealType: 'dinner', 
@@ -933,7 +948,7 @@
                 nutrition: { calories: 220, protein: 18, carbs: 8, fat: 15 },
                 prepTime: '60 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/fu-qi-fei-pian.jpg'
             },
             'Kou Shui Ji': { 
                 mealType: 'dinner', 
@@ -942,7 +957,7 @@
                 nutrition: { calories: 200, protein: 25, carbs: 5, fat: 10 },
                 prepTime: '50 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/kou-shui-ji.jpg'
             },
             'Shui Zhu Yu': { 
                 mealType: 'dinner', 
@@ -951,7 +966,7 @@
                 nutrition: { calories: 220, protein: 35, carbs: 5, fat: 8 },
                 prepTime: '35 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/shui-zhu-yu.jpg'
             },
             'Gong Bao Ji Ding': { 
                 mealType: 'dinner', 
@@ -960,7 +975,7 @@
                 nutrition: { calories: 320, protein: 28, carbs: 15, fat: 18 },
                 prepTime: '25 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/gong-bao-ji-ding.jpg'
             },
             
             // 粤菜 (Cantonese Cuisine)
@@ -971,7 +986,7 @@
                 nutrition: { calories: 220, protein: 35, carbs: 2, fat: 8 },
                 prepTime: '60 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/white-cut-chicken.jpg'
             },
             'Char Siu Bao': { 
                 mealType: 'breakfast', 
@@ -980,7 +995,7 @@
                 nutrition: { calories: 180, protein: 10, carbs: 25, fat: 6 },
                 prepTime: '45 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/char-siu-bao.jpg'
             },
             'Xiaolongbao': { 
                 mealType: 'breakfast', 
@@ -989,7 +1004,7 @@
                 nutrition: { calories: 150, protein: 8, carbs: 20, fat: 5 },
                 prepTime: '60 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/xiaolongbao.jpg'
             },
             'Zhajiang Noodles': { 
                 mealType: 'lunch', 
@@ -998,7 +1013,7 @@
                 nutrition: { calories: 450, protein: 18, carbs: 65, fat: 15 },
                 prepTime: '25 minutes',
                 difficulty: 'Easy',
-                
+                image: 'images/food/chinese/zhajiang-noodles.jpg'
             },
             'Lanzhou Hand-Pulled Noodles': { 
                 mealType: 'lunch', 
@@ -1007,7 +1022,7 @@
                 nutrition: { calories: 380, protein: 15, carbs: 60, fat: 8 },
                 prepTime: '45 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/lanzhou-hand-pulled-noodles.jpg'
             },
             'Beijing Roast Duck': { 
                 mealType: 'dinner', 
@@ -1016,7 +1031,7 @@
                 nutrition: { calories: 350, protein: 32, carbs: 5, fat: 22 },
                 prepTime: '120 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/beijing-roast-duck.jpg'
             },
             'Fried Rice': { 
                 mealType: 'lunch', 
@@ -1025,7 +1040,7 @@
                 nutrition: { calories: 320, protein: 8, carbs: 55, fat: 8 },
                 prepTime: '20 minutes',
                 difficulty: 'Easy',
-                
+                image: 'images/food/chinese/fried-rice.jpg'
             },
             'Sweet and Sour Pork': { 
                 mealType: 'dinner', 
@@ -1034,7 +1049,7 @@
                 nutrition: { calories: 380, protein: 22, carbs: 25, fat: 20 },
                 prepTime: '30 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/sweet-and-sour-pork.jpg'
             },
             'Boiled Fish': { 
                 mealType: 'dinner', 
@@ -1043,7 +1058,7 @@
                 nutrition: { calories: 220, protein: 35, carbs: 5, fat: 8 },
                 prepTime: '35 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/boiled-fish.jpg'
             },
             
             // 新增粤菜
@@ -1054,7 +1069,7 @@
                 nutrition: { calories: 120, protein: 8, carbs: 15, fat: 4 },
                 prepTime: '40 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/siu-mai.jpg'
             },
             'Har Gow': { 
                 mealType: 'breakfast', 
@@ -1063,7 +1078,7 @@
                 nutrition: { calories: 100, protein: 6, carbs: 18, fat: 2 },
                 prepTime: '50 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/har-gow.jpg'
             },
             'Dim Sum': { 
                 mealType: 'breakfast', 
@@ -1072,7 +1087,7 @@
                 nutrition: { calories: 200, protein: 12, carbs: 25, fat: 8 },
                 prepTime: '90 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/dim-sum.jpg'
             },
             'Wonton Soup': { 
                 mealType: 'lunch', 
@@ -1081,7 +1096,7 @@
                 nutrition: { calories: 180, protein: 15, carbs: 12, fat: 8 },
                 prepTime: '35 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/wonton-soup.jpg'
             },
             'BBQ Pork': { 
                 mealType: 'dinner', 
@@ -1090,7 +1105,7 @@
                 nutrition: { calories: 280, protein: 25, carbs: 8, fat: 18 },
                 prepTime: '120 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/bbq-pork.jpg'
             },
             
             // 湘菜 (Hunan Cuisine)
@@ -1101,7 +1116,7 @@
                 nutrition: { calories: 260, protein: 28, carbs: 8, fat: 15 },
                 prepTime: '45 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/dong-an-chicken.jpg'
             },
             'Stinky Tofu': { 
                 mealType: 'snack', 
@@ -1110,7 +1125,7 @@
                 nutrition: { calories: 150, protein: 10, carbs: 8, fat: 10 },
                 prepTime: '30 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/stinky-tofu.jpg'
             },
             'Spicy Crayfish': { 
                 mealType: 'dinner', 
@@ -1119,7 +1134,7 @@
                 nutrition: { calories: 180, protein: 20, carbs: 5, fat: 8 },
                 prepTime: '40 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/spicy-crayfish.jpg'
             },
             'Hunan Beef': { 
                 mealType: 'dinner', 
@@ -1128,7 +1143,7 @@
                 nutrition: { calories: 320, protein: 30, carbs: 10, fat: 20 },
                 prepTime: '35 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/hunan-beef.jpg'
             },
             
             // 鲁菜 (Shandong Cuisine)
@@ -1139,7 +1154,7 @@
                 nutrition: { calories: 280, protein: 25, carbs: 15, fat: 12 },
                 prepTime: '40 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/sweet-and-sour-fish.jpg'
             },
             'Dezhou Braised Chicken': { 
                 mealType: 'dinner', 
@@ -1148,7 +1163,7 @@
                 nutrition: { calories: 300, protein: 35, carbs: 5, fat: 18 },
                 prepTime: '90 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/dezhou-braised-chicken.jpg'
             },
             'Jiuzhuan Large Intestine': { 
                 mealType: 'dinner', 
@@ -1157,7 +1172,7 @@
                 nutrition: { calories: 350, protein: 20, carbs: 8, fat: 25 },
                 prepTime: '120 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/jiuzhuan-large-intestine.jpg'
             },
             
             // 苏菜 (Jiangsu Cuisine)
@@ -1168,7 +1183,7 @@
                 nutrition: { calories: 320, protein: 28, carbs: 12, fat: 18 },
                 prepTime: '60 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/squirrel-fish.jpg'
             },
             'Dongpo Pork': { 
                 mealType: 'dinner', 
@@ -1177,7 +1192,7 @@
                 nutrition: { calories: 450, protein: 25, carbs: 8, fat: 35 },
                 prepTime: '180 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/dongpo-pork.jpg'
             },
             'Hairy Crab': { 
                 mealType: 'dinner', 
@@ -1186,7 +1201,7 @@
                 nutrition: { calories: 180, protein: 20, carbs: 2, fat: 10 },
                 prepTime: '30 minutes',
                 difficulty: 'Easy',
-                
+                image: 'images/food/chinese/hairy-crab.jpg'
             },
             
             // 浙菜 (Zhejiang Cuisine)
@@ -1197,7 +1212,7 @@
                 nutrition: { calories: 220, protein: 30, carbs: 8, fat: 10 },
                 prepTime: '45 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/west-lake-fish.jpg'
             },
             'Longjing Shrimp': { 
                 mealType: 'dinner', 
@@ -1206,7 +1221,7 @@
                 nutrition: { calories: 180, protein: 25, carbs: 5, fat: 8 },
                 prepTime: '25 minutes',
                 difficulty: 'Easy',
-                
+                image: 'images/food/chinese/longjing-shrimp.jpg'
             },
             
             // 闽菜 (Fujian Cuisine)
@@ -1217,7 +1232,7 @@
                 nutrition: { calories: 500, protein: 35, carbs: 15, fat: 30 },
                 prepTime: '240 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/buddha-jumps-over-the-wall.jpg'
             },
             'Red Wine Chicken': { 
                 mealType: 'dinner', 
@@ -1226,7 +1241,7 @@
                 nutrition: { calories: 280, protein: 25, carbs: 8, fat: 18 },
                 prepTime: '60 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/red-wine-chicken.jpg'
             },
             
             // 徽菜 (Anhui Cuisine)
@@ -1237,7 +1252,7 @@
                 nutrition: { calories: 380, protein: 28, carbs: 10, fat: 25 },
                 prepTime: '120 minutes',
                 difficulty: 'Hard',
-                
+                image: 'images/food/chinese/hui-braised-pork.jpg'
             },
             
             // 其他中餐
@@ -1248,7 +1263,7 @@
                 nutrition: { calories: 120, protein: 8, carbs: 15, fat: 5 },
                 prepTime: '30 minutes',
                 difficulty: 'Easy',
-                
+                image: 'images/food/chinese/hot-and-sour-soup.jpg'
             },
             'Egg Drop Soup': { 
                 mealType: 'lunch', 
@@ -1257,7 +1272,7 @@
                 nutrition: { calories: 80, protein: 6, carbs: 8, fat: 3 },
                 prepTime: '15 minutes',
                 difficulty: 'Easy',
-                
+                image: 'images/food/chinese/egg-drop-soup.jpg'
             },
             'Spring Rolls': { 
                 mealType: 'appetizer', 
@@ -1266,7 +1281,7 @@
                 nutrition: { calories: 150, protein: 5, carbs: 20, fat: 6 },
                 prepTime: '25 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/spring-rolls.jpg'
             },
             'Dumplings': { 
                 mealType: 'dinner', 
@@ -1275,7 +1290,7 @@
                 nutrition: { calories: 200, protein: 12, carbs: 25, fat: 8 },
                 prepTime: '60 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/dumplings.jpg'
             },
             'Steamed Buns': { 
                 mealType: 'breakfast', 
@@ -1284,7 +1299,7 @@
                 nutrition: { calories: 120, protein: 4, carbs: 22, fat: 2 },
                 prepTime: '90 minutes',
                 difficulty: 'Medium',
-                
+                image: 'images/food/chinese/steamed-buns.jpg'
             },
             // 传统友好的早餐非素食选择
             'Classic Bacon and Eggs': {
@@ -1294,7 +1309,7 @@
                 nutrition: { calories: 380, protein: 28, carbs: 8, fat: 26 },
                 prepTime: '15 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥓'
             },
             'Sausage and Hash Browns': {
                 mealType: 'breakfast',
@@ -1303,7 +1318,7 @@
                 nutrition: { calories: 420, protein: 18, carbs: 32, fat: 28 },
                 prepTime: '20 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥔'
             },
             'Ham and Cheese Croissant': {
                 mealType: 'breakfast',
@@ -1312,7 +1327,7 @@
                 nutrition: { calories: 360, protein: 16, carbs: 32, fat: 20 },
                 prepTime: '8 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥐'
             },
             'Breakfast Sausage Links': {
                 mealType: 'breakfast',
@@ -1321,7 +1336,7 @@
                 nutrition: { calories: 280, protein: 20, carbs: 8, fat: 22 },
                 prepTime: '12 minutes',
                 difficulty: 'Easy',
-                
+                image: '🌭'
             },
             'Canadian Bacon Breakfast': {
                 mealType: 'breakfast',
@@ -1330,7 +1345,7 @@
                 nutrition: { calories: 320, protein: 24, carbs: 12, fat: 20 },
                 prepTime: '10 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥓'
             },
             'Pepperoni Breakfast Pizza': {
                 mealType: 'breakfast',
@@ -1339,7 +1354,7 @@
                 nutrition: { calories: 420, protein: 22, carbs: 38, fat: 24 },
                 prepTime: '25 minutes',
                 difficulty: 'Medium',
-                
+                image: '🍕'
             },
             'Breakfast Sausage Patty': {
                 mealType: 'breakfast',
@@ -1348,7 +1363,7 @@
                 nutrition: { calories: 240, protein: 18, carbs: 6, fat: 18 },
                 prepTime: '8 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥩'
             },
             'Prosciutto and Eggs': {
                 mealType: 'breakfast',
@@ -1357,7 +1372,7 @@
                 nutrition: { calories: 340, protein: 26, carbs: 6, fat: 24 },
                 prepTime: '12 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥓'
             },
             'Breakfast Sausage Roll': {
                 mealType: 'breakfast',
@@ -1366,7 +1381,7 @@
                 nutrition: { calories: 380, protein: 16, carbs: 35, fat: 22 },
                 prepTime: '15 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥖'
             },
             'Bacon Breakfast Burrito': {
                 mealType: 'breakfast',
@@ -1375,7 +1390,7 @@
                 nutrition: { calories: 420, protein: 24, carbs: 32, fat: 26 },
                 prepTime: '18 minutes',
                 difficulty: 'Medium',
-                
+                image: '🌯'
             },
             'Sausage Breakfast Casserole': {
                 mealType: 'breakfast',
@@ -1384,7 +1399,7 @@
                 nutrition: { calories: 380, protein: 22, carbs: 25, fat: 24 },
                 prepTime: '45 minutes',
                 difficulty: 'Medium',
-                
+                image: '🍳'
             },
             'Ham Breakfast Sandwich': {
                 mealType: 'breakfast',
@@ -1393,7 +1408,7 @@
                 nutrition: { calories: 360, protein: 20, carbs: 28, fat: 20 },
                 prepTime: '10 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥪'
             },
             'Bacon Breakfast Bowl': {
                 mealType: 'breakfast',
@@ -1402,7 +1417,7 @@
                 nutrition: { calories: 440, protein: 26, carbs: 28, fat: 30 },
                 prepTime: '20 minutes',
                 difficulty: 'Medium',
-                
+                image: '🥓'
             },
             'Sausage Breakfast Tacos': {
                 mealType: 'breakfast',
@@ -1411,7 +1426,7 @@
                 nutrition: { calories: 340, protein: 18, carbs: 25, fat: 20 },
                 prepTime: '15 minutes',
                 difficulty: 'Easy',
-                
+                image: '🌮'
             },
             'Bacon Breakfast Hash': {
                 mealType: 'breakfast',
@@ -1420,7 +1435,7 @@
                 nutrition: { calories: 400, protein: 20, carbs: 32, fat: 26 },
                 prepTime: '25 minutes',
                 difficulty: 'Medium',
-                
+                image: '🥓'
             },
             'Ham Breakfast Wrap': {
                 mealType: 'breakfast',
@@ -1429,7 +1444,7 @@
                 nutrition: { calories: 320, protein: 22, carbs: 25, fat: 18 },
                 prepTime: '12 minutes',
                 difficulty: 'Easy',
-                
+                image: '🌯'
             },
             'Sausage Breakfast Muffins': {
                 mealType: 'breakfast',
@@ -1438,7 +1453,7 @@
                 nutrition: { calories: 280, protein: 14, carbs: 28, fat: 16 },
                 prepTime: '30 minutes',
                 difficulty: 'Easy',
-                
+                image: '🧁'
             },
             'Bacon Breakfast Sandwich': {
                 mealType: 'breakfast',
@@ -1447,7 +1462,7 @@
                 nutrition: { calories: 380, protein: 24, carbs: 30, fat: 22 },
                 prepTime: '12 minutes',
                 difficulty: 'Easy',
-                
+                image: '🥪'
             },
             'Sausage Breakfast Skillet': {
                 mealType: 'breakfast',
@@ -1456,7 +1471,7 @@
                 nutrition: { calories: 460, protein: 26, carbs: 28, fat: 32 },
                 prepTime: '22 minutes',
                 difficulty: 'Medium',
-                
+                image: '🍳'
             },
         };
         
@@ -1497,6 +1512,7 @@
             resultElement.innerHTML = `
                 <div class="food-result-card">
                     <div class="food-header">
+                        <div class="food-icon-result">${foodInfo.image}</div>
                         <div class="food-info">
                             <div class="food-name-result">${randomFood}</div>
                             <div class="food-tags">

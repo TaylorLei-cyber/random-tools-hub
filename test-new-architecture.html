@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test New Food Generator Architecture</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; margin: 5px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .result { margin: 10px 0; padding: 10px; background: #f8f9fa; border-left: 4px solid #007bff; }
+        .count { font-weight: bold; color: #28a745; }
+    </style>
+</head>
+<body>
+    <h1>New Food Generator Architecture Test</h1>
+    
+    <div class="test-section">
+        <h2>Database Statistics</h2>
+        <button onclick="showDatabaseStats()">Show Database Statistics</button>
+        <div id="stats-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test Food Generation</h2>
+        <button onclick="testBreakfastVeg()">Test Breakfast Vegetarian</button>
+        <button onclick="testBreakfastNonVeg()">Test Breakfast Non-Vegetarian</button>
+        <button onclick="testLunchVeg()">Test Lunch Vegetarian</button>
+        <button onclick="testLunchNonVeg()">Test Lunch Non-Vegetarian</button>
+        <button onclick="testDinnerVeg()">Test Dinner Vegetarian</button>
+        <button onclick="testDinnerNonVeg()">Test Dinner Non-Vegetarian</button>
+        <div id="test-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test Multiple Generations</h2>
+        <button onclick="testMultipleGenerations()">Generate 10 Random Foods</button>
+        <div id="multiple-result" class="result"></div>
+    </div>
+
+    <script src="food-data.js"></script>
+    <script>
+        function showDatabaseStats() {
+            const stats = {
+                'Breakfast Vegetarian': 0,
+                'Breakfast Non-Vegetarian': 0,
+                'Lunch Vegetarian': 0,
+                'Lunch Non-Vegetarian': 0,
+                'Dinner Vegetarian': 0,
+                'Dinner Non-Vegetarian': 0
+            };
+            
+            Object.keys(foodDatabase).forEach(food => {
+                const info = foodDatabase[food];
+                const key = `${info.mealType.charAt(0).toUpperCase() + info.mealType.slice(1)} ${info.lifestyle.charAt(0).toUpperCase() + info.lifestyle.slice(1)}`;
+                stats[key]++;
+            });
+            
+            let html = '<h3>Food Database Statistics:</h3>';
+            Object.keys(stats).forEach(category => {
+                html += `<p><span class="count">${category}:</span> ${stats[category]} items</p>`;
+            });
+            
+            document.getElementById('stats-result').innerHTML = html;
+        }
+        
+        function testFoodGeneration(mealType, lifestyle) {
+            let availableFoods = Object.keys(foodDatabase).filter(food => 
+                foodDatabase[food].mealType === mealType && 
+                foodDatabase[food].lifestyle === lifestyle
+            );
+            
+            if (availableFoods.length === 0) {
+                return `No ${mealType} ${lifestyle} foods found!`;
+            }
+            
+            const randomFood = availableFoods[Math.floor(Math.random() * availableFoods.length)];
+            const foodInfo = foodDatabase[randomFood];
+            
+            return `
+                <strong>Generated Food:</strong> ${randomFood}<br>
+                <strong>Category:</strong> ${foodInfo.category}<br>
+                <strong>Prep Time:</strong> ${foodInfo.prepTime}<br>
+                <strong>Difficulty:</strong> ${foodInfo.difficulty}<br>
+                <strong>Calories:</strong> ${foodInfo.nutrition.calories} kcal<br>
+                <strong>Available Options:</strong> ${availableFoods.length} items
+            `;
+        }
+        
+        function testBreakfastVeg() {
+            const result = testFoodGeneration('breakfast', 'vegetarian');
+            document.getElementById('test-result').innerHTML = `<h3>Breakfast Vegetarian Test:</h3>${result}`;
+        }
+        
+        function testBreakfastNonVeg() {
+            const result = testFoodGeneration('breakfast', 'non-vegetarian');
+            document.getElementById('test-result').innerHTML = `<h3>Breakfast Non-Vegetarian Test:</h3>${result}`;
+        }
+        
+        function testLunchVeg() {
+            const result = testFoodGeneration('lunch', 'vegetarian');
+            document.getElementById('test-result').innerHTML = `<h3>Lunch Vegetarian Test:</h3>${result}`;
+        }
+        
+        function testLunchNonVeg() {
+            const result = testFoodGeneration('lunch', 'non-vegetarian');
+            document.getElementById('test-result').innerHTML = `<h3>Lunch Non-Vegetarian Test:</h3>${result}`;
+        }
+        
+        function testDinnerVeg() {
+            const result = testFoodGeneration('dinner', 'vegetarian');
+            document.getElementById('test-result').innerHTML = `<h3>Dinner Vegetarian Test:</h3>${result}`;
+        }
+        
+        function testDinnerNonVeg() {
+            const result = testFoodGeneration('dinner', 'non-vegetarian');
+            document.getElementById('test-result').innerHTML = `<h3>Dinner Non-Vegetarian Test:</h3>${result}`;
+        }
+        
+        function testMultipleGenerations() {
+            let html = '<h3>Multiple Food Generations:</h3>';
+            for (let i = 1; i <= 10; i++) {
+                const randomFood = Object.keys(foodDatabase)[Math.floor(Math.random() * Object.keys(foodDatabase).length)];
+                const foodInfo = foodDatabase[randomFood];
+                html += `<p><strong>${i}.</strong> ${randomFood} (${foodInfo.mealType} ${foodInfo.lifestyle})</p>`;
+            }
+            document.getElementById('multiple-result').innerHTML = html;
+        }
+        
+        // 页面加载时自动显示数据库统计
+        window.onload = function() {
+            showDatabaseStats();
+        };
+    </script>
+</body>
+</html> 

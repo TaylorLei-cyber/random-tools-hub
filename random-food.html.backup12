@@ -1,0 +1,4632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍕 Random Food Generator - Random Food Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Navigation bar styles */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+        
+        .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+            color: #666;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: auto;
+            right: 0;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-width: 280px;
+            max-width: 350px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+            padding: 8px 0;
+            margin: 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 16px;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+        
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        /* Mobile navigation styles */
+        .mobile-nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+        
+        .mobile-nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .mobile-nav-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .mobile-nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-nav-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            
+            .mobile-nav-toggle {
+                display: flex;
+            }
+            
+            .nav {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+            }
+            
+            /* 移动端导航 - 右对齐下拉菜单 */
+            .nav-menu {
+                display: none;
+                position: fixed;
+                top: 70px;
+                right: 20px;
+                width: 200px;
+                background: white;
+                border: 1px solid #e9ecef;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 10px 0;
+                z-index: 1000;
+                overflow-y: auto;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+                margin: 0;
+                text-align: left;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            
+            .nav-menu a {
+                display: block;
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-menu a:hover {
+                color: #667eea;
+                background: #f8f9fa;
+            }
+            
+            /* 移动端隐藏下拉菜单，直接显示所有工具链接 */
+            .dropdown {
+                width: 100%;
+                display: block;
+            }
+            
+            .dropdown-toggle {
+                display: block;
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+                text-decoration: none;
+                border-bottom: 1px solid #f0f0f0;
+                cursor: pointer;
+            }
+            
+            .dropdown-toggle::after {
+                content: '▼';
+                font-size: 0.8rem;
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+                color: #666;
+            }
+            
+            .dropdown.active .dropdown-toggle::after {
+                content: '▲';
+                transform: rotate(180deg);
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 0;
+                visibility: hidden;
+                transform: none;
+                background: #f8f9fa;
+                border: none;
+                box-shadow: none;
+                min-width: auto;
+                padding: 0;
+                margin: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                max-height: 300px;
+            }
+            
+            .dropdown-menu li {
+                border-bottom: 1px solid #f0f0f0;
+            }
+            
+            .dropdown-menu a {
+                padding: 12px 20px 12px 40px;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: #333;
+                border-bottom: none;
+                background: transparent;
+                margin: 0;
+                border-radius: 0;
+                transition: all 0.3s ease;
+            }
+            
+            .dropdown-menu a:hover {
+                background: #e9ecef;
+                color: #667eea;
+            }
+            
+            .single-page {
+                margin-top: 30px;
+            }
+            
+            .main-content {
+                width: 95%;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .food-display-large {
+                font-size: 3rem;
+                min-height: 60px;
+            }
+            
+            .generate-btn-large {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .options-selector {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+                max-width: 100%;
+            }
+            
+            .option-group {
+                width: 100%;
+            }
+            
+            .option-select {
+                max-width: 100%;
+            }
+            
+            .food-result-card {
+                padding: 20px;
+            }
+            
+            .food-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .food-icon-result {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            
+            .food-name-result {
+                font-size: 1.5rem;
+            }
+            
+            .food-details {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .option-group {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .option-label {
+                min-width: 100px;
+                text-align: left;
+            }
+            
+            .option-select {
+                min-width: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .nav-menu {
+                gap: 10px;
+                font-size: 0.85rem;
+            }
+            
+            .single-page {
+                margin-top: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header p {
+                font-size: 0.95rem;
+            }
+            
+            .food-name-large {
+                font-size: 1.4rem;
+                padding: 12px;
+            }
+            
+            .generate-btn-large {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+            
+            .back-btn {
+                top: 15px;
+                left: 15px;
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Reference RandomGenerate.io design style */
+        body {
+            background: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        html {
+            overflow-x: hidden;
+        }
+        
+        .single-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .main-content {
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        .food-display-large {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .food-icon-large {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        
+        .food-name-large {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            min-width: 200px;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .food-category {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        .generate-btn-large {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .generate-btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* 新增的选项样式 */
+        .options-selector {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .option-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+        
+        .option-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        
+        .option-select {
+            padding: 12px 16px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            color: #333;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+        
+        .option-select:hover {
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+        }
+        
+        .option-select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        /* 结果卡片样式 - 更新为食谱卡片设计 */
+        .food-result-card {
+            background: #1a1a1a;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border: 3px solid #ffd700;
+            color: white;
+        }
+        
+        .food-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .food-icon-result {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            border: 3px solid #ffd700;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background: #2a2a2a;
+        }
+        
+        .food-info {
+            flex: 1;
+        }
+        
+        .food-name-result {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .food-tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        
+        .food-tag {
+            background: #333;
+            color: #ccc;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .food-tag::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ffd700;
+        }
+        
+        .food-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .detail-section {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #444;
+        }
+        
+        .detail-title {
+            font-weight: 600;
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .detail-title::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .detail-title.ingredients::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffd700'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+        }
+        
+        .detail-title.nutrition::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffd700'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+        }
+        
+        .detail-content {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .ingredients-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .ingredients-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+            color: #ccc;
+        }
+        
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+        
+        .nutrition-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+            align-items: center;
+        }
+        
+        .nutrition-item:last-child {
+            border-bottom: none;
+        }
+        
+        .nutrition-label {
+            color: #ccc;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nutrition-label::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .nutrition-label.calories::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffd700'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E");
+        }
+        
+        .nutrition-label.fat::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffd700'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+        }
+        
+        .nutrition-value {
+            color: white;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .food-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .food-icon-result {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+            }
+            
+            .food-name-result {
+                font-size: 1.6rem;
+            }
+            
+            .food-details {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .food-tags {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="/" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/MyGenTool.svg" alt="MyGenTool" style="height: 35px; width: auto;">
+                    <span style="margin-left: 10px; font-weight: 600; font-size: 1.2rem; color: #333;">MyGenTool</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/random-bible-verse-generator">Random Bible Verse Generator</a></li>
+                    <li><a href="/random-animal-generator">Random Animal Generator</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">All Tools</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/random-number-generator">Random Number Generator</a></li>
+                            <li><a href="/random-color-generator">Random Color Generator</a></li>
+                            <li><a href="/random-password-generator">Random Password Generator</a></li>
+                            <li><a href="/random-food-generator">Random Food Generator</a></li>
+                            <li><a href="/random-travel-generator">Random Travel Generator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <a href="/" class="back-btn">← Back to Home</a>
+    
+    <div class="single-page">
+        <div class="main-content">
+            <header>
+                <h1>🍕 Random Food Generator</h1>
+                <p>Discover food, randomly select your next meal</p>
+            </header>
+            
+            <div class="options-selector">
+                <div class="option-group">
+                    <label for="mealType" class="option-label">Choose Meal Type:</label>
+                    <select class="option-select" id="mealType">
+                        <option value="random">Random</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snack">Snacks</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="lifestyle" class="option-label">Choose Lifestyle (Veg/Non-veg):</label>
+                    <select class="option-select" id="lifestyle">
+                        <option value="random">Random</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="non-vegetarian">Non-Vegetarian</option>
+                    </select>
+                </div>
+                </div>
+                
+            <button class="generate-btn-large" onclick="generateRandomFood()">Generate Food</button>
+                
+                <div class="food-display-large" id="food-result">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const foodList = {
+            chinese: [
+                'Kung Pao Chicken', 'Mapo Tofu', 'Sweet and Sour Pork', 'Boiled Fish', 'Twice Cooked Pork', 'Fish Fragrant Shredded Pork', 'Braised Pork', 'Xiaolongbao',
+                'Zhajiang Noodles', 'Lanzhou Hand-Pulled Noodles', 'Chongqing Hot Pot', 'Beijing Roast Duck', 'White Cut Chicken', 'Char Siu Bao', 'Fried Rice', 'Sour Fish'
+            ],
+            western: [
+                'Spaghetti', 'Pizza', 'Hamburger', 'Steak', 'Sandwich', 'Salad', 'Sushi', 'Taco',
+                'Escargot', 'Paella', 'Greek Salad', 'German Pork Knuckle', 'Swiss Cheese Fondue', 'Fish and Chips'
+            ],
+            dessert: [
+                'Tiramisu', 'Macaron', 'Cheesecake', 'Chocolate Mousse', 'Ice Cream', 'Pudding', 'Egg Tart', 'Cream Puff',
+                'Mille Crepe Cake', 'Mousse Cake', 'Souffle', 'Crepe', 'Waffle', 'Muffin'
+            ],
+            drink: [
+                'Bubble Tea', 'Latte', 'Matcha Latte', 'Lemonade', 'Juice', 'Cola', 'Beer', 'Red Wine',
+                'Cocktail', 'Hot Chocolate', 'Green Tea', 'Black Tea', 'Flower Tea', 'Soy Milk'
+            ]
+        };
+        
+        // 扩展食物数据库，添加餐点类型和生活方式信息
+        const foodDatabase = {
+            // 川菜 (Sichuan Cuisine)
+            'Kung Pao Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 28, carbs: 15, fat: 18 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🍙'
+            },
+            'Mapo Tofu': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 12, carbs: 8, fat: 12 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🧈'
+            },
+            'Twice Cooked Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 350, protein: 25, carbs: 12, fat: 22 },
+                prepTime: '40 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Fish Fragrant Shredded Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 20, carbs: 10, fat: 18 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Braised Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 420, protein: 30, carbs: 8, fat: 28 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Chongqing Hot Pot': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 25, carbs: 12, fat: 16 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍲'
+            },
+            'Sour Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 240, protein: 28, carbs: 8, fat: 12 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Hui Guo Rou': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 22, carbs: 15, fat: 25 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Fu Qi Fei Pian': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 18, carbs: 8, fat: 15 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            'Kou Shui Ji': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 25, carbs: 5, fat: 10 },
+                prepTime: '50 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Shui Zhu Yu': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 35, carbs: 5, fat: 8 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Gong Bao Ji Ding': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 28, carbs: 15, fat: 18 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            
+            // 粤菜 (Cantonese Cuisine)
+            'White Cut Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 35, carbs: 2, fat: 8 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Char Siu Bao': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 10, carbs: 25, fat: 6 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Xiaolongbao': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 150, protein: 8, carbs: 20, fat: 5 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard',
+                image: '🍙'
+            },
+            'Zhajiang Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 450, protein: 18, carbs: 65, fat: 15 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Lanzhou Hand-Pulled Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 15, carbs: 60, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Hard',
+                image: '🍜'
+            },
+            'Beijing Roast Duck': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 350, protein: 32, carbs: 5, fat: 22 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🦆'
+            },
+            'Fried Rice': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 8, carbs: 55, fat: 8 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Sweet and Sour Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 22, carbs: 25, fat: 20 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Boiled Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 35, carbs: 5, fat: 8 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            
+            // 新增粤菜
+            'Siu Mai': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 8, carbs: 15, fat: 4 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Har Gow': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 100, protein: 6, carbs: 18, fat: 2 },
+                prepTime: '50 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            'Dim Sum': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 12, carbs: 25, fat: 8 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            'Wonton Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 15, carbs: 12, fat: 8 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🥣'
+            },
+            'BBQ Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 25, carbs: 8, fat: 18 },
+                prepTime: '120 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            
+            // 湘菜 (Hunan Cuisine)
+            'Dong\'an Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 260, protein: 28, carbs: 8, fat: 15 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Stinky Tofu': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 150, protein: 10, carbs: 8, fat: 10 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🧈'
+            },
+            'Spicy Crayfish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 20, carbs: 5, fat: 8 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Hunan Beef': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 30, carbs: 10, fat: 20 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            
+            // 鲁菜 (Shandong Cuisine)
+            'Sweet and Sour Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 25, carbs: 15, fat: 12 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Dezhou Braised Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 300, protein: 35, carbs: 5, fat: 18 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            'Jiuzhuan Large Intestine': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 350, protein: 20, carbs: 8, fat: 25 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            
+            // 苏菜 (Jiangsu Cuisine)
+            'Squirrel Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 28, carbs: 12, fat: 18 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard',
+                image: '🐟'
+            },
+            'Dongpo Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 450, protein: 25, carbs: 8, fat: 35 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Hairy Crab': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 20, carbs: 2, fat: 10 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🦀'
+            },
+            
+            // 浙菜 (Zhejiang Cuisine)
+            'West Lake Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 30, carbs: 8, fat: 10 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Longjing Shrimp': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 25, carbs: 5, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🐟'
+            },
+            
+            // 闽菜 (Fujian Cuisine)
+            'Buddha Jumps Over the Wall': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 500, protein: 35, carbs: 15, fat: 30 },
+                prepTime: '240 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            'Red Wine Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 25, carbs: 8, fat: 18 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            
+            // 徽菜 (Anhui Cuisine)
+            'Hui Braised Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 28, carbs: 10, fat: 25 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            
+            // 其他中餐
+            'Hot and Sour Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 8, carbs: 15, fat: 5 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Egg Drop Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 80, protein: 6, carbs: 8, fat: 3 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Spring Rolls': { 
+                mealType: 'appetizer', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 150, protein: 5, carbs: 20, fat: 6 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🌯'
+            },
+            'Dumplings': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 12, carbs: 25, fat: 8 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Steamed Buns': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 4, carbs: 22, fat: 2 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            
+            // 西餐
+            'Pizza': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 8, carbs: 35, fat: 4 },
+                prepTime: '45 minutes',
+                difficulty: 'Hard',
+                image: '🍕'
+            },
+            'Hamburger': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 8, carbs: 25, fat: 12 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍔'
+            },
+            'Spaghetti': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 12, carbs: 55, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍝'
+            },
+            'Steak': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 300, protein: 35, carbs: 20, fat: 25 },
+                prepTime: '150 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Sandwich': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 8, carbs: 25, fat: 12 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥪'
+            },
+            'Salad': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 150, protein: 6, carbs: 20, fat: 8 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥗'
+            },
+            'Sushi': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 8, carbs: 35, fat: 4 },
+                prepTime: '45 minutes',
+                difficulty: 'Hard',
+                image: '🍣'
+            },
+            'Taco': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 8, carbs: 25, fat: 12 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🌮'
+            },
+            
+            // 甜点
+            'Tiramisu': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 350, protein: 8, carbs: 35, fat: 20 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍰'
+            },
+            'Macaron': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 4, carbs: 45, fat: 10 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍬'
+            },
+            'Cheesecake': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 8, carbs: 25, fat: 12 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🧀'
+            },
+            'Chocolate Mousse': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 200, protein: 8, carbs: 25, fat: 12 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🍫'
+            },
+            'Ice Cream': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 220, protein: 8, carbs: 35, fat: 6 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🍦'
+            },
+            'Pudding': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 180, protein: 8, carbs: 25, fat: 8 },
+                prepTime: '480 minutes',
+                difficulty: 'Easy',
+                image: '🍮'
+            },
+            'Egg Tart': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 180, protein: 8, carbs: 25, fat: 8 },
+                prepTime: '480 minutes',
+                difficulty: 'Easy',
+                image: '🥧'
+            },
+            'Cream Puff': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 180, protein: 8, carbs: 25, fat: 8 },
+                prepTime: '480 minutes',
+                difficulty: 'Easy',
+                image: '🥧'
+            },
+            
+            // 饮品
+            'Bubble Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥤'
+            },
+            'Latte': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 220, protein: 8, carbs: 35, fat: 6 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '☕'
+            },
+            'Matcha Latte': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 220, protein: 8, carbs: 35, fat: 6 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '☕'
+            },
+            'Lemonade': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍋'
+            },
+            'Juice': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍹'
+            },
+            'Cola': { 
+                mealType: 'drink', 
+                lifestyle: 'non-vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥤'
+            },
+            'Beer': { 
+                mealType: 'drink', 
+                lifestyle: 'non-vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍺'
+            },
+            'Red Wine': { 
+                mealType: 'drink', 
+                lifestyle: 'non-vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍷'
+            },
+            'Cocktail': { 
+                mealType: 'drink', 
+                lifestyle: 'non-vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍸'
+            },
+            'Hot Chocolate': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍫'
+            },
+            'Green Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍵'
+            },
+            'Black Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍵'
+            },
+            'Flower Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🌸'
+            },
+            'Soy Milk': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drink',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥛'
+            }
+        };
+        
+        function generateRandomFood() {
+            const mealType = document.getElementById('mealType').value;
+            const lifestyle = document.getElementById('lifestyle').value;
+            
+            let availableFoods = Object.keys(foodDatabase);
+            
+            // 根据餐点类型过滤
+            if (mealType !== 'random') {
+                availableFoods = availableFoods.filter(food => 
+                    foodDatabase[food].mealType === mealType
+                );
+            }
+            
+            // 根据生活方式过滤
+            if (lifestyle !== 'random') {
+                availableFoods = availableFoods.filter(food => 
+                    foodDatabase[food].lifestyle === lifestyle
+                );
+            }
+            
+            if (availableFoods.length === 0) {
+                alert('No food options available for the selected criteria! Please try different options.');
+                return;
+            }
+            
+            const randomFood = availableFoods[Math.floor(Math.random() * availableFoods.length)];
+            const resultElement = document.getElementById('food-result');
+            
+            const foodInfo = foodDatabase[randomFood];
+            
+            // 生成配料列表
+            const ingredients = generateIngredients(randomFood, foodInfo);
+            
+            // 直接使用静态图片URL
+            resultElement.innerHTML = `
+                <div class="food-result-card">
+                    <div class="food-header">
+                        <div class="food-icon-result">${foodInfo.image}</div>
+                        <div class="food-info">
+                            <div class="food-name-result">${randomFood}</div>
+                            <div class="food-tags">
+                                <span class="food-tag">${getLifestyleName(foodInfo.lifestyle)}</span>
+                                <span class="food-tag">${getMealTypeName(foodInfo.mealType)}</span>
+                                <span class="food-tag">Prep ${foodInfo.prepTime}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-details">
+                        <div class="detail-section">
+                            <div class="detail-title ingredients">Ingredients</div>
+                            <ul class="ingredients-list">
+                                ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-title nutrition">Nutrition (per serving)</div>
+                            <div class="nutrition-grid">
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label calories">Calories:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.calories} kcal</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label fat">Fat Content:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.fat}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Saturated Fat:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.fat * 0.3)}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Cholesterol:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.fat * 5)}mg</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Sodium:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.calories * 2)}mg</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Carbohydrates:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.carbs}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Fiber:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.carbs * 0.1)}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Sugar:</span>
+                                    <span class="nutrition-value">${Math.round(foodInfo.nutrition.carbs * 0.3)}g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Protein:</span>
+                                    <span class="nutrition-value">${foodInfo.nutrition.protein}g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Add animation effect
+            resultElement.style.animation = 'fadeIn 0.5s ease-in-out';
+            setTimeout(() => {
+                resultElement.style.animation = '';
+            }, 500);
+        }
+        
+        function generateIngredients(foodName, foodInfo) {
+            // 根据食物类型生成配料列表
+            const baseIngredients = {
+                'chinese': [
+                    '2 tablespoons soy sauce',
+                    '1 tablespoon sesame oil',
+                    '2 cloves garlic, minced',
+                    '1 inch ginger, grated',
+                    '2 green onions, chopped',
+                    '1 tablespoon cornstarch',
+                    'Salt and pepper to taste'
+                ],
+                'western': [
+                    '2 tablespoons olive oil',
+                    '1 onion, diced',
+                    '2 cloves garlic, minced',
+                    '1 teaspoon dried herbs',
+                    'Salt and pepper to taste',
+                    '1 cup vegetable broth',
+                    '2 tablespoons butter'
+                ],
+                'dessert': [
+                    '1 cup all-purpose flour',
+                    '1/2 cup sugar',
+                    '2 eggs',
+                    '1/2 cup milk',
+                    '1/4 cup butter, melted',
+                    '1 teaspoon vanilla extract',
+                    '1/2 teaspoon baking powder'
+                ],
+                'drink': [
+                    '1 cup base liquid',
+                    '2 tablespoons sweetener',
+                    '1/2 cup ice cubes',
+                    'Fresh herbs for garnish',
+                    'Citrus slices for garnish'
+                ]
+            };
+            
+            const category = foodInfo.category;
+            const ingredients = baseIngredients[category] || baseIngredients['western'];
+            
+            // 添加特定食物的主要配料
+            const mainIngredients = getMainIngredients(foodName, foodInfo);
+            
+            return [...mainIngredients, ...ingredients.slice(0, 3)];
+        }
+        
+        function getMainIngredients(foodName, foodInfo) {
+            const mainIngredients = {
+                // 川菜 (Sichuan Cuisine)
+                'Kung Pao Chicken': [
+                    '400g chicken breast, diced',
+                    '1/2 cup peanuts',
+                    '2 red chili peppers',
+                    '1 bell pepper, diced'
+                ],
+                'Mapo Tofu': [
+                    '400g soft tofu, cubed',
+                    '200g ground pork',
+                    '2 tablespoons doubanjiang',
+                    '1 tablespoon Sichuan peppercorns'
+                ],
+                'Twice Cooked Pork': [
+                    '300g pork belly, sliced',
+                    '2 leeks, sliced',
+                    '2 tablespoons fermented black beans',
+                    '1 tablespoon chili bean paste'
+                ],
+                'Fish Fragrant Shredded Pork': [
+                    '300g pork shoulder, shredded',
+                    '2 carrots, julienned',
+                    '2 tablespoons pickled vegetables',
+                    '1 tablespoon garlic, minced'
+                ],
+                'Braised Pork': [
+                    '500g pork belly',
+                    '2 tablespoons dark soy sauce',
+                    '1 cup Shaoxing wine',
+                    '2 star anise'
+                ],
+                'Chongqing Hot Pot': [
+                    'Assorted meats and vegetables',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon Sichuan peppercorns',
+                    'Hot pot broth base'
+                ],
+                'Sour Fish': [
+                    '500g fish fillet',
+                    '2 tablespoons pickled vegetables',
+                    '1 tablespoon vinegar',
+                    '2 green onions'
+                ],
+                'Hui Guo Rou': [
+                    '300g pork belly, sliced',
+                    '2 green peppers',
+                    '2 tablespoons chili bean paste',
+                    '1 tablespoon garlic'
+                ],
+                'Fu Qi Fei Pian': [
+                    '300g beef tripe',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon Sichuan peppercorns',
+                    '2 green onions'
+                ],
+                'Kou Shui Ji': [
+                    '1 whole chicken',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon Sichuan peppercorns',
+                    '2 tablespoons soy sauce'
+                ],
+                'Shui Zhu Yu': [
+                    '500g fish fillet',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon Sichuan peppercorns',
+                    '2 tablespoons soy sauce'
+                ],
+                'Gong Bao Ji Ding': [
+                    '400g chicken breast, diced',
+                    '1/2 cup peanuts',
+                    '2 red chili peppers',
+                    '1 bell pepper, diced'
+                ],
+                
+                // 粤菜 (Cantonese Cuisine)
+                'White Cut Chicken': [
+                    '1 whole chicken',
+                    '2 tablespoons ginger',
+                    '2 green onions',
+                    '1 tablespoon sesame oil'
+                ],
+                'Char Siu Bao': [
+                    '300g char siu pork',
+                    '2 cups all-purpose flour',
+                    '1/2 cup sugar',
+                    '1 tablespoon yeast'
+                ],
+                'Xiaolongbao': [
+                    '300g ground pork',
+                    '2 cups all-purpose flour',
+                    '1/2 cup gelatin broth',
+                    '2 green onions'
+                ],
+                'Zhajiang Noodles': [
+                    '400g noodles',
+                    '200g ground pork',
+                    '2 tablespoons sweet bean sauce',
+                    '2 cucumbers, julienned'
+                ],
+                'Lanzhou Hand-Pulled Noodles': [
+                    '400g hand-pulled noodles',
+                    '300g beef brisket',
+                    '2 tablespoons beef broth',
+                    '2 green onions'
+                ],
+                'Beijing Roast Duck': [
+                    '1 whole duck',
+                    '2 tablespoons honey',
+                    '1 tablespoon five-spice powder',
+                    '2 tablespoons soy sauce'
+                ],
+                'Fried Rice': [
+                    '3 cups cooked rice',
+                    '2 eggs',
+                    '2 green onions',
+                    '2 tablespoons soy sauce'
+                ],
+                'Sweet and Sour Pork': [
+                    '400g pork tenderloin',
+                    '1 bell pepper',
+                    '1 pineapple',
+                    '2 tablespoons ketchup'
+                ],
+                'Boiled Fish': [
+                    '500g fish fillet',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon Sichuan peppercorns',
+                    '2 green onions'
+                ],
+                'Siu Mai': [
+                    '300g ground pork',
+                    '2 cups all-purpose flour',
+                    '1/2 cup shrimp',
+                    '2 green onions'
+                ],
+                'Har Gow': [
+                    '300g shrimp',
+                    '2 cups wheat starch',
+                    '1/2 cup tapioca starch',
+                    '2 green onions'
+                ],
+                'Dim Sum': [
+                    'Assorted dim sum items',
+                    '2 cups all-purpose flour',
+                    '1/2 cup ground pork',
+                    '2 green onions'
+                ],
+                'Wonton Soup': [
+                    '300g ground pork',
+                    '2 cups all-purpose flour',
+                    '1/2 cup shrimp',
+                    '2 green onions'
+                ],
+                'BBQ Pork': [
+                    '500g pork shoulder',
+                    '2 tablespoons hoisin sauce',
+                    '1 tablespoon five-spice powder',
+                    '2 tablespoons honey'
+                ],
+                
+                // 湘菜 (Hunan Cuisine)
+                'Dong\'an Chicken': [
+                    '1 whole chicken',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon ginger',
+                    '2 green onions'
+                ],
+                'Stinky Tofu': [
+                    '400g fermented tofu',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon garlic',
+                    '2 green onions'
+                ],
+                'Spicy Crayfish': [
+                    '500g crayfish',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon garlic',
+                    '2 green onions'
+                ],
+                'Hunan Beef': [
+                    '400g beef flank',
+                    '2 tablespoons chili oil',
+                    '1 tablespoon ginger',
+                    '2 green onions'
+                ],
+                
+                // 鲁菜 (Shandong Cuisine)
+                'Sweet and Sour Fish': [
+                    '500g fish fillet',
+                    '2 tablespoons ketchup',
+                    '1 tablespoon vinegar',
+                    '2 green onions'
+                ],
+                'Dezhou Braised Chicken': [
+                    '1 whole chicken',
+                    '2 tablespoons soy sauce',
+                    '1 tablespoon five-spice powder',
+                    '2 green onions'
+                ],
+                'Jiuzhuan Large Intestine': [
+                    '500g pork intestine',
+                    '2 tablespoons soy sauce',
+                    '1 tablespoon five-spice powder',
+                    '2 green onions'
+                ],
+                
+                // 苏菜 (Jiangsu Cuisine)
+                'Squirrel Fish': [
+                    '500g fish fillet',
+                    '2 tablespoons sweet and sour sauce',
+                    '1 tablespoon vinegar',
+                    '2 green onions'
+                ],
+                'Dongpo Pork': [
+                    '500g pork belly',
+                    '2 tablespoons soy sauce',
+                    '1 cup Shaoxing wine',
+                    '2 green onions'
+                ],
+                'Hairy Crab': [
+                    '4 hairy crabs',
+                    '2 tablespoons ginger vinegar',
+                    '1 tablespoon ginger',
+                    '2 green onions'
+                ],
+                
+                // 浙菜 (Zhejiang Cuisine)
+                'West Lake Fish': [
+                    '500g fish fillet',
+                    '2 tablespoons soy sauce',
+                    '1 tablespoon vinegar',
+                    '2 green onions'
+                ],
+                'Longjing Shrimp': [
+                    '400g shrimp',
+                    '2 tablespoons Longjing tea',
+                    '1 tablespoon ginger',
+                    '2 green onions'
+                ],
+                
+                // 闽菜 (Fujian Cuisine)
+                'Buddha Jumps Over the Wall': [
+                    'Assorted premium ingredients',
+                    '2 tablespoons Shaoxing wine',
+                    '1 tablespoon soy sauce',
+                    '2 green onions'
+                ],
+                'Red Wine Chicken': [
+                    '1 whole chicken',
+                    '2 cups red wine',
+                    '1 tablespoon ginger',
+                    '2 green onions'
+                ],
+                
+                // 徽菜 (Anhui Cuisine)
+                'Hui Braised Pork': [
+                    '500g pork belly',
+                    '2 tablespoons soy sauce',
+                    '1 cup Shaoxing wine',
+                    '2 green onions'
+                ],
+                
+                // 其他中餐
+                'Hot and Sour Soup': [
+                    '2 tablespoons vinegar',
+                    '1 tablespoon chili oil',
+                    '2 eggs',
+                    '2 green onions'
+                ],
+                'Egg Drop Soup': [
+                    '2 eggs',
+                    '2 tablespoons cornstarch',
+                    '1 tablespoon soy sauce',
+                    '2 green onions'
+                ],
+                'Spring Rolls': [
+                    '2 cups shredded vegetables',
+                    '1 cup ground pork',
+                    '2 tablespoons soy sauce',
+                    '2 green onions'
+                ],
+                'Dumplings': [
+                    '300g ground pork',
+                    '2 cups all-purpose flour',
+                    '1/2 cup cabbage',
+                    '2 green onions'
+                ],
+                'Steamed Buns': [
+                    '2 cups all-purpose flour',
+                    '1/2 cup sugar',
+                    '1 tablespoon yeast',
+                    '2 green onions'
+                ],
+                
+                // 西餐
+                'Pizza': [
+                    '1 pizza dough',
+                    '1/2 cup tomato sauce',
+                    '200g mozzarella cheese',
+                    'Fresh basil leaves'
+                ],
+                'Hamburger': [
+                    '200g ground beef',
+                    '1 hamburger bun',
+                    'Lettuce and tomato',
+                    'Cheese slice'
+                ],
+                'Spaghetti': [
+                    '400g spaghetti',
+                    '1/2 cup tomato sauce',
+                    '2 tablespoons olive oil',
+                    'Fresh basil'
+                ],
+                'Steak': [
+                    '300g beef steak',
+                    '2 tablespoons butter',
+                    '1 tablespoon herbs',
+                    'Salt and pepper'
+                ],
+                'Sandwich': [
+                    '2 slices bread',
+                    '100g deli meat',
+                    'Lettuce and tomato',
+                    'Cheese slice'
+                ],
+                'Salad': [
+                    'Mixed greens',
+                    '1/2 cup vegetables',
+                    '2 tablespoons dressing',
+                    'Croutons'
+                ],
+                'Sushi': [
+                    '2 cups sushi rice',
+                    '200g fish',
+                    'Nori sheets',
+                    'Wasabi and ginger'
+                ],
+                'Taco': [
+                    '200g ground beef',
+                    '2 taco shells',
+                    'Lettuce and tomato',
+                    'Cheese and salsa'
+                ],
+                
+                // 甜点
+                'Tiramisu': [
+                    '6 egg yolks',
+                    '1/2 cup sugar',
+                    '1 cup mascarpone cheese',
+                    '1 cup strong coffee'
+                ],
+                'Macaron': [
+                    '2 cups almond flour',
+                    '1/2 cup sugar',
+                    '2 egg whites',
+                    'Food coloring'
+                ],
+                'Cheesecake': [
+                    '2 cups cream cheese',
+                    '1/2 cup sugar',
+                    '2 eggs',
+                    '1 cup graham crackers'
+                ],
+                'Chocolate Mousse': [
+                    '200g dark chocolate',
+                    '4 egg yolks',
+                    '1/2 cup heavy cream',
+                    '2 tablespoons sugar'
+                ],
+                'Ice Cream': [
+                    '2 cups heavy cream',
+                    '1/2 cup sugar',
+                    '4 egg yolks',
+                    '1 teaspoon vanilla'
+                ],
+                'Pudding': [
+                    '2 cups milk',
+                    '1/2 cup sugar',
+                    '2 egg yolks',
+                    '1 teaspoon vanilla'
+                ],
+                'Egg Tart': [
+                    '2 cups all-purpose flour',
+                    '1/2 cup sugar',
+                    '4 egg yolks',
+                    '1 cup milk'
+                ],
+                'Cream Puff': [
+                    '1 cup all-purpose flour',
+                    '1/2 cup butter',
+                    '4 eggs',
+                    '1 cup water'
+                ],
+                
+                // 饮品
+                'Bubble Tea': [
+                    '1 cup black tea',
+                    '1/4 cup milk',
+                    '2 tablespoons tapioca pearls',
+                    '2 tablespoons brown sugar syrup'
+                ],
+                'Latte': [
+                    '1 cup espresso',
+                    '1/2 cup steamed milk',
+                    '1 tablespoon sugar',
+                    'Milk foam'
+                ],
+                'Matcha Latte': [
+                    '1 tablespoon matcha powder',
+                    '1/2 cup steamed milk',
+                    '1 tablespoon sugar',
+                    'Milk foam'
+                ],
+                'Lemonade': [
+                    '1 cup lemon juice',
+                    '1/2 cup sugar',
+                    '2 cups water',
+                    'Ice cubes'
+                ],
+                'Juice': [
+                    '2 cups fresh fruit',
+                    '1 tablespoon sugar',
+                    '1 cup water',
+                    'Ice cubes'
+                ],
+                'Cola': [
+                    '1 cup carbonated water',
+                    '2 tablespoons sugar',
+                    '1 tablespoon caramel',
+                    'Ice cubes'
+                ],
+                'Beer': [
+                    '1 cup malt',
+                    '1 tablespoon hops',
+                    '1 tablespoon yeast',
+                    'Water'
+                ],
+                'Red Wine': [
+                    'Grapes',
+                    'Yeast',
+                    'Sugar',
+                    'Time for fermentation'
+                ]
+            };
+            
+            return mainIngredients[foodName] || [
+                'Main protein or vegetable',
+                'Seasoning and spices',
+                'Fresh herbs',
+                'Cooking oil'
+            ];
+        }
+        
+        function showFullRecipe(foodName) {
+            // 这里可以链接到完整的食谱页面或显示详细步骤
+            alert(`Full recipe for ${foodName} will be available soon!`);
+        }
+        
+        function getCategoryName(category) {
+            const categoryNames = {
+                'all': 'All Foods',
+                'chinese': 'Chinese',
+                'western': 'Western',
+                'dessert': 'Dessert',
+                'drink': 'Drinks'
+            };
+            return categoryNames[category] || 'Unknown Category';
+        }
+        
+        function getMealTypeName(mealType) {
+            const mealTypeNames = {
+                'breakfast': 'Breakfast',
+                'lunch': 'Lunch',
+                'dinner': 'Dinner',
+                'snack': 'Snack',
+                'dessert': 'Dessert',
+                'drink': 'Drink'
+            };
+            return mealTypeNames[mealType] || 'Unknown Meal Type';
+        }
+        
+        function getLifestyleName(lifestyle) {
+            const lifestyleNames = {
+                'vegetarian': 'Vegetarian',
+                'non-vegetarian': 'Non-Vegetarian'
+            };
+            return lifestyleNames[lifestyle] || 'Unknown Lifestyle';
+        }
+        
+        // 移动端下拉菜单功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 食物生成器特定的JavaScript代码
+        });
+    </script>
+    <script src="mobile-nav.js"></script>
+</body>
+</html> 
+            // 更多川菜
+            'Dan Dan Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 450, protein: 15, carbs: 65, fat: 18 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Gong Bao Ji Ding': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 32, carbs: 18, fat: 20 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Ma La Xiang Guo': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 520, protein: 28, carbs: 25, fat: 35 },
+                prepTime: '40 minutes',
+                difficulty: 'Hard',
+                image: '🍲'
+            },
+            'Shui Zhu Yu': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 35, carbs: 5, fat: 8 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Kou Shui Ji': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 25, carbs: 5, fat: 10 },
+                prepTime: '50 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Fu Qi Fei Pian': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 18, carbs: 8, fat: 15 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            'Hui Guo Rou': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 22, carbs: 15, fat: 25 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Suan Cai Yu': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 28, carbs: 8, fat: 6 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Liang Ban Ji': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 160, protein: 22, carbs: 5, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍗'
+            },
+            'Yu Xiang Qie Zi': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 140, protein: 4, carbs: 18, fat: 8 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍆'
+            },
+
+            // 更多粤菜
+            'Siu Mai': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 15, carbs: 20, fat: 6 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Har Gow': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 160, protein: 18, carbs: 18, fat: 4 },
+                prepTime: '50 minutes',
+                difficulty: 'Hard',
+                image: '🥟'
+            },
+            'Char Siu': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 420, protein: 35, carbs: 15, fat: 25 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Wonton Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 12, carbs: 20, fat: 6 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🥣'
+            },
+            'BBQ Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 32, carbs: 12, fat: 22 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Sweet and Sour Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 18, carbs: 35, fat: 15 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Steamed Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 32, carbs: 2, fat: 6 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🐟'
+            },
+            'Chicken Feet': { 
+                mealType: 'snack', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 15, carbs: 2, fat: 6 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Egg Tarts': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 180, protein: 4, carbs: 22, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥧'
+            },
+            'Milk Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 120, protein: 2, carbs: 18, fat: 4 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '☕'
+            },
+
+            // 更多湘菜
+            'Dong'an Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 32, carbs: 8, fat: 15 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Stinky Tofu': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 8, carbs: 10, fat: 6 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🧈'
+            },
+            'Spicy Crayfish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 25, carbs: 5, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🦐'
+            },
+            'Hunan Beef': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 28, carbs: 12, fat: 18 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Spicy Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 260, protein: 30, carbs: 8, fat: 12 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Pickled Vegetables': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 40, protein: 2, carbs: 6, fat: 1 },
+                prepTime: '1440 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            },
+            'Spicy Tofu': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 140, protein: 12, carbs: 8, fat: 8 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🧈'
+            },
+            'Hunan Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 28, carbs: 6, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Spicy Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 22, carbs: 10, fat: 18 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Hunan Duck': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 25, carbs: 8, fat: 22 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard',
+                image: '🦆'
+            },
+
+            // 更多鲁菜
+            'Sweet and Sour Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 25, carbs: 20, fat: 12 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Dezhou Braised Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 350, protein: 38, carbs: 8, fat: 18 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            'Jiuzhuan Large Intestine': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 22, carbs: 10, fat: 18 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Braised Sea Cucumber': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 25, carbs: 2, fat: 2 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🦑'
+            },
+            'Shandong Dumplings': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 12, carbs: 35, fat: 6 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Shandong Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 15, carbs: 45, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Braised Abalone': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 150, protein: 28, carbs: 3, fat: 4 },
+                prepTime: '240 minutes',
+                difficulty: 'Hard',
+                image: '🦪'
+            },
+            'Shandong Pancake': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 6, carbs: 28, fat: 6 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🥞'
+            },
+            'Braised Pork Belly': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 450, protein: 25, carbs: 8, fat: 35 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Shandong Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 15, carbs: 8, fat: 6 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥣'
+            },
+
+            // 更多苏菜
+            'Squirrel Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 28, carbs: 25, fat: 15 },
+                prepTime: '45 minutes',
+                difficulty: 'Hard',
+                image: '🐟'
+            },
+            'Dongpo Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 480, protein: 32, carbs: 12, fat: 35 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Hairy Crab': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 20, carbs: 2, fat: 10 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🦀'
+            },
+            'Lion\'s Head Meatballs': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 25, carbs: 8, fat: 22 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Jiangsu Dumplings': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 10, carbs: 32, fat: 6 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Braised Fish Head': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 30, carbs: 5, fat: 10 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🐟'
+            },
+            'Jiangsu Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 260, protein: 12, carbs: 42, fat: 6 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Steamed Crab': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 160, protein: 22, carbs: 1, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🦀'
+            },
+            'Jiangsu Rice': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 4, carbs: 38, fat: 4 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Braised Vegetables': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 6, carbs: 18, fat: 4 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            },
+
+            // 更多浙菜
+            'West Lake Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 30, carbs: 8, fat: 10 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Longjing Shrimp': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 25, carbs: 5, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🦐'
+            },
+            'Dongpo Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 28, carbs: 6, fat: 8 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Zhejiang Rice': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 4, carbs: 35, fat: 2 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Braised Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 32, carbs: 6, fat: 15 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Zhejiang Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 240, protein: 12, carbs: 38, fat: 6 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Steamed Vegetables': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 80, protein: 4, carbs: 12, fat: 2 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            },
+            'Zhejiang Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 100, protein: 12, carbs: 6, fat: 4 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Braised Tofu': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 10, carbs: 8, fat: 6 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🧈'
+            },
+            'Zhejiang Dumplings': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 160, protein: 8, carbs: 25, fat: 4 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+
+            // 更多闽菜
+            'Buddha Jumps Over the Wall': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 500, protein: 35, carbs: 15, fat: 30 },
+                prepTime: '240 minutes',
+                difficulty: 'Hard',
+                image: '🍲'
+            },
+            'Red Wine Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 25, carbs: 8, fat: 18 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Fujian Fried Rice': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 320, protein: 12, carbs: 48, fat: 10 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Braised Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 28, carbs: 8, fat: 25 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Fujian Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 15, carbs: 42, fat: 8 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Steamed Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 30, carbs: 2, fat: 6 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🐟'
+            },
+            'Fujian Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 15, carbs: 8, fat: 6 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🥣'
+            },
+            'Braised Vegetables': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 100, protein: 6, carbs: 15, fat: 3 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            },
+            'Fujian Dumplings': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 180, protein: 10, carbs: 28, fat: 5 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Red Wine Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 140, protein: 12, carbs: 10, fat: 6 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🥣'
+            },
+
+            // 更多徽菜
+            'Hui Braised Pork': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 380, protein: 28, carbs: 10, fat: 25 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Anhui Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 200, protein: 28, carbs: 6, fat: 8 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Hui Braised Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 280, protein: 32, carbs: 6, fat: 15 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Anhui Rice': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 160, protein: 3, carbs: 32, fat: 2 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Braised Tofu': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 120, protein: 10, carbs: 8, fat: 6 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🧈'
+            },
+            'Anhui Noodles': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 220, protein: 10, carbs: 35, fat: 6 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Hui Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 100, protein: 12, carbs: 6, fat: 4 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Steamed Vegetables': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 80, protein: 4, carbs: 12, fat: 2 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            },
+            'Anhui Dumplings': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 160, protein: 8, carbs: 25, fat: 4 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Braised Vegetables': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'chinese',
+                nutrition: { calories: 90, protein: 5, carbs: 12, fat: 3 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            }
+
+
+            // 更多意大利菜
+            'Spaghetti Carbonara': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 650, protein: 25, carbs: 70, fat: 30 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🍝'
+            },
+            'Risotto': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 12, carbs: 55, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍚'
+            },
+            'Osso Buco': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 450, protein: 35, carbs: 20, fat: 25 },
+                prepTime: '150 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Bruschetta': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 4, carbs: 15, fat: 6 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🍞'
+            },
+            'Tiramisu': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 350, protein: 8, carbs: 35, fat: 20 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍰'
+            },
+            'Pizza Margherita': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 12, carbs: 35, fat: 12 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍕'
+            },
+            'Lasagna': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 22, carbs: 35, fat: 18 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🍝'
+            },
+            'Fettuccine Alfredo': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 420, protein: 15, carbs: 45, fat: 22 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍝'
+            },
+            'Penne Arrabbiata': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 12, carbs: 55, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍝'
+            },
+            'Gnocchi': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 8, carbs: 48, fat: 6 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥔'
+            },
+
+            // 更多法国菜
+            'Coq au Vin': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 32, carbs: 15, fat: 22 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🍗'
+            },
+            'Ratatouille': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 6, carbs: 25, fat: 8 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍅'
+            },
+            'French Onion Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 8, carbs: 25, fat: 12 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🥣'
+            },
+            'Croissant': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 260, protein: 6, carbs: 28, fat: 14 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🥐'
+            },
+            'Beef Bourguignon': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 420, protein: 35, carbs: 18, fat: 25 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🥩'
+            },
+            'Quiche Lorraine': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 15, carbs: 20, fat: 22 },
+                prepTime: '75 minutes',
+                difficulty: 'Medium',
+                image: '🥧'
+            },
+            'Escargots': { 
+                mealType: 'appetizer', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 15, carbs: 2, fat: 6 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🐌'
+            },
+            'French Toast': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 12, carbs: 35, fat: 12 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍞'
+            },
+            'Bouillabaisse': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 25, carbs: 12, fat: 15 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🥘'
+            },
+            'Tarte Tatin': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 320, protein: 4, carbs: 45, fat: 14 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🥧'
+            },
+
+            // 更多西班牙菜
+            'Paella': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 450, protein: 28, carbs: 55, fat: 18 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard',
+                image: '🍚'
+            },
+            'Gazpacho': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 6 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Spanish Tortilla': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 15, carbs: 20, fat: 18 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍳'
+            },
+            'Tapas': { 
+                mealType: 'snack', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 12, carbs: 15, fat: 12 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🥘'
+            },
+            'Churros': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 4, carbs: 45, fat: 10 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍩'
+            },
+            'Jamón Ibérico': { 
+                mealType: 'appetizer', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 25, carbs: 2, fat: 8 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy',
+                image: '🥩'
+            },
+            'Patatas Bravas': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 4, carbs: 35, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🥔'
+            },
+            'Sangria': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 150, protein: 0, carbs: 18, fat: 0 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🍷'
+            },
+            'Pulpo a la Gallega': { 
+                mealType: 'appetizer', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 18, carbs: 2, fat: 4 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🐙'
+            },
+            'Flan': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 200, protein: 6, carbs: 25, fat: 8 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍮'
+            },
+
+            // 更多希腊菜
+            'Greek Salad': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 8, carbs: 12, fat: 14 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥗'
+            },
+            'Moussaka': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 420, protein: 25, carbs: 30, fat: 25 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍆'
+            },
+            'Souvlaki': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 28, carbs: 25, fat: 15 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🍖'
+            },
+            'Tzatziki': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 80, protein: 4, carbs: 6, fat: 5 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥒'
+            },
+            'Spanakopita': { 
+                mealType: 'appetizer', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 8, carbs: 18, fat: 14 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥬'
+            },
+            'Dolmades': { 
+                mealType: 'appetizer', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 6, carbs: 15, fat: 6 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍃'
+            },
+            'Baklava': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 320, protein: 6, carbs: 35, fat: 18 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍯'
+            },
+            'Greek Yogurt': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 15, carbs: 8, fat: 4 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy',
+                image: '🥛'
+            },
+            'Pastitsio': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 22, carbs: 35, fat: 18 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍝'
+            },
+            'Galaktoboureko': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 6, carbs: 32, fat: 14 },
+                prepTime: '75 minutes',
+                difficulty: 'Hard',
+                image: '🍰'
+            }
+
+
+            // 更多墨西哥菜
+            'Enchiladas': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 22, carbs: 35, fat: 18 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🌮'
+            },
+            'Guacamole': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 160, protein: 4, carbs: 12, fat: 12 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥑'
+            },
+            'Quesadilla': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 18, carbs: 25, fat: 20 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🧀'
+            },
+            'Tacos': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 18, carbs: 25, fat: 15 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🌮'
+            },
+            'Burrito': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 450, protein: 25, carbs: 45, fat: 20 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🌯'
+            },
+            'Fajitas': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 28, carbs: 20, fat: 16 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Salsa': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 40, protein: 2, carbs: 6, fat: 1 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍅'
+            },
+            'Mexican Rice': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 4, carbs: 32, fat: 4 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Churros': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 4, carbs: 45, fat: 10 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍩'
+            },
+            'Horchata': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 120, protein: 2, carbs: 22, fat: 2 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥤'
+            },
+
+            // 更多印度菜
+            'Butter Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 420, protein: 28, carbs: 15, fat: 30 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Palak Paneer': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 15, carbs: 12, fat: 20 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🧀'
+            },
+            'Biryani': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 450, protein: 25, carbs: 65, fat: 15 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍚'
+            },
+            'Naan Bread': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 6, carbs: 30, fat: 4 },
+                prepTime: '120 minutes',
+                difficulty: 'Medium',
+                image: '🫓'
+            },
+            'Tandoori Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 35, carbs: 8, fat: 12 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Dal Makhani': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 12, carbs: 25, fat: 8 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🫘'
+            },
+            'Samosa': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 160, protein: 6, carbs: 20, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Roti': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 4, carbs: 20, fat: 3 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🫓'
+            },
+            'Gulab Jamun': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 200, protein: 4, carbs: 28, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍯'
+            },
+            'Masala Chai': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 80, protein: 2, carbs: 12, fat: 3 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '☕'
+            },
+
+            // 更多日本菜
+            'Sushi Roll': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 8, carbs: 35, fat: 4 },
+                prepTime: '45 minutes',
+                difficulty: 'Hard',
+                image: '🍣'
+            },
+            'Ramen': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 18, carbs: 55, fat: 12 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍜'
+            },
+            'Tempura': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 8, carbs: 35, fat: 12 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🍤'
+            },
+            'Miso Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 80, protein: 6, carbs: 8, fat: 4 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Teriyaki Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 32, carbs: 15, fat: 12 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Onigiri': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 160, protein: 4, carbs: 28, fat: 3 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍙'
+            },
+            'Udon': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 12, carbs: 55, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Sashimi': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 20, carbs: 2, fat: 4 },
+                prepTime: '15 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Mochi': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 100, protein: 2, carbs: 18, fat: 2 },
+                prepTime: '60 minutes',
+                difficulty: 'Hard',
+                image: '🍡'
+            },
+            'Green Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 2, protein: 0, carbs: 0, fat: 0 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy',
+                image: '🍵'
+            },
+
+            // 更多泰国菜
+            'Pad Thai': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 350, protein: 15, carbs: 45, fat: 15 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🍜'
+            },
+            'Green Curry': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 18, carbs: 15, fat: 20 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🍛'
+            },
+            'Tom Yum Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 12, carbs: 8, fat: 6 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Mango Sticky Rice': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 320, protein: 4, carbs: 65, fat: 6 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥭'
+            },
+            'Som Tam': { 
+                mealType: 'appetizer', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 80, protein: 4, carbs: 12, fat: 2 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥗'
+            },
+            'Massaman Curry': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 20, carbs: 18, fat: 22 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍛'
+            },
+            'Thai Iced Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 180, protein: 2, carbs: 28, fat: 6 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥤'
+            },
+            'Pad See Ew': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 18, carbs: 48, fat: 15 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍜'
+            },
+            'Thai Basil Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 25, carbs: 12, fat: 16 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍗'
+            },
+            'Coconut Ice Cream': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 200, protein: 2, carbs: 25, fat: 10 },
+                prepTime: '240 minutes',
+                difficulty: 'Medium',
+                image: '🍨'
+            },
+
+            // 更多韩国菜
+            'Bibimbap': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 20, carbs: 45, fat: 15 },
+                prepTime: '40 minutes',
+                difficulty: 'Medium',
+                image: '🍚'
+            },
+            'Kimchi': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 40, protein: 2, carbs: 6, fat: 1 },
+                prepTime: '1440 minutes',
+                difficulty: 'Medium',
+                image: '🥬'
+            },
+            'Bulgogi': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 28, carbs: 15, fat: 18 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Tteokbokki': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 6, carbs: 35, fat: 4 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍡'
+            },
+            'Japchae': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 8, carbs: 45, fat: 8 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍜'
+            },
+            'Samgyeopsal': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 350, protein: 25, carbs: 8, fat: 25 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🥩'
+            },
+            'Kimbap': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 8, carbs: 35, fat: 6 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🍙'
+            },
+            'Doenjang Jjigae': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 10, carbs: 8, fat: 6 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Hotteok': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 180, protein: 4, carbs: 28, fat: 6 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥞'
+            },
+            'Makgeolli': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 120, protein: 2, carbs: 15, fat: 0 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy',
+                image: '🍶'
+            },
+
+            // 更多越南菜
+            'Pho': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 22, carbs: 35, fat: 8 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🍜'
+            },
+            'Banh Mi': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 15, carbs: 40, fat: 12 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥖'
+            },
+            'Spring Rolls': { 
+                mealType: 'appetizer', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🌯'
+            },
+            'Bun Cha': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 350, protein: 25, carbs: 35, fat: 15 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍜'
+            },
+            'Com Tam': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 20, carbs: 45, fat: 12 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Ca Phe Sua Da': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 80, protein: 2, carbs: 12, fat: 3 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '☕'
+            },
+            'Banh Xeo': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 8, carbs: 35, fat: 12 },
+                prepTime: '35 minutes',
+                difficulty: 'Medium',
+                image: '🥞'
+            },
+            'Goi Cuon': { 
+                mealType: 'appetizer', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 80, protein: 6, carbs: 12, fat: 2 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🌯'
+            },
+            'Che': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 120, protein: 2, carbs: 22, fat: 2 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🍮'
+            },
+            'Nuoc Mam': { 
+                mealType: 'condiment', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 20, protein: 4, carbs: 1, fat: 0 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy',
+                image: '🧂'
+            }
+
+
+            // 更多现代健康食品
+            'Quinoa Bowl': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 12, carbs: 45, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🥗'
+            },
+            'Avocado Toast': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 8, carbs: 25, fat: 12 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥑'
+            },
+            'Smoothie Bowl': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 6, carbs: 28, fat: 6 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥤'
+            },
+            'Buddha Bowl': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 15, carbs: 45, fat: 10 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🥗'
+            },
+            'Zucchini Noodles': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 6, carbs: 15, fat: 6 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥒'
+            },
+            'Cauliflower Rice': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 80, protein: 4, carbs: 12, fat: 3 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥦'
+            },
+            'Kale Salad': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 140, protein: 8, carbs: 15, fat: 8 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            },
+            'Chia Pudding': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 160, protein: 8, carbs: 18, fat: 8 },
+                prepTime: '480 minutes',
+                difficulty: 'Easy',
+                image: '🍮'
+            },
+            'Acai Bowl': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 4, carbs: 35, fat: 6 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥤'
+            },
+            'Protein Pancakes': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 20, carbs: 25, fat: 12 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥞'
+            },
+
+            // 更多中东菜
+            'Hummus': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 140, protein: 6, carbs: 15, fat: 8 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🫘'
+            },
+            'Falafel': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 8, carbs: 25, fat: 10 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥙'
+            },
+            'Shawarma': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 25, carbs: 25, fat: 15 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥙'
+            },
+            'Tabouleh': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 4, carbs: 18, fat: 4 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥗'
+            },
+            'Baba Ganoush': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 100, protein: 3, carbs: 8, fat: 7 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🍆'
+            },
+            'Kebab': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 22, carbs: 15, fat: 16 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍖'
+            },
+            'Pita Bread': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 160, protein: 5, carbs: 28, fat: 2 },
+                prepTime: '120 minutes',
+                difficulty: 'Medium',
+                image: '🫓'
+            },
+            'Moussaka': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 20, carbs: 25, fat: 22 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍆'
+            },
+            'Baklava': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 320, protein: 6, carbs: 35, fat: 18 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍯'
+            },
+            'Turkish Coffee': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 5, protein: 0, carbs: 1, fat: 0 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '☕'
+            },
+
+            // 更多地中海菜
+            'Mediterranean Salad': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 8, carbs: 15, fat: 12 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🥗'
+            },
+            'Grilled Fish': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 28, carbs: 2, fat: 8 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🐟'
+            },
+            'Olive Tapenade': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 2, carbs: 4, fat: 12 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🫒'
+            },
+            'Caprese Salad': { 
+                mealType: 'appetizer', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 160, protein: 8, carbs: 8, fat: 12 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍅'
+            },
+            'Risotto ai Funghi': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 10, carbs: 55, fat: 8 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍚'
+            },
+            'Bruschetta': { 
+                mealType: 'appetizer', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 4, carbs: 15, fat: 6 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🍞'
+            },
+            'Pasta Primavera': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 10, carbs: 45, fat: 8 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍝'
+            },
+            'Minestrone Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 140, protein: 6, carbs: 20, fat: 4 },
+                prepTime: '45 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Tiramisu': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 350, protein: 8, carbs: 35, fat: 20 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🍰'
+            },
+            'Limoncello': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 120, protein: 0, carbs: 15, fat: 0 },
+                prepTime: '43200 minutes',
+                difficulty: 'Hard',
+                image: '🍋'
+            },
+
+            // 更多北欧菜
+            'Gravlax': { 
+                mealType: 'appetizer', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 160, protein: 20, carbs: 2, fat: 8 },
+                prepTime: '2880 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Swedish Meatballs': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 25, carbs: 15, fat: 18 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🍖'
+            },
+            'Smørrebrød': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 15, carbs: 25, fat: 15 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥪'
+            },
+            'Lutefisk': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 140, protein: 25, carbs: 2, fat: 4 },
+                prepTime: '1440 minutes',
+                difficulty: 'Hard',
+                image: '🐟'
+            },
+            'Karelian Pies': { 
+                mealType: 'snack', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 6, carbs: 28, fat: 6 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥧'
+            },
+            'Finnish Salmon Soup': { 
+                mealType: 'lunch', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 18, carbs: 12, fat: 10 },
+                prepTime: '40 minutes',
+                difficulty: 'Easy',
+                image: '🥣'
+            },
+            'Norwegian Waffles': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 6, carbs: 32, fat: 8 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🧇'
+            },
+            'Danish Pastries': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 6, carbs: 35, fat: 14 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🥐'
+            },
+            'Icelandic Skyr': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 18, carbs: 8, fat: 2 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy',
+                image: '🥛'
+            },
+            'Mulled Wine': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 150, protein: 0, carbs: 18, fat: 0 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍷'
+            },
+
+            // 更多东欧菜
+            'Borscht': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 6, carbs: 15, fat: 6 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥣'
+            },
+            'Pierogi': { 
+                mealType: 'dinner', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 240, protein: 8, carbs: 35, fat: 8 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Goulash': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 28, carbs: 25, fat: 20 },
+                prepTime: '120 minutes',
+                difficulty: 'Medium',
+                image: '🥘'
+            },
+            'Schnitzel': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 25, carbs: 15, fat: 18 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Sauerkraut': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 40, protein: 2, carbs: 6, fat: 1 },
+                prepTime: '4320 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            },
+            'Strudel': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 280, protein: 4, carbs: 45, fat: 10 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🥧'
+            },
+            'Kielbasa': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 18, carbs: 8, fat: 20 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🌭'
+            },
+            'Potato Pancakes': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 4, carbs: 25, fat: 10 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🥔'
+            },
+            'Cabbage Rolls': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 260, protein: 18, carbs: 20, fat: 12 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🥬'
+            },
+            'Beer': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 150, protein: 2, carbs: 15, fat: 0 },
+                prepTime: '5 minutes',
+                difficulty: 'Easy',
+                image: '🍺'
+            },
+
+            // 更多非洲菜
+            'Couscous': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 6, carbs: 32, fat: 2 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Tagine': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 25, carbs: 20, fat: 18 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🥘'
+            },
+            'Ful Medames': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 12, carbs: 25, fat: 8 },
+                prepTime: '60 minutes',
+                difficulty: 'Easy',
+                image: '🫘'
+            },
+            'Shakshuka': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 15, carbs: 15, fat: 18 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🍳'
+            },
+            'Merguez': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 20, carbs: 8, fat: 20 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🌭'
+            },
+            'Harissa': { 
+                mealType: 'condiment', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 20, protein: 1, carbs: 3, fat: 1 },
+                prepTime: '15 minutes',
+                difficulty: 'Easy',
+                image: '🌶️'
+            },
+            'Brik': { 
+                mealType: 'appetizer', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 8, carbs: 15, fat: 10 },
+                prepTime: '25 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Mint Tea': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 5, protein: 0, carbs: 1, fat: 0 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍵'
+            },
+            'Baklava': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 320, protein: 6, carbs: 35, fat: 18 },
+                prepTime: '90 minutes',
+                difficulty: 'Hard',
+                image: '🍯'
+            },
+            'Couscous Salad': { 
+                mealType: 'lunch', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 8, carbs: 35, fat: 6 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🥗'
+            },
+
+            // 更多南美菜
+            'Ceviche': { 
+                mealType: 'appetizer', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 120, protein: 18, carbs: 6, fat: 4 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🐟'
+            },
+            'Empanadas': { 
+                mealType: 'snack', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 8, carbs: 25, fat: 10 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥟'
+            },
+            'Arepas': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 6, carbs: 28, fat: 6 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🫓'
+            },
+            'Feijoada': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 420, protein: 28, carbs: 35, fat: 20 },
+                prepTime: '180 minutes',
+                difficulty: 'Hard',
+                image: '🥘'
+            },
+            'Chimichurri': { 
+                mealType: 'condiment', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 40, protein: 2, carbs: 4, fat: 3 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🌿'
+            },
+            'Picanha': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 350, protein: 35, carbs: 5, fat: 22 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+            'Moqueca': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 25, carbs: 15, fat: 16 },
+                prepTime: '60 minutes',
+                difficulty: 'Medium',
+                image: '🥘'
+            },
+            'Brigadeiro': { 
+                mealType: 'dessert', 
+                lifestyle: 'vegetarian', 
+                category: 'dessert',
+                nutrition: { calories: 120, protein: 2, carbs: 18, fat: 5 },
+                prepTime: '30 minutes',
+                difficulty: 'Easy',
+                image: '🍫'
+            },
+            'Caipirinha': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 150, protein: 0, carbs: 18, fat: 0 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍹'
+            },
+            'Churrasco': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 380, protein: 32, carbs: 8, fat: 25 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🥩'
+            },
+
+            // 更多加勒比菜
+            'Jerk Chicken': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 320, protein: 28, carbs: 8, fat: 20 },
+                prepTime: '120 minutes',
+                difficulty: 'Medium',
+                image: '🍗'
+            },
+            'Rice and Peas': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 200, protein: 6, carbs: 35, fat: 4 },
+                prepTime: '45 minutes',
+                difficulty: 'Easy',
+                image: '🍚'
+            },
+            'Callaloo': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 80, protein: 4, carbs: 12, fat: 3 },
+                prepTime: '25 minutes',
+                difficulty: 'Easy',
+                image: '🥬'
+            },
+            'Ackee and Saltfish': { 
+                mealType: 'breakfast', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 280, protein: 20, carbs: 15, fat: 18 },
+                prepTime: '45 minutes',
+                difficulty: 'Medium',
+                image: '🥘'
+            },
+            'Curry Goat': { 
+                mealType: 'dinner', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 350, protein: 28, carbs: 12, fat: 22 },
+                prepTime: '120 minutes',
+                difficulty: 'Hard',
+                image: '🍖'
+            },
+            'Plantains': { 
+                mealType: 'side', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 160, protein: 2, carbs: 28, fat: 4 },
+                prepTime: '20 minutes',
+                difficulty: 'Easy',
+                image: '🍌'
+            },
+            'Rum Punch': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 180, protein: 0, carbs: 22, fat: 0 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🍹'
+            },
+            'Coconut Bread': { 
+                mealType: 'breakfast', 
+                lifestyle: 'vegetarian', 
+                category: 'western',
+                nutrition: { calories: 220, protein: 6, carbs: 32, fat: 8 },
+                prepTime: '90 minutes',
+                difficulty: 'Medium',
+                image: '🍞'
+            },
+            'Conch Fritters': { 
+                mealType: 'appetizer', 
+                lifestyle: 'non-vegetarian', 
+                category: 'western',
+                nutrition: { calories: 180, protein: 8, carbs: 20, fat: 8 },
+                prepTime: '30 minutes',
+                difficulty: 'Medium',
+                image: '🦪'
+            },
+            'Tropical Smoothie': { 
+                mealType: 'drink', 
+                lifestyle: 'vegetarian', 
+                category: 'drinks',
+                nutrition: { calories: 140, protein: 2, carbs: 28, fat: 2 },
+                prepTime: '10 minutes',
+                difficulty: 'Easy',
+                image: '🥤'
+            }
+
