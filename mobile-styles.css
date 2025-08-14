@@ -354,7 +354,7 @@
         order: 2 !important;
     }
     
-    /* 针对每个feature的具体布局 */
+    /* 针对每个feature的具体布局 - 强制文字在上，图片在下 */
     .content-section .section-content > div:nth-child(1) > div:first-child,
     .content-section .section-content > div:nth-child(2) > div:first-child,
     .content-section .section-content > div:nth-child(3) > div:first-child,
@@ -366,6 +366,15 @@
     .content-section .section-content > div:nth-child(2) > div:last-child,
     .content-section .section-content > div:nth-child(3) > div:last-child,
     .content-section .section-content > div:nth-child(4) > div:last-child {
+        order: 2 !important;
+    }
+    
+    /* 特别针对第一个feature（600 Curated Meal Ideas）确保文字在上 */
+    .content-section .section-content > div:first-child > div:first-child {
+        order: 1 !important;
+    }
+    
+    .content-section .section-content > div:first-child > div:last-child {
         order: 2 !important;
     }
     
