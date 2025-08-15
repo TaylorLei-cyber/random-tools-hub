@@ -262,8 +262,8 @@ h3 {
 
 /* Main content */
 main {
-    /* margin-top: 80px; */
-    /* min-height: calc(100vh - 80px); */
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
 }
 
 /* Footer */
