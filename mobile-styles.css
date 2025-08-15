@@ -388,7 +388,7 @@
     
     /* 优化Key Features区域的文字容器 */
     .content-section .section-content > div > div:first-child {
-        padding: 0 5px !important;
+        padding: 0 15px !important;
     }
     
     /* 确保文字内容有足够的间距 */
@@ -403,6 +403,20 @@
     
     .content-section .section-content > div > div:first-child p:last-child {
         margin-bottom: 0 !important;
+    }
+    
+    /* 增加所有文字内容的左右边距 */
+    .content-section .section-content p {
+        padding: 0 10px !important;
+    }
+    
+    .content-section .section-content h3 {
+        padding: 0 10px !important;
+    }
+    
+    /* 特别为Key Features区域增加更多边距 */
+    .content-section .section-content > div > div:first-child {
+        padding: 0 20px !important;
     }
     
     /* 移动端FAQ区域优化 */
