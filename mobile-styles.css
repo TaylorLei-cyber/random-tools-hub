@@ -106,7 +106,7 @@
     
     .dropdown-toggle:hover {
         background: #f8f9fa;
-        color: #ffd700;
+        color: #333;
     }
     
     .dropdown-toggle::after {
@@ -120,7 +120,7 @@
     .dropdown.active .dropdown-toggle::after {
         content: '▲';
         transform: rotate(180deg);
-        color: #ffd700;
+        color: #333;
     }
     
     .dropdown-menu {
@@ -172,7 +172,7 @@
     
     .dropdown-menu a:hover {
         background: #e9ecef;
-        color: #ffd700;
+        color: #333;
     }
     
     /* 移动端Hero Section优化 */
