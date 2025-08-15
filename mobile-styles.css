@@ -270,7 +270,7 @@
     
     /* 移动端内容区域优化 */
     .content-section {
-        padding: 40px 30px !important;
+        padding: 40px 20px !important;
     }
     
     .section-title {
@@ -280,7 +280,7 @@
         font-weight: 700 !important;
         text-align: center !important;
         color: #333 !important;
-        padding: 0 20px !important;
+        padding: 0 10px !important;
     }
     
     .section-content {
@@ -294,7 +294,7 @@
         color: #555 !important;
         text-align: left !important;
         font-weight: 400 !important;
-        padding: 0 25px !important;
+        padding: 0 15px !important;
     }
     
     /* 移动端所有内容区域统一布局：文字在上，图片在下 */
@@ -390,19 +390,19 @@
     
     /* 优化Key Features区域的文字容器 */
     .content-section .section-content > div > div:first-child {
-        padding: 0 30px !important;
+        padding: 0 20px !important;
     }
     
     /* 确保文字内容有足够的间距 */
     .content-section .section-content > div > div:first-child h3 {
         margin-top: 0 !important;
         margin-bottom: 18px !important;
-        padding: 0 25px !important;
+        padding: 0 15px !important;
     }
     
     .content-section .section-content > div > div:first-child p {
         margin-bottom: 20px !important;
-        padding: 0 25px !important;
+        padding: 0 15px !important;
     }
     
     .content-section .section-content > div > div:first-child p:last-child {
@@ -411,16 +411,16 @@
     
     /* 增加所有文字内容的左右边距 */
     .content-section .section-content p {
-        padding: 0 25px !important;
+        padding: 0 15px !important;
     }
     
     .content-section .section-content h3 {
-        padding: 0 25px !important;
+        padding: 0 15px !important;
     }
     
     /* 特别为Key Features区域增加更多边距 */
     .content-section .section-content > div > div:first-child {
-        padding: 0 30px !important;
+        padding: 0 20px !important;
     }
     
     /* 移动端FAQ区域优化 */
