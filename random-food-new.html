@@ -307,7 +307,7 @@
                         </div>
                     </div>
                     
-                    <div class="food-details" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 25px;">
+                    <div class="food-details" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; margin-top: 25px;">
                         <div class="detail-section" style="background: #2a2a2a; padding: 20px; border-radius: 12px; border: 1px solid #444;">
                             <h3 class="detail-title" style="font-weight: 600; color: #ffd700; margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
                                 <span style="width: 20px; height: 20px; background: #ffd700; border-radius: 50%; display: inline-block;"></span>
@@ -327,46 +327,22 @@
                                 ${randomFood.recipe}
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Nutrition Information -->
-                    <div class="nutrition-section" style="margin-top: 25px; background: #2a2a2a; padding: 20px; border-radius: 12px; border: 1px solid #444;">
-                        <h3 class="detail-title" style="font-weight: 600; color: #ffd700; margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
-                            <span style="width: 20px; height: 20px; background: #ffd700; border-radius: 50%; display: inline-block;"></span>
-                            Nutrition Information (per serving)
-                        </h3>
-                        <div class="nutrition-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; color: #ccc;">
-                            <div class="nutrition-item" style="background: #333; padding: 12px; border-radius: 8px; text-align: center;">
-                                <div style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Calories</div>
-                                <div style="font-size: 1.1rem; font-weight: 600;">${randomFood.detailedNutrition.calories} kcal</div>
-                            </div>
-                            <div class="nutrition-item" style="background: #333; padding: 12px; border-radius: 8px; text-align: center;">
-                                <div style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Protein</div>
-                                <div style="font-size: 1.1rem; font-weight: 600;">${randomFood.detailedNutrition.protein}g</div>
-                            </div>
-                            <div class="nutrition-item" style="background: #333; padding: 12px; border-radius: 8px; text-align: center;">
-                                <div style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Carbohydrates</div>
-                                <div style="font-size: 1.1rem; font-weight: 600;">${randomFood.detailedNutrition.carbohydrates}g</div>
-                            </div>
-                            <div class="nutrition-item" style="background: #333; padding: 12px; border-radius: 8px; text-align: center;">
-                                <div style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Fat</div>
-                                <div style="font-size: 1.1rem; font-weight: 600;">${randomFood.detailedNutrition.fat}g</div>
-                            </div>
-                            <div class="nutrition-item" style="background: #333; padding: 12px; border-radius: 8px; text-align: center;">
-                                <div style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Fiber</div>
-                                <div style="font-size: 1.1rem; font-weight: 600;">${randomFood.detailedNutrition.fiber}g</div>
-                            </div>
-                            <div class="nutrition-item" style="background: #333; padding: 12px; border-radius: 8px; text-align: center;">
-                                <div style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Sugar</div>
-                                <div style="font-size: 1.1rem; font-weight: 600;">${randomFood.detailedNutrition.sugar}g</div>
-                            </div>
-                            <div class="nutrition-item" style="background: #333; padding: 12px; border-radius: 8px; text-align: center;">
-                                <div style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Sodium</div>
-                                <div style="font-size: 1.1rem; font-weight: 600;">${randomFood.detailedNutrition.sodium}mg</div>
-                            </div>
-                            <div class="nutrition-item" style="background: #333; padding: 12px; border-radius: 8px; text-align: center;">
-                                <div style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Cholesterol</div>
-                                <div style="font-size: 1.1rem; font-weight: 600;">${randomFood.detailedNutrition.cholesterol}mg</div>
+                        
+                        <div class="detail-section" style="background: #2a2a2a; padding: 20px; border-radius: 12px; border: 1px solid #444;">
+                            <h3 class="detail-title" style="font-weight: 600; color: #ffd700; margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                                <span style="width: 20px; height: 20px; background: #ffd700; border-radius: 50%; display: inline-block;"></span>
+                                Nutrition (per serving)
+                            </h3>
+                            <div class="nutrition-list" style="color: #ccc; line-height: 1.6; font-size: 0.95rem;">
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Calories:</strong> ${randomFood.detailedNutrition.calories} kcal</div>
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Fat Content:</strong> ${randomFood.detailedNutrition.fat}g</div>
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Saturated Fat:</strong> ${randomFood.detailedNutrition.saturatedFat}g</div>
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Cholesterol:</strong> ${randomFood.detailedNutrition.cholesterol}mg</div>
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Sodium:</strong> ${randomFood.detailedNutrition.sodium}mg</div>
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Carbohydrates:</strong> ${randomFood.detailedNutrition.carbohydrates}g</div>
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Fiber:</strong> ${randomFood.detailedNutrition.fiber}g</div>
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Sugar:</strong> ${randomFood.detailedNutrition.sugar}g</div>
+                                <div style="margin-bottom: 8px;"><strong style="color: #ffd700;">Protein:</strong> ${randomFood.detailedNutrition.protein}g</div>
                             </div>
                         </div>
                     </div>
