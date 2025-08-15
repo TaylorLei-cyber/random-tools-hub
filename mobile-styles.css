@@ -1,8 +1,20 @@
 /* Mobile Styles - 移动端全面优化 */
 @media (max-width: 768px) {
     /* 移动端导航优化 */
+    .nav-menu {
+        display: none;
+    }
+    
     .mobile-nav-toggle {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
         padding: 8px;
         border-radius: 6px;
         transition: background-color 0.3s ease;
@@ -24,7 +36,7 @@
     .nav-menu {
         display: none;
         position: fixed;
-        top: 70px;
+        top: 60px;
         left: 0;
         right: 0;
         background: white;
@@ -32,7 +44,7 @@
         padding: 0;
         box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         z-index: 1000;
-        max-height: calc(100vh - 70px);
+        max-height: calc(100vh - 60px);
         overflow-y: auto;
         border-radius: 0;
         margin-top: 0;
@@ -163,190 +175,129 @@
         color: #ffd700;
     }
     
-    /* 移动端footer优化 */
-    .footer-links {
-        flex-direction: column;
-        gap: 20px;
+    /* 移动端Hero Section优化 */
+    .hero-section {
+        padding: 40px 15px !important;
     }
     
-    .footer {
-        padding: 30px 0;
-        margin-top: 40px;
+    .hero-section h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
     }
     
-    .footer-content {
-        padding: 0 15px;
-    }
-    
-    /* 移动端食物生成器优化 */
-    .generator-section {
-        padding: 30px 15px;
-        margin-bottom: 0;
-        border-radius: 0 !important; /* 确保移动端也没有圆角 */
-    }
-    
-    .generator-title {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-        line-height: 1.3;
-    }
-    
-    .generator-description {
-        font-size: 1rem;
-        margin-bottom: 25px;
-        line-height: 1.5;
+    .hero-section p {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+        line-height: 1.5 !important;
     }
     
     .controls-section {
-        max-width: 100%;
-        gap: 15px;
-        margin-bottom: 25px;
+        max-width: 100% !important;
+        margin-bottom: 25px !important;
     }
     
     .control-group {
-        gap: 6px;
+        margin-bottom: 15px !important;
     }
     
-    .control-label {
-        font-size: 0.95rem;
-        margin-bottom: 3px;
+    .control-group label {
+        font-size: 0.95rem !important;
+        margin-bottom: 6px !important;
     }
     
     .control-select {
-        padding: 14px 16px;
-        font-size: 1rem;
-        padding-right: 40px;
+        padding: 14px 16px !important;
+        font-size: 1rem !important;
+        padding-right: 40px !important;
     }
     
     .generate-btn {
-        padding: 16px 30px;
-        font-size: 1.1rem;
-        margin: 15px 0;
-        border-radius: 10px;
+        padding: 16px 30px !important;
+        font-size: 1.1rem !important;
+        margin: 15px 0 !important;
+        border-radius: 10px !important;
     }
     
     /* 移动端食物结果卡片优化 */
     .food-result-card {
-        padding: 20px 15px;
-        margin: 15px 0;
-        border-radius: 12px;
-        border-width: 2px;
+        padding: 20px 15px !important;
+        margin: 15px 0 !important;
+        border-radius: 12px !important;
+        border-width: 2px !important;
     }
     
     .food-header {
-        flex-direction: column;
-        gap: 15px;
-        margin-bottom: 20px;
-        text-align: center;
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
     }
     
     .food-name-result {
-        font-size: 1.6rem;
-        margin-bottom: 12px;
-        line-height: 1.3;
+        font-size: 1.6rem !important;
+        margin-bottom: 12px !important;
+        line-height: 1.3 !important;
     }
     
     .food-tags {
-        gap: 8px;
-        margin-bottom: 12px;
-        justify-content: center;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
+        justify-content: center !important;
     }
     
     .food-tag {
-        padding: 5px 10px;
-        font-size: 0.8rem;
-        border-radius: 15px;
+        padding: 5px 10px !important;
+        font-size: 0.8rem !important;
+        border-radius: 15px !important;
     }
     
     .food-details {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin-top: 20px;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        margin-top: 20px !important;
     }
     
     .detail-section {
-        padding: 15px;
-        border-radius: 10px;
+        padding: 15px !important;
+        border-radius: 10px !important;
     }
     
     .detail-title {
-        font-size: 1rem;
-        margin-bottom: 12px;
-    }
-    
-    .ingredients-list li {
-        padding: 6px 0;
-        font-size: 0.9rem;
-    }
-    
-    .nutrition-grid {
-        gap: 6px;
-    }
-    
-    .nutrition-item {
-        padding: 6px 0;
-    }
-    
-    .nutrition-label {
-        font-size: 0.85rem;
-    }
-    
-    .nutrition-value {
-        font-size: 0.85rem;
+        font-size: 1rem !important;
+        margin-bottom: 12px !important;
     }
     
     /* 移动端内容区域优化 */
     .content-section {
-        padding: 40px 15px;
+        padding: 40px 15px !important;
     }
     
     .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-        line-height: 1.3;
+        font-size: 1.6rem !important;
+        margin-bottom: 20px !important;
+        line-height: 1.3 !important;
     }
     
     .section-content {
-        max-width: 100%;
+        max-width: 100% !important;
     }
     
     .section-content p {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 15px;
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 15px !important;
     }
     
-    /* 移动端How to Use区域优化 */
-    .content-section.gray .section-content > div {
-        flex-direction: column;
-        gap: 25px;
-        margin-top: 25px;
-    }
-    
-    .content-section.gray .section-content > div > div:first-child {
-        order: 1;
-    }
-    
-    .content-section.gray .section-content > div > div:last-child {
-        order: 2;
-    }
-    
-    .content-section.gray .section-content img {
-        width: 100%;
-        height: auto;
-        max-width: 350px;
-        margin: 0 auto;
-        display: block;
-    }
-    
-    /* 移动端Key Features区域优化 */
+    /* 移动端所有内容区域统一布局：文字在上，图片在下 */
     .content-section .section-content > div {
-        flex-direction: column;
-        gap: 25px;
-        margin-bottom: 40px;
+        flex-direction: column !important;
+        gap: 25px !important;
+        margin-top: 25px !important;
+        margin-bottom: 40px !important;
     }
     
-    /* 确保所有feature的文字在上，图片在下 */
+    /* 确保文字在上，图片在下 - 针对每个feature的布局 */
     .content-section .section-content > div > div:first-child {
         order: 1 !important;
     }
@@ -355,105 +306,145 @@
         order: 2 !important;
     }
     
-    /* 针对每个feature的具体布局 - 强制文字在上，图片在下 */
-    .content-section .section-content > div:nth-child(1) > div:first-child,
-    .content-section .section-content > div:nth-child(2) > div:first-child,
-    .content-section .section-content > div:nth-child(3) > div:first-child,
+    /* 特别针对Key Features区域，确保每个feature的文字和图片正确配对 */
+    /* Feature 1: 图片在左，文字在右 -> 移动端：文字在上，图片在下 */
+    .content-section .section-content > div:nth-child(1) > div:first-child {
+        order: 2 !important; /* 图片移到下面 */
+    }
+    
+    .content-section .section-content > div:nth-child(1) > div:last-child {
+        order: 1 !important; /* 文字移到上面 */
+    }
+    
+    /* Feature 2: 文字在左，图片在右 -> 移动端：文字在上，图片在下 */
+    .content-section .section-content > div:nth-child(2) > div:first-child {
+        order: 1 !important; /* 文字在上面 */
+    }
+    
+    .content-section .section-content > div:nth-child(2) > div:last-child {
+        order: 2 !important; /* 图片在下面 */
+    }
+    
+    /* Feature 3: 图片在左，文字在右 -> 移动端：文字在上，图片在下 */
+    .content-section .section-content > div:nth-child(3) > div:first-child {
+        order: 2 !important; /* 图片移到下面 */
+    }
+    
+    .content-section .section-content > div:nth-child(3) > div:last-child {
+        order: 1 !important; /* 文字移到上面 */
+    }
+    
+    /* Feature 4: 文字在左，图片在右 -> 移动端：文字在上，图片在下 */
     .content-section .section-content > div:nth-child(4) > div:first-child {
-        order: 1 !important;
+        order: 1 !important; /* 文字在上面 */
     }
     
-    .content-section .section-content > div:nth-child(1) > div:last-child,
-    .content-section .section-content > div:nth-child(2) > div:last-child,
-    .content-section .section-content > div:nth-child(3) > div:last-child,
     .content-section .section-content > div:nth-child(4) > div:last-child {
-        order: 2 !important;
+        order: 2 !important; /* 图片在下面 */
     }
     
-    /* 特别针对第一个feature（600 Curated Meal Ideas）确保文字在上 */
-    .content-section .section-content > div:first-child > div:first-child {
-        order: 1 !important;
-    }
-    
-    .content-section .section-content > div:first-child > div:last-child {
-        order: 2 !important;
-    }
-    
-    /* 更具体的选择器，确保第一个feature的文字容器在上 */
-    .content-section .section-content > div:first-child > div:nth-child(2) {
-        order: 1 !important;
-    }
-    
-    .content-section .section-content > div:first-child > div:nth-child(1) {
-        order: 2 !important;
-    }
-    
-    /* 确保第三个feature（Accurate Nutrition Information）的文字在上，图片在下 */
-    .content-section .section-content > div:nth-child(3) > div:nth-child(2) {
-        order: 1 !important;
-    }
-    
-    .content-section .section-content > div:nth-child(3) > div:nth-child(1) {
-        order: 2 !important;
-    }
-    
+    /* 图片样式统一 */
     .content-section .section-content img {
-        width: 100%;
-        height: auto;
-        max-width: 300px;
-        margin: 0 auto;
-        display: block;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
     
+    /* 文字内容样式 */
     .content-section .section-content h3 {
-        font-size: 1.2rem;
-        margin-bottom: 12px;
+        font-size: 1.2rem !important;
+        margin-bottom: 12px !important;
     }
     
     .content-section .section-content p {
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
     }
     
     /* 移动端FAQ区域优化 */
     .faq-section {
-        padding: 40px 15px;
+        padding: 40px 15px !important;
     }
     
     .faq-list {
-        max-width: 100%;
+        max-width: 100% !important;
     }
     
     .faq-question {
-        padding: 16px 20px;
-        font-size: 1rem;
-        line-height: 1.4;
+        padding: 16px 20px !important;
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
     }
     
     .faq-answer {
-        padding: 0 20px 16px 20px;
-        font-size: 0.95rem;
-        line-height: 1.5;
+        padding: 0 20px 16px 20px !important;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
     }
     
     /* 移动端CTA区域优化 */
     .cta-section {
-        padding: 40px 15px;
+        padding: 40px 15px !important;
     }
     
     .cta-section .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 15px;
+        font-size: 1.6rem !important;
+        margin-bottom: 15px !important;
     }
     
     .cta-section p {
-        font-size: 1rem;
-        margin-bottom: 25px;
-        line-height: 1.5;
+        font-size: 1rem !important;
+        margin-bottom: 25px !important;
+        line-height: 1.5 !important;
     }
     
     .cta-section .generate-btn {
-        padding: 16px 35px;
-        font-size: 1.1rem;
+        padding: 16px 35px !important;
+        font-size: 1.1rem !important;
+    }
+    
+    /* 移动端footer优化 */
+    .footer {
+        padding: 30px 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    .footer-content {
+        padding: 0 15px !important;
+    }
+    
+    .footer-links {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    /* 移动端表格优化 */
+    .ingredients-list table,
+    .nutrition-list table {
+        font-size: 0.9rem !important;
+    }
+    
+    .ingredients-list th,
+    .nutrition-list th {
+        padding: 8px 4px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .ingredients-list td,
+    .nutrition-list td {
+        padding: 6px 4px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* 移动端容器优化 */
+    .container {
+        padding: 0 15px !important;
+    }
+    
+    /* 移动端main优化 */
+    main {
+        margin-top: 60px !important;
     }
 } 

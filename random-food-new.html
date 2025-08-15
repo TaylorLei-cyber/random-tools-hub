@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="mobile-styles.css">
 </head>
 <body>
-    <header class="header" style="position: relative; z-index: 1000; background: white;">
+    <header class="header" style="position: fixed; z-index: 1000; background: white;">
         <div class="nav-container">
             <nav class="nav">
                 <a href="/" class="logo" style="display: flex; align-items: center;">
@@ -258,7 +258,7 @@
 
     <footer class="footer" style="background: #333; color: white; text-align: center; padding: 20px 0; margin-top: 0;">
         <div class="container">
-            <p>&copy; 2024 MyGenTool. All rights reserved.</p>
+            <p>&copy; 2025 MyGenTool. All rights reserved.</p>
         </div>
     </footer>
 
@@ -295,11 +295,12 @@
                         <div class="food-info" style="flex: 1;">
                             <h2 class="food-name-result" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 15px; line-height: 1.2; text-align: center;">${Object.keys(foodDatabase).find(key => foodDatabase[key] === randomFood)}</h2>
                             <div class="food-tags" style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 15px; justify-content: center;">
-                                <span class="food-tag" style="background: #333; color: #ccc; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px;">
-                                    <span style="width: 8px; height: 8px; border-radius: 50%; background: #ffd700; display: inline-block;"></span>
+                                <span class="food-tag meal-tag" style="background: #333; color: #ccc; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px; position: relative;">
+                                    <span class="single-dot" style="width: 6px; height: 6px; border-radius: 50%; background: #ffd700; display: inline-block; flex-shrink: 0; position: relative; z-index: 1;"></span>
                                     ${randomFood.mealType}
                                 </span>
-                                <span class="food-tag" style="background: #333; color: #ccc; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">
+                                <span class="food-tag lifestyle-tag" style="background: #333; color: #ccc; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px; position: relative;">
+                                    <span class="single-dot" style="width: 6px; height: 6px; border-radius: 50%; background: #ffd700; display: inline-block; flex-shrink: 0; position: relative; z-index: 1;"></span>
                                     ${randomFood.lifestyle}
                                 </span>
                             </div>
