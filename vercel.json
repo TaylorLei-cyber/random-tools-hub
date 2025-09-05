@@ -53,6 +53,11 @@
       "source": "/random-bible-verse.html",
       "destination": "/random-bible-verse-generator",
       "permanent": true
+    },
+    {
+      "source": "/random-fruit-generator.html",
+      "destination": "/random-fruit-generator",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -87,6 +92,10 @@
     {
       "source": "/random-bible-verse-generator",
       "destination": "/random-bible-verse.html"
+    },
+    {
+      "source": "/random-fruit-generator",
+      "destination": "/random-fruit-generator.html"
     }
   ],
   "headers": [

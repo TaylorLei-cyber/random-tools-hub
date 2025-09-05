@@ -376,6 +376,13 @@ main {
     gap: 6px;
 }
 
+.food-tag::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffd700;
+}
 
 .food-details {
     display: grid;
