@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://mygentool.com/random-object-generator">
     <meta property="og:title" content="Random Object Generator – Free Online Tool for Anything">
     <meta property="og:description" content="Our Random Object Generator instantly provides random things for games, creative projects, or scavenger hunts. Get unique random items for free and fast!">
-    <meta property="og:image" content="https://mygentool.com/images/mygentool-og-image.png">
+    <meta property="og:image" content="https://mygentool.com/images/randon-object-generator/random-object-generator-og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -29,7 +29,7 @@
     <meta name="twitter:site" content="https://mygentool.com">
     <meta name="twitter:title" content="Random Object Generator – Free Online Tool for Anything">
     <meta name="twitter:description" content="Our Random Object Generator instantly provides random things for games, creative projects, or scavenger hunts. Get unique random items for free and fast!">
-    <meta name="twitter:image" content="https://mygentool.com/images/mygentool-og-image.png">
+    <meta name="twitter:image" content="https://mygentool.com/images/randon-object-generator/random-object-generator-og-image.png">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="recipe-styles.css">
@@ -251,6 +251,43 @@
             .object-list {
                 grid-template-columns: 1fr;
             }
+
+            /* How to Use Section Mobile */
+            .content-grid > div {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+
+            .content-grid img {
+                width: 100% !important;
+                height: 300px !important;
+                max-width: none !important;
+            }
+
+            /* Key Features Section Mobile */
+            .section-content > div {
+                flex-direction: column !important;
+                gap: 30px !important;
+                text-align: center !important;
+            }
+
+            .section-content > div:nth-child(even) {
+                flex-direction: column !important;
+            }
+
+            .section-content img {
+                width: 100% !important;
+                height: 300px !important;
+                max-width: none !important;
+            }
+
+            .section-content h3 {
+                text-align: center !important;
+            }
+
+            .section-content p {
+                text-align: center !important;
+            }
         }
     </style>
 </head>
@@ -364,18 +401,23 @@
             <div class="container">
                 <h2 class="section-title">How to Use the Random Object Generator</h2>
                 <div class="content-grid">
-                    <div class="content-text">
-                        <div class="step-card">
-                            <h3>Step 1: Set Your Generation Preferences</h3>
-                            <p>Start by defining your needs. Select the quantity of random objects you want, from 1 to 50 items. You can choose a specific category, like "Household Items" or "Tools," or select "All Objects" for maximum variety in your random item selection. Then, decide if you want to allow duplicate objects in the generated list.</p>
+                    <div style="display: flex; gap: 40px; align-items: center;">
+                        <div style="flex: 1;">
+                            <div class="step-card">
+                                <h3>Step 1: Set Your Generation Preferences</h3>
+                                <p>Start by defining your needs. Select the quantity of random objects you want, from 1 to 50 items. You can choose a specific category, like "Household Items" or "Tools," or select "All Objects" for maximum variety in your random item selection. Then, decide if you want to allow duplicate objects in the generated list.</p>
+                            </div>
+                            <div class="step-card">
+                                <h3>Step 2: Generate Your List of Objects</h3>
+                                <p>Once your preferences are set, simply click the "Generate Random Objects" button. MyGenTool will instantly create a unique list of random items based on your selections. This process is super fast, providing you with your desired list of objects in mere seconds, perfect for quick decision-making or creative projects.</p>
+                            </div>
+                            <div class="step-card">
+                                <h3>Step 3: Utilize Your Generated Items</h3>
+                                <p>After your random objects appear, you can instantly copy the list to your clipboard for easy pasting elsewhere. Share your unique selection on social media platforms, or use your new list of random items for games, brainstorming, or any activity that requires a diverse set of objects. It's a flexible tool for endless possibilities!</p>
+                            </div>
                         </div>
-                        <div class="step-card">
-                            <h3>Step 2: Generate Your List of Objects</h3>
-                            <p>Once your preferences are set, simply click the "Generate Random Objects" button. MyGenTool will instantly create a unique list of random items based on your selections. This process is super fast, providing you with your desired list of objects in mere seconds, perfect for quick decision-making or creative projects.</p>
-                        </div>
-                        <div class="step-card">
-                            <h3>Step 3: Utilize Your Generated Items</h3>
-                            <p>After your random objects appear, you can instantly copy the list to your clipboard for easy pasting elsewhere. Share your unique selection on social media platforms, or use your new list of random items for games, brainstorming, or any activity that requires a diverse set of objects. It's a flexible tool for endless possibilities!</p>
+                        <div style="flex: 1;">
+                            <img src="images/randon-object-generator/how-to-use-the-random-object-generator.png" style="width: 480px; height: 480px; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); object-fit: cover;">
                         </div>
                     </div>
                 </div>
@@ -386,22 +428,49 @@
         <section class="content-section" style="padding: 80px 0; background: white;">
             <div class="container">
                 <h2 class="section-title">Essential Features for Endless Possibilities</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>1. Diverse Object Categories</h3>
-                        <p>Explore an extensive database with hundreds of items across 9 unique categories, including household goods, office supplies, and outdoor gear. This means you can find anything from a common kitchen utensil to a specific clothing accessory, or leave it wide open for maximum variety. Whether you're planning a themed game or just need a random object for creative inspiration, MyGenTool's vast selection ensures you always get fresh and unexpected results. It's a powerful online tool designed to spark your imagination with endless options.</p>
+                <div class="section-content">
+                    <!-- Feature 1 -->
+                    <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 60px;">
+                        <div style="flex: 1;">
+                            <img src="images/randon-object-generator/diverse-object-categories.png" style="width: 380px; height: 380px; border-radius: 10px; object-fit: cover;">
+                        </div>
+                        <div style="flex: 1; text-align: left;">
+                            <h3 style="color: #333; margin-bottom: 15px; font-size: 1.3rem;">1. Diverse Object Categories</h3>
+                            <p style="color: #666; line-height: 1.6; font-size: 1.1rem;">Explore an extensive database with hundreds of items across 9 unique categories, including household goods, office supplies, and outdoor gear. This means you can find anything from a common kitchen utensil to a specific clothing accessory, or leave it wide open for maximum variety. Whether you're planning a themed game or just need a random object for creative inspiration, MyGenTool's vast selection ensures you always get fresh and unexpected results. It's a powerful online tool designed to spark your imagination with endless options.</p>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>2. Fully Customizable Generation</h3>
-                        <p>Take control of your random object selection with options to set the quantity (from 1 to 50), choose specific categories, and decide if you want to allow duplicate items. If you're organizing a scavenger hunt for unique items, simply uncheck the "Allow Duplicates" box. Need just one random toy or multiple bathroom essentials? Our free generator tool lets you fine-tune the results to match your exact project or game requirements, giving you precise control over your output.</p>
+
+                    <!-- Feature 2 -->
+                    <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 60px;">
+                        <div style="flex: 1; text-align: left;">
+                            <h3 style="color: #333; margin-bottom: 15px; font-size: 1.3rem;">2. Fully Customizable Generation</h3>
+                            <p style="color: #666; line-height: 1.6; font-size: 1.1rem;">Take control of your random object selection with options to set the quantity (from 1 to 50), choose specific categories, and decide if you want to allow duplicate items. If you're organizing a scavenger hunt for unique items, simply uncheck the "Allow Duplicates" box. Need just one random toy or multiple bathroom essentials? Our free generator tool lets you fine-tune the results to match your exact project or game requirements, giving you precise control over your output.</p>
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="images/randon-object-generator/fully-customizable-generation.png" style="width: 380px; height: 380px; border-radius: 10px; object-fit: cover;">
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>3. Instant, Hassle-Free Selection</h3>
-                        <p>Our random object generator provides an incredibly quick and easy way to get what you need. Forget about manually brainstorming or searching for ideas. With just a few clicks, you can instantly generate a list of objects in seconds. This free online tool is designed for convenience, letting you quickly copy and share your generated items for immediate use. It saves you time and effort, making it super simple to get fresh ideas for creative projects, games, or decision-making on the fly.</p>
+
+                    <!-- Feature 3 -->
+                    <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 60px;">
+                        <div style="flex: 1;">
+                            <img src="images/randon-object-generator/instant-hassle-free-selection.png" style="width: 380px; height: 380px; border-radius: 10px; object-fit: cover;">
+                        </div>
+                        <div style="flex: 1; text-align: left;">
+                            <h3 style="color: #333; margin-bottom: 15px; font-size: 1.3rem;">3. Instant, Hassle-Free Selection</h3>
+                            <p style="color: #666; line-height: 1.6; font-size: 1.1rem;">Our random object generator provides an incredibly quick and easy way to get what you need. Forget about manually brainstorming or searching for ideas. With just a few clicks, you can instantly generate a list of objects in seconds. This free online tool is designed for convenience, letting you quickly copy and share your generated items for immediate use. It saves you time and effort, making it super simple to get fresh ideas for creative projects, games, or decision-making on the fly.</p>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>4. Spark Creativity & Fun</h3>
-                        <p>Unleash your imagination and add a new dimension of fun to various activities. Use this versatile tool for brainstorming, creating unique game ideas, breaking creative blocks, or even making everyday decisions more interesting. It's perfect for party games, team-building exercises, or simply getting a random prompt for drawing or writing. This free online resource is more than just an object generator; it's your go-to for sparking new ideas and adding an element of surprise to any task.</p>
+
+                    <!-- Feature 4 -->
+                    <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 60px;">
+                        <div style="flex: 1; text-align: left;">
+                            <h3 style="color: #333; margin-bottom: 15px; font-size: 1.3rem;">4. Spark Creativity & Fun</h3>
+                            <p style="color: #666; line-height: 1.6; font-size: 1.1rem;">Unleash your imagination and add a new dimension of fun to various activities. Use this versatile tool for brainstorming, creating unique game ideas, breaking creative blocks, or even making everyday decisions more interesting. It's perfect for party games, team-building exercises, or simply getting a random prompt for drawing or writing. This free online resource is more than just an object generator; it's your go-to for sparking new ideas and adding an element of surprise to any task.</p>
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="images/randon-object-generator/spark-creativity-fun.png" style="width: 380px; height: 380px; border-radius: 10px; object-fit: cover;">
+                        </div>
                     </div>
                 </div>
             </div>
