@@ -58,6 +58,11 @@
       "source": "/random-fruit-generator.html",
       "destination": "/random-fruit-generator",
       "permanent": true
+    },
+    {
+      "source": "/random-object-generator.html",
+      "destination": "/random-object-generator",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -96,6 +101,10 @@
     {
       "source": "/random-fruit-generator",
       "destination": "/random-fruit-generator.html"
+    },
+    {
+      "source": "/random-object-generator",
+      "destination": "/random-object-generator.html"
     }
   ],
   "headers": [

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Object Generator | Pick Random Objects & Things Online</title>
+    <meta name="description" content="Generate random objects instantly with our free Random Object Generator. Use it as an object randomizer, thing picker, or to get random object names for games, scavenger hunts, and creative inspiration.">
+    <meta name="keywords" content="random object generator, object generator, random things, object randomizer, random object picker, scavenger hunt, random items, object list generator">
+    <meta name="author" content="MyGenTool">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mygentool.com/random-object-generator">
+    <link rel="icon" type="image/x-icon" href="https://mygentool.com/images/mygentool-favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://mygentool.com/images/mygentool-favicon.ico">
+    <link rel="apple-touch-icon" href="https://mygentool.com/images/mygentool-favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mygentool.com/images/mygentool-favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mygentool.com/images/mygentool-favicon.ico">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mygentool.com/random-object-generator">
+    <meta property="og:title" content="Random Object Generator | Pick Random Objects & Things Online">
+    <meta property="og:description" content="Generate random objects instantly with our free Random Object Generator. Use it as an object randomizer, thing picker, or to get random object names for games, scavenger hunts, and creative inspiration.">
+    <meta property="og:image" content="https://mygentool.com/images/mygentool-og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://mygentool.com">
+    <meta name="twitter:title" content="Random Object Generator | Pick Random Objects & Things Online">
+    <meta name="twitter:description" content="Generate random objects instantly with our free Random Object Generator. Use it as an object randomizer, thing picker, or to get random object names for games, scavenger hunts, and creative inspiration.">
+    <meta name="twitter:image" content="https://mygentool.com/images/mygentool-og-image.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="recipe-styles.css">
+    <link rel="stylesheet" href="mobile-styles.css">
+    <style>
+        /* Object Generator Specific Styles */
+        .generator-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 20px;
+            text-align: center;
+            margin: 0;
+            position: relative;
+        }
+
+        .generator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .generator-title {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .generator-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generator-controls {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .control-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .control-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-item label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .control-item select,
+        .control-item input {
+            padding: 8px 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            min-width: 120px;
+        }
+
+        .control-item input[type="number"] {
+            width: 80px;
+        }
+
+        .generate-btn {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #333;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .generate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .generate-btn:active {
+            transform: translateY(0);
+        }
+
+        .results-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            min-height: 200px;
+        }
+
+        .results-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .object-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .object-item {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .object-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+
+        .loading {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+        }
+
+        .copy-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .share-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn.facebook {
+            background: #1877f2;
+            color: white;
+        }
+
+        .share-btn.twitter {
+            background: #1da1f2;
+            color: white;
+        }
+
+        .share-btn.reddit {
+            background: #ff4500;
+            color: white;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-1px);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .generator-title {
+                font-size: 2rem;
+            }
+            
+            .control-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .object-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" style="position: fixed; z-index: 1000; background: white;">
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="/" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/MyGenTool.svg" alt="MyGenTool" style="height: 35px; width: auto;">
+                    <span style="margin-left: 10px; font-weight: 600; font-size: 1.2rem; color: #333;">MyGenTool</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/random-bible-verse-generator">Random Bible Verse Generator</a></li>
+                    <li><a href="/random-animal-generator">Random Animal Generator</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">All Tools</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/random-number-generator">Random Number Generator</a></li>
+                            <li><a href="/random-color-generator">Random Color Generator</a></li>
+                            <li><a href="/random-password-generator">Random Password Generator</a></li>
+                            <li><a href="/random-food-generator">Random Food Generator</a></li>
+                            <li><a href="/random-fruit-generator">Random Fruit Generator</a></li>
+                            <li><a href="/random-travel-generator">Random Travel Generator</a></li>
+                            <li><a href="/random-object-generator" class="active">Random Object Generator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px;">
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 20px; text-align: center; margin: 0; position: relative; margin-top: 0;">
+            <div class="container">
+                <h1 style="color: white; font-size: 3rem; font-weight: 700; margin-bottom: 20px; position: relative; z-index: 2;">🎲 Random Object Generator – Discover Random Things Instantly</h1>
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.2rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Generate random objects instantly with our free Random Object Generator! Perfect for scavenger hunts, creative inspiration, games, and brainstorming. Get random things from everyday items to unique objects.
+                </p>
+            </div>
+        </section>
+
+        <!-- Generator Section -->
+        <section class="generator-section">
+            <div class="generator-container">
+                <div class="generator-controls">
+                    <div class="control-group">
+                        <div class="control-item">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" min="1" max="50" value="10">
+                        </div>
+                        <div class="control-item">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option value="all">All Objects</option>
+                                <option value="household">Household Items</option>
+                                <option value="office">Office Supplies</option>
+                                <option value="outdoor">Outdoor Items</option>
+                                <option value="kitchen">Kitchen Items</option>
+                                <option value="bathroom">Bathroom Items</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="tools">Tools</option>
+                                <option value="toys">Toys & Games</option>
+                            </select>
+                        </div>
+                        <div class="control-item">
+                            <label for="duplicates">Allow Duplicates</label>
+                            <select id="duplicates">
+                                <option value="false">No</option>
+                                <option value="true">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="generate-btn" onclick="generateRandomObjects()">🎲 Generate Random Objects</button>
+                </div>
+
+                <div class="results-container">
+                    <h3 class="results-title">Your Random Objects</h3>
+                    <div id="object-results" class="loading">Click the button above to generate random objects!</div>
+                    <button id="copy-btn" class="copy-btn" onclick="copyResults()" style="display: none;">📋 Copy List</button>
+                    <div class="share-buttons" id="share-buttons" style="display: none;">
+                        <a href="#" class="share-btn facebook" onclick="shareOnFacebook()">Facebook</a>
+                        <a href="#" class="share-btn twitter" onclick="shareOnTwitter()">Twitter</a>
+                        <a href="#" class="share-btn reddit" onclick="shareOnReddit()">Reddit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is Section -->
+        <section class="content-section" style="padding: 80px 0; background: white;">
+            <div class="container">
+                <h2 class="section-title">What is the Random Object Generator?</h2>
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p>The Random Object Generator is a versatile tool designed to help you discover random objects and things instantly. Whether you're planning a scavenger hunt, looking for creative inspiration, or need random items for games and activities, this generator provides an endless supply of random objects.</p>
+                        <p>Our generator includes hundreds of everyday objects from various categories including household items, office supplies, outdoor gear, kitchen utensils, and much more. Each generation is completely random, ensuring you get fresh and unexpected results every time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="content-section" style="padding: 80px 0; background: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">How to Use the Random Object Generator</h2>
+                <div class="content-grid">
+                    <div class="content-text">
+                        <div class="step-card">
+                            <h3>Step 1: Choose Your Settings</h3>
+                            <p>Select how many objects you want to generate (1-50), choose a specific category or keep it on "All Objects", and decide whether to allow duplicate items in your list.</p>
+                        </div>
+                        <div class="step-card">
+                            <h3>Step 2: Generate Your Objects</h3>
+                            <p>Click the "Generate Random Objects" button to instantly create your random object list. The generator will select objects based on your chosen settings.</p>
+                        </div>
+                        <div class="step-card">
+                            <h3>Step 3: Use Your Results</h3>
+                            <p>Copy your list, share it with friends, or use it for scavenger hunts, creative projects, or any activity that needs random objects. Generate new lists anytime!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="content-section" style="padding: 80px 0; background: white;">
+            <div class="container">
+                <h2 class="section-title">Key Features of Our Free Random Object Generator</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>🎯 Extensive Object Database</h3>
+                        <p>Access hundreds of random objects from various categories including household items, office supplies, outdoor gear, and more.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>⚙️ Customizable Settings</h3>
+                        <p>Choose quantity, category, and duplicate settings to generate exactly the type of object list you need for your activity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎮 Perfect for Games</h3>
+                        <p>Ideal for scavenger hunts, party games, creative challenges, and any activity that requires random object selection.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📋 Easy Sharing</h3>
+                        <p>Copy your generated lists or share them directly on social media platforms with built-in sharing buttons.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" style="padding: 80px 0; background: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What is the Random Object Generator used for?</h3>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The Random Object Generator is perfect for scavenger hunts, creative inspiration, party games, brainstorming sessions, and any activity that needs random object selection. It's widely used by teachers, event organizers, and creative professionals.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How many objects can I generate at once?</h3>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can generate between 1 and 50 random objects at once. This range covers everything from single object selection to comprehensive lists for large group activities.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I choose specific categories of objects?</h3>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! You can select from categories like household items, office supplies, outdoor items, kitchen items, bathroom items, clothing, electronics, tools, and toys & games. Or choose "All Objects" for maximum variety.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Is this random object generator free to use?</h3>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our Random Object Generator is completely free to use! You can generate as many object lists as you want without any cost, registration, or limitations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I share my generated object lists?</h3>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! You can copy your generated lists to clipboard or share them directly on Facebook, Twitter, and Reddit using our built-in sharing buttons.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How can I use this for scavenger hunts?</h3>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Generate a list of 10-20 random objects, print or share the list with participants, and have them find or collect the items. You can create multiple lists for different teams or difficulty levels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 50px 40px; text-align: center; margin: 40px auto; max-width: 800px;">
+            <h2 style="color: white; font-size: 2.5rem; font-weight: 700; margin-bottom: 20px;">Ready to Generate Random Objects?</h2>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.2rem; margin-bottom: 30px;">Start creating random object lists for your next scavenger hunt, game, or creative project!</p>
+            <button class="generate-btn" onclick="document.querySelector('.generator-section').scrollIntoView({behavior: 'smooth'})" style="font-size: 1.3rem; padding: 18px 45px;">🎲 Generate Objects Now</button>
+        </section>
+    </main>
+
+    <footer class="footer" style="background: #2c3e50; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 MyGenTool. All rights reserved. | <a href="/privacy" style="color: #3498db;">Privacy Policy</a> | <a href="/terms" style="color: #3498db;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Object database
+        const objectDatabase = {
+            all: [
+                'pencil', 'notebook', 'phone', 'headphones', 'keys', 'wallet', 'watch', 'glasses', 'backpack', 'umbrella',
+                'laptop', 'mouse', 'keyboard', 'monitor', 'charger', 'camera', 'book', 'pen', 'paper', 'scissors',
+                'tape', 'stapler', 'calculator', 'ruler', 'eraser', 'marker', 'highlighter', 'folder', 'binder', 'clipboard',
+                'coffee mug', 'water bottle', 'lunch box', 'thermos', 'plate', 'bowl', 'spoon', 'fork', 'knife', 'cup',
+                'towel', 'soap', 'shampoo', 'toothbrush', 'toothpaste', 'mirror', 'comb', 'brush', 'razor', 'lotion',
+                'shirt', 'pants', 'dress', 'shoes', 'socks', 'hat', 'belt', 'jacket', 'sweater', 'tie',
+                'hammer', 'screwdriver', 'wrench', 'pliers', 'drill', 'saw', 'level', 'tape measure', 'flashlight', 'batteries',
+                'ball', 'toy car', 'puzzle', 'board game', 'dice', 'cards', 'yo-yo', 'frisbee', 'kite', 'jump rope',
+                'tree', 'flower', 'rock', 'leaf', 'stick', 'acorn', 'pinecone', 'feather', 'shell', 'pebble',
+                'car', 'bicycle', 'skateboard', 'roller skates', 'scooter', 'bus', 'train', 'airplane', 'boat', 'helicopter'
+            ],
+            household: [
+                'couch', 'chair', 'table', 'lamp', 'pillow', 'blanket', 'curtain', 'rug', 'vase', 'picture frame',
+                'clock', 'calendar', 'candle', 'plant', 'basket', 'box', 'shelf', 'drawer', 'cabinet', 'mirror',
+                'television', 'remote control', 'speaker', 'radio', 'fan', 'heater', 'vacuum', 'broom', 'mop', 'bucket'
+            ],
+            office: [
+                'desk', 'chair', 'computer', 'printer', 'scanner', 'fax machine', 'telephone', 'answering machine',
+                'file cabinet', 'bookshelf', 'whiteboard', 'marker', 'eraser', 'push pins', 'thumbtacks', 'rubber bands',
+                'paper clips', 'binder clips', 'envelope', 'stamp', 'address book', 'calendar', 'planner', 'notebook'
+            ],
+            outdoor: [
+                'tent', 'sleeping bag', 'camping chair', 'cooler', 'flashlight', 'lantern', 'rope', 'compass',
+                'map', 'backpack', 'hiking boots', 'water bottle', 'sunscreen', 'hat', 'sunglasses', 'binoculars',
+                'camera', 'fishing rod', 'tackle box', 'bait', 'net', 'kayak', 'paddle', 'life jacket'
+            ],
+            kitchen: [
+                'refrigerator', 'stove', 'oven', 'microwave', 'toaster', 'blender', 'mixer', 'coffee maker',
+                'kettle', 'pot', 'pan', 'skillet', 'cutting board', 'knife', 'spatula', 'spoon', 'fork',
+                'plate', 'bowl', 'cup', 'glass', 'mug', 'dish towel', 'apron', 'oven mitt', 'can opener'
+            ],
+            bathroom: [
+                'toilet', 'sink', 'bathtub', 'shower', 'towel', 'washcloth', 'soap', 'shampoo', 'conditioner',
+                'toothbrush', 'toothpaste', 'mouthwash', 'floss', 'razor', 'shaving cream', 'lotion', 'deodorant',
+                'hair dryer', 'curling iron', 'comb', 'brush', 'mirror', 'scale', 'medicine cabinet', 'bath mat'
+            ],
+            clothing: [
+                'shirt', 'blouse', 't-shirt', 'tank top', 'sweater', 'hoodie', 'jacket', 'coat', 'blazer',
+                'pants', 'jeans', 'shorts', 'skirt', 'dress', 'suit', 'tie', 'bow tie', 'belt', 'suspenders',
+                'shoes', 'sneakers', 'boots', 'sandals', 'heels', 'flip flops', 'socks', 'stockings', 'hat', 'cap'
+            ],
+            electronics: [
+                'smartphone', 'tablet', 'laptop', 'desktop computer', 'monitor', 'keyboard', 'mouse', 'webcam',
+                'microphone', 'speaker', 'headphones', 'earbuds', 'charger', 'cable', 'adapter', 'power bank',
+                'camera', 'video camera', 'drone', 'smartwatch', 'fitness tracker', 'gaming console', 'controller'
+            ],
+            tools: [
+                'hammer', 'screwdriver', 'wrench', 'pliers', 'drill', 'saw', 'level', 'tape measure', 'square',
+                'chisel', 'file', 'sandpaper', 'clamp', 'vise', 'ladder', 'scaffold', 'safety glasses', 'gloves',
+                'toolbox', 'tool belt', 'flashlight', 'lantern', 'extension cord', 'multimeter', 'stud finder'
+            ],
+            toys: [
+                'ball', 'toy car', 'doll', 'action figure', 'puzzle', 'board game', 'card game', 'dice',
+                'yo-yo', 'frisbee', 'kite', 'jump rope', 'hula hoop', 'slinky', 'marbles', 'jacks',
+                'building blocks', 'lego', 'play-doh', 'coloring book', 'crayons', 'markers', 'paint', 'brush'
+            ]
+        };
+
+        function generateRandomObjects() {
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const category = document.getElementById('category').value;
+            const allowDuplicates = document.getElementById('duplicates').value === 'true';
+            
+            const objects = objectDatabase[category] || objectDatabase.all;
+            const results = [];
+            
+            if (allowDuplicates) {
+                for (let i = 0; i < quantity; i++) {
+                    const randomIndex = Math.floor(Math.random() * objects.length);
+                    results.push(objects[randomIndex]);
+                }
+            } else {
+                const shuffled = [...objects].sort(() => 0.5 - Math.random());
+                results.push(...shuffled.slice(0, Math.min(quantity, objects.length)));
+            }
+            
+            displayResults(results);
+        }
+
+        function displayResults(objects) {
+            const resultsContainer = document.getElementById('object-results');
+            const copyBtn = document.getElementById('copy-btn');
+            const shareButtons = document.getElementById('share-buttons');
+            
+            if (objects.length === 0) {
+                resultsContainer.innerHTML = '<div class="loading">No objects found for the selected category.</div>';
+                copyBtn.style.display = 'none';
+                shareButtons.style.display = 'none';
+                return;
+            }
+            
+            let html = '<div class="object-list">';
+            objects.forEach((obj, index) => {
+                html += `<div class="object-item">${index + 1}. ${obj}</div>`;
+            });
+            html += '</div>';
+            
+            resultsContainer.innerHTML = html;
+            copyBtn.style.display = 'inline-block';
+            shareButtons.style.display = 'flex';
+            
+            // Store results for sharing
+            window.currentResults = objects;
+        }
+
+        function copyResults() {
+            if (!window.currentResults) return;
+            
+            const text = window.currentResults.map((obj, index) => `${index + 1}. ${obj}`).join('\n');
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copied!';
+                btn.style.background = '#28a745';
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '#28a745';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy to clipboard. Please select and copy manually.');
+            });
+        }
+
+        function shareOnFacebook() {
+            const text = window.currentResults ? window.currentResults.join(', ') : '';
+            const url = encodeURIComponent(window.location.href);
+            const shareText = encodeURIComponent(`Check out these random objects: ${text}`);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${shareText}`, '_blank');
+        }
+
+        function shareOnTwitter() {
+            const text = window.currentResults ? window.currentResults.slice(0, 3).join(', ') : '';
+            const url = encodeURIComponent(window.location.href);
+            const shareText = encodeURIComponent(`Random objects: ${text}... Try the Random Object Generator!`);
+            window.open(`https://twitter.com/intent/tweet?text=${shareText}&url=${url}`, '_blank');
+        }
+
+        function shareOnReddit() {
+            const text = window.currentResults ? window.currentResults.join(', ') : '';
+            const url = encodeURIComponent(window.location.href);
+            const shareText = encodeURIComponent(`Random Object Generator Results:\n\n${text}\n\nGenerated at: ${url}`);
+            window.open(`https://reddit.com/submit?url=${url}&title=${shareText}`, '_blank');
+        }
+
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Mobile navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
